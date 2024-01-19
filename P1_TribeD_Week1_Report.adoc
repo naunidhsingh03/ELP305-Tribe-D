@@ -294,6 +294,8 @@ image::https://github.com/soulhunter03/ELP305-TribeD-Resources/raw/1baba6a33de5f
 === Index ? at end with pg no. ?
 
 
+=== Glossary??
+
 [[_mindmap]]
 === Mind Map
 [[_outline_mindmap]]
@@ -572,6 +574,103 @@ void speedControl() {
 
 image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/9ae27957f7f9bed7b02f8cd5803453d164ba0f19/electrical_resources/water_sprinkler_circuit.png[]
 
+==== Scrubber
+...  Scrubbing will occur in circular motion (clockwise/anticlockwise)
+...  Speed is controlled using electric signals (based on the voltage of a potentiometer) • Direction (clockwise/ anticlockwise) can be controlled based on a digital logic [1 or 0] • The L293D motor driver is used. It is designed to provide bidirectional drive currents of up to  600-mA at voltages from 4.5 V to 36 V.  
+...  Multiple scrubbers/ scrubbing mode patterns can be defined on this model further based on  the design specifications.
+
+image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/4657c2e45a7e58677d9d220eac84a0fc316f88ca/electrical_resources/scrubbing_circuit.png[]
+
+[source,c]
+----
+#define BTN_DIR 13
+#define POT 0
+#define EN1 3
+#define M1A 4
+#define M1B 7
+#define LED_GREEN 2
+#define LED_RED 5
+#define LED_YELLOW 1
+
+int pos, veloc, oldpos=-1, Speed;
+
+void setup() {
+  pinMode(M1A, OUTPUT);
+  pinMode(M1B, OUTPUT);
+  pinMode(LED_GREEN, OUTPUT);
+  pinMode(LED_RED, OUTPUT);
+  pinMode(LED_YELLOW, OUTPUT);
+  pinMode(BTN_DIR, INPUT);
+}
+
+void loop() {
+  pos = analogRead(POT);
+  Speed = analogRead(POT);
+
+  if (pos != oldpos) {
+    veloc = map(pos, 0, 1023, 0, 255);
+    Speed = map(pos, 0, 1023, 0, 255);
+    analogWrite(EN1, veloc);
+    analogWrite(LED_RED, Speed);
+    oldpos = pos;
+  }
+
+  if (digitalRead(BTN_DIR) == LOW) {
+    digitalWrite(M1A, HIGH);
+    digitalWrite(M1B, LOW);
+    digitalWrite(LED_GREEN, HIGH);
+    digitalWrite(LED_YELLOW, LOW);
+  } else {
+    digitalWrite(M1A, LOW);
+    digitalWrite(M1B, HIGH);
+    digitalWrite(LED_YELLOW, HIGH);
+    digitalWrite(LED_GREEN, LOW);
+  }
+
+  delay(200);
+}
+----
+
+
+
+==== Dryer
+
+We are planning to use the configuration of tunnel dryer to dry the clothes. The power and torque requirements of the motor used in blower and power requirements of the heater will depend on the time needed to dry the cloth, rate at which the cloth is being fed, width and height of the chamber, final moisture content and initial moisture content.
+Also, since counter current configuration is most efficient, we will be using the same in our design. Using tunnel dryers also allows us to move the conveyor belt slowly as it is very efficient in processing materials taking long drying time and thus requiring lesser motor drive.
+
+image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/9ae27957f7f9bed7b02f8cd5803453d164ba0f19/electrical_resources/tunnel_dryer.png[]
+
+Optimisation for power requirements will be done once design specs are provided and it would be based on the mathematical modelling and simulations done to observe the humidity content with rate of air flow and power input to heater and blower.
+To control the heater we will use Arduino, a temperature sensor (thermocouple), a relay module, battery and bunch of connecting wires.
+One of the circuits which can be used is as follows:
+
+image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/9ae27957f7f9bed7b02f8cd5803453d164ba0f19/electrical_resources/dryer_pic_2.png[]
+
+One can have LCD display to keep track of any errors in the functioning.
+Arduino code for controlling heater is as follows:
+link: code1
+
+For running and controlling the blower we need to have an Arduino controlling motor, anemometer, battery and bunch of wires.
+
+image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/9ae27957f7f9bed7b02f8cd5803453d164ba0f19/electrical_resources/dryer_pic_3.png[]
+
+The code is:
+link: code2
+
+
+
+==== Blower
+
+We will be controlling the speed of the DC motor using a potentiometer for the purpose of  blower in our washing machine to remove heavy dust particles from the cloth piece. 
+... Potentiometer has three terminals. Outer two terminals are for power supply and the middle terminal is the output.
+... As we rotate the knob of the potentiometer, the resistance between the middle terminal and one of the outer terminals changes. This change in resistance controls the voltage supplied to the motor, which in turn controls its speed.
+... We can connect multiple DC motors in our system by making slight modifications in the wiring.
+... A Transistor is used for more efficient control of the motor speed. By controlling the current flow to the motor, transistors can prevent overloading and overheating, enhancing the motor’s lifespan. 
+
+image:: https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/9ae27957f7f9bed7b02f8cd5803453d164ba0f19/electrical_resources/blower_circuit.png[]
+
+The code is:
+link: code
 
 
 [[_glossary]]
