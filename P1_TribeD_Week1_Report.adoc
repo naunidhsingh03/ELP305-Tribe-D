@@ -5,7 +5,7 @@
 :bibtex-style: ieee
 :sectnums:
 :toc: left
-:toclevels: 2
+:toclevels: 1
 
 [.text-center]
 .Week 2 Report
@@ -146,7 +146,7 @@ image::https://github.com/soulhunter03/ELP305-TribeD-Resources/raw/1baba6a33de5f
 | 37         | link:https://www.linkedin.com/in/shubham-anand-055423252[Shubham Anand]             | 2021EE10674| Electrical Team Member                        |ee1210674@ee.iitd.ac.in     | 1
 
 
-| 38         | link:Kumar Sanu Singh          | 2021EE31213| Electrical Team Member                        |ee3211213@ee.iitd.ac.in     | 1
+| 38         | link:https://www.linkedin.com/in/sanu-a5b6a72ab[Kumar Sanu Singh]          | 2021EE31213| Electrical Team Member                        |ee3211213@ee.iitd.ac.in     | 1
 
 
 | 39         | link:https://www.linkedin.com/in/rahul-kumar-9a021a236/[Rahul Kumar]               | 2021MT10893| Fabrication Team Member                       |mt1210893@maths.iitd.ac.in  | 1
@@ -155,7 +155,7 @@ image::https://github.com/soulhunter03/ELP305-TribeD-Resources/raw/1baba6a33de5f
 | 40         | link:https://www.linkedin.com/in/manav-garg-0a240a175[Manav Garg]                | 2021EE30017| Fabrication Team Member                       |ee3210017@ee.iitd.ac.in     | 1
 
 
-| 41         | link:www.linkedin.com/in/kushagrgoyal[Kushagr Goyal]                             | 2021EE10634| Fabrication Team Member                       |ee1210634@ee.iitd.ac.in     | 1
+| 41         | link:https://www.linkedin.com/in/kushagrgoyal[Kushagr Goyal]                             | 2021EE10634| Fabrication Team Member                       |ee1210634@ee.iitd.ac.in     | 1
 
 
 | 42         | link:https://www.linkedin.com/in/champak-swargiary-a87b04230/[Champak Swargiary]         | 2021MT10263| Fabrication Team Member                       |mt1210263@maths.iitd.ac.in  | 1
@@ -164,7 +164,8 @@ image::https://github.com/soulhunter03/ELP305-TribeD-Resources/raw/1baba6a33de5f
 | 43         | link:https://www.linkedin.com/in/ajay-ramavath-/[Ajay Naik]                 | 2020MT60888| Fabrication Team Member                       |mt6210888@maths.iitd.ac.in  | 1
 
 
-| 44         | link:https://www.linkedin.com/in/vadlapudi-manoj-5a764825a[Vadlapudi Manoj]           | 2021MT10245| Documentation Team Member                     |mt1210245@maths.iitd.ac.in  | 1
+| 44         | link:https://www.linkedin.com/in/aryan-sharma-326657230/[Aryan Sharma]              | 2021EE10141| Fabrication Team Member                       |ee1210141@ee.iitd.ac.in     | 1
+
 
 
 | 45         | link:https://www.linkedin.com/in/bhavik-garg-4b214422a[Bhavik Garg]               | 2021EE10657| Documentation Team Member                     |ee1210657@ee.iitd.ac.in     | 1
@@ -209,8 +210,8 @@ image::https://github.com/soulhunter03/ELP305-TribeD-Resources/raw/1baba6a33de5f
 | 58         | link:https://www.linkedin.com/in/prabhat-babu-490096282[Prabhat Babu]              | 2021MT10255| Documentation Team Member                     |mt1210255@maths.iitd.ac.in  | 1
 
 
-| 59         | link:https://www.linkedin.com/in/aryan-sharma-326657230/[Aryan Sharma]              | 2021EE10141| Fabrication Team Member                       |ee1210141@ee.iitd.ac.in     | 1
 
+| 59         | link:https://www.linkedin.com/in/vadlapudi-manoj-5a764825a[Vadlapudi Manoj]           | 2021MT10245| Documentation Team Member                     |mt1210245@maths.iitd.ac.in  | 1
 
 |===
 
@@ -226,32 +227,32 @@ image::https://github.com/soulhunter03/ELP305-TribeD-Resources/raw/1baba6a33de5f
 * link:#_list_of_figures[2. List of Figures]
 * link:#_list_of_abbreviations[3. List of Abbreviations]
 * link:#_index[4. Index]
-* link:#_glossary[5. Glossary]
-* link:#_mindmap[6. Mind Map]
-* link:#_project_mang[7. Project Management]
-* link:#_abstract[8. Abstract]
-* link:#_motivation[9. Motivation]
-* link:#_machine_mech[10. Mechanism of the Machine]
-** link:#_removal[10.1. Removal of Dust using Air]
-** link:#_soap_and_water[10.2. Soap + Water Mechanism]
-*** link:#_stains[10.2.1. Stains]
-*** link:#_solvents[10.2.2. Solvents]
-** link:#_scrubbing[10.3. Scrubbing]
-** link:#_water_mech[10.4. Water Mechanism]
-** link:#_drying[10.5. Drying]
-* link:#_requirements[11. Requirements for the Idea]
-** link:#_input_specs[11.1. Input Specifications]
-** link:#_output_specs[11.2. Output Specifications]
-** link:#_power_reqs[11.3. Power Requirements]
-** link:#_logi_reqs[11.4. Logistical Requirements]
-** link:#_env_reqs[11.5. Environmental Requirements]
-** link:#_site_reqs[11.6. Site Requirements]
-** link:#_time_reqs[11.7. Time Requirements]
-*** link:#_design_time[11.7.1. Design Time Requirements]
-*** link:#_time_to_market_reqs[11.7.2. Time to Market Requirements]
-*** link:#_lifetime_reqs[11.7.3. Lifetime Requirements]
-*** link:#_end_of_life_reqs[11.7.4. End of Life Requirements]
-** link:#_other_reqs[11.8. Other Non-Functional Requirements]
+* link:#_mindmap[5. Mind Map]
+* link:#_project_mang[6. Project Management]
+* link:#_abstract[7. Abstract]
+* link:#_motivation[8. Motivation]
+* link:#_machine_mech[9. Mechanism of the Machine]
+** link:#_removal[9.1. Removal of Dust using Air]
+** link:#_soap_and_water[9.2. Soap + Water Mechanism]
+*** link:#_stains[9.2.1. Stains]
+*** link:#_solvents[9.2.2. Solvents]
+** link:#_scrubbing[9.3. Scrubbing]
+** link:#_water_mech[9.4. Water Mechanism]
+** link:#_drying[9.5. Drying]
+* link:#_requirements[10. Requirements for the Idea]
+** link:#_input_specs[10.1. Input Specifications]
+** link:#_output_specs[10.2. Output Specifications]
+** link:#_power_reqs[10.3. Power Requirements]
+** link:#_logi_reqs[10.4. Logistical Requirements]
+** link:#_env_reqs[10.5. Environmental Requirements]
+** link:#_site_reqs[10.6. Site Requirements]
+** link:#_time_reqs[10.7. Time Requirements]
+*** link:#_design_time[10.7.1. Design Time Requirements]
+*** link:#_time_to_market_reqs[10.7.2. Time to Market Requirements]
+*** link:#_lifetime_reqs[10.7.3. Lifetime Requirements]
+*** link:#_end_of_life_reqs[10.7.4. End of Life Requirements]
+** link:#_other_reqs[10.8. Other Non-Functional Requirements]
+* link:#_glossary[11. Glossary]
 
 
 
@@ -290,8 +291,6 @@ image::https://github.com/soulhunter03/ELP305-TribeD-Resources/raw/1baba6a33de5f
 [[_index]]
 === Index ? at end with pg no. ?
 
-[[_glossary]]
-=== Glossary ? at end with pg no. ?
 
 [[_mindmap]]
 === Mind Map
@@ -450,6 +449,40 @@ They are expected to run continuously, 24/7, with an emergency shutdown initiate
 * *Miscellaneous Considerations:*
 Dimensions and the inclusion of a stand or wheels are left to the designer's discretion.
 
+[[_glossary]]
+
+[glossary]
+=== Glossary
+
+[glossary]
+ABS (Acrylonitrile Butadiene Styrene):: A strong and durable thermoplastic polymer used in manufacturing. 
+Acrylonitrile butadiene styrene (ABS):: A common thermoplastic used to make light, rigid, molded products such as pipe, automotive body parts, wheel covers, enclosures, and protective headgear.  
+Affix:: Securely attach or fasten.  
+CPCB (Central Pollution Control Board):: A regulatory body in India that sets standards for environmental pollution control.  
+* *Denier:* A unit of measurement for the linear mass density of fibers. It is the mass in grams per 9000 meters of the fiber.  
+* *Desizing:* The removal of sizing agents, such as starch or other chemicals, from fabrics to prepare them for further processing.  
+* *Gantt Chart:* A visual representation of a project schedule that shows the start and finish dates of various elements of the project.  
+* *Graywater:* Domestic wastewater that does not contain fecal matter, often reused for irrigation or other non-potable purposes.  
+* *Isometric View:* A three-dimensional representation of an object, showing all three spatial dimensions in one view.  
+* *Mercerizing:* A textile finishing process that increases the luster and strength of fabric, typically cotton, by treating it with a caustic soda solution. 
+* *Nozzle:* A device for controlling the direction or flow of a fluid. 
+* *Nozzle mechanism:* The nozzle and flapper mechanism are a displacement type detector which converts mechanical movement into a pressure signal by covering the opening of a nozzle with a flat plate called the flapper. This restricts fluid flow through the nozzle and generates a pressure signal. 
+* *Petroleum-based cleaning agents:* Solvents effective for oil-based stains (e.g., mineral spirits, naphtha).
+* *Pretreatment:* Applying cleansing agent before washing.  
+* *Resource Breakdown:* A breakdown of resources required for a project, often detailing labor, equipment, and materials. 
+* *Robust Scrubbing:* Strong, sturdy, and effective scrubbing.  
+* *Rust stains:* Formed by oxidation of iron.  
+* *Scour:* To clean or rub using a stiff brush or abrasive.  
+* *Setup Time:* The time required to prepare the washing machine for operation.  
+* *Singeing:* The process of burning off protruding fibers or impurities from the surface of a fabric, often using a flame or hot surface.  
+* *Syrup:* In the context of the report, it may refer to a concentrated solution of a sugar or sugar substitute in water.  
+* *Tannin:*   bitter, astringent substance found in plants.  
+* *Testing Phase:* A stage in the development process where the functionality and performance are evaluated.  
+* *Thermoplastic Polymer:* A type of polymer that becomes pliable or mouldable when heated and solidifies upon cooling.  
+* *Thread Count:* The number of threads woven together per square inch in a fabric. A higher thread count is generally associated with a finer and more luxurious fabric.  
+* *Traces:*  mall amounts or remnants.  
+* *Turpentine:*   solvent used for thinning, cleaning paint and  varnish removal.  
+* *User-Centric:* Designed with a primary focus on meeting the needs and preferences of users.  
 == References (to be updated)
 // how to use citations. citenp:[DryCleaningChemicals]
 // citenp:[WhatWaterConsumption]
