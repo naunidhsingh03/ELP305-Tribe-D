@@ -1,0 +1,34 @@
+= My Arduino Project
+:source-highlighter: rouge
+:rouge-style: github
+
+== Introduction
+
+This is a simple example of an AsciiDoc document with an Arduino code block.
+
+== Arduino Code
+
+[source,arduino]
+----
+void setup() {
+  // Initialize serial communication
+  Serial.begin(9600);
+}
+
+void loop() {
+  // Read and print sensor value
+  int sensorValue = analogRead(A0);
+  Serial.println(sensorValue);
+
+  // Delay for a second
+  delay(1000);
+}
+----
+[source,ruby]
+----
+require 'sinatra'
+
+get '/hi' do
+  "Hello World!"
+end
+----

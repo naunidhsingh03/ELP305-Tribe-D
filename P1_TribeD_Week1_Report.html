@@ -432,6 +432,74 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 #footer-text{color:rgba(0,0,0,.6);font-size:.9em}}
 @media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
 </style>
+<style>
+pre.pygments .hll { background-color: #ffffcc }
+pre.pygments { background: #ffffff; }
+pre.pygments .tok-c { color: #aaaaaa; font-style: italic } /* Comment */
+pre.pygments .tok-err { color: #FF0000; background-color: #FFAAAA } /* Error */
+pre.pygments .tok-k { color: #0000aa } /* Keyword */
+pre.pygments .tok-ch { color: #aaaaaa; font-style: italic } /* Comment.Hashbang */
+pre.pygments .tok-cm { color: #aaaaaa; font-style: italic } /* Comment.Multiline */
+pre.pygments .tok-cp { color: #4c8317 } /* Comment.Preproc */
+pre.pygments .tok-cpf { color: #aaaaaa; font-style: italic } /* Comment.PreprocFile */
+pre.pygments .tok-c1 { color: #aaaaaa; font-style: italic } /* Comment.Single */
+pre.pygments .tok-cs { color: #0000aa; font-style: italic } /* Comment.Special */
+pre.pygments .tok-gd { color: #aa0000 } /* Generic.Deleted */
+pre.pygments .tok-ge { font-style: italic } /* Generic.Emph */
+pre.pygments .tok-gr { color: #aa0000 } /* Generic.Error */
+pre.pygments .tok-gh { color: #000080; font-weight: bold } /* Generic.Heading */
+pre.pygments .tok-gi { color: #00aa00 } /* Generic.Inserted */
+pre.pygments .tok-go { color: #888888 } /* Generic.Output */
+pre.pygments .tok-gp { color: #555555 } /* Generic.Prompt */
+pre.pygments .tok-gs { font-weight: bold } /* Generic.Strong */
+pre.pygments .tok-gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+pre.pygments .tok-gt { color: #aa0000 } /* Generic.Traceback */
+pre.pygments .tok-kc { color: #0000aa } /* Keyword.Constant */
+pre.pygments .tok-kd { color: #0000aa } /* Keyword.Declaration */
+pre.pygments .tok-kn { color: #0000aa } /* Keyword.Namespace */
+pre.pygments .tok-kp { color: #0000aa } /* Keyword.Pseudo */
+pre.pygments .tok-kr { color: #0000aa } /* Keyword.Reserved */
+pre.pygments .tok-kt { color: #00aaaa } /* Keyword.Type */
+pre.pygments .tok-m { color: #009999 } /* Literal.Number */
+pre.pygments .tok-s { color: #aa5500 } /* Literal.String */
+pre.pygments .tok-na { color: #1e90ff } /* Name.Attribute */
+pre.pygments .tok-nb { color: #00aaaa } /* Name.Builtin */
+pre.pygments .tok-nc { color: #00aa00; text-decoration: underline } /* Name.Class */
+pre.pygments .tok-no { color: #aa0000 } /* Name.Constant */
+pre.pygments .tok-nd { color: #888888 } /* Name.Decorator */
+pre.pygments .tok-ni { color: #880000; font-weight: bold } /* Name.Entity */
+pre.pygments .tok-nf { color: #00aa00 } /* Name.Function */
+pre.pygments .tok-nn { color: #00aaaa; text-decoration: underline } /* Name.Namespace */
+pre.pygments .tok-nt { color: #1e90ff; font-weight: bold } /* Name.Tag */
+pre.pygments .tok-nv { color: #aa0000 } /* Name.Variable */
+pre.pygments .tok-ow { color: #0000aa } /* Operator.Word */
+pre.pygments .tok-w { color: #bbbbbb } /* Text.Whitespace */
+pre.pygments .tok-mb { color: #009999 } /* Literal.Number.Bin */
+pre.pygments .tok-mf { color: #009999 } /* Literal.Number.Float */
+pre.pygments .tok-mh { color: #009999 } /* Literal.Number.Hex */
+pre.pygments .tok-mi { color: #009999 } /* Literal.Number.Integer */
+pre.pygments .tok-mo { color: #009999 } /* Literal.Number.Oct */
+pre.pygments .tok-sa { color: #aa5500 } /* Literal.String.Affix */
+pre.pygments .tok-sb { color: #aa5500 } /* Literal.String.Backtick */
+pre.pygments .tok-sc { color: #aa5500 } /* Literal.String.Char */
+pre.pygments .tok-dl { color: #aa5500 } /* Literal.String.Delimiter */
+pre.pygments .tok-sd { color: #aa5500 } /* Literal.String.Doc */
+pre.pygments .tok-s2 { color: #aa5500 } /* Literal.String.Double */
+pre.pygments .tok-se { color: #aa5500 } /* Literal.String.Escape */
+pre.pygments .tok-sh { color: #aa5500 } /* Literal.String.Heredoc */
+pre.pygments .tok-si { color: #aa5500 } /* Literal.String.Interpol */
+pre.pygments .tok-sx { color: #aa5500 } /* Literal.String.Other */
+pre.pygments .tok-sr { color: #009999 } /* Literal.String.Regex */
+pre.pygments .tok-s1 { color: #aa5500 } /* Literal.String.Single */
+pre.pygments .tok-ss { color: #0000aa } /* Literal.String.Symbol */
+pre.pygments .tok-bp { color: #00aaaa } /* Name.Builtin.Pseudo */
+pre.pygments .tok-fm { color: #00aa00 } /* Name.Function.Magic */
+pre.pygments .tok-vc { color: #aa0000 } /* Name.Variable.Class */
+pre.pygments .tok-vg { color: #aa0000 } /* Name.Variable.Global */
+pre.pygments .tok-vi { color: #aa0000 } /* Name.Variable.Instance */
+pre.pygments .tok-vm { color: #aa0000 } /* Name.Variable.Magic */
+pre.pygments .tok-il { color: #009999 } /* Literal.Number.Integer.Long */
+</style>
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
@@ -441,6 +509,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel1">
 <li><a href="#_our_tribe">1. Week 2 Report: Requirements + Specifications</a></li>
 <li><a href="#_body">2. Body</a></li>
+<li><a href="#_references_to_be_updated">References (to be updated)</a></li>
 <li><a href="#_appendix_to_be_changed"> A: Appendix (to be changed)</a></li>
 </ul>
 </div>
@@ -466,6 +535,100 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <pre>Submitted to: Prof. Subrat Kar</pre>
 </div>
 </div>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="arduino"><span></span><span class="tok-c1">// Motor A connections</span>
+<span class="tok-kr">int</span><span class="tok-w"> </span><span class="tok-n">enA</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-mi">9</span><span class="tok-p">;</span>
+<span class="tok-kr">int</span><span class="tok-w"> </span><span class="tok-n">in1</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-mi">8</span><span class="tok-p">;</span>
+<span class="tok-kr">int</span><span class="tok-w"> </span><span class="tok-n">in2</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-mi">7</span><span class="tok-p">;</span>
+<span class="tok-c1">// Motor B connections</span>
+<span class="tok-kr">int</span><span class="tok-w"> </span><span class="tok-n">enB</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-mi">3</span><span class="tok-p">;</span>
+<span class="tok-kr">int</span><span class="tok-w"> </span><span class="tok-n">in3</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-mi">5</span><span class="tok-p">;</span>
+<span class="tok-kr">int</span><span class="tok-w"> </span><span class="tok-n">in4</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-mi">4</span><span class="tok-p">;</span>
+
+<span class="tok-kr">void</span><span class="tok-w"> </span><span class="tok-nb">setup</span><span class="tok-p">()</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="tok-w">  </span><span class="tok-c1">// Set all the motor control pins to outputs</span>
+<span class="tok-w">  </span><span class="tok-nf">pinMode</span><span class="tok-p">(</span><span class="tok-n">enA</span><span class="tok-p">,</span><span class="tok-w"> </span><span class="tok-kr">OUTPUT</span><span class="tok-p">);</span>
+<span class="tok-w">  </span><span class="tok-nf">pinMode</span><span class="tok-p">(</span><span class="tok-n">enB</span><span class="tok-p">,</span><span class="tok-w"> </span><span class="tok-kr">OUTPUT</span><span class="tok-p">);</span>
+<span class="tok-w">  </span><span class="tok-nf">pinMode</span><span class="tok-p">(</span><span class="tok-n">in1</span><span class="tok-p">,</span><span class="tok-w"> </span><span class="tok-kr">OUTPUT</span><span class="tok-p">);</span>
+<span class="tok-w">  </span><span class="tok-nf">pinMode</span><span class="tok-p">(</span><span class="tok-n">in2</span><span class="tok-p">,</span><span class="tok-w"> </span><span class="tok-kr">OUTPUT</span><span class="tok-p">);</span>
+<span class="tok-w">  </span><span class="tok-nf">pinMode</span><span class="tok-p">(</span><span class="tok-n">in3</span><span class="tok-p">,</span><span class="tok-w"> </span><span class="tok-kr">OUTPUT</span><span class="tok-p">);</span>
+<span class="tok-w">  </span><span class="tok-nf">pinMode</span><span class="tok-p">(</span><span class="tok-n">in4</span><span class="tok-p">,</span><span class="tok-w"> </span><span class="tok-kr">OUTPUT</span><span class="tok-p">);</span>
+
+<span class="tok-w">  </span><span class="tok-c1">// Turn off motors - Initial state</span>
+<span class="tok-w">  </span><span class="tok-nf">digitalWrite</span><span class="tok-p">(</span><span class="tok-n">in1</span><span class="tok-p">,</span><span class="tok-w"> </span><span class="tok-kr">LOW</span><span class="tok-p">);</span>
+<span class="tok-w">  </span><span class="tok-nf">digitalWrite</span><span class="tok-p">(</span><span class="tok-n">in2</span><span class="tok-p">,</span><span class="tok-w"> </span><span class="tok-kr">LOW</span><span class="tok-p">);</span>
+<span class="tok-w">  </span><span class="tok-nf">digitalWrite</span><span class="tok-p">(</span><span class="tok-n">in3</span><span class="tok-p">,</span><span class="tok-w"> </span><span class="tok-kr">LOW</span><span class="tok-p">);</span>
+<span class="tok-w">  </span><span class="tok-nf">digitalWrite</span><span class="tok-p">(</span><span class="tok-n">in4</span><span class="tok-p">,</span><span class="tok-w"> </span><span class="tok-kr">LOW</span><span class="tok-p">);</span>
+<span class="tok-p">}</span>
+
+<span class="tok-kr">void</span><span class="tok-w"> </span><span class="tok-nb">loop</span><span class="tok-p">()</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="tok-w">  </span><span class="tok-n">directionControl</span><span class="tok-p">();</span>
+<span class="tok-w">  </span><span class="tok-nf">delay</span><span class="tok-p">(</span><span class="tok-mi">1000</span><span class="tok-p">);</span>
+<span class="tok-w">  </span><span class="tok-n">speedControl</span><span class="tok-p">();</span>
+<span class="tok-w">  </span><span class="tok-nf">delay</span><span class="tok-p">(</span><span class="tok-mi">1000</span><span class="tok-p">);</span>
+<span class="tok-p">}</span>
+
+<span class="tok-c1">// This function lets you control the spinning direction of motors</span>
+<span class="tok-kr">void</span><span class="tok-w"> </span><span class="tok-nf">directionControl</span><span class="tok-p">()</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="tok-w">  </span><span class="tok-c1">// Set motors to maximum speed</span>
+<span class="tok-w">  </span><span class="tok-c1">// For PWM maximum possible values are 0 to 255</span>
+<span class="tok-w">  </span><span class="tok-nf">analogWrite</span><span class="tok-p">(</span><span class="tok-n">enA</span><span class="tok-p">,</span><span class="tok-w"> </span><span class="tok-mi">255</span><span class="tok-p">);</span>
+<span class="tok-w">  </span><span class="tok-nf">analogWrite</span><span class="tok-p">(</span><span class="tok-n">enB</span><span class="tok-p">,</span><span class="tok-w"> </span><span class="tok-mi">255</span><span class="tok-p">);</span>
+
+<span class="tok-w">  </span><span class="tok-c1">// Turn on motor A &amp; B</span>
+<span class="tok-w">  </span><span class="tok-nf">digitalWrite</span><span class="tok-p">(</span><span class="tok-n">in1</span><span class="tok-p">,</span><span class="tok-w"> </span><span class="tok-kr">HIGH</span><span class="tok-p">);</span>
+<span class="tok-w">  </span><span class="tok-nf">digitalWrite</span><span class="tok-p">(</span><span class="tok-n">in2</span><span class="tok-p">,</span><span class="tok-w"> </span><span class="tok-kr">LOW</span><span class="tok-p">);</span>
+<span class="tok-w">  </span><span class="tok-nf">digitalWrite</span><span class="tok-p">(</span><span class="tok-n">in3</span><span class="tok-p">,</span><span class="tok-w"> </span><span class="tok-kr">HIGH</span><span class="tok-p">);</span>
+<span class="tok-w">  </span><span class="tok-nf">digitalWrite</span><span class="tok-p">(</span><span class="tok-n">in4</span><span class="tok-p">,</span><span class="tok-w"> </span><span class="tok-kr">LOW</span><span class="tok-p">);</span>
+
+<span class="tok-w">  </span><span class="tok-nf">delay</span><span class="tok-p">(</span><span class="tok-mi">2000</span><span class="tok-p">);</span>
+
+<span class="tok-w">  </span><span class="tok-c1">// Now change motor directions</span>
+<span class="tok-w">  </span><span class="tok-nf">digitalWrite</span><span class="tok-p">(</span><span class="tok-n">in1</span><span class="tok-p">,</span><span class="tok-w"> </span><span class="tok-kr">LOW</span><span class="tok-p">);</span>
+<span class="tok-w">  </span><span class="tok-nf">digitalWrite</span><span class="tok-p">(</span><span class="tok-n">in2</span><span class="tok-p">,</span><span class="tok-w"> </span><span class="tok-kr">HIGH</span><span class="tok-p">);</span>
+<span class="tok-w">  </span><span class="tok-nf">digitalWrite</span><span class="tok-p">(</span><span class="tok-n">in3</span><span class="tok-p">,</span><span class="tok-w"> </span><span class="tok-kr">LOW</span><span class="tok-p">);</span>
+<span class="tok-w">  </span><span class="tok-nf">digitalWrite</span><span class="tok-p">(</span><span class="tok-n">in4</span><span class="tok-p">,</span><span class="tok-w"> </span><span class="tok-kr">HIGH</span><span class="tok-p">);</span>
+
+<span class="tok-w">  </span><span class="tok-nf">delay</span><span class="tok-p">(</span><span class="tok-mi">2000</span><span class="tok-p">);</span>
+
+<span class="tok-w">  </span><span class="tok-c1">// Turn off motors</span>
+<span class="tok-w">  </span><span class="tok-nf">digitalWrite</span><span class="tok-p">(</span><span class="tok-n">in1</span><span class="tok-p">,</span><span class="tok-w"> </span><span class="tok-kr">LOW</span><span class="tok-p">);</span>
+<span class="tok-w">  </span><span class="tok-nf">digitalWrite</span><span class="tok-p">(</span><span class="tok-n">in2</span><span class="tok-p">,</span><span class="tok-w"> </span><span class="tok-kr">LOW</span><span class="tok-p">);</span>
+<span class="tok-w">  </span><span class="tok-nf">digitalWrite</span><span class="tok-p">(</span><span class="tok-n">in3</span><span class="tok-p">,</span><span class="tok-w"> </span><span class="tok-kr">LOW</span><span class="tok-p">);</span>
+<span class="tok-w">  </span><span class="tok-nf">digitalWrite</span><span class="tok-p">(</span><span class="tok-n">in4</span><span class="tok-p">,</span><span class="tok-w"> </span><span class="tok-kr">LOW</span><span class="tok-p">);</span>
+<span class="tok-p">}</span>
+
+<span class="tok-c1">// This function lets you control the speed of the motors</span>
+<span class="tok-kr">void</span><span class="tok-w"> </span><span class="tok-nf">speedControl</span><span class="tok-p">()</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="tok-w">  </span><span class="tok-c1">// Turn on motors</span>
+<span class="tok-w">  </span><span class="tok-nf">digitalWrite</span><span class="tok-p">(</span><span class="tok-n">in1</span><span class="tok-p">,</span><span class="tok-w"> </span><span class="tok-kr">LOW</span><span class="tok-p">);</span>
+<span class="tok-w">  </span><span class="tok-nf">digitalWrite</span><span class="tok-p">(</span><span class="tok-n">in2</span><span class="tok-p">,</span><span class="tok-w"> </span><span class="tok-kr">HIGH</span><span class="tok-p">);</span>
+<span class="tok-w">  </span><span class="tok-nf">digitalWrite</span><span class="tok-p">(</span><span class="tok-n">in3</span><span class="tok-p">,</span><span class="tok-w"> </span><span class="tok-kr">LOW</span><span class="tok-p">);</span>
+<span class="tok-w">  </span><span class="tok-nf">digitalWrite</span><span class="tok-p">(</span><span class="tok-n">in4</span><span class="tok-p">,</span><span class="tok-w"> </span><span class="tok-kr">HIGH</span><span class="tok-p">);</span>
+
+<span class="tok-w">  </span><span class="tok-c1">// Accelerate from zero to maximum speed</span>
+<span class="tok-w">  </span><span class="tok-k">for</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-kr">int</span><span class="tok-w"> </span><span class="tok-n">i</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-mi">0</span><span class="tok-p">;</span><span class="tok-w"> </span><span class="tok-n">i</span><span class="tok-w"> </span><span class="tok-o">&lt;</span><span class="tok-w"> </span><span class="tok-mi">256</span><span class="tok-p">;</span><span class="tok-w"> </span><span class="tok-n">i</span><span class="tok-o">++</span><span class="tok-p">)</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="tok-w">    </span><span class="tok-nf">analogWrite</span><span class="tok-p">(</span><span class="tok-n">enA</span><span class="tok-p">,</span><span class="tok-w"> </span><span class="tok-n">i</span><span class="tok-p">);</span>
+<span class="tok-w">    </span><span class="tok-nf">analogWrite</span><span class="tok-p">(</span><span class="tok-n">enB</span><span class="tok-p">,</span><span class="tok-w"> </span><span class="tok-n">i</span><span class="tok-p">);</span>
+<span class="tok-w">    </span><span class="tok-nf">delay</span><span class="tok-p">(</span><span class="tok-mi">20</span><span class="tok-p">);</span>
+<span class="tok-w">  </span><span class="tok-p">}</span>
+
+<span class="tok-w">  </span><span class="tok-c1">// Decelerate from maximum speed to zero</span>
+<span class="tok-w">  </span><span class="tok-k">for</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-kr">int</span><span class="tok-w"> </span><span class="tok-n">i</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-mi">255</span><span class="tok-p">;</span><span class="tok-w"> </span><span class="tok-n">i</span><span class="tok-w"> </span><span class="tok-o">&gt;=</span><span class="tok-w"> </span><span class="tok-mi">0</span><span class="tok-p">;</span><span class="tok-w"> </span><span class="tok-o">--</span><span class="tok-n">i</span><span class="tok-p">)</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="tok-w">    </span><span class="tok-nf">analogWrite</span><span class="tok-p">(</span><span class="tok-n">enA</span><span class="tok-p">,</span><span class="tok-w"> </span><span class="tok-n">i</span><span class="tok-p">);</span>
+<span class="tok-w">    </span><span class="tok-nf">analogWrite</span><span class="tok-p">(</span><span class="tok-n">enB</span><span class="tok-p">,</span><span class="tok-w"> </span><span class="tok-n">i</span><span class="tok-p">);</span>
+<span class="tok-w">    </span><span class="tok-nf">delay</span><span class="tok-p">(</span><span class="tok-mi">20</span><span class="tok-p">);</span>
+<span class="tok-w">  </span><span class="tok-p">}</span>
+
+<span class="tok-w">  </span><span class="tok-c1">// Now turn off motors</span>
+<span class="tok-w">  </span><span class="tok-nf">digitalWrite</span><span class="tok-p">(</span><span class="tok-n">in1</span><span class="tok-p">,</span><span class="tok-w"> </span><span class="tok-kr">LOW</span><span class="tok-p">);</span>
+<span class="tok-w">  </span><span class="tok-nf">digitalWrite</span><span class="tok-p">(</span><span class="tok-n">in2</span><span class="tok-p">,</span><span class="tok-w"> </span><span class="tok-kr">LOW</span><span class="tok-p">);</span>
+<span class="tok-w">  </span><span class="tok-nf">digitalWrite</span><span class="tok-p">(</span><span class="tok-n">in3</span><span class="tok-p">,</span><span class="tok-w"> </span><span class="tok-kr">LOW</span><span class="tok-p">);</span>
+<span class="tok-w">  </span><span class="tok-nf">digitalWrite</span><span class="tok-p">(</span><span class="tok-n">in4</span><span class="tok-p">,</span><span class="tok-w"> </span><span class="tok-kr">LOW</span><span class="tok-p">);</span>
+<span class="tok-p">}</span></code></pre>
 </div>
 </div>
 </div>
@@ -1540,8 +1703,19 @@ Dimensions and the inclusion of a stand or wheels are left to the designer&#8217
 <p><strong>Turpentine:</strong>   solvent used for thinning, cleaning paint and  varnish removal.</p>
 </li>
 <li>
-<p><strong>User-Centric:</strong> Designed with a primary focus on meeting the needs and preferences of users.
-== References (to be updated)</p>
+<p><strong>User-Centric:</strong> Designed with a primary focus on meeting the needs and preferences of users.</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_references_to_be_updated">References (to be updated)</h2>
+<div class="sectionbody">
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -1611,13 +1785,6 @@ Dimensions and the inclusion of a stand or wheels are left to the designer&#8217
 <p>M. Qian, P. Wei, C. Ma, Z. Xiang, J. Xiao, and X. Hu, “Study on drying characters of a thin cotton fabric under uneven radial heating by the hot air jet,” <em>Drying Technology</em>, vol. 40, no. 15, pp. 3115–3127, Nov. 2022, doi: 10.1080/07373937.2021.2004159.</p>
 </li>
 </ol>
-</div>
-</li>
-</ul>
-</div>
-</dd>
-</dl>
-</div>
 </div>
 </div>
 </div>
@@ -1724,7 +1891,7 @@ Dimensions and the inclusion of a stand or wheels are left to the designer&#8217
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-01-19 15:34:46 +0530
+Last updated 2024-01-19 17:04:48 +0530
 </div>
 </div>
 </body>
