@@ -1,0 +1,1665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.20">
+<title>ELP 305: Design and Systems Lab</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<style>
+/*! Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
+/* Uncomment the following line when using as a custom stylesheet */
+/* @import "https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700"; */
+html{font-family:sans-serif;-webkit-text-size-adjust:100%}
+a{background:none}
+a:focus{outline:thin dotted}
+a:active,a:hover{outline:0}
+h1{font-size:2em;margin:.67em 0}
+b,strong{font-weight:bold}
+abbr{font-size:.9em}
+abbr[title]{cursor:help;border-bottom:1px dotted #dddddf;text-decoration:none}
+dfn{font-style:italic}
+hr{height:0}
+mark{background:#ff0;color:#000}
+code,kbd,pre,samp{font-family:monospace;font-size:1em}
+pre{white-space:pre-wrap}
+q{quotes:"\201C" "\201D" "\2018" "\2019"}
+small{font-size:80%}
+sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+sup{top:-.5em}
+sub{bottom:-.25em}
+img{border:0}
+svg:not(:root){overflow:hidden}
+figure{margin:0}
+audio,video{display:inline-block}
+audio:not([controls]){display:none;height:0}
+fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}
+legend{border:0;padding:0}
+button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}
+button,input{line-height:normal}
+button,select{text-transform:none}
+button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}
+button[disabled],html input[disabled]{cursor:default}
+input[type=checkbox],input[type=radio]{padding:0}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
+textarea{overflow:auto;vertical-align:top}
+table{border-collapse:collapse;border-spacing:0}
+*,::before,::after{box-sizing:border-box}
+html,body{font-size:100%}
+body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;line-height:1;position:relative;cursor:auto;-moz-tab-size:4;-o-tab-size:4;tab-size:4;word-wrap:anywhere;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
+a:hover{cursor:pointer}
+img,object,embed{max-width:100%;height:auto}
+object,embed{height:100%}
+img{-ms-interpolation-mode:bicubic}
+.left{float:left!important}
+.right{float:right!important}
+.text-left{text-align:left!important}
+.text-right{text-align:right!important}
+.text-center{text-align:center!important}
+.text-justify{text-align:justify!important}
+.hide{display:none}
+img,object,svg{display:inline-block;vertical-align:middle}
+textarea{height:auto;min-height:50px}
+select{width:100%}
+.subheader,.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{line-height:1.45;color:#7a2518;font-weight:400;margin-top:0;margin-bottom:.25em}
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6,pre,form,p,blockquote,th,td{margin:0;padding:0}
+a{color:#2156a5;text-decoration:underline;line-height:inherit}
+a:hover,a:focus{color:#1d4b8f}
+a img{border:0}
+p{line-height:1.6;margin-bottom:1.25em;text-rendering:optimizeLegibility}
+p aside{font-size:.875em;line-height:1.35;font-style:italic}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{font-family:"Open Sans","DejaVu Sans",sans-serif;font-weight:300;font-style:normal;color:#ba3925;text-rendering:optimizeLegibility;margin-top:1em;margin-bottom:.5em;line-height:1.0125em}
+h1 small,h2 small,h3 small,#toctitle small,.sidebarblock>.content>.title small,h4 small,h5 small,h6 small{font-size:60%;color:#e99b8f;line-height:0}
+h1{font-size:2.125em}
+h2{font-size:1.6875em}
+h3,#toctitle,.sidebarblock>.content>.title{font-size:1.375em}
+h4,h5{font-size:1.125em}
+h6{font-size:1em}
+hr{border:solid #dddddf;border-width:1px 0 0;clear:both;margin:1.25em 0 1.1875em}
+em,i{font-style:italic;line-height:inherit}
+strong,b{font-weight:bold;line-height:inherit}
+small{font-size:60%;line-height:inherit}
+code{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;color:rgba(0,0,0,.9)}
+ul,ol,dl{line-height:1.6;margin-bottom:1.25em;list-style-position:outside;font-family:inherit}
+ul,ol{margin-left:1.5em}
+ul li ul,ul li ol{margin-left:1.25em;margin-bottom:0}
+ul.circle{list-style-type:circle}
+ul.disc{list-style-type:disc}
+ul.square{list-style-type:square}
+ul.circle ul:not([class]),ul.disc ul:not([class]),ul.square ul:not([class]){list-style:inherit}
+ol li ul,ol li ol{margin-left:1.25em;margin-bottom:0}
+dl dt{margin-bottom:.3125em;font-weight:bold}
+dl dd{margin-bottom:1.25em}
+blockquote{margin:0 0 1.25em;padding:.5625em 1.25em 0 1.1875em;border-left:1px solid #ddd}
+blockquote,blockquote p{line-height:1.6;color:rgba(0,0,0,.85)}
+@media screen and (min-width:768px){h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2}
+h1{font-size:2.75em}
+h2{font-size:2.3125em}
+h3,#toctitle,.sidebarblock>.content>.title{font-size:1.6875em}
+h4{font-size:1.4375em}}
+table{background:#fff;margin-bottom:1.25em;border:1px solid #dedede;word-wrap:normal}
+table thead,table tfoot{background:#f7f8f7}
+table thead tr th,table thead tr td,table tfoot tr th,table tfoot tr td{padding:.5em .625em .625em;font-size:inherit;color:rgba(0,0,0,.8);text-align:left}
+table tr th,table tr td{padding:.5625em .625em;font-size:inherit;color:rgba(0,0,0,.8)}
+table tr.even,table tr.alt{background:#f8f8f7}
+table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{line-height:1.6}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2;word-spacing:-.05em}
+h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title strong,h4 strong,h5 strong,h6 strong{font-weight:400}
+.center{margin-left:auto;margin-right:auto}
+.stretch{width:100%}
+.clearfix::before,.clearfix::after,.float-group::before,.float-group::after{content:" ";display:table}
+.clearfix::after,.float-group::after{clear:both}
+:not(pre).nobreak{word-wrap:normal}
+:not(pre).nowrap{white-space:nowrap}
+:not(pre).pre-wrap{white-space:pre-wrap}
+:not(pre):not([class^=L])>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background:#f7f7f8;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed}
+pre{color:rgba(0,0,0,.9);font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;line-height:1.45;text-rendering:optimizeSpeed}
+pre code,pre pre{color:inherit;font-size:inherit;line-height:inherit}
+pre>code{display:block}
+pre.nowrap,pre.nowrap pre{white-space:pre;word-wrap:normal}
+em em{font-style:normal}
+strong strong{font-weight:400}
+.keyseq{color:rgba(51,51,51,.8)}
+kbd{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;display:inline-block;color:rgba(0,0,0,.8);font-size:.65em;line-height:1.45;background:#f7f7f7;border:1px solid #ccc;border-radius:3px;box-shadow:0 1px 0 rgba(0,0,0,.2),inset 0 0 0 .1em #fff;margin:0 .15em;padding:.2em .5em;vertical-align:middle;position:relative;top:-.1em;white-space:nowrap}
+.keyseq kbd:first-child{margin-left:0}
+.keyseq kbd:last-child{margin-right:0}
+.menuseq,.menuref{color:#000}
+.menuseq b:not(.caret),.menuref{font-weight:inherit}
+.menuseq{word-spacing:-.02em}
+.menuseq b.caret{font-size:1.25em;line-height:.8}
+.menuseq i.caret{font-weight:bold;text-align:center;width:.45em}
+b.button::before,b.button::after{position:relative;top:-1px;font-weight:400}
+b.button::before{content:"[";padding:0 3px 0 2px}
+b.button::after{content:"]";padding:0 2px 0 3px}
+p a>code:hover{color:rgba(0,0,0,.9)}
+#header,#content,#footnotes,#footer{width:100%;margin:0 auto;max-width:62.5em;*zoom:1;position:relative;padding-left:.9375em;padding-right:.9375em}
+#header::before,#header::after,#content::before,#content::after,#footnotes::before,#footnotes::after,#footer::before,#footer::after{content:" ";display:table}
+#header::after,#content::after,#footnotes::after,#footer::after{clear:both}
+#content{margin-top:1.25em}
+#content::before{content:none}
+#header>h1:first-child{color:rgba(0,0,0,.85);margin-top:2.25rem;margin-bottom:0}
+#header>h1:first-child+#toc{margin-top:8px;border-top:1px solid #dddddf}
+#header>h1:only-child,body.toc2 #header>h1:nth-last-child(2){border-bottom:1px solid #dddddf;padding-bottom:8px}
+#header .details{border-bottom:1px solid #dddddf;line-height:1.45;padding-top:.25em;padding-bottom:.25em;padding-left:.25em;color:rgba(0,0,0,.6);display:flex;flex-flow:row wrap}
+#header .details span:first-child{margin-left:-.125em}
+#header .details span.email a{color:rgba(0,0,0,.85)}
+#header .details br{display:none}
+#header .details br+span::before{content:"\00a0\2013\00a0"}
+#header .details br+span.author::before{content:"\00a0\22c5\00a0";color:rgba(0,0,0,.85)}
+#header .details br+span#revremark::before{content:"\00a0|\00a0"}
+#header #revnumber{text-transform:capitalize}
+#header #revnumber::after{content:"\00a0"}
+#content>h1:first-child:not([class]){color:rgba(0,0,0,.85);border-bottom:1px solid #dddddf;padding-bottom:8px;margin-top:0;padding-top:1rem;margin-bottom:1.25rem}
+#toc{border-bottom:1px solid #e7e7e9;padding-bottom:.5em}
+#toc>ul{margin-left:.125em}
+#toc ul.sectlevel0>li>a{font-style:italic}
+#toc ul.sectlevel0 ul.sectlevel1{margin:.5em 0}
+#toc ul{font-family:"Open Sans","DejaVu Sans",sans-serif;list-style-type:none}
+#toc li{line-height:1.3334;margin-top:.3334em}
+#toc a{text-decoration:none}
+#toc a:active{text-decoration:underline}
+#toctitle{color:#7a2518;font-size:1.2em}
+@media screen and (min-width:768px){#toctitle{font-size:1.375em}
+body.toc2{padding-left:15em;padding-right:0}
+#toc.toc2{margin-top:0!important;background:#f8f8f7;position:fixed;width:15em;left:0;top:0;border-right:1px solid #e7e7e9;border-top-width:0!important;border-bottom-width:0!important;z-index:1000;padding:1.25em 1em;height:100%;overflow:auto}
+#toc.toc2 #toctitle{margin-top:0;margin-bottom:.8rem;font-size:1.2em}
+#toc.toc2>ul{font-size:.9em;margin-bottom:0}
+#toc.toc2 ul ul{margin-left:0;padding-left:1em}
+#toc.toc2 ul.sectlevel0 ul.sectlevel1{padding-left:0;margin-top:.5em;margin-bottom:.5em}
+body.toc2.toc-right{padding-left:0;padding-right:15em}
+body.toc2.toc-right #toc.toc2{border-right-width:0;border-left:1px solid #e7e7e9;left:auto;right:0}}
+@media screen and (min-width:1280px){body.toc2{padding-left:20em;padding-right:0}
+#toc.toc2{width:20em}
+#toc.toc2 #toctitle{font-size:1.375em}
+#toc.toc2>ul{font-size:.95em}
+#toc.toc2 ul ul{padding-left:1.25em}
+body.toc2.toc-right{padding-left:0;padding-right:20em}}
+#content #toc{border:1px solid #e0e0dc;margin-bottom:1.25em;padding:1.25em;background:#f8f8f7;border-radius:4px}
+#content #toc>:first-child{margin-top:0}
+#content #toc>:last-child{margin-bottom:0}
+#footer{max-width:none;background:rgba(0,0,0,.8);padding:1.25em}
+#footer-text{color:hsla(0,0%,100%,.8);line-height:1.44}
+#content{margin-bottom:.625em}
+.sect1{padding-bottom:.625em}
+@media screen and (min-width:768px){#content{margin-bottom:1.25em}
+.sect1{padding-bottom:1.25em}}
+.sect1:last-child{padding-bottom:0}
+.sect1+.sect1{border-top:1px solid #e7e7e9}
+#content h1>a.anchor,h2>a.anchor,h3>a.anchor,#toctitle>a.anchor,.sidebarblock>.content>.title>a.anchor,h4>a.anchor,h5>a.anchor,h6>a.anchor{position:absolute;z-index:1001;width:1.5ex;margin-left:-1.5ex;display:block;text-decoration:none!important;visibility:hidden;text-align:center;font-weight:400}
+#content h1>a.anchor::before,h2>a.anchor::before,h3>a.anchor::before,#toctitle>a.anchor::before,.sidebarblock>.content>.title>a.anchor::before,h4>a.anchor::before,h5>a.anchor::before,h6>a.anchor::before{content:"\00A7";font-size:.85em;display:block;padding-top:.1em}
+#content h1:hover>a.anchor,#content h1>a.anchor:hover,h2:hover>a.anchor,h2>a.anchor:hover,h3:hover>a.anchor,#toctitle:hover>a.anchor,.sidebarblock>.content>.title:hover>a.anchor,h3>a.anchor:hover,#toctitle>a.anchor:hover,.sidebarblock>.content>.title>a.anchor:hover,h4:hover>a.anchor,h4>a.anchor:hover,h5:hover>a.anchor,h5>a.anchor:hover,h6:hover>a.anchor,h6>a.anchor:hover{visibility:visible}
+#content h1>a.link,h2>a.link,h3>a.link,#toctitle>a.link,.sidebarblock>.content>.title>a.link,h4>a.link,h5>a.link,h6>a.link{color:#ba3925;text-decoration:none}
+#content h1>a.link:hover,h2>a.link:hover,h3>a.link:hover,#toctitle>a.link:hover,.sidebarblock>.content>.title>a.link:hover,h4>a.link:hover,h5>a.link:hover,h6>a.link:hover{color:#a53221}
+details,.audioblock,.imageblock,.literalblock,.listingblock,.stemblock,.videoblock{margin-bottom:1.25em}
+details{margin-left:1.25rem}
+details>summary{cursor:pointer;display:block;position:relative;line-height:1.6;margin-bottom:.625rem;outline:none;-webkit-tap-highlight-color:transparent}
+details>summary::-webkit-details-marker{display:none}
+details>summary::before{content:"";border:solid transparent;border-left:solid;border-width:.3em 0 .3em .5em;position:absolute;top:.5em;left:-1.25rem;transform:translateX(15%)}
+details[open]>summary::before{border:solid transparent;border-top:solid;border-width:.5em .3em 0;transform:translateY(15%)}
+details>summary::after{content:"";width:1.25rem;height:1em;position:absolute;top:.3em;left:-1.25rem}
+.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{text-rendering:optimizeLegibility;text-align:left;font-family:"Noto Serif","DejaVu Serif",serif;font-size:1rem;font-style:italic}
+table.tableblock.fit-content>caption.title{white-space:nowrap;width:0}
+.paragraph.lead>p,#preamble>.sectionbody>[class=paragraph]:first-of-type p{font-size:1.21875em;line-height:1.6;color:rgba(0,0,0,.85)}
+.admonitionblock>table{border-collapse:separate;border:0;background:none;width:100%}
+.admonitionblock>table td.icon{text-align:center;width:80px}
+.admonitionblock>table td.icon img{max-width:none}
+.admonitionblock>table td.icon .title{font-weight:bold;font-family:"Open Sans","DejaVu Sans",sans-serif;text-transform:uppercase}
+.admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #dddddf;color:rgba(0,0,0,.6);word-wrap:anywhere}
+.admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
+.exampleblock>.content{border:1px solid #e6e6e6;margin-bottom:1.25em;padding:1.25em;background:#fff;border-radius:4px}
+.sidebarblock{border:1px solid #dbdbd6;margin-bottom:1.25em;padding:1.25em;background:#f3f3f2;border-radius:4px}
+.sidebarblock>.content>.title{color:#7a2518;margin-top:0;text-align:center}
+.exampleblock>.content>:first-child,.sidebarblock>.content>:first-child{margin-top:0}
+.exampleblock>.content>:last-child,.exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
+.literalblock pre,.listingblock>.content>pre{border-radius:4px;overflow-x:auto;padding:1em;font-size:.8125em}
+@media screen and (min-width:768px){.literalblock pre,.listingblock>.content>pre{font-size:.90625em}}
+@media screen and (min-width:1280px){.literalblock pre,.listingblock>.content>pre{font-size:1em}}
+.literalblock pre,.listingblock>.content>pre:not(.highlight),.listingblock>.content>pre[class=highlight],.listingblock>.content>pre[class^="highlight "]{background:#f7f7f8}
+.literalblock.output pre{color:#f7f7f8;background:rgba(0,0,0,.9)}
+.listingblock>.content{position:relative}
+.listingblock code[data-lang]::before{display:none;content:attr(data-lang);position:absolute;font-size:.75em;top:.425rem;right:.5rem;line-height:1;text-transform:uppercase;color:inherit;opacity:.5}
+.listingblock:hover code[data-lang]::before{display:block}
+.listingblock.terminal pre .command::before{content:attr(data-prompt);padding-right:.5em;color:inherit;opacity:.5}
+.listingblock.terminal pre .command:not([data-prompt])::before{content:"$"}
+.listingblock pre.highlightjs{padding:0}
+.listingblock pre.highlightjs>code{padding:1em;border-radius:4px}
+.listingblock pre.prettyprint{border-width:0}
+.prettyprint{background:#f7f7f8}
+pre.prettyprint .linenums{line-height:1.45;margin-left:2em}
+pre.prettyprint li{background:none;list-style-type:inherit;padding-left:0}
+pre.prettyprint li code[data-lang]::before{opacity:1}
+pre.prettyprint li:not(:first-child) code[data-lang]::before{display:none}
+table.linenotable{border-collapse:separate;border:0;margin-bottom:0;background:none}
+table.linenotable td[class]{color:inherit;vertical-align:top;padding:0;line-height:inherit;white-space:normal}
+table.linenotable td.code{padding-left:.75em}
+table.linenotable td.linenos,pre.pygments .linenos{border-right:1px solid;opacity:.35;padding-right:.5em;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
+pre.pygments span.linenos{display:inline-block;margin-right:.75em}
+.quoteblock{margin:0 1em 1.25em 1.5em;display:table}
+.quoteblock:not(.excerpt)>.title{margin-left:-1.5em;margin-bottom:.75em}
+.quoteblock blockquote,.quoteblock p{color:rgba(0,0,0,.85);font-size:1.15rem;line-height:1.75;word-spacing:.1em;letter-spacing:0;font-style:italic;text-align:justify}
+.quoteblock blockquote{margin:0;padding:0;border:0}
+.quoteblock blockquote::before{content:"\201c";float:left;font-size:2.75em;font-weight:bold;line-height:.6em;margin-left:-.6em;color:#7a2518;text-shadow:0 1px 2px rgba(0,0,0,.1)}
+.quoteblock blockquote>.paragraph:last-child p{margin-bottom:0}
+.quoteblock .attribution{margin-top:.75em;margin-right:.5ex;text-align:right}
+.verseblock{margin:0 1em 1.25em}
+.verseblock pre{font-family:"Open Sans","DejaVu Sans",sans-serif;font-size:1.15rem;color:rgba(0,0,0,.85);font-weight:300;text-rendering:optimizeLegibility}
+.verseblock pre strong{font-weight:400}
+.verseblock .attribution{margin-top:1.25rem;margin-left:.5ex}
+.quoteblock .attribution,.verseblock .attribution{font-size:.9375em;line-height:1.45;font-style:italic}
+.quoteblock .attribution br,.verseblock .attribution br{display:none}
+.quoteblock .attribution cite,.verseblock .attribution cite{display:block;letter-spacing:-.025em;color:rgba(0,0,0,.6)}
+.quoteblock.abstract blockquote::before,.quoteblock.excerpt blockquote::before,.quoteblock .quoteblock blockquote::before{display:none}
+.quoteblock.abstract blockquote,.quoteblock.abstract p,.quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{line-height:1.6;word-spacing:0}
+.quoteblock.abstract{margin:0 1em 1.25em;display:block}
+.quoteblock.abstract>.title{margin:0 0 .375em;font-size:1.15em;text-align:center}
+.quoteblock.excerpt>blockquote,.quoteblock .quoteblock{padding:0 0 .25em 1em;border-left:.25em solid #dddddf}
+.quoteblock.excerpt,.quoteblock .quoteblock{margin-left:0}
+.quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{color:inherit;font-size:1.0625rem}
+.quoteblock.excerpt .attribution,.quoteblock .quoteblock .attribution{color:inherit;font-size:.85rem;text-align:left;margin-right:0}
+p.tableblock:last-child{margin-bottom:0}
+td.tableblock>.content{margin-bottom:1.25em;word-wrap:anywhere}
+td.tableblock>.content>:last-child{margin-bottom:-1.25em}
+table.tableblock,th.tableblock,td.tableblock{border:0 solid #dedede}
+table.grid-all>*>tr>*{border-width:1px}
+table.grid-cols>*>tr>*{border-width:0 1px}
+table.grid-rows>*>tr>*{border-width:1px 0}
+table.frame-all{border-width:1px}
+table.frame-ends{border-width:1px 0}
+table.frame-sides{border-width:0 1px}
+table.frame-none>colgroup+*>:first-child>*,table.frame-sides>colgroup+*>:first-child>*{border-top-width:0}
+table.frame-none>:last-child>:last-child>*,table.frame-sides>:last-child>:last-child>*{border-bottom-width:0}
+table.frame-none>*>tr>:first-child,table.frame-ends>*>tr>:first-child{border-left-width:0}
+table.frame-none>*>tr>:last-child,table.frame-ends>*>tr>:last-child{border-right-width:0}
+table.stripes-all>*>tr,table.stripes-odd>*>tr:nth-of-type(odd),table.stripes-even>*>tr:nth-of-type(even),table.stripes-hover>*>tr:hover{background:#f8f8f7}
+th.halign-left,td.halign-left{text-align:left}
+th.halign-right,td.halign-right{text-align:right}
+th.halign-center,td.halign-center{text-align:center}
+th.valign-top,td.valign-top{vertical-align:top}
+th.valign-bottom,td.valign-bottom{vertical-align:bottom}
+th.valign-middle,td.valign-middle{vertical-align:middle}
+table thead th,table tfoot th{font-weight:bold}
+tbody tr th{background:#f7f8f7}
+tbody tr th,tbody tr th p,tfoot tr th,tfoot tr th p{color:rgba(0,0,0,.8);font-weight:bold}
+p.tableblock>code:only-child{background:none;padding:0}
+p.tableblock{font-size:1em}
+ol{margin-left:1.75em}
+ul li ol{margin-left:1.5em}
+dl dd{margin-left:1.125em}
+dl dd:last-child,dl dd:last-child>:last-child{margin-bottom:0}
+li p,ul dd,ol dd,.olist .olist,.ulist .ulist,.ulist .olist,.olist .ulist{margin-bottom:.625em}
+ul.checklist,ul.none,ol.none,ul.no-bullet,ol.no-bullet,ol.unnumbered,ul.unstyled,ol.unstyled{list-style-type:none}
+ul.no-bullet,ol.no-bullet,ol.unnumbered{margin-left:.625em}
+ul.unstyled,ol.unstyled{margin-left:0}
+li>p:empty:only-child::before{content:"";display:inline-block}
+ul.checklist>li>p:first-child{margin-left:-1em}
+ul.checklist>li>p:first-child>.fa-square-o:first-child,ul.checklist>li>p:first-child>.fa-check-square-o:first-child{width:1.25em;font-size:.8em;position:relative;bottom:.125em}
+ul.checklist>li>p:first-child>input[type=checkbox]:first-child{margin-right:.25em}
+ul.inline{display:flex;flex-flow:row wrap;list-style:none;margin:0 0 .625em -1.25em}
+ul.inline>li{margin-left:1.25em}
+.unstyled dl dt{font-weight:400;font-style:normal}
+ol.arabic{list-style-type:decimal}
+ol.decimal{list-style-type:decimal-leading-zero}
+ol.loweralpha{list-style-type:lower-alpha}
+ol.upperalpha{list-style-type:upper-alpha}
+ol.lowerroman{list-style-type:lower-roman}
+ol.upperroman{list-style-type:upper-roman}
+ol.lowergreek{list-style-type:lower-greek}
+.hdlist>table,.colist>table{border:0;background:none}
+.hdlist>table>tbody>tr,.colist>table>tbody>tr{background:none}
+td.hdlist1,td.hdlist2{vertical-align:top;padding:0 .625em}
+td.hdlist1{font-weight:bold;padding-bottom:1.25em}
+td.hdlist2{word-wrap:anywhere}
+.literalblock+.colist,.listingblock+.colist{margin-top:-.5em}
+.colist td:not([class]):first-child{padding:.4em .75em 0;line-height:1;vertical-align:top}
+.colist td:not([class]):first-child img{max-width:none}
+.colist td:not([class]):last-child{padding:.25em 0}
+.thumb,.th{line-height:0;display:inline-block;border:4px solid #fff;box-shadow:0 0 0 1px #ddd}
+.imageblock.left{margin:.25em .625em 1.25em 0}
+.imageblock.right{margin:.25em 0 1.25em .625em}
+.imageblock>.title{margin-bottom:0}
+.imageblock.thumb,.imageblock.th{border-width:6px}
+.imageblock.thumb>.title,.imageblock.th>.title{padding:0 .125em}
+.image.left,.image.right{margin-top:.25em;margin-bottom:.25em;display:inline-block;line-height:0}
+.image.left{margin-right:.625em}
+.image.right{margin-left:.625em}
+a.image{text-decoration:none;display:inline-block}
+a.image object{pointer-events:none}
+sup.footnote,sup.footnoteref{font-size:.875em;position:static;vertical-align:super}
+sup.footnote a,sup.footnoteref a{text-decoration:none}
+sup.footnote a:active,sup.footnoteref a:active{text-decoration:underline}
+#footnotes{padding-top:.75em;padding-bottom:.75em;margin-bottom:.625em}
+#footnotes hr{width:20%;min-width:6.25em;margin:-.25em 0 .75em;border-width:1px 0 0}
+#footnotes .footnote{padding:0 .375em 0 .225em;line-height:1.3334;font-size:.875em;margin-left:1.2em;margin-bottom:.2em}
+#footnotes .footnote a:first-of-type{font-weight:bold;text-decoration:none;margin-left:-1.05em}
+#footnotes .footnote:last-of-type{margin-bottom:0}
+#content #footnotes{margin-top:-.625em;margin-bottom:0;padding:.75em 0}
+div.unbreakable{page-break-inside:avoid}
+.big{font-size:larger}
+.small{font-size:smaller}
+.underline{text-decoration:underline}
+.overline{text-decoration:overline}
+.line-through{text-decoration:line-through}
+.aqua{color:#00bfbf}
+.aqua-background{background:#00fafa}
+.black{color:#000}
+.black-background{background:#000}
+.blue{color:#0000bf}
+.blue-background{background:#0000fa}
+.fuchsia{color:#bf00bf}
+.fuchsia-background{background:#fa00fa}
+.gray{color:#606060}
+.gray-background{background:#7d7d7d}
+.green{color:#006000}
+.green-background{background:#007d00}
+.lime{color:#00bf00}
+.lime-background{background:#00fa00}
+.maroon{color:#600000}
+.maroon-background{background:#7d0000}
+.navy{color:#000060}
+.navy-background{background:#00007d}
+.olive{color:#606000}
+.olive-background{background:#7d7d00}
+.purple{color:#600060}
+.purple-background{background:#7d007d}
+.red{color:#bf0000}
+.red-background{background:#fa0000}
+.silver{color:#909090}
+.silver-background{background:#bcbcbc}
+.teal{color:#006060}
+.teal-background{background:#007d7d}
+.white{color:#bfbfbf}
+.white-background{background:#fafafa}
+.yellow{color:#bfbf00}
+.yellow-background{background:#fafa00}
+span.icon>.fa{cursor:default}
+a span.icon>.fa{cursor:inherit}
+.admonitionblock td.icon [class^="fa icon-"]{font-size:2.5em;text-shadow:1px 1px 2px rgba(0,0,0,.5);cursor:default}
+.admonitionblock td.icon .icon-note::before{content:"\f05a";color:#19407c}
+.admonitionblock td.icon .icon-tip::before{content:"\f0eb";text-shadow:1px 1px 2px rgba(155,155,0,.8);color:#111}
+.admonitionblock td.icon .icon-warning::before{content:"\f071";color:#bf6900}
+.admonitionblock td.icon .icon-caution::before{content:"\f06d";color:#bf3400}
+.admonitionblock td.icon .icon-important::before{content:"\f06a";color:#bf0000}
+.conum[data-value]{display:inline-block;color:#fff!important;background:rgba(0,0,0,.8);border-radius:50%;text-align:center;font-size:.75em;width:1.67em;height:1.67em;line-height:1.67em;font-family:"Open Sans","DejaVu Sans",sans-serif;font-style:normal;font-weight:bold}
+.conum[data-value] *{color:#fff!important}
+.conum[data-value]+b{display:none}
+.conum[data-value]::after{content:attr(data-value)}
+pre .conum[data-value]{position:relative;top:-.125em}
+b.conum *{color:inherit!important}
+.conum:not([data-value]):empty{display:none}
+dt,th.tableblock,td.content,div.footnote{text-rendering:optimizeLegibility}
+h1,h2,p,td.content,span.alt,summary{letter-spacing:-.01em}
+p strong,td.content strong,div.footnote strong{letter-spacing:-.005em}
+p,blockquote,dt,td.content,td.hdlist1,span.alt,summary{font-size:1.0625rem}
+p{margin-bottom:1.25rem}
+.sidebarblock p,.sidebarblock dt,.sidebarblock td.content,p.tableblock{font-size:1em}
+.exampleblock>.content{background:#fffef7;border-color:#e0e0dc;box-shadow:0 1px 4px #e0e0dc}
+.print-only{display:none!important}
+@page{margin:1.25cm .75cm}
+@media print{*{box-shadow:none!important;text-shadow:none!important}
+html{font-size:80%}
+a{color:inherit!important;text-decoration:underline!important}
+a.bare,a[href^="#"],a[href^="mailto:"]{text-decoration:none!important}
+a[href^="http:"]:not(.bare)::after,a[href^="https:"]:not(.bare)::after{content:"(" attr(href) ")";display:inline-block;font-size:.875em;padding-left:.25em}
+abbr[title]{border-bottom:1px dotted}
+abbr[title]::after{content:" (" attr(title) ")"}
+pre,blockquote,tr,img,object,svg{page-break-inside:avoid}
+thead{display:table-header-group}
+svg{max-width:100%}
+p,blockquote,dt,td.content{font-size:1em;orphans:3;widows:3}
+h2,h3,#toctitle,.sidebarblock>.content>.title{page-break-after:avoid}
+#header,#content,#footnotes,#footer{max-width:none}
+#toc,.sidebarblock,.exampleblock>.content{background:none!important}
+#toc{border-bottom:1px solid #dddddf!important;padding-bottom:0!important}
+body.book #header{text-align:center}
+body.book #header>h1:first-child{border:0!important;margin:2.5em 0 1em}
+body.book #header .details{border:0!important;display:block;padding:0!important}
+body.book #header .details span:first-child{margin-left:0!important}
+body.book #header .details br{display:block}
+body.book #header .details br+span::before{content:none!important}
+body.book #toc{border:0!important;text-align:left!important;padding:0!important;margin:0!important}
+body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-break-before:always}
+.listingblock code[data-lang]::before{display:block}
+#footer{padding:0 .9375em}
+.hide-on-print{display:none!important}
+.print-only{display:block!important}
+.hide-for-print{display:none!important}
+.show-for-print{display:inherit!important}}
+@media amzn-kf8,print{#header>h1:first-child{margin-top:1.25rem}
+.sect1{padding:0!important}
+.sect1+.sect1{border:0}
+#footer{background:none}
+#footer-text{color:rgba(0,0,0,.6);font-size:.9em}}
+@media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
+</style>
+</head>
+<body class="article toc2 toc-left">
+<div id="header">
+<h1>ELP 305: Design and Systems Lab</h1>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_our_tribe">1. Week 2 Report: Requirements + Specifications</a>
+<ul class="sectlevel2">
+<li><a href="#_our_tribe_2">1.1. Our Tribe</a></li>
+<li><a href="#_team_members_with_if_less_than_1">1.2. Team members with IF less than 1</a></li>
+</ul>
+</li>
+<li><a href="#_body">2. Body</a>
+<ul class="sectlevel2">
+<li><a href="#_table_of_contents">2.1. Table of Contents</a></li>
+<li><a href="#_list_of_tables">2.2. List of Tables</a></li>
+<li><a href="#_list_of_figures">2.3. List of Figures</a></li>
+<li><a href="#_list_of_abbreviations">2.4. List of Abbreviations</a></li>
+<li><a href="#_index">2.5. Index ? at end with pg no. ?</a></li>
+<li><a href="#_glossary">2.6. Glossary ? at end with pg no. ?</a></li>
+<li><a href="#_mindmap">2.7. Mind Map</a></li>
+<li><a href="#_project_mang">2.8. Project Management</a></li>
+<li><a href="#_motivation">2.9. Motivation  ? edit acc to ques given</a></li>
+<li><a href="#_machine_mech">2.10. <span class="underline"><strong>Mechanism of the Machine</strong></span></a></li>
+<li><a href="#_requirements">2.11. Requirements for the Idea</a></li>
+</ul>
+</li>
+<li><a href="#_references_to_be_updated">3. References (to be updated)</a></li>
+<li><a href="#_appendix_to_be_changed"> A: Appendix (to be changed)</a>
+<ul class="sectlevel2">
+<li><a href="#_document_statistics">A.1. Document Statistics</a></li>
+<li><a href="#_readability_indices_explain_a_bit_about_ranges">A.2. Readability Indices ? explain a bit about ranges</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div class="sidebarblock text-center">
+<div class="content">
+<div class="title">Week 2 Report</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="https://github.com/soulhunter03/ELP305-TribeD-Resources/raw/1baba6a33de5fbc93a292d9863ce8c8760a16c83/assets/logo.png" alt="60" width="60">
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Submitted by: Tribe D (Demantors)</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Submitted to: Prof. Subrat Kar</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_our_tribe">1. Week 2 Report: Requirements + Specifications</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_our_tribe_2">1.1. Our Tribe</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 4.5454%;">
+<col style="width: 18.1818%;">
+<col style="width: 18.1818%;">
+<col style="width: 31.8181%;">
+<col style="width: 22.7272%;">
+<col style="width: 4.5457%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SNo.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Roll No.</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Position</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Email</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IF</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.linkedin.com/in/ayush-dudawat-6b7a9b222/">Ayush Dudawat</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021EE10694</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Tribe Coordinator</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:ee1210694@ee.iitd.ac.in">ee1210694@ee.iitd.ac.in</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.linkedin.com/in/ayush-sharma-b01346224/">Ayush Sharma</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021MT10244</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Tribe Coordinator</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:mt1210244@maths.iitd.ac.in">mt1210244@maths.iitd.ac.in</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.linkedin.com/in/nitesh-singh-a79a17223/">Nitesh Singh</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021MT10250</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Documentation Activity Coordinator</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:mt1210250@maths.iitd.ac.in">mt1210250@maths.iitd.ac.in</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.linkedin.com/in/vansh-jain-36569b225/">Vansh Jain</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021MT10234</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Research and Business Development Coordinator</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:mt1210234@maths.iitd.ac.in">mt1210234@maths.iitd.ac.in</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.linkedin.com/in/sharesth-thakan-249504250/">Sharesth Thakan</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021EE30730</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Fabrication and Testing Coordinator</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:ee3210730@ee.iitd.ac.in">ee3210730@ee.iitd.ac.in</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.linkedin.com/in/abhas-porov-b69077248/">Abhas Porov</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021EE10781</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Electrical Design and Simulation Coordinator</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:ee1210781@ee.iitd.ac.in">ee1210781@ee.iitd.ac.in</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.linkedin.com/in/tanisha-jangra-5203132ab">Tanisha</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021MT10927</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Research Team Member</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:mt1210927@maths.iitd.ac.in">mt1210927@maths.iitd.ac.in</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.linkedin.com/in/shreyansh-jain-6abb9124b/">Shreyansh Jain</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021MT10930</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Research Team Member</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:mt1210930@maths.iitd.ac.in">mt1210930@maths.iitd.ac.in</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">9</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.linkedin.com/in/rishika-arya-266082279/">Rishika Arya</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021MT10926</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Research Team Member</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:mt1210926@maths.iitd.ac.in">mt1210926@maths.iitd.ac.in</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.linkedin.com/in/sarmistha-subhadarshini-507172243">Sarmistha Subhadarshini</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021MT10261</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Research Team Member</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:mt1210261@maths.iitd.ac.in">mt1210261@maths.iitd.ac.in</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.linkedin.com/in/anshika-prajapati-9b855022b/">Anshika Prajapati</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021MT60961</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Research Team Member</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:mt6210961@maths.iitd.ac.in">mt6210961@maths.iitd.ac.in</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.linkedin.com/in/rupam-kumawat-b27949253/">Rupam Kumawat</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021MT60267</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Research Team Member</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:mt6210267@maths.iitd.ac.in">mt6210267@maths.iitd.ac.in</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">13</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.linkedin.com/in/sakshimagarkar/">Sakshi Magarkar</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021MT60965</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Research Team Member</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:mt6210965@maths.iitd.ac.in">mt6210965@maths.iitd.ac.in</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.linkedin.com/in/aniket-pandey-b5b9a1263/">Aniket Pandey</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021MT60266</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Research Team Member</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:mt6210266@maths.iitd.ac.in">mt6210266@maths.iitd.ac.in</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">15</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.linkedin.com/in/nancy-kansal-1b5384234/">Nancy Kansal</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021MT10905</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Research Team Member</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:mt1210905@maths.iitd.ac.in">mt1210905@maths.iitd.ac.in</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">16</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.linkedin.com/in/divyansh-agarwal-22989525b">Diyvansh Agarwal</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021EE10035</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Research Team Member</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:ee1210035@ee.iitd.ac.in">ee1210035@ee.iitd.ac.in</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">17</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.linkedin.com/in/mukund-aggarwal">Mukund Aggarwal</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021MT60939</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Research Team Member</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:mt6210939@maths.iitd.ac.in">mt6210939@maths.iitd.ac.in</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">18</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.linkedin.com/in/tanishk-singh-80ba09224/">Tanishk Singh</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021EE10167</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Research Team Member</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:ee1210167@ee.iitd.ac.in">ee1210167@ee.iitd.ac.in</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">19</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.linkedin.com/in/akshansh-rajora-5794b5228">Akshansh Rajora</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021MT10933</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Research Team Member</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:mt1210933@maths.iitd.ac.in">mt1210933@maths.iitd.ac.in</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">20</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.linkedin.com/in/ayush-madhur-40a575236/">Ayush Madhur</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021EE10161</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Research Team Member</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:ee1210161@ee.iitd.ac.in">ee1210161@ee.iitd.ac.in</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">21</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.linkedin.com/in/keshvi-tomer-4b0331236/">Keshvi Tomar</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021EE10682</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Research Team Member</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:ee1210682@ee.iitd.ac.in">ee1210682@ee.iitd.ac.in</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">22</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.linkedin.com/in/kanak-kumar-538ab2247/">Kanak Kumar Singh</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021EE10163</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Research Team Member</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:ee1210163@ee.iitd.ac.in">ee1210163@ee.iitd.ac.in</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">23</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.linkedin.com/in/aravind-udupa-266a52223/">Aravind Udupa</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021MT60940</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Research Team Member</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:mt6210940@maths.iitd.ac.in">mt6210940@maths.iitd.ac.in</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">24</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.linkedin.com/in/arpit-rathore-56b535223/">Arpit Rathore</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021MT10920</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Research Team Member</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:mt1210920@maths.iitd.ac.in">mt1210920@maths.iitd.ac.in</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">25</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.linkedin.com/in/vandit-srivastava">Vandit Srivastava</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021EE10640</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Electrical Team Member</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:ee1210640@ee.iitd.ac.in">ee1210640@ee.iitd.ac.in</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">26</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.linkedin.com/in/ankita-meena-2b919a236/">Ankita Meena</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021EE10173</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Electrical Team Member</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:ee1210173@ee.iitd.ac.in">ee1210173@ee.iitd.ac.in</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">27</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.linkedin.com/in/aditya-gupta-178638228">Aditya Gupta</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021EE30713</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Electrical Team Member</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:ee3210713@ee.iitd.ac.in">ee3210713@ee.iitd.ac.in</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.linkedin.com/in/aditya-bhalotia-756654253">Aditya Bhalotia</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021EE30698</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Electrical Team Member</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:ee3210698@ee.iitd.ac.in">ee3210698@ee.iitd.ac.in</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">29</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.linkedin.com/in/ayush-shrivastava-264398248">Ayush Shrivastava</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021EE10632</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Electrical Team Member</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:ee1210632@ee.iitd.ac.in">ee1210632@ee.iitd.ac.in</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.linkedin.com/in/harshit-nagar-178a33253">Harshit Nagar</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021EE10155</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Electrical Team Member</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:ee1210155@ee.iitd.ac.in">ee1210155@ee.iitd.ac.in</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">31</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.linkedin.com/in/shreyansh-jaiswal-4b79b2228">Shreyansh Jaiswal</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021EE10154</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Electrical Team Member</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:ee1210154@ee.iitd.ac.in">ee1210154@ee.iitd.ac.in</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">32</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.linkedin.com/in/akshar-tripathi-9a267425b/">Akshar Tripathi</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021EE10980</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Electrical Team Member</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:ee1210980@ee.iitd.ac.in">ee1210980@ee.iitd.ac.in</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">33</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.linkedin.com/in/muskan-yadav-2b0651b4">Muskan Yadav</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021EE10686</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Electrical Team Member</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:ee1210686@ee.iitd.ac.in">ee1210686@ee.iitd.ac.in</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">34</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.linkedin.com/in/pavan-bharadwaj-07025a281">Pavan Bharadwaj</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021EE10630</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Electrical Team Member</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:ee1210630@ee.iitd.ac.in">ee1210630@ee.iitd.ac.in</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">35</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.linkedin.com/in/mokshavi-reddy-93b41a255">Aluka Mokshavi</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021MT10909</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Electrical Team Member</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:mt1210909@maths.iitd.ac.in">mt1210909@maths.iitd.ac.in</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">36</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.linkedin.com/in/sathvika-palle-28a13025a">Palle Sathvika</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021MT10928</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Electrical Team Member</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:mt1210928@maths.iitd.ac.in">mt1210928@maths.iitd.ac.in</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">37</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.linkedin.com/in/shubham-anand-055423252">Shubham Anand</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021EE10674</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Electrical Team Member</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:ee1210674@ee.iitd.ac.in">ee1210674@ee.iitd.ac.in</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">38</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">link:Kumar Sanu Singh</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021EE31213</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Electrical Team Member</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:ee3211213@ee.iitd.ac.in">ee3211213@ee.iitd.ac.in</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">39</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.linkedin.com/in/rahul-kumar-9a021a236/">Rahul Kumar</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021MT10893</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Fabrication Team Member</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:mt1210893@maths.iitd.ac.in">mt1210893@maths.iitd.ac.in</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">40</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.linkedin.com/in/manav-garg-0a240a175">Manav Garg</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021EE30017</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Fabrication Team Member</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:ee3210017@ee.iitd.ac.in">ee3210017@ee.iitd.ac.in</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">41</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="www.linkedin.com/in/kushagrgoyal">Kushagr Goyal</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021EE10634</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Fabrication Team Member</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:ee1210634@ee.iitd.ac.in">ee1210634@ee.iitd.ac.in</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">42</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.linkedin.com/in/champak-swargiary-a87b04230/">Champak Swargiary</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021MT10263</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Fabrication Team Member</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:mt1210263@maths.iitd.ac.in">mt1210263@maths.iitd.ac.in</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">43</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.linkedin.com/in/ajay-ramavath-/">Ajay Naik</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2020MT60888</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Fabrication Team Member</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:mt6210888@maths.iitd.ac.in">mt6210888@maths.iitd.ac.in</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">44</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.linkedin.com/in/vadlapudi-manoj-5a764825a">Vadlapudi Manoj</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021MT10245</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Documentation Team Member</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:mt1210245@maths.iitd.ac.in">mt1210245@maths.iitd.ac.in</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">45</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.linkedin.com/in/bhavik-garg-4b214422a">Bhavik Garg</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021EE10657</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Documentation Team Member</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:ee1210657@ee.iitd.ac.in">ee1210657@ee.iitd.ac.in</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">46</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.linkedin.com/in/ishu-ishu-9241242ab/">Ishu</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021EE30735</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Documentation Team Member</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:ee3210735@ee.iitd.ac.in">ee3210735@ee.iitd.ac.in</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">47</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.linkedin.com/in/sashidhar-alvakonda-32b9011a5">Alvakonda Sashidhar</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021EE30744</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Documentation Team Member</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:ee3210744@ee.iitd.ac.in">ee3210744@ee.iitd.ac.in</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">48</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.linkedin.com/in/harshdeep-shakya-507304236/">Harshdeep Shakya</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021EE30745</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Documentation Team Member</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:ee3210745@ee.iitd.ac.in">ee3210745@ee.iitd.ac.in</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">49</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.linkedin.com/in/abhinava-a-mohanty-30a3a6232">Abhinava Anwesha Mohanty</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021EE10136</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Documentation Team Member</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:ee1210136@ee.iitd.ac.in">ee1210136@ee.iitd.ac.in</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">50</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.linkedin.com/in/atishay-aggarwal-066414226">Atishay Aggarwal</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021MT60941</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Documentation Team Member</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:mt6210941@maths.iitd.ac.in">mt6210941@maths.iitd.ac.in</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">51</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.linkedin.com/in/srinath-k-s-875834222/">Srinath K S</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021MT10912</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Documentation Team Member</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:mt1210912@maths.iitd.ac.in">mt1210912@maths.iitd.ac.in</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">52</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.linkedin.com/in/kshitij-kumar-gautam/">Kshitij K Gautam</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021MT60269</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Documentation Team Member</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:mt6210269@maths.iitd.ac.in">mt6210269@maths.iitd.ac.in</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">53</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.linkedin.com/in/chandan-kumar-774813224">Chandan Kumar</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021MT60268</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Documentation Team Member</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:mt6210268@maths.iitd.ac.in">mt6210268@maths.iitd.ac.in</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">54</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.linkedin.com/in/naunidh-singh-0b256a22b/">Naunidh Singh</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021MT60956</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Documentation Team Member</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:mt6210956@maths.iitd.ac.in">mt6210956@maths.iitd.ac.in</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">55</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.linkedin.com/in/vipul-yadav-6142a6287">Vipul</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021EE30731</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Documentation Team Member</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:ee3210731@ee.iitd.ac.in">ee3210731@ee.iitd.ac.in</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">56</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.linkedin.com/in/amit-singh-221888236/">Amit Singh</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021MT10921</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Documentation Team Member</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:mt1210921@maths.iitd.ac.in">mt1210921@maths.iitd.ac.in</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">57</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.linkedin.com/in/sumanth-mandala-868a1a2aa/">Sumanth Mandala</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021EE10153</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Documentation Team Member</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:ee1210153@ee.iitd.ac.in">ee1210153@ee.iitd.ac.in</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">58</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.linkedin.com/in/prabhat-babu-490096282">Prabhat Babu</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021MT10255</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Documentation Team Member</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:mt1210255@maths.iitd.ac.in">mt1210255@maths.iitd.ac.in</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">59</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.linkedin.com/in/aryan-sharma-326657230/">Aryan Sharma</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021EE10141</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Fabrication Team Member</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:ee1210141@ee.iitd.ac.in">ee1210141@ee.iitd.ac.in</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_team_members_with_if_less_than_1">1.2. Team members with IF less than 1</h3>
+
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_body">2. Body</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_table_of_contents">2.1. Table of Contents</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#_list_of_tables">1. List of Tables</a></p>
+</li>
+<li>
+<p><a href="#_list_of_figures">2. List of Figures</a></p>
+</li>
+<li>
+<p><a href="#_list_of_abbreviations">3. List of Abbreviations</a></p>
+</li>
+<li>
+<p><a href="#_index">4. Index</a></p>
+</li>
+<li>
+<p><a href="#_glossary">5. Glossary</a></p>
+</li>
+<li>
+<p><a href="#_mindmap">6. Mind Map</a></p>
+</li>
+<li>
+<p><a href="#_project_mang">7. Project Management</a></p>
+</li>
+<li>
+<p><a href="#_abstract">8. Abstract</a></p>
+</li>
+<li>
+<p><a href="#_motivation">9. Motivation</a></p>
+</li>
+<li>
+<p><a href="#_machine_mech">10. Mechanism of the Machine</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#_removal">10.1. Removal of Dust using Air</a></p>
+</li>
+<li>
+<p><a href="#_soap_and_water">10.2. Soap + Water Mechanism</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#_stains">10.2.1. Stains</a></p>
+</li>
+<li>
+<p><a href="#_solvents">10.2.2. Solvents</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="#_scrubbing">10.3. Scrubbing</a></p>
+</li>
+<li>
+<p><a href="#_water_mech">10.4. Water Mechanism</a></p>
+</li>
+<li>
+<p><a href="#_drying">10.5. Drying</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="#_requirements">11. Requirements for the Idea</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#_input_specs">11.1. Input Specifications</a></p>
+</li>
+<li>
+<p><a href="#_output_specs">11.2. Output Specifications</a></p>
+</li>
+<li>
+<p><a href="#_power_reqs">11.3. Power Requirements</a></p>
+</li>
+<li>
+<p><a href="#_logi_reqs">11.4. Logistical Requirements</a></p>
+</li>
+<li>
+<p><a href="#_env_reqs">11.5. Environmental Requirements</a></p>
+</li>
+<li>
+<p><a href="#_site_reqs">11.6. Site Requirements</a></p>
+</li>
+<li>
+<p><a href="#_time_reqs">11.7. Time Requirements</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#_design_time">11.7.1. Design Time Requirements</a></p>
+</li>
+<li>
+<p><a href="#_time_to_market_reqs">11.7.2. Time to Market Requirements</a></p>
+</li>
+<li>
+<p><a href="#_lifetime_reqs">11.7.3. Lifetime Requirements</a></p>
+</li>
+<li>
+<p><a href="#_end_of_life_reqs">11.7.4. End of Life Requirements</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="#_other_reqs">11.8. Other Non-Functional Requirements</a></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_list_of_tables">2.2. List of Tables</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="#_our_tribe">Our Tribe</a></p>
+</li>
+<li>
+<p><a href="#_abbreviations">Abbreviations Table</a></p>
+</li>
+<li>
+<p><a href="#_doc_stats">Document Statistics</a></p>
+</li>
+<li>
+<p><a href="#_readability_stats">Readability Statistics</a></p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_list_of_figures">2.3. List of Figures</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="#_fig1_isometric">Isometric view Figure 1</a></p>
+</li>
+<li>
+<p><a href="#_fig2_isometric">Isometric view Figure 2</a></p>
+</li>
+<li>
+<p><a href="#_outline_mindmap">Outline Mind Map</a></p>
+</li>
+<li>
+<p><a href="#_requirements_mind_map">Mind Map for Requirements</a></p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_list_of_abbreviations">2.4. List of Abbreviations</h3>
+<table id="_abbreviations" class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. Some Abbreviations</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Abbreviation</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Stands for</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IF</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Involvement Factor</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ID</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Identification</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CPCB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Central Pollution Control Board</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mg</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">milligram</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AC</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Alternating Current</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Decibels</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kg</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kilograms</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ABS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Acrylonitrile Butadiene Styrene</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_index">2.5. Index ? at end with pg no. ?</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_glossary">2.6. Glossary ? at end with pg no. ?</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_mindmap">2.7. Mind Map</h3>
+<div id="_outline_mindmap" class="imageblock">
+<div class="content">
+<img src="https://github.com/soulhunter03/ELP305-TribeD-Resources/raw/1baba6a33de5fbc93a292d9863ce8c8760a16c83/assets/outline_mindmap.jpg" alt="outline mindmap">
+</div>
+<div class="title">Figure 1. Outline Mind Map</div>
+</div>
+<div id="_requirements_mind_map" class="imageblock">
+<div class="content">
+<img src="https://github.com/soulhunter03/ELP305-TribeD-Resources/raw/1baba6a33de5fbc93a292d9863ce8c8760a16c83/assets/requirements_mindmap.jpg" alt="requirements mindmap">
+</div>
+<div class="title">Figure 2. Requirements Mind Map</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_project_mang">2.8. Project Management</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://owncloud.iitd.ac.in/nextcloud/index.php/s/R7QxnbaZQiDwPCw">Network Chart</a></p>
+</li>
+<li>
+<p><a href="https://owncloud.iitd.ac.in/nextcloud/index.php/s/Kromy3WjxSmz3T3">WBS</a></p>
+</li>
+<li>
+<p><a href="https://owncloud.iitd.ac.in/nextcloud/index.php/s/z3wfo9jcZTJGC4w">Gantt Chart</a></p>
+</li>
+<li>
+<p><a href="https://owncloud.iitd.ac.in/nextcloud/index.php/s/BCYFgMTTXa2y3kQ">Resource Breakdown</a></p>
+</li>
+</ul>
+</div>
+<div id="_abstract" class="quoteblock abstract">
+<div class="title"><strong>Abstract</strong></div>
+<blockquote>
+This project revolves around developing a user-centric washing machine, which involves a comprehensive analysis of the features an average user looks for. Through extensive research, we will identify key elements that resonate with the needs and preferences of the general population when searching for a washing machine.<br>
+Our initial design focuses on building a basic model, which in further iterations can incorporate more advanced features as a result of extensive surveys and research done across the course of the project to satisfy the contemporary users' needs.
+</blockquote>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_motivation">2.9. Motivation  ? edit acc to ques given</h3>
+<div class="paragraph">
+<p>Our motivation for developing this innovative washing machine stems from a desire to redefine the conventional norms in the industry. We aim to go beyond the traditional boundaries and create a product that caters to the diverse needs of the broad market. Our product will heavily rely on user feedback at each stage of the design, making it user-friendly to ensure that our product becomes very accessible. This model is committed to going above and beyond the ordinary, surpassing user expectations, and setting new benchmarks in washing machine technology. We believe in creating a product that not only fulfills practical needs but also enhances the overall user experience, elevating the standard for what a washing machine can achieve.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_machine_mech">2.10. <span class="underline"><strong>Mechanism of the Machine</strong></span></h3>
+<div class="sect3">
+<h4 id="_removal">2.10.1. <strong>Removal of Dust using Air</strong></h4>
+<div class="paragraph">
+<p>To secure the cloth in place and prevent it from being carried away by the wind, lay it flat and affix it to the surface. Utilize an air blower by directing the airflow over the cloth, with the attached blower expelling air from the top onto the fabric. For smaller pieces of fabric, a 500W mini blower, priced at Rs 500, is an effective solution. Alternatively, a manual approach involves installing a high-speed fan within a pipe for a similar effect.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_soap_and_water">2.10.2. Soap + Water Mechanism</h4>
+<div id="_fig1_isometric" class="imageblock">
+<div class="content">
+<img src="https://github.com/soulhunter03/ELP305-TribeD-Resources/raw/1baba6a33de5fbc93a292d9863ce8c8760a16c83/assets/sprinkler_fig1.jpg" alt="sprinkler fig1" width="50%">
+</div>
+<div class="title">Figure 3. Isometric view of Sprinkler</div>
+</div>
+<div id="_fig2_isometric" class="imageblock">
+<div class="content">
+<img src="https://github.com/soulhunter03/ELP305-TribeD-Resources/raw/1baba6a33de5fbc93a292d9863ce8c8760a16c83/assets/sprinkler_fig2.jpg" alt="sprinkler fig2" width="50%">
+</div>
+<div class="title">Figure 4. Isometric view of Sprinkler</div>
+</div>
+<div class="paragraph">
+<p>The fundamental concept behind this method is to ensure comprehensive cleaning by spreading the soap solution evenly on both sides of the fabric. To execute this, a soap solution is meticulously prepared above the targeted cloth. This solution with a predetermined ratio of soap to water facilitates effective cleansing. Employing a specialized nozzle mechanism, the soap solution is methodically sprinkled onto the fabric evenly in both directions making it more effective in removing dirt, stains. The end result comes out to be a thorough and uniform cleaning mechanism.</p>
+</div>
+<div class="sect4">
+<h5 id="_stains"><strong>Stains</strong></h5>
+<div class="paragraph">
+<p>In our research on fabric stains encountered during the manufacturing process, we identified common culprits such as oil-based stains, dye, and rust stains. For tackling oil-based stains like grease and wax, we recommend using petroleum-based cleaning agents or robust detergents such as ABS. Paint stains can be effectively removed with turpentine or a detergent pretreatment. Rust stains, on the other hand, respond well to a combination of detergents and scrubbing. While vinegar can be used for stain removal, it may require more time, leading us to consider alternative solutions. For oil stains, a mixture of 50% water and 50% white vinegar, along with a hot water detergent solution, proves effective. Spot cleaning for odors and stains can be achieved using a solution of white vinegar and water or a paste of baking soda and water. Bleaching, if needed, can be accomplished with bleaching powder, although caution is advised to prevent potential damage to the fabric fibers. Our comprehensive approach addresses various stains, providing practical solutions for effective cloth cleaning in the manufacturing process.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_solvents"><strong>Solvents</strong></h5>
+<div class="paragraph">
+<p>In our exploration of stain removal methods, we categorized stains into organic and inorganic types. Organic stains, such as those absorbed from lubricating oil, dyes, grease, and tannin, respond well to organic solvents. These solvents, such as ABS , effectively target and break down organic compounds, making them suitable for various manufacturing stains. On the other hand, inorganic stains, including adsorbed substances like muddy soil, inorganic salts, and contaminants, require a different approach. For these stains, the use of non-polar and volatile solvents is recommended, ensuring efficient removal without leaving residues. Additionally, high-pressure jet machines prove effective in the scouring process, providing a thorough cleaning method for a range of stains. This comprehensive strategy incorporates specialized solvents and techniques tailored to address the diverse nature of stains encountered in the manufacturing of fabrics.</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_scrubbing">2.10.3. <strong>Scrubbing</strong></h4>
+<div class="paragraph">
+<p>For a washing machine assembly line, we&#8217;ve prioritized effective scrubbing for optimal cloth cleaning. Recognizing the fabric&#8217;s thickness, we&#8217;ve implemented a two-step scrubbing approach. As the cloth advances between the conveyor belts, a circular scrubber is strategically positioned to vigorously scrub one side. To enhance the scrubbing effectiveness, we&#8217;ve incorporated a rough platform opposite to the scrub, acting like a 'washboard' for improved friction and cleaning. This meticulous scrubbing process is crucial, as without the platform, the scrubbing efficiency is compromised. After cleaning one side, we reverse the positions of the scrubber and platform to ensure a thorough scrubbing action on the other side. Our design emphasizes the importance of robust scrubbing for a comprehensive and efficient cleaning process on the assembly line.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_water_mech">2.10.4. <strong>Water Mechanism</strong></h4>
+<div class="paragraph">
+<p>The scrubbed fabric retaining traces of soap, undergoes exposure to high-pressure water from a nozzle. Subsequently, the cloth is guided through a wiper to eliminate any surplus moisture and soap solution. The combined unit, comprising both the nozzle and wiper, moves back and forth across the fabric for several iterations, with the exact number determined during the testing phase.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_drying">2.10.5. Drying</h4>
+<div class="paragraph">
+<p>The device produces warm air directed towards damp surfaces using a hot air-drying method. The same mechanism can be understood as the one used in a hair dryer.  This targeted application of heat speeds up the evaporation process of water molecules. The elevated temperature boosts the energy of the water, facilitating its swift transition from liquid to vapor. This mechanism effectively eliminates moisture, making it a fast and efficient technique for drying fabrics.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_requirements">2.11. Requirements for the Idea</h3>
+<div class="sect3">
+<h4 id="_input_specs">2.11.1. Input Specifications</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Material Specifications:</strong>
+Newly manufactured white unbleached cotton with single-ply, Denier 60, and a thread count 400.</p>
+</li>
+<li>
+<p><strong>Dimensions:</strong>
+10 meters in length and 2 meters in width.</p>
+</li>
+<li>
+<p><strong>Cloth Characteristics:</strong>
+Free from foul odour, slightly damp, and without buttons, zippers, or attachments.</p>
+</li>
+<li>
+<p><strong>Cleaning Limitations:</strong>
+Maximum weight for cleaning is set at 11 kg dry, with stains limited to those occurring during manufacturing.</p>
+</li>
+<li>
+<p><strong>Cost and Service Preferences:</strong>
+Preference for the washing machine to be offered at zero cost, requiring no servicing time and no maintenance. Actual prices are expected to depend on the provider, with alternatives considered if costs are excessively high.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_output_specs">2.11.2. Outputs Requirements</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Desired Output:</strong>
+A cleaned and dry cloth wound on rollers.</p>
+</li>
+<li>
+<p><strong>Client Responsibilities:</strong>
+Treating discharged graywater, managing lint, and ensuring the returned cloth is wrinkle-free and bone-dry.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_power_reqs">2.11.3. Power Requirements</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Voltage and Phase Requirements:</strong>
+The washing machine should operate on 220VAC 15A, with the option for 440VAC 3-phase available at an additional cost.</p>
+</li>
+<li>
+<p><strong>Operational Expectations:</strong>
+They are expected to run continuously, 24/7, with an emergency shutdown initiated using a 1-button process.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_logi_reqs">2.11.4. Logistical Requirements</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Machine Type and Features:</strong> An automatic washing machine is preffered with minimal water usage and no need for portability or a programmable timer.</p>
+</li>
+<li>
+<p><strong>Washing Medium Features</strong> There are no restrictions on the washing medium, but costs may be incurred for using rare solvents, focusing on overall cost-effectiveness.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_env_reqs">2.11.5. Environmental Requirements</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Noise Restrictions:</strong> Noise levels should not exceed 75 dB.</p>
+</li>
+<li>
+<p><strong>Compliance:</strong> Must comply with local regulations, including those set by the Central Pollution Control Board (CPCB).</p>
+</li>
+<li>
+<p><strong>Sustainability Preferences:</strong> Preference for cold water washing, sustainable components, and optimization of energy consumption, robustness, and durability.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_site_reqs">2.11.6. Site Requirements</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Essentials for the Site:</strong> Adequate power supply, suitable drainage, and specific design parameters.</p>
+</li>
+<li>
+<p><strong>Water Source:</strong> The water source was specified as having 60 mg CaCO3/l hardness, with an overhead tank and a 50,000-liter refillable capacity at 35 meters.</p>
+</li>
+<li>
+<p><strong>Structural Considerations:</strong> Structural considerations include material selection and the ability to withstand the maximum cloth weight.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_time_reqs">2.11.7. Time Requirements</h4>
+<div class="sect4">
+<h5 id="_design_time">Design Time Requirements ? heading doesnt match with points ?</h5>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Cleaning and Drying time:</strong> Atmost 45 minutes.</p>
+</li>
+<li>
+<p><strong>Use Rate:</strong> ?</p>
+</li>
+<li>
+<p><strong>Setup Time:</strong> As little time as possible, no more than 1 day.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_time_to_market_reqs">Time to Market Requirements</h5>
+
+</div>
+<div class="sect4">
+<h5 id="_lifetime_reqs">Lifetime Requirements</h5>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Expected Lifetime:</strong> The machine is expected to last atlest 6 years.</p>
+</li>
+<li>
+<p><strong>Service Hours and Cost:</strong> No more than 6 hours per year and there isn&#8217;t an explicit cost constraint for the servicing.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_end_of_life_reqs">End of Life Requirements</h5>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Replacement for Old Machine:</strong> Client could be interested in replacing the old machine for a new one at a discounted price.</p>
+</li>
+<li>
+<p><strong>Parts' Availability:</strong> Parts of the machine should be available for 10 years to enable servicing.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_other_reqs">2.11.8. Other Non-Functional Requirements</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Miscellaneous Considerations:</strong>
+Dimensions and the inclusion of a stand or wheels are left to the designer&#8217;s discretion.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_references_to_be_updated">3. References (to be updated)</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>K. D. Cleaners, “Dry Cleaining 101: Seven Fabrics That Need To Be Dry Cleaned,” <em>Kelly’s Dry Cleaners</em>. Jan. 2020, Accessed: Jan. 12, 2024. [Online]. Available: <a href="https://kellysdrycleaners.com/blog/dry-cleaning-101-six-fabrics-that-need-to-be-dry-cleaned/" class="bare">https://kellysdrycleaners.com/blog/dry-cleaning-101-six-fabrics-that-need-to-be-dry-cleaned/</a>.</p>
+</li>
+<li>
+<p>Aqualogic, “Hot, warm or cold wash: How to make the right choice for your laundry,” <em>Aqualogic Laundry Systems</em>. Aug. 2023, Accessed: Jan. 12, 2024. [Online]. Available: <a href="https://aqualogic.com.au/blog/hot-warm-cold-wash-make-right-choice-laundry/" class="bare">https://aqualogic.com.au/blog/hot-warm-cold-wash-make-right-choice-laundry/</a>.</p>
+</li>
+<li>
+<p>“Dry Cleaning Chemicals 101: How Are Chemicals Used for Dry Cleaning?” Accessed: Jan. 12, 2024. [Online]. Available: <a href="https://www.hamperapp.com/blog/dry-cleaning-chemicals-101-how-are-chemicals-used-for-dry-cleaning" class="bare">https://www.hamperapp.com/blog/dry-cleaning-chemicals-101-how-are-chemicals-used-for-dry-cleaning</a>.</p>
+</li>
+<li>
+<p>M. I. Kiron, “Dry Cleaning and Wet Cleaning: Differences, Effects, Benefits &amp; Limitations,” <em>Textile Learner</em>. Jul. 2021, Accessed: Jan. 12, 2024. [Online]. Available: <a href="https://textilelearner.net/dry-cleaning-and-wet-cleaning/" class="bare">https://textilelearner.net/dry-cleaning-and-wet-cleaning/</a>.</p>
+</li>
+<li>
+<p>“Simple Search \textbar NSCEP \textbar US EPA.” Accessed: Jan. 12, 2024. [Online]. Available: <a href="https://nepis.epa.gov/Exe/ZyNET.EXE?ZyActionL=Register&amp;User=anonymous&amp;Password=anonymous&amp;Client=EPA&amp;Init=1" class="bare">https://nepis.epa.gov/Exe/ZyNET.EXE?ZyActionL=Register&amp;User=anonymous&amp;Password=anonymous&amp;Client=EPA&amp;Init=1</a>.</p>
+</li>
+<li>
+<p>“What is the best Industrial cleaner? Water-based cleaners or solvent cleaners?,” <em>GZ Industrial Supplies</em>. Accessed: Jan. 12, 2024. [Online]. Available: <a href="https://www.gz-supplies.com/news/what-is-the-best-industrial-cleaner-waterbased-cleaners-or-solvent-cleaners/" class="bare">https://www.gz-supplies.com/news/what-is-the-best-industrial-cleaner-waterbased-cleaners-or-solvent-cleaners/</a>.</p>
+</li>
+<li>
+<p>“16 Best Solvent Based Upholstery Cleaner In 2024: [Latest Updated].” Accessed: Jan. 12, 2024. [Online]. Available: <a href="https://osoris.com/best-solvent-based-upholstery-cleaner/" class="bare">https://osoris.com/best-solvent-based-upholstery-cleaner/</a>.</p>
+</li>
+<li>
+<p>“Remove Yellow Stains From Cotton Sheets With Hydrogen Peroxide - Bulk Peroxide.” Jun. 2022, Accessed: Jan. 12, 2024. [Online]. Available: <a href="https://bulkperoxide.com/remove-yellow-stains-from-cotton-sheets-with-hydrogen-peroxide/" class="bare">https://bulkperoxide.com/remove-yellow-stains-from-cotton-sheets-with-hydrogen-peroxide/</a>.</p>
+</li>
+<li>
+<p>“How to Use a Clothes Steamer,” <em>The Home Depot</em>. Accessed: Jan. 12, 2024. [Online]. Available: <a href="https://www.homedepot.com/c/ab/how-to-use-a-clothes-steamer/9ba683603be9fa5395fab901e647cbb5" class="bare">https://www.homedepot.com/c/ab/how-to-use-a-clothes-steamer/9ba683603be9fa5395fab901e647cbb5</a>.</p>
+</li>
+<li>
+<p>“How To Remove Stains From Any Garment At Home.” Apr. 2019, Accessed: Jan. 12, 2024. [Online]. Available: <a href="https://www.gentlemansgazette.com/how-to-remove-stains-from-any-garment/" class="bare">https://www.gentlemansgazette.com/how-to-remove-stains-from-any-garment/</a>.</p>
+</li>
+<li>
+<p>Gentleman’s Gazette, “How to Remove Stains From Clothes At Home Better Than The Dry Cleaner.” Apr. 2019, Accessed: Jan. 12, 2024. [Online]. Available: <a href="https://www.youtube.com/watch?v=CHzLckkSATI" class="bare">https://www.youtube.com/watch?v=CHzLckkSATI</a>.</p>
+</li>
+<li>
+<p>RamsonsBangalore, “Ramsons Stain Removing Machine.” Oct. 2012, Accessed: Jan. 12, 2024. [Online]. Available: <a href="https://www.youtube.com/watch?v=jtSx7sFDXdA" class="bare">https://www.youtube.com/watch?v=jtSx7sFDXdA</a>.</p>
+</li>
+<li>
+<p>C. Green, “Agitated to Clean: How the Washing Machine Changed Life for the American Woman.”</p>
+</li>
+<li>
+<p>“Textile finishing stains.” Jul. 2015, Accessed: Jan. 12, 2024. [Online]. Available: <a href="https://www.slideshare.net/prateekNigamNift/12-textile-finishing-stains" class="bare">https://www.slideshare.net/prateekNigamNift/12-textile-finishing-stains</a>.</p>
+</li>
+<li>
+<p>“:: Alternatives to CTC – Substitutes for Textile Stain Removal ::” Accessed: Jan. 12, 2024. [Online]. Available: <a href="https://ozonecell.nic.in/CTC_PHASEOUT/stainremoval.html" class="bare">https://ozonecell.nic.in/CTC_PHASEOUT/stainremoval.html</a>.</p>
+</li>
+<li>
+<p>“Which of the solvents tasted would be best to remove an oil stain from clothing?,” <em>homework.study.com</em>. Accessed: Jan. 12, 2024. [Online]. Available: <a href="https://homework.study.com/explanation/which-of-the-solvents-tasted-would-be-best-to-remove-an-oil-stain-from-clothing.html" class="bare">https://homework.study.com/explanation/which-of-the-solvents-tasted-would-be-best-to-remove-an-oil-stain-from-clothing.html</a>.</p>
+</li>
+<li>
+<p>“The Ultimate Guide to Removing Every Type of Fabric Stain from Clothing,” <em>Better Homes &amp; Gardens</em>. Accessed: Jan. 12, 2024. [Online]. Available: <a href="https://www.bhg.com/homekeeping/laundry-linens/stain-removal/removing-stains-from-fabrics/" class="bare">https://www.bhg.com/homekeeping/laundry-linens/stain-removal/removing-stains-from-fabrics/</a>.</p>
+</li>
+<li>
+<p>“How to Use a Clothes Steamer,” <em>The Home Depot</em>. Accessed: Jan. 12, 2024. [Online]. Available: <a href="https://www.homedepot.com/c/ab/how-to-use-a-clothes-steamer/9ba683603be9fa5395fab901e647cbb5" class="bare">https://www.homedepot.com/c/ab/how-to-use-a-clothes-steamer/9ba683603be9fa5395fab901e647cbb5</a>.</p>
+</li>
+<li>
+<p>M. I. Kiron, “Comparison of High Thread Count Cotton Fabrics for Comfort and Mechanical Properties,” <em>Textile Learner</em>. Dec. 2020, Accessed: Jan. 12, 2024. [Online]. Available: <a href="https://textilelearner.net/comparison-of-high-thread-count-cotton-fabrics/" class="bare">https://textilelearner.net/comparison-of-high-thread-count-cotton-fabrics/</a>.</p>
+</li>
+<li>
+<p>“What Is a Good Thread Count for Sheets?,” <em>Wirecutter: Reviews for the Real World</em>. Feb. 2020, Accessed: Jan. 12, 2024. [Online]. Available: <a href="https://www.nytimes.com/wirecutter/blog/good-thread-count-for-sheets/" class="bare">https://www.nytimes.com/wirecutter/blog/good-thread-count-for-sheets/</a>.</p>
+</li>
+<li>
+<p>H.-J. Seok, H.-W. Chung, H.-J. Kim, and J. Kwen, “Effects of Tentering and Washing on the Shrinkage and Elasticity of Cotton/Spandex Fabric,” <em>Textile Science and Engineering</em>, vol. 46, no. 5, pp. 269–275, 2009, Accessed: Jan. 12, 2024. [Online]. Available: <a href="https://koreascience.kr/article/JAKO200908856864573.page" class="bare">https://koreascience.kr/article/JAKO200908856864573.page</a>.</p>
+</li>
+<li>
+<p>M. Qian, P. Wei, C. Ma, Z. Xiang, J. Xiao, and X. Hu, “Study on drying characters of a thin cotton fabric under uneven radial heating by the hot air jet,” <em>Drying Technology</em>, vol. 40, no. 15, pp. 3115–3127, Nov. 2022, doi: 10.1080/07373937.2021.2004159.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_appendix_to_be_changed"> A: Appendix (to be changed)</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_document_statistics">A.1. Document Statistics</h3>
+<table id="_doc_stats" class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 2. Document Stats</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Number of words</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2318</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Average Word Length</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Average number of words per sentence</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">15</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Total Number of characters with spaces</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">17,983</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Total Number of character without spaces</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14,254</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Total Number of Letter characters</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11,719</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Total Number of Sentences</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">141</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Number of Unique Words</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">940</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Number of Repeat Words</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2087</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Number of Syllables</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3874</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_readability_indices_explain_a_bit_about_ranges">A.2. Readability Indices ? explain a bit about ranges</h3>
+<table id="_readability_stats" class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 3. Readability Stats</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Readibility Index</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Score</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Difficulty</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Flesch Reading Ease</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">63</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Standard</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Gunning Fog Readibility</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11.3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fairly Difficult</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Coleman Liau Readibility Index</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10.51</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fairly Difficult</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Flesch Kincaid Grade Level</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.96</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Average</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Automated Readibility Index</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11.01</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fairly Difficult</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2024-01-19 13:36:57 +0530
+</div>
+</div>
+</body>
+</html>

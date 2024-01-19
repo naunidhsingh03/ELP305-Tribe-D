@@ -1,0 +1,522 @@
+= ELP 305: Design and Systems Lab
+:appendix-caption:
+:bibtex-file: P1_zotero_bibtex.bib
+:bibtex-order: alphabetical
+:bibtex-style: ieee
+:sectnums:
+:toc: left
+:toclevels: 2
+
+[.text-center]
+.Week 2 Report
+****
+
+image::https://github.com/soulhunter03/ELP305-TribeD-Resources/raw/1baba6a33de5fbc93a292d9863ce8c8760a16c83/assets/logo.png[60, 60,align="center"]
+
+ Submitted by: Tribe D (Demantors)
+
+
+ Submitted to: Prof. Subrat Kar 
+
+
+****
+
+
+[[_our_tribe]]
+==  Week 2 Report: Requirements + Specifications
+
+=== Our Tribe
+
+[cols='1,4,4,^7, 5, 1',width="100%"]
+|===
+
+
+| SNo. | Name              | Roll No.   | Position                                                    |    Email                   | IF
+
+
+
+| 1          | link:https://www.linkedin.com/in/ayush-dudawat-6b7a9b222/[Ayush Dudawat]            | 2021EE10694| Tribe Coordinator                             |ee1210694@ee.iitd.ac.in     | 1
+
+
+| 2          | link:https://www.linkedin.com/in/ayush-sharma-b01346224/[Ayush Sharma]              | 2021MT10244| Tribe Coordinator                             |mt1210244@maths.iitd.ac.in  | 1
+
+
+| 3          | link:https://www.linkedin.com/in/nitesh-singh-a79a17223/[Nitesh Singh]              | 2021MT10250| Documentation Activity Coordinator            |mt1210250@maths.iitd.ac.in  | 1
+
+
+| 4          | link:https://www.linkedin.com/in/vansh-jain-36569b225/[Vansh Jain]                  | 2021MT10234| Research and Business Development Coordinator |mt1210234@maths.iitd.ac.in  | 1
+
+
+| 5          | link:https://www.linkedin.com/in/sharesth-thakan-249504250/[Sharesth Thakan]        | 2021EE30730| Fabrication and Testing Coordinator           |ee3210730@ee.iitd.ac.in     | 1
+
+
+| 6          | link:https://www.linkedin.com/in/abhas-porov-b69077248/[Abhas Porov]               | 2021EE10781| Electrical Design and Simulation Coordinator  |ee1210781@ee.iitd.ac.in     | 1
+
+
+| 7          | link:https://www.linkedin.com/in/tanisha-jangra-5203132ab[Tanisha]                   | 2021MT10927| Research Team Member                          |mt1210927@maths.iitd.ac.in  | 1
+
+
+| 8          | link:https://www.linkedin.com/in/shreyansh-jain-6abb9124b/[Shreyansh Jain]            | 2021MT10930| Research Team Member                          |mt1210930@maths.iitd.ac.in  | 1
+
+
+| 9          | link:https://www.linkedin.com/in/rishika-arya-266082279/[Rishika Arya]              | 2021MT10926| Research Team Member                          |mt1210926@maths.iitd.ac.in  | 1
+
+
+| 10         | link:https://www.linkedin.com/in/sarmistha-subhadarshini-507172243[Sarmistha Subhadarshini]   | 2021MT10261| Research Team Member                          |mt1210261@maths.iitd.ac.in  | 1
+
+
+| 11         | link:https://www.linkedin.com/in/anshika-prajapati-9b855022b/[Anshika Prajapati]         | 2021MT60961| Research Team Member                          |mt6210961@maths.iitd.ac.in  | 1
+
+
+| 12         | link:https://www.linkedin.com/in/rupam-kumawat-b27949253/[Rupam Kumawat]             | 2021MT60267| Research Team Member                          |mt6210267@maths.iitd.ac.in  | 1
+
+
+| 13         | link:https://www.linkedin.com/in/sakshimagarkar/[Sakshi Magarkar]                            | 2021MT60965| Research Team Member                          |mt6210965@maths.iitd.ac.in  | 1
+
+
+| 14         | link:https://www.linkedin.com/in/aniket-pandey-b5b9a1263/[Aniket Pandey]             | 2021MT60266| Research Team Member                          |mt6210266@maths.iitd.ac.in  | 1
+
+
+| 15         | link:https://www.linkedin.com/in/nancy-kansal-1b5384234/[Nancy Kansal]              | 2021MT10905| Research Team Member                          |mt1210905@maths.iitd.ac.in  | 1
+
+
+| 16         | link:https://www.linkedin.com/in/divyansh-agarwal-22989525b[Diyvansh Agarwal]          | 2021EE10035| Research Team Member                          |ee1210035@ee.iitd.ac.in     | 1
+
+
+| 17         | link:https://www.linkedin.com/in/mukund-aggarwal[Mukund Aggarwal]           | 2021MT60939| Research Team Member                          |mt6210939@maths.iitd.ac.in  | 1
+
+
+| 18         | link:https://www.linkedin.com/in/tanishk-singh-80ba09224/[Tanishk Singh]             | 2021EE10167| Research Team Member                          |ee1210167@ee.iitd.ac.in     | 1
+
+
+| 19         | link:https://www.linkedin.com/in/akshansh-rajora-5794b5228[Akshansh Rajora]           | 2021MT10933| Research Team Member                          |mt1210933@maths.iitd.ac.in  | 1
+
+
+| 20         | link:https://www.linkedin.com/in/ayush-madhur-40a575236/[Ayush Madhur]              | 2021EE10161| Research Team Member                          |ee1210161@ee.iitd.ac.in     | 1
+
+
+| 21         | link:https://www.linkedin.com/in/keshvi-tomer-4b0331236/[Keshvi Tomar]              | 2021EE10682| Research Team Member                          |ee1210682@ee.iitd.ac.in     | 1
+
+
+| 22         | link:https://www.linkedin.com/in/kanak-kumar-538ab2247/[Kanak Kumar Singh]         | 2021EE10163| Research Team Member                          |ee1210163@ee.iitd.ac.in     | 1
+
+
+| 23         | link:https://www.linkedin.com/in/aravind-udupa-266a52223/[Aravind Udupa]             | 2021MT60940| Research Team Member                          |mt6210940@maths.iitd.ac.in  | 1
+
+
+| 24         | link:https://www.linkedin.com/in/arpit-rathore-56b535223/[Arpit Rathore]             | 2021MT10920| Research Team Member                          |mt1210920@maths.iitd.ac.in  | 1
+
+
+| 25         | link:https://www.linkedin.com/in/vandit-srivastava[Vandit Srivastava]         | 2021EE10640| Electrical Team Member                        |ee1210640@ee.iitd.ac.in     | 1
+
+
+| 26         | link:https://www.linkedin.com/in/ankita-meena-2b919a236/[Ankita Meena]              | 2021EE10173| Electrical Team Member                        |ee1210173@ee.iitd.ac.in     | 1
+
+
+| 27         | link:https://www.linkedin.com/in/aditya-gupta-178638228[Aditya Gupta]              | 2021EE30713| Electrical Team Member                        |ee3210713@ee.iitd.ac.in     | 1
+
+
+| 28         | link:https://www.linkedin.com/in/aditya-bhalotia-756654253[Aditya Bhalotia]         | 2021EE30698| Electrical Team Member                        |ee3210698@ee.iitd.ac.in     | 1
+
+
+| 29         | link:https://www.linkedin.com/in/ayush-shrivastava-264398248[Ayush Shrivastava]     | 2021EE10632| Electrical Team Member                        |ee1210632@ee.iitd.ac.in     | 1
+
+
+| 30         | link:https://www.linkedin.com/in/harshit-nagar-178a33253[Harshit Nagar]             | 2021EE10155| Electrical Team Member                        |ee1210155@ee.iitd.ac.in     | 1
+
+
+| 31         | link:https://www.linkedin.com/in/shreyansh-jaiswal-4b79b2228[Shreyansh Jaiswal]         | 2021EE10154| Electrical Team Member                        |ee1210154@ee.iitd.ac.in     | 1
+
+
+| 32         | link:https://www.linkedin.com/in/akshar-tripathi-9a267425b/[Akshar Tripathi]           | 2021EE10980| Electrical Team Member                        |ee1210980@ee.iitd.ac.in     | 1
+
+
+| 33         | link:https://www.linkedin.com/in/muskan-yadav-2b0651b4[Muskan Yadav]              | 2021EE10686| Electrical Team Member                        |ee1210686@ee.iitd.ac.in     | 1
+
+
+| 34         | link:https://www.linkedin.com/in/pavan-bharadwaj-07025a281[Pavan Bharadwaj]           | 2021EE10630| Electrical Team Member                        |ee1210630@ee.iitd.ac.in     | 1
+
+
+| 35         | link:https://www.linkedin.com/in/mokshavi-reddy-93b41a255[Aluka Mokshavi]            | 2021MT10909| Electrical Team Member                        |mt1210909@maths.iitd.ac.in  | 1
+
+
+| 36         | link:https://www.linkedin.com/in/sathvika-palle-28a13025a[Palle Sathvika]            | 2021MT10928| Electrical Team Member                        |mt1210928@maths.iitd.ac.in  | 1
+
+
+| 37         | link:https://www.linkedin.com/in/shubham-anand-055423252[Shubham Anand]             | 2021EE10674| Electrical Team Member                        |ee1210674@ee.iitd.ac.in     | 1
+
+
+| 38         | link:Kumar Sanu Singh          | 2021EE31213| Electrical Team Member                        |ee3211213@ee.iitd.ac.in     | 1
+
+
+| 39         | link:https://www.linkedin.com/in/rahul-kumar-9a021a236/[Rahul Kumar]               | 2021MT10893| Fabrication Team Member                       |mt1210893@maths.iitd.ac.in  | 1
+
+
+| 40         | link:https://www.linkedin.com/in/manav-garg-0a240a175[Manav Garg]                | 2021EE30017| Fabrication Team Member                       |ee3210017@ee.iitd.ac.in     | 1
+
+
+| 41         | link:www.linkedin.com/in/kushagrgoyal[Kushagr Goyal]                             | 2021EE10634| Fabrication Team Member                       |ee1210634@ee.iitd.ac.in     | 1
+
+
+| 42         | link:https://www.linkedin.com/in/champak-swargiary-a87b04230/[Champak Swargiary]         | 2021MT10263| Fabrication Team Member                       |mt1210263@maths.iitd.ac.in  | 1
+
+
+| 43         | link:https://www.linkedin.com/in/ajay-ramavath-/[Ajay Naik]                 | 2020MT60888| Fabrication Team Member                       |mt6210888@maths.iitd.ac.in  | 1
+
+
+| 44         | link:https://www.linkedin.com/in/vadlapudi-manoj-5a764825a[Vadlapudi Manoj]           | 2021MT10245| Documentation Team Member                     |mt1210245@maths.iitd.ac.in  | 1
+
+
+| 45         | link:https://www.linkedin.com/in/bhavik-garg-4b214422a[Bhavik Garg]               | 2021EE10657| Documentation Team Member                     |ee1210657@ee.iitd.ac.in     | 1
+
+
+| 46         | link:https://www.linkedin.com/in/ishu-ishu-9241242ab/[Ishu]                      | 2021EE30735| Documentation Team Member                     |ee3210735@ee.iitd.ac.in     | 1
+
+
+| 47         | link:https://www.linkedin.com/in/sashidhar-alvakonda-32b9011a5[Alvakonda Sashidhar]       | 2021EE30744| Documentation Team Member                     |ee3210744@ee.iitd.ac.in     | 1
+
+
+| 48         | link:https://www.linkedin.com/in/harshdeep-shakya-507304236/[Harshdeep Shakya]          | 2021EE30745| Documentation Team Member                     |ee3210745@ee.iitd.ac.in     | 1
+
+
+| 49         | link:https://www.linkedin.com/in/abhinava-a-mohanty-30a3a6232[Abhinava Anwesha Mohanty]  | 2021EE10136| Documentation Team Member                     |ee1210136@ee.iitd.ac.in     | 1
+
+
+| 50         | link:https://www.linkedin.com/in/atishay-aggarwal-066414226[Atishay Aggarwal]          | 2021MT60941| Documentation Team Member                     |mt6210941@maths.iitd.ac.in  | 1
+
+
+| 51         | link:https://www.linkedin.com/in/srinath-k-s-875834222/[Srinath K S]               | 2021MT10912| Documentation Team Member                     |mt1210912@maths.iitd.ac.in  | 1
+
+
+| 52         | link:https://www.linkedin.com/in/kshitij-kumar-gautam/[Kshitij K Gautam]          | 2021MT60269| Documentation Team Member                     |mt6210269@maths.iitd.ac.in  | 1
+
+
+| 53         | link:https://www.linkedin.com/in/chandan-kumar-774813224[Chandan Kumar]             | 2021MT60268| Documentation Team Member                     |mt6210268@maths.iitd.ac.in  | 1
+
+
+| 54         | link:https://www.linkedin.com/in/naunidh-singh-0b256a22b/[Naunidh Singh]             | 2021MT60956| Documentation Team Member                     |mt6210956@maths.iitd.ac.in  | 1
+
+
+| 55         | link:https://www.linkedin.com/in/vipul-yadav-6142a6287[Vipul]                     | 2021EE30731| Documentation Team Member                     |ee3210731@ee.iitd.ac.in     | 1
+
+
+| 56         | link:https://www.linkedin.com/in/amit-singh-221888236/[Amit Singh]                | 2021MT10921| Documentation Team Member                     |mt1210921@maths.iitd.ac.in  | 1
+
+
+| 57         | link:https://www.linkedin.com/in/sumanth-mandala-868a1a2aa/[Sumanth Mandala]           | 2021EE10153| Documentation Team Member                     |ee1210153@ee.iitd.ac.in     | 1
+
+
+| 58         | link:https://www.linkedin.com/in/prabhat-babu-490096282[Prabhat Babu]              | 2021MT10255| Documentation Team Member                     |mt1210255@maths.iitd.ac.in  | 1
+
+
+| 59         | link:https://www.linkedin.com/in/aryan-sharma-326657230/[Aryan Sharma]              | 2021EE10141| Fabrication Team Member                       |ee1210141@ee.iitd.ac.in     | 1
+
+
+|===
+
+
+
+=== Team members with IF less than 1
+
+== Body
+
+=== Table of Contents
+
+* link:#_list_of_tables[1. List of Tables]
+* link:#_list_of_figures[2. List of Figures]
+* link:#_list_of_abbreviations[3. List of Abbreviations]
+* link:#_index[4. Index]
+* link:#_glossary[5. Glossary]
+* link:#_mindmap[6. Mind Map]
+* link:#_project_mang[7. Project Management]
+* link:#_abstract[8. Abstract]
+* link:#_motivation[9. Motivation]
+* link:#_machine_mech[10. Mechanism of the Machine]
+** link:#_removal[10.1. Removal of Dust using Air]
+** link:#_soap_and_water[10.2. Soap + Water Mechanism]
+*** link:#_stains[10.2.1. Stains]
+*** link:#_solvents[10.2.2. Solvents]
+** link:#_scrubbing[10.3. Scrubbing]
+** link:#_water_mech[10.4. Water Mechanism]
+** link:#_drying[10.5. Drying]
+* link:#_requirements[11. Requirements for the Idea]
+** link:#_input_specs[11.1. Input Specifications]
+** link:#_output_specs[11.2. Output Specifications]
+** link:#_power_reqs[11.3. Power Requirements]
+** link:#_logi_reqs[11.4. Logistical Requirements]
+** link:#_env_reqs[11.5. Environmental Requirements]
+** link:#_site_reqs[11.6. Site Requirements]
+** link:#_time_reqs[11.7. Time Requirements]
+*** link:#_design_time[11.7.1. Design Time Requirements]
+*** link:#_time_to_market_reqs[11.7.2. Time to Market Requirements]
+*** link:#_lifetime_reqs[11.7.3. Lifetime Requirements]
+*** link:#_end_of_life_reqs[11.7.4. End of Life Requirements]
+** link:#_other_reqs[11.8. Other Non-Functional Requirements]
+
+
+
+
+[[_list_of_tables]]
+=== List of Tables
+. link:#_our_tribe[Our Tribe]
+. link:#_abbreviations[Abbreviations Table]
+. link:#_doc_stats[Document Statistics]
+. link:#_readability_stats[Readability Statistics]
+
+[[_list_of_figures]]
+=== List of Figures
+. link:#_fig1_isometric[Isometric view Figure 1]
+. link:#_fig2_isometric[Isometric view Figure 2]
+. link:#_outline_mindmap[Outline Mind Map]
+. link:#_requirements_mind_map[Mind Map for Requirements]
+
+[[_list_of_abbreviations]]
+=== List of Abbreviations
+
+[[_abbreviations]]
+.Some Abbreviations
+|===
+|*Abbreviation*     | *Stands for*
+|IF               | Involvement Factor
+|ID               | Identification
+|CPCB             | Central Pollution Control Board
+|mg               | milligram
+|AC               | Alternating Current
+|dB               | Decibels
+|Kg               | Kilograms
+|ABS              |Acrylonitrile Butadiene Styrene
+|===
+
+[[_index]]
+=== Index ? at end with pg no. ?
+
+[[_glossary]]
+=== Glossary ? at end with pg no. ?
+
+[[_mindmap]]
+=== Mind Map
+[[_outline_mindmap]]
+.Outline Mind Map
+image::https://github.com/soulhunter03/ELP305-TribeD-Resources/raw/1baba6a33de5fbc93a292d9863ce8c8760a16c83/assets/outline_mindmap.jpg[]
+
+
+[[_requirements_mind_map]]
+.Requirements Mind Map
+image::https://github.com/soulhunter03/ELP305-TribeD-Resources/raw/1baba6a33de5fbc93a292d9863ce8c8760a16c83/assets/requirements_mindmap.jpg[]
+
+[[_project_mang]]
+=== Project Management
+
+* link:https://owncloud.iitd.ac.in/nextcloud/index.php/s/R7QxnbaZQiDwPCw[Network Chart]
+* link:https://owncloud.iitd.ac.in/nextcloud/index.php/s/Kromy3WjxSmz3T3[WBS]
+* link:https://owncloud.iitd.ac.in/nextcloud/index.php/s/z3wfo9jcZTJGC4w[Gantt Chart]
+* link:https://owncloud.iitd.ac.in/nextcloud/index.php/s/BCYFgMTTXa2y3kQ[Resource Breakdown]
+
+[[_abstract]]
+[abstract]
+.*Abstract*
+This project revolves around developing a user-centric washing machine, which involves a comprehensive analysis of the features an average user looks for. Through extensive research, we will identify key elements that resonate with the needs and preferences of the general population when searching for a washing machine. +
+Our initial design focuses on building a basic model, which in further iterations can incorporate more advanced features as a result of extensive surveys and research done across the course of the project to satisfy the contemporary users' needs.
+
+
+[[_motivation]]
+=== Motivation  ? edit acc to ques given
+Our motivation for developing this innovative washing machine stems from a desire to redefine the conventional norms in the industry. We aim to go beyond the traditional boundaries and create a product that caters to the diverse needs of the broad market. Our product will heavily rely on user feedback at each stage of the design, making it user-friendly to ensure that our product becomes very accessible. This model is committed to going above and beyond the ordinary, surpassing user expectations, and setting new benchmarks in washing machine technology. We believe in creating a product that not only fulfills practical needs but also enhances the overall user experience, elevating the standard for what a washing machine can achieve.
+
+[[_machine_mech]]
+=== [underline]#*Mechanism of the Machine*#
+
+[[_removal]]
+==== *Removal of Dust using Air*
+To secure the cloth in place and prevent it from being carried away by the wind, lay it flat and affix it to the surface. Utilize an air blower by directing the airflow over the cloth, with the attached blower expelling air from the top onto the fabric. For smaller pieces of fabric, a 500W mini blower, priced at Rs 500, is an effective solution. Alternatively, a manual approach involves installing a high-speed fan within a pipe for a similar effect.
+
+[[_soap_and_water]]
+==== Soap + Water Mechanism
+[[_fig1_isometric]]
+.Isometric view of Sprinkler
+image::https://github.com/soulhunter03/ELP305-TribeD-Resources/raw/1baba6a33de5fbc93a292d9863ce8c8760a16c83/assets/sprinkler_fig1.jpg[width=50%]
+
+[[_fig2_isometric]]
+.Isometric view of Sprinkler
+image::https://github.com/soulhunter03/ELP305-TribeD-Resources/raw/1baba6a33de5fbc93a292d9863ce8c8760a16c83/assets/sprinkler_fig2.jpg[width=50%]
+
+The fundamental concept behind this method is to ensure comprehensive cleaning by spreading the soap solution evenly on both sides of the fabric. To execute this, a soap solution is meticulously prepared above the targeted cloth. This solution with a predetermined ratio of soap to water facilitates effective cleansing. Employing a specialized nozzle mechanism, the soap solution is methodically sprinkled onto the fabric evenly in both directions making it more effective in removing dirt, stains. The end result comes out to be a thorough and uniform cleaning mechanism.
+
+[[_stains]]
+===== *Stains*
+In our research on fabric stains encountered during the manufacturing process, we identified common culprits such as oil-based stains, dye, and rust stains. For tackling oil-based stains like grease and wax, we recommend using petroleum-based cleaning agents or robust detergents such as ABS. Paint stains can be effectively removed with turpentine or a detergent pretreatment. Rust stains, on the other hand, respond well to a combination of detergents and scrubbing. While vinegar can be used for stain removal, it may require more time, leading us to consider alternative solutions. For oil stains, a mixture of 50% water and 50% white vinegar, along with a hot water detergent solution, proves effective. Spot cleaning for odors and stains can be achieved using a solution of white vinegar and water or a paste of baking soda and water. Bleaching, if needed, can be accomplished with bleaching powder, although caution is advised to prevent potential damage to the fabric fibers. Our comprehensive approach addresses various stains, providing practical solutions for effective cloth cleaning in the manufacturing process.
+
+[[_solvents]]
+===== *Solvents*
+In our exploration of stain removal methods, we categorized stains into organic and inorganic types. Organic stains, such as those absorbed from lubricating oil, dyes, grease, and tannin, respond well to organic solvents. These solvents, such as ABS , effectively target and break down organic compounds, making them suitable for various manufacturing stains. On the other hand, inorganic stains, including adsorbed substances like muddy soil, inorganic salts, and contaminants, require a different approach. For these stains, the use of non-polar and volatile solvents is recommended, ensuring efficient removal without leaving residues. Additionally, high-pressure jet machines prove effective in the scouring process, providing a thorough cleaning method for a range of stains. This comprehensive strategy incorporates specialized solvents and techniques tailored to address the diverse nature of stains encountered in the manufacturing of fabrics.
+
+[[_scrubbing]]
+==== *Scrubbing*
+For a washing machine assembly line, we've prioritized effective scrubbing for optimal cloth cleaning. Recognizing the fabric's thickness, we've implemented a two-step scrubbing approach. As the cloth advances between the conveyor belts, a circular scrubber is strategically positioned to vigorously scrub one side. To enhance the scrubbing effectiveness, we've incorporated a rough platform opposite to the scrub, acting like a 'washboard' for improved friction and cleaning. This meticulous scrubbing process is crucial, as without the platform, the scrubbing efficiency is compromised. After cleaning one side, we reverse the positions of the scrubber and platform to ensure a thorough scrubbing action on the other side. Our design emphasizes the importance of robust scrubbing for a comprehensive and efficient cleaning process on the assembly line.
+
+[[_water_mech]]
+==== *Water Mechanism*
+The scrubbed fabric retaining traces of soap, undergoes exposure to high-pressure water from a nozzle. Subsequently, the cloth is guided through a wiper to eliminate any surplus moisture and soap solution. The combined unit, comprising both the nozzle and wiper, moves back and forth across the fabric for several iterations, with the exact number determined during the testing phase.
+
+[[_drying]]
+==== Drying
+The device produces warm air directed towards damp surfaces using a hot air-drying method. The same mechanism can be understood as the one used in a hair dryer.  This targeted application of heat speeds up the evaporation process of water molecules. The elevated temperature boosts the energy of the water, facilitating its swift transition from liquid to vapor. This mechanism effectively eliminates moisture, making it a fast and efficient technique for drying fabrics. 
+
+
+[[_requirements]]
+=== Requirements for the Idea
+
+[[_input_specs]]
+==== Input Specifications
+
+* *Material Specifications:*
+ Newly manufactured white unbleached cotton with single-ply, Denier 60, and a thread count 400.
+* *Dimensions:*
+10 meters in length and 2 meters in width.
+
+* *Cloth Characteristics:*
+Free from foul odour, slightly damp, and without buttons, zippers, or attachments.
+* *Cleaning Limitations:*
+Maximum weight for cleaning is set at 11 kg dry, with stains limited to those occurring during manufacturing.
+
+* *Cost and Service Preferences:*
+Preference for the washing machine to be offered at zero cost, requiring no servicing time and no maintenance. Actual prices are expected to depend on the provider, with alternatives considered if costs are excessively high.
+
+[[_output_specs]]
+==== Outputs Requirements
+* *Desired Output:*
+A cleaned and dry cloth wound on rollers.
+* *Client Responsibilities:*
+Treating discharged graywater, managing lint, and ensuring the returned cloth is wrinkle-free and bone-dry.
+
+[[_power_reqs]]
+==== Power Requirements
+* *Voltage and Phase Requirements:*
+The washing machine should operate on 220VAC 15A, with the option for 440VAC 3-phase available at an additional cost.
+* *Operational Expectations:*
+They are expected to run continuously, 24/7, with an emergency shutdown initiated using a 1-button process.
+
+[[_logi_reqs]]
+==== Logistical Requirements
+* *Machine Type and Features:* An automatic washing machine is preffered with minimal water usage and no need for portability or a programmable timer.
+* *Washing Medium Features* There are no restrictions on the washing medium, but costs may be incurred for using rare solvents, focusing on overall cost-effectiveness.
+
+[[_env_reqs]]
+==== Environmental Requirements
+* *Noise Restrictions:* Noise levels should not exceed 75 dB.
+* *Compliance:* Must comply with local regulations, including those set by the Central Pollution Control Board (CPCB).
+* *Sustainability Preferences:* Preference for cold water washing, sustainable components, and optimization of energy consumption, robustness, and durability.
+
+[[_site_reqs]]
+==== Site Requirements
+* *Essentials for the Site:* Adequate power supply, suitable drainage, and specific design parameters.
+* *Water Source:* The water source was specified as having 60 mg CaCO3/l hardness, with an overhead tank and a 50,000-liter refillable capacity at 35 meters.
+* *Structural Considerations:* Structural considerations include material selection and the ability to withstand the maximum cloth weight.
+
+[[_time_reqs]]
+==== Time Requirements
+
+[[_design_time]]
+===== Design Time Requirements ? heading doesnt match with points ?
+* *Cleaning and Drying time:* Atmost 45 minutes.
+* *Use Rate:* ?
+* *Setup Time:* As little time as possible, no more than 1 day.
+
+[[_time_to_market_reqs]]
+===== Time to Market Requirements
+
+[[_lifetime_reqs]]
+===== Lifetime Requirements
+* *Expected Lifetime:* The machine is expected to last atlest 6 years.
+* *Service Hours and Cost:* No more than 6 hours per year and there isn't an explicit cost constraint for the servicing.
+
+[[_end_of_life_reqs]]
+===== End of Life Requirements
+* *Replacement for Old Machine:* Client could be interested in replacing the old machine for a new one at a discounted price.
+* *Parts' Availability:* Parts of the machine should be available for 10 years to enable servicing. 
+
+
+// * *Cleaning and Setup Times:*
+// .. Cleaning and drying time set at 45 minutes.
+// .. Setup time should be at most 1 day.
+
+// === Lifetime Requirements
+// * *Lifespan and Service Limits:*
+// .. The machine's lifespan should be at least 6 years.
+// .. At most, 6 hours of service per year.
+
+[[_other_reqs]]
+==== Other Non-Functional Requirements
+* *Miscellaneous Considerations:*
+Dimensions and the inclusion of a stand or wheels are left to the designer's discretion.
+
+== References (to be updated)
+// how to use citations. citenp:[DryCleaningChemicals]
+// citenp:[WhatWaterConsumption]
+// bibliography::[]
+
+. bibitem:[cleaners_dry_2020]
+. bibitem:[aqualogic_hot_2023]
+. bibitem:[noauthor_dry_nodate]
+. bibitem:[kiron_dry_2021]
+. bibitem:[noauthor_simple_nodate]
+. bibitem:[noauthor_what_nodate]
+. bibitem:[noauthor_16_nodate]
+. bibitem:[noauthor_remove_2022]
+. bibitem:[noauthor_how_nodate]
+. bibitem:[noauthor_how_2019]
+. bibitem:[gentlemans_gazette_how_2019]
+. bibitem:[ramsonsbangalore_ramsons_2012]
+. bibitem:[green_agitated_nodate]
+. bibitem:[noauthor_textile_2015]
+. bibitem:[noauthor__nodate]
+. bibitem:[noauthor_which_nodate]
+. bibitem:[noauthor_ultimate_nodate]
+. bibitem:[noauthor_how_nodate]
+. bibitem:[kiron_comparison_2020]
+. bibitem:[noauthor_what_2020]
+. bibitem:[seok_effects_2009]
+. bibitem:[qian_study_2022]
+
+
+
+// * link:https://www.matec-conferences.org/10.1051/matecconf/201822004007[Matec Web of Conferences Article]
+// * link:https://aqualogic.com.au/blog/hot-warm-cold-wash-make-right-choice-laundry/[Aqualogic Blog Post]
+// * link:https://www.iqsdirectory.com/articles/dryer/types-of-dryers.html[IQS Directory Article]
+// * link:https://www.testextextile.com/textile-pretreatment-processes-singeing-desizing-scouring-bleaching-mercerizing/[Testex Textile Artilce]
+// * link:https://www.cda.co.uk/laundry/spin-explained/,%20https://www.cda.co.uk/laundry/spin-explained/[CDA Laundry Apin Explanation]
+// * link:https://www.textileadvisor.com/2019/04/oil-marks-stain-marks-dust-marks-and.html[Textile Advisor Article]
+// * link:https://www.gentlemansgazette.com/how-to-remove-stains-from-any-garment/[Gentleman's Gazette Article]
+
+[appendix]
+== Appendix (to be changed)
+
+=== Document Statistics
+[[_doc_stats]]
+.Document Stats
+|===
+|Number of words      | 2318
+|Average Word Length  | 5
+|Average number of words per sentence | 15
+|Total Number of characters with spaces | 17,983
+|Total Number of character without spaces | 14,254
+|Total Number of Letter characters   | 11,719
+|Total Number of Sentences | 141
+|Number of Unique Words | 940
+|Number of Repeat Words | 2087
+|Number of Syllables    | 3874
+|===
+
+=== Readability Indices ? explain a bit about ranges
+[[_readability_stats]]
+
+.Readability Stats 
+|===
+| Readibility Index | Score | Difficulty
+| Flesch Reading Ease | 63 | Standard
+| Gunning Fog Readibility | 11.3 | Fairly Difficult
+| Coleman Liau Readibility Index | 10.51 | Fairly Difficult
+| Flesch Kincaid Grade Level | 6.96 | Average
+| Automated Readibility Index | 11.01 | Fairly Difficult
+|===
+
