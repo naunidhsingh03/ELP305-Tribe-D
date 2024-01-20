@@ -231,6 +231,7 @@ image::https://github.com/soulhunter03/ELP305-TribeD-Resources/raw/1baba6a33de5f
 === Table of Contents
 
 toc::[]
+
 // * link:#_list_of_tables[1. List of Tables]
 // * link:#_list_of_figures[2. List of Figures]
 // * link:#_list_of_abbreviations[3. List of Abbreviations]
@@ -325,8 +326,9 @@ image::https://github.com/soulhunter03/ELP305-TribeD-Resources/raw/1baba6a33de5f
 * link:https://owncloud.iitd.ac.in/nextcloud/index.php/s/BCYFgMTTXa2y3kQ[Resource Breakdown]
 
 [[_abstract]]
+=== Abstract
+
 [abstract]
-.*Abstract*
 
 This project revolves around developing a user-centric washing machine, which involves a comprehensive analysis of the features an average user looks for. Through extensive research, we will identify key elements that resonate with the needs and preferences of the general population when searching for a washing machine. +
 Our initial design focuses on building a basic model, which in further iterations can incorporate more advanced features as a result of extensive surveys and research done across the course of the project to satisfy the contemporary users' needs.
@@ -385,12 +387,13 @@ Our motivation for developing this innovative washing machine stems from a desir
 ==== Input Specifications
 
 * *Material Specifications:*
- Newly manufactured white unbleached cotton with single-ply, Denier 60, and a thread count 400.
+Newly manufactured white unbleached cotton with single-ply, Denier 60, and a thread count 400.
 * *Dimensions:*
-10 meters in length and 2 meters in width.
-
+Cloth is either available on rollers(2m*10m) or it can be assumed as an infinite sheet supply of width 2 m.
 * *Cloth Characteristics:*
 Free from foul odour, slightly damp, and without buttons, zippers, or attachments.
+* *Stain Characteristics:*
+Only oil and grease stains present on the edges of the cloth need to be removed
 * *Cleaning Limitations:*
 Maximum weight for cleaning is set at 11 kg dry, with stains limited to those occurring during manufacturing.
 
@@ -568,8 +571,10 @@ Below is an example of a circuit diagram to drive multiple motors from a single 
 .Circuit for Roller
 image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/4657c2e45a7e58677d9d220eac84a0fc316f88ca/electrical_resources/roller_circuit.png[]
 
-
-[source,arduino]
+[%collapsible]
+.Click Here to See the Code
+====
+[source,arduino, role=code-folding]
 .Arduino Code
 ----
 // Motor A connections
@@ -663,7 +668,7 @@ void speedControl() {
   digitalWrite(in4, LOW);
 }
 ----
-
+====
 
 ==== Soap Water Sprinkler
 
@@ -673,6 +678,9 @@ void speedControl() {
 image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/9ae27957f7f9bed7b02f8cd5803453d164ba0f19/electrical_resources/water_sprinkler_circuit.png[]
 
 
+[%collapsible]
+.Click Here to See the Code
+====
 [source,arduino]
 ----
 void setup() {
@@ -710,6 +718,7 @@ void measure_distance() {
   distance = time * 340 / 20000;
 }
 ----
+====
 
 ** [underline]#Explanation:#
 *** When the distance is less than 10cm we have to turn on the MOSFET and else we have to turn off the MOSFET. We will also use the on board LED connected to pin 13 and toggle it along with the MOSFET so that we can ensure if the MOSFET is in turned on or off state.
@@ -723,6 +732,10 @@ void measure_distance() {
 
 image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/88c12ef3ea625a24905de9faf5e61669c8b8352f/electrical_resources/without_censor_sprinkler_circuit.png[]
 
+
+[%collapsible]
+.Click Here to See the Code
+====
 .Arduino Relay Control with Button
 [source,arduino]
 ----
@@ -747,6 +760,7 @@ void loop() {
   }
 }
 ----
+====
 
 * [underline]#Explanation:#
 ** Push button is used to on/off the relay which controls the pump
@@ -765,6 +779,9 @@ the design specifications.
 
 image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/4657c2e45a7e58677d9d220eac84a0fc316f88ca/electrical_resources/scrubbing_circuit.png[]
 
+[%collapsible]
+.Click Here to See the Code
+====
 [source, arduino]
 ----
 #define BTN_DIR 13
@@ -814,7 +831,7 @@ void loop() {
   delay(200);
 }
 ----
-
+====
 
 
 ==== Dryer
@@ -832,14 +849,260 @@ image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/9ae27957f7f
 
 One can have LCD display to keep track of any errors in the functioning.
 Arduino code for controlling heater is as follows:
-link: code1
+
+
+[%collapsible]
+.Click Here to See the Code
+====
+[source, cpp]
+----
+/* Max6675 Module  ==> Arduino
+ * CS            ==> D10
+ * SO            ==> D12
+ * SCK           ==> D13
+ * Vcc           ==> Vcc (5v)
+ * Gnd           ==> Gnd
+ */
+
+// LCD config (i2c LCD screen, you need to install the LiquidCrystal_I2C if you don't have it)
+#include <Wire.h>
+#include <LiquidCrystal_I2C.h>
+LiquidCrystal_I2C lcd(0x3f, 20, 4);  // sometimes the address is not 0x3f. Change to 0x27 if it doesn't work.
+
+/* i2c LCD Module  ==> Arduino
+ * SCL           ==> A5
+ * SDA           ==> A4
+ * Vcc           ==> Vcc (5v)
+ * Gnd           ==> Gnd
+ */
+#include <SPI.h>
+// We define the SPI pins
+#define MAX6675_CS   10
+#define MAX6675_SO   12
+#define MAX6675_SCK  13
+
+// Pins
+int PWM_pin = 3;
+
+// Variables
+float temperature_read = 0.0;
+float set_temperature = 100;
+float PID_error = 0;
+float previous_error = 0;
+float elapsedTime, Time, timePrev;
+int PID_value = 0;
+
+// PID constants
+int kp = 9.1;   int ki = 0.3;   int kd = 1.8;
+int PID_p = 0;  int PID_i = 0;  int PID_d = 0;
+
+void setup() {
+  pinMode(PWM_pin, OUTPUT);
+  TCCR2B = TCCR2B & B11111000 | 0x03;  // pin 3 and 11 PWM frequency of 980.39 Hz
+  Time = millis();
+  lcd.init();
+  lcd.backlight();
+}
+
+void loop() {
+  // First, we read the real value of temperature
+  temperature_read = readThermocouple();
+  // Next, we calculate the error between the setpoint and the real value
+  PID_error = set_temperature - temperature_read;
+  // Calculate the P value
+  PID_p = kp * PID_error;
+  // Calculate the I value in a range of +-3
+  if (-3 < PID_error < 3) {
+    PID_i = PID_i + (ki * PID_error);
+  }
+
+  // For derivative, we need real-time to calculate speed change rate
+  timePrev = Time;                         // the previous time is stored before the actual time read
+  Time = millis();                         // actual time read
+  elapsedTime = (Time - timePrev) / 1000;
+  // Now we can calculate the D value
+  PID_d = kd * ((PID_error - previous_error) / elapsedTime);
+  // Final total PID value is the sum of P + I + D
+  PID_value = PID_p + PID_i + PID_d;
+  // We define PWM range between 0 and 255
+  if (PID_value < 0) {
+    PID_value = 0;
+  }
+  if (PID_value > 255) {
+    PID_value = 255;
+  }
+  // Now we can write the PWM signal to the MOSFET on digital pin D3
+  analogWrite(PWM_pin, 255 - PID_value);
+  previous_error = PID_error;     // Remember to store the previous error for the next loop.
+
+  delay(300);
+  // lcd.clear();
+
+  lcd.setCursor(0, 0);
+  lcd.print("PID TEMP control");
+  lcd.setCursor(0, 1);
+  lcd.print("S:");
+  lcd.setCursor(2, 1);
+  lcd.print(set_temperature, 1);
+  lcd.setCursor(9, 1);
+  lcd.print("R:");
+  lcd.setCursor(11, 1);
+  lcd.print(temperature_read, 1);
+}
+
+double readThermocouple() {
+  uint16_t v;
+  pinMode(MAX6675_CS, OUTPUT);
+  pinMode(MAX6675_SO, INPUT);
+  pinMode(MAX6675_SCK, OUTPUT);
+
+  digitalWrite(MAX6675_CS, LOW);
+  delay(1);
+
+  // Read in 16 bits,
+  // 15	= 0 always
+  // 14..2 = 0.25 degree counts MSB First
+  // 2 	= 1 if thermocouple is open circuit
+  // 1..0  = uninteresting status
+
+  v = shiftIn(MAX6675_SO, MAX6675_SCK, MSBFIRST);
+  v <<= 8;
+  v |= shiftIn(MAX6675_SO, MAX6675_SCK, MSBFIRST);
+
+  digitalWrite(MAX6675_CS, HIGH);
+  if (v & 0x4) {
+    // Bit 2 indicates if the thermocouple is disconnected
+    return NAN;
+  }
+  // The lower three bits (0,1,2) are discarded status bits
+  v >>= 3;
+  // The remaining bits are the number of 0.25 degree (C) counts
+  return v * 0.25;
+}
+----
+====
 
 For running and controlling the blower we need to have an Arduino controlling motor, anemometer, battery and bunch of wires.
 
 image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/9ae27957f7f9bed7b02f8cd5803453d164ba0f19/electrical_resources/dryer_pic_3.png[]
 
-The code is:
-link: code2
+
+
+[%collapsible]
+.Click Here to See the Code
+====
+[source,cpp]
+----
+#include "DHT.h"
+#include <LiquidCrystal.h>
+
+LiquidCrystal lcd(7, 6, 5, 4, 3, 2);
+#define DHTPIN 12  // Pin connected to the DHT sensor
+
+#define DHTTYPE DHT11  // DHT 11
+
+#define pwm 9  // PWM pin for fan speed control
+
+byte degree[8] =
+{
+  0b00011,
+  0b00011,
+  0b00000,
+  0b00000,
+  0b00000,
+  0b00000,
+  0b00000,
+  0b00000
+};
+
+// Initialize DHT sensor for normal 16mhz Arduino
+DHT dht(DHTPIN, DHTTYPE);
+
+void setup() {
+  lcd.begin(16, 2);
+  lcd.createChar(1, degree);
+  lcd.clear();
+  lcd.print("   Fan Speed  ");
+  lcd.setCursor(0, 1);
+  lcd.print("  Controlling ");
+  delay(2000);
+  analogWrite(pwm, 255);
+  delay(2000);
+  Serial.begin(9600);
+  dht.begin();
+}
+
+void loop() {
+  // Wait a few seconds between measurements.
+  delay(2000);
+
+  // Reading temperature or humidity takes about 250 milliseconds!
+  // Sensor readings may also be up to 2 seconds 'old' (it's a very slow sensor)
+  float h = dht.readHumidity();
+  // Read temperature as Celsius
+  float t = dht.readTemperature();
+  // Read temperature as Fahrenheit
+  float f = dht.readTemperature(true);
+
+  // Check if any reads failed and exit early (to try again).
+  if (isnan(h) || isnan(t) || isnan(f)) {
+    Serial.println("Failed to read from DHT sensor!");
+    return;
+  }
+
+  // Compute heat index
+  // Must send in t in Fahrenheit!
+  float hi = dht.computeHeatIndex(f, h);
+
+  Serial.print("Humidity: ");
+  Serial.print(h);
+  Serial.print(" %\t");
+  Serial.print("Temperature: ");
+  Serial.print(t);
+  Serial.print(" *C ");
+  Serial.print(f);
+  Serial.print(" *F\t");
+  Serial.print("Heat index: ");
+  Serial.print(hi);
+  Serial.println(" *F");
+
+  lcd.setCursor(0, 0);
+  lcd.print("Temp: ");
+  lcd.print(t);   // Printing temperature on LCD
+  lcd.print(" C");
+  lcd.setCursor(0, 1);
+
+  // Fan Speed Control based on Temperature
+  if (t > 29) {
+    analogWrite(9, 0);
+    lcd.print("Fan OFF         ");
+    delay(100);
+  } else if (t == 29) {
+    analogWrite(pwm, 51);
+    lcd.print("Fan Speed: 20%   ");
+    delay(100);
+  } else if (t == 28) {
+    analogWrite(pwm, 102);
+    lcd.print("Fan Speed: 40%   ");
+    delay(100);
+  } else if (t == 24) {
+    analogWrite(pwm, 153);
+    lcd.print("Fan Speed: 60%   ");
+    delay(100);
+  } else if (t == 20) {
+    analogWrite(pwm, 204);
+    lcd.print("Fan Speed: 80%   ");
+    delay(100);
+  } else if (t < 20) {
+    analogWrite(pwm, 255);
+    lcd.print("Fan Speed: 100%   ");
+    delay(100);
+  }
+
+  delay(3000);
+}
+----
+====
 
 
 
@@ -854,11 +1117,130 @@ link: code2
 .TinkerCAD circuit for Blower
 image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/9ae27957f7f9bed7b02f8cd5803453d164ba0f19/electrical_resources/blower_circuit.png[]
 
-The code is:
-link: code
 
+[%collapsible]
+.Click Here to See the Code
+====
+[source,cpp]
+----
+const int poten = A3;
+int var;
+
+void setup() {
+  pinMode(6, OUTPUT);
+}
+
+void loop() {
+  var = analogRead(poten);
+  analogWrite(6, var);
+}
+----
+====
 
 === Solvent
+
+Some of the cleansing agents that were researched and tested for oil and grease stains are:
+
+==== Lipase Enzyme
+
+* Pros: Lipase is an enzyme that breaks down oil and thus was thought of as a solution to clean oil and grease stains.
+
+* Cons: The idea was rejected as we require the water to be slightly warm(~40-50 C) for the optimal enzyme action, and maintaining warm water is not so easy.
+
+==== Spot Remover(such as Shout) and Hot Water
+
+* Pros: It can remove both oil and grease stains. Spraying the stain remover and then followed by brushing in hot water can remove the results.
+
+* Cons: Increases the energy requirement of the model as hot water is required. Using spot removers increases the cost.
+
+==== Spot Lifters(such as K2R spot lifter) followed by dry brushing
+
+* Pros: It overcomes the drawback of scrubbing in hot water(mentioned in the previous method). After application, keeping it for 10-15 minutes lifts the stain and only a brush off is required in the end.
+
+* Cons: It is very costly(~3300 Rs for 150 ml) and availability may become an issue when required in large amounts, as it is manufactured in the USA. 
+
+==== Baby powder/ Cornstarch/ Salt/ Vinegar followed by washing
+
+* Pros: Effective in cleaning oil and grease stain significantly
+
+* Cons: Requires soaking and  multiple iterations to remove the stains, therefore time consuming
+
+==== WD-40 or Lighter Fluid 
+
+* Pros: Effective in cleaning oil and grease stain significantly
+
+* Cons: Takes 20 min soaking time and hot water is required for washing.
+
+.Grease stain before using WD-40
+image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/280fdb451ed940e8a1bfbbd416651b69019e250b/solvent_pictures/wd_40_before.jpg[]
+
+.Grease stain after using WD-40 
+image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/280fdb451ed940e8a1bfbbd416651b69019e250b/solvent_pictures/wd_40_after.jpg[]
+
+
+==== PCE(perchloroethylene):
+
+* Pros: Tetrachloroethylene (PCE) is a nonflammable, liquid solvent widely used in dry cleaning and is effective in removing oil and grease stains..In small quantities.
+
+* Cons: Extended exposure to large quantities of PCE could cause irritation to eyes, skin, throat, nose, and respiratory system.
+
+==== Handwash(Dettol):
+
+Tested hand wash to clean oil stain with gentle brushing and it successfully cleaned the oil stain.
+
+* Pros: Handwashes are biodegradable and environmentally friendly and can be washed and reused multiple times. They are soft and less abrasive
+
+* Cons: Depending on the material and color, handwashes may be more prone to staining, which could affect the appearance and cleanliness of cloth
+
+==== Dishwasher (Vim Drop)
+
+* Pros: Effective in removing both oil and grease stains by scrubbing with vim drop and water with normal pressure.
+
+.Grease stain before using dishwasher(Vim)
+image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/280fdb451ed940e8a1bfbbd416651b69019e250b/solvent_pictures/dishwash_before.jpg[]
+
+.Grease stain after using dishwasher(Vim)
+image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/280fdb451ed940e8a1bfbbd416651b69019e250b/solvent_pictures/dishwash_after.jpg[]
+
+
+==== Trichloroethylene (TCE): chlorinated solvent
+
+* Pros: Stain remover and degreaser. TCE evaporates quickly, leaving behind a dry surface.TCE can act quickly to break down and dissolve stains or contaminants, making it effective for rapid cleaning processes.
+
+* Cons: TCE exposure has been linked to various health risks, including respiratory, neurological, and reproductive effects. Prolonged or repeated exposure can lead to serious health problems, and it is considered a potential human carcinogen. TCE has been restricted or banned in many countries for certain applications. TCE is flammable, posing a fire hazard. Special precautions are needed when handling and storing TCE to prevent accidents. It is also persistent in the environment and can contaminate soil and groundwater, posing risks to ecosystems.
+
+==== Isopropyl(Rubbing alcohol 68-72%)
+
+* Pros: Isopropyl alcohol, also known as rubbing alcohol, is a natural degreasing agent sold in most department stores. Based on the theoretical searches it was suggested a volatile solvent to remove oil and grease stains
+
+* Cons: The idea was rejected after practically experimenting on the grease and oil stained cotton cloth by scrubbing and even soaking the cloth in it for 5 min didn't remove oil and Grease stain. May be effective after a longer time of soaking, and thus not efficient because of time constraints.
+
+.Grease stain after applying isopropyl(rubbing alcohol 68-72%)
+image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/280fdb451ed940e8a1bfbbd416651b69019e250b/solvent_pictures/isopropyl_after.png[]
+
+
+====  Detergent (Surf Excel)
+
+* Pros: Was effective on oil stains with slight scrubbing 
+
+* Cons: The idea was rejected because it was not effective on Grease stain, even after hard scrubbing
+
+.Grease stain after using detergent and scrubbing
+image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/280fdb451ed940e8a1bfbbd416651b69019e250b/solvent_pictures/detergent_after.png[====
+
+
+==== Acetone
+
+* Pros: As it is volatile, it would be quite convenient in the drying stage.
+
+*	Cons: We have experimentally seen that it does not work efficiently on grease stain
+
+
+.Grease stain before using acetone
+image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/280fdb451ed940e8a1bfbbd416651b69019e250b/solvent_pictures/acetone_before.jpg[]
+
+.Grease stain after using acetone
+image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/280fdb451ed940e8a1bfbbd416651b69019e250b/solvent_pictures/acetone_after.jpg[]
 
 
 
@@ -866,14 +1248,82 @@ link: code
 === Specifications
 
 ==== Energy Specifications
+. Roller
+|===
+| Maximum Output Voltage   | 36 V
+| Maximum Current rating (per channel)| 600mA
+|===
+
+. Soap Water Sprinkler
+.. With Sensor (Prototype)
+|===
+| Adapter Voltage Rating    | 12 -15 V 
+| Maximum Current Rating    | 1.2A 
+| Continuous Current Rating   | 700mA 
+|===
+
+.. Without Sensor
+|===
+| Nozzle's Pressure|          5-15 bar 
+| Nozzle's Length  | 	 3-4 cm
+| Nozzle's Diameter|        1-1.5 cm 
+|===
+
+. Scrubber
+|===
+|Voltage|  0 V 
+|Current| 0 A 
+|===
 
 ==== Space Specifications
 
 ==== Power Specifications
+. Roller
+|===
+| Power Rating of Prototype| 21.6 W
+|===
+
+. Soap Water Sprinkler
+.. With Sensor (Prototype)
+|===
+| Power Rating of Prototype| 18 W
+|===
+
+.. Without Sensor
+|===
+| Battery voltage| 10 - 15 V
+|===
 
 ==== Cost Specifications
+. Roller
+*  Prototype average cost: Rs. 200.
+
+. Soap Water Sprinkler
+|===
+|Arduino | Rs.2500 
+| Nozzle | Rs.500 
+| Resistors | Rs. 10-20 
+| Breadboard | Rs. 90 
+| Sensor | Rs. 200 
+| Connecting wires | Rs.150 
+|NMOS | Rs. 70 
+| solvent pump | Rs. 200 
+|===
 
 ==== Performance Specifications
+
+. Roller
+* Rolling capacity: ~60-80 meters/min. 
+* Rewind Diameter: 1.8-2 meters. 
+* The driver module for the prototype can be used simultaneously by other motors in the system 
+* The cost of the actual machine can be reduced significantly because it would be integrated with other components. 
+* If a small DC motor is used, a no-load speed of ~9000 rpm, and a loaded speed of ~5000 rpm can be achieved in the prototype. 
+
+. Soap Water Sprinkler
+.. With Sensor:
+ HCSR04 Ultrasonic Sensor will check if there is any object placed before the dispenser. A solenoid valve will be used to control the flow of water by energising and deenergising. 
+.. Withour Sensor:
+Arduino controls the operation of water pump. It also controls the flow rate and directions of water.  
 
 ==== Manpower Specifications
 
@@ -971,13 +1421,13 @@ User-Centric:: Designed with a primary focus on meeting the needs and preference
 |Number of Syllables    | 3874
 |===
 
-=== Readability Indices ? explain a bit about ranges
+=== Readability Indices ? explain a bit about ranges? add max range in denom
 [[_readability_stats]]
 
 .Readability Stats 
 |===
 | Readibility Index | Score | Difficulty
-| Flesch Reading Ease | 63 | Standard
+| Flesch Reading Ease | 63/100 | Standard
 | Gunning Fog Readibility | 11.3 | Fairly Difficult
 | Coleman Liau Readibility Index | 10.51 | Fairly Difficult
 | Flesch Kincaid Grade Level | 6.96 | Average
