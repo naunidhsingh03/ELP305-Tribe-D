@@ -1328,25 +1328,25 @@ image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/280fdb451ed
 
 ==== Space Specifications
 
-proposed model specifications:
+Proposed Model Specifications:
 
 * *Base:*
 
-** length = 100cm 
+** Length = 100cm 
 
-** breadth = 30cm
+** Breadth = 30cm
 
 * *Roller:* 	
 
-** diameter = 8cm 
+** Diameter = 8cm 
 
-** length = 25cm
+** Length = 25cm
 
 * *N-box:*  	
 
-** length = 70cm
+** Length = 70cm
 
-** breadth = 25cm
+** Breadth = 25cm
 
 
 
@@ -1366,17 +1366,17 @@ proposed model specifications:
 ** Battery voltage: 10 - 15 V
 
 
-===== 4. Blower
+===== 3. Blower
 * DC Motor: 
 |===
 |Power| 300 Watts 
 |Speed| 7000 RPM 
 |===
 
-* Transistor (BC547): Max collector Dissipation| 1.5W 
+* Transistor (BC547): Max collector Dissipation: 1.5W 
 * Resistor (100M ohms): Power Rating:0.25-0.5W  
 
-===== 5. Blower
+===== 4. Dryer
 * Actual machine requirement: 4-6 KW depending on the speed of feeding the cloth and drying rate 
 * For Prototype: 1000-2000W   
 
@@ -1637,11 +1637,11 @@ water compartment:: A compartment to store water
 
 .Document ID
 |===
-|Document type      |
+|Document type          |
 |Document Authorised by |
-|Publication Date   |
-|Version No.        |
-|GitHub Repo Details |
+|Publication Date       |
+|Version No.            |
+|GitHub Repo Details    |
 |===
 
 === Document Statistics
