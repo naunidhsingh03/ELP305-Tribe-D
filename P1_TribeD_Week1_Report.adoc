@@ -221,7 +221,7 @@ image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/be458fa52e9
 
 
 === Team members with IF less than 1
-
+[[_less_if]]
 [cols='1,4,4,^7, 5, 1',width="100%"]
 |===
 | SNo. | Name              | Roll No.   | Position                                                    |    Email                   | IF
@@ -296,16 +296,56 @@ Assigned tasks were not completed, Low participation in most of the meetings eve
 
 
 . link:#_our_tribe[Our Tribe]
+. link:#_less_if[Tribe members with IF less than 1]
 . link:#_abbreviations[Abbreviations Table]
+. link:#_solvents_specs[Solvents Specifications]
+. link:#_roller_en_specs[Roller Energy Specs]
+. link:#_sprinkler_en_specs1[Sprinkler Energy Specifications 1]
+. link:#_sprinkler_en_specs2[Sprinkler Energy Specifications 2]
+. link:#_blower_en_specs1[Blower Potentiometer Speciicatios]
+. link:#_blower_en_specs2[Blower Battery Specifications]
+. link:#_sprinkler_cost[Sprinkler Cost Specifications]
+. link:#_scrubber_cost[Scrubber Cost Specifications]
+. link:#_blower_cost[Blower Cost Specifications]
+. link:#_manpower_specs[Manpower Specifications]
+. link:#_doc_id[Document ID]
 . link:#_doc_stats[Document Statistics]
 . link:#_readability_stats[Readability Statistics]
 
 [[_list_of_figures]]
 === List of Figures (to be updated)
-. link:#_fig1_isometric[Isometric view Figure 1]
-. link:#_fig2_isometric[Isometric view Figure 2]
+
 . link:#_outline_mindmap[Outline Mind Map]
 . link:#_requirements_mind_map[Mind Map for Requirements]
+. link:#_prop_isometric_view[Proposed Model isometric view]
+. link:#_prop_top_view[Proposed Model top view]
+. link:#_prop_side_view[Proposed Model side view]
+. link:#_workflow_mindmap[Workflow]
+. link:#_industrial_roller[Industrial Roller]
+. link:#_duty_cycle[Duty Cycle]
+. link:#_circuit_for_roller[Circuit for Roller]
+. link:#_fig1_isometric[Isometric view of Sprinkler Figure 1]
+. link:#_fig2_isometric[Isometric view of Sprinkler Figure 2]
+. link:#_circuit_water[Circuit for Water Sprinkler]
+. link:#_circuit_push[Circuit for Water Sprinkler using Push]
+. link:#_circuit_sensor[Circuit for Water Sprinkler using Sensor]
+. link:#_circuit_for_blower[Circuit for Blower]
+. link:#_tunnel_dryer[Tunnel Dryer]
+. link:#_circuit1_dryer[Circuit for Dryer]
+. link:#_circuit2_dryer[Control Circuit for Dryer]
+. link:#_b_wd40[Stain before using WD-40]
+. link:#_a_wd40[Stain after using WD-40]
+. link:#_b_dishwasher[Stain after using Dishwasher]
+. link:#_a_dishwasher[Stain after using Dishwasher ]
+. link:#_a_isopropyl[Stain after using Isopropyl ]
+. link:#_a_detergent[Stain after using Detergent]
+. link:#_b_acetone[Stain before using Acetone]
+. link:#_a_acetone[Stain after using Acetone]
+
+
+
+
+
 
 [[_list_of_abbreviations]]
 === List of Abbreviations (to be updated)
@@ -477,15 +517,15 @@ Dimensions and the inclusion of a stand or wheels are left to the designer's dis
 
 We propose the development of an innovative cloth cleaning machine that can be used to clean oil stains (which occur near the edges) off of manufactured cloth after the manufacturing process. Our design consists of rollers, driving motors, a guiding frame (used to fold the cloth in half vertically), wiping and cleaning surfaces (brushes/sponge), a soap water mixture compartment, a water compartment, and a drying chamber. This automated system aims to streamline the cloth manufacturing process, ensuring efficient cleaning and drying during the manufacturing process while minimising the impact on the fabric. The USP of our design is that the regions of the cloth that are guaranteed to come in clean are untouched in the process, which preserves the quality and durability of the cloth. This approach also ensures that drying requires less effort and resources than other approaches.
 
-==== Key Components:
-===== Rollers with Motor Control:
+==== Key Components
+===== Rollers with Motor Control
 * Two rollers placed on either side of the machine.
 * Motor-controlled to regulate the speed of the cloth movement.
 
-===== Cloth Attachment:
+===== Cloth Attachment
 * Cloth is securely attached to the rollers upon loading in batches, ensuring uniform tension.
 
-===== Guiding Frame:
+===== Guiding Frame
 * Positioned between the rollers upon viewing from the side and placed parallelly between the two vertical walls when viewed from the top.
 * The frame, when viewed from the side, looks like a smoothened plateau with a long flat top and curved sides (coming from and going towards the input and output rollers, respectively.) Upon viewing from the top, it looks like the edge of a railing. 
 * The frame is slightly angled and is broader at the bottom than at the top. (This helps in dispensing soap on the edge stains from the top with targeted and precise positioning)
@@ -495,35 +535,40 @@ We propose the development of an innovative cloth cleaning machine that can be u
 * The part of the fabric towards the centre in the horizontal configuration, now slides at the top of the smooth frame as the rollers on the other end pulls it at a constant speed and is unaffected by the cleaning and drying process.
 * Once the cloth crosses the drying chamber, the guiding frame is shaped in such a way that it lowers the cloth from the raised frame back to its horizontal configuration onto the roller
 
-===== Cleaning Mechanism:
+===== Cleaning Mechanism
 * Brushes along the edges of the frame at a fixed distance from the height (coincides with the stained edge of the cloth).
 * The parallel wall also has brushes at the same vertical height, and the two brushes hold onto the edge of the cloth as it moves under the influence of the rollers and scrubs against the brushes, hence getting cleaned.
 * Solvent drizzled from the top onto the stained part of the cloth). The solvent mixture and water are dispensed in succession and recursively, creating stages along the length of the frame. (first “x” cm-> soap, next “y” cm-> water, next “x” cm-> soap, etc. )
 * Brushes act as scrubbers to enhance cleaning effectiveness.
 
-===== Cleaning Fluid Compartment:
+===== Cleaning Fluid Compartment
 * Alternating compartments for soap water mixture and water.
 * The soap compartments have brushes along the wall, while the water compartment consists of high pressure water nozzles to remove soap from the cloth. 
 * Ensures proper cleaning of the cloth during the process.
 
-===== Drying Chamber:
+===== Drying Chamber
 * Located after the cleaning mechanism.
 * Equipped with air blowers to blow hot air onto the cloth.
 * Ensures quick and effective drying.
 
-===== Guiding Fixtures:
+===== Guiding Fixtures
 * Transition the cloth from the input roller to the cleaning chamber of the frame and from the drying chamber of the frame to the rollers.
 * Facilitates a smooth movement of the cloth.
 
-===== Waste Tub:
+===== Waste Tub
 * A waste tub at the bottom to collect residual drippings and lint.
 
+
+[[_prop_isometric_view]]
 .Proposed model isometric view
 image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/8f83e23284014fff1847c5024d5e7ba3d274cf96/P1_TribeD_Proposed_Model/isometric%201.png[]
 
+
+[[_prop_top_view]]
 .Proposed model top view
 image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/8f83e23284014fff1847c5024d5e7ba3d274cf96/P1_TribeD_Proposed_Model/top%20view.png[]
 
+[[_prop_side_view]]
 .Proposed model side view
 image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/8f83e23284014fff1847c5024d5e7ba3d274cf96/P1_TribeD_Proposed_Model/side%20view.png[]
 
@@ -538,6 +583,7 @@ image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/8f83e232840
 * The cloth then enters the drying chamber, where hot air is blown to expedite the drying process.
 * After drying, the cleaned and dried cloth moves through guiding fixtures onto the rollers for subsequent manufacturing.
 
+[[_workflow_mindmap]]
 .Workflow
 image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/d417d822e73870101807a1adacbe3fa176b03a75/assets/P1_WorkFlow_TribeD_Flowchart.png[]
 
@@ -576,15 +622,18 @@ Varying soaps changes the time cloth needs to spend in the chamber, which increa
 
 The cloth will also be straightened using 1 or 2 uncontrolled rolling cylinders which can provide the requisite tension in the fabric and guide the fabric onto the roller.
 
+
+[[_industrial_roller]]
 .Industrial Roller
 image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/4657c2e45a7e58677d9d220eac84a0fc316f88ca/electrical_resources/Picture1.png[width=50%]
 
-===== [underline]#*Controlling DC motor using Arduino:*#
+===== Controlling DC motor using Arduino:
 To control the speed of a DC motor using Arduino, we need to adjust the input voltage supplied to the motor. 
 We can control the input voltage with a pulse-width modulated (PWM) signal.
 To change the speed of the DC motor we need to change the amplitude of the input voltage that is applied to the motor.
 A common technique to do that is PWM (Pulse Width Modulation). In PWM the applied voltage is adjusted by sending a series of pulses so the output voltage is proportional pulse width generated by the microcontroller that is also known as *duty cycle*.
 
+[[_duty_cycle]]
 .Duty Cycle
 image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/4c3f442d4cf538c5df98a55429b09d2a34c96f45/electrical_resources/duty_cycle.png[]
 
@@ -595,6 +644,7 @@ The higher the duty cycle, the higher the average voltage applied to the DC moto
 A common and cheap solution to drive motors and efficiently control them, is to use a Motor Controller module along with Arduino. L293D Motor driver module is a readily available IC which can be easily interfaced with Arduino, to control the various aspects of DC motors like speed, direction and braking. It is designed to provide bidirectional drive currents of up to 600-mA at voltages from 4.5 V to 36V.
 Below is an example of a circuit diagram to drive multiple motors from a single module, and Arduino code to interface a motor with the module.
 
+[[_circuit_for_roller]]
 .Circuit for Roller
 image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/4657c2e45a7e58677d9d220eac84a0fc316f88ca/electrical_resources/roller_circuit.png[]
 
@@ -707,8 +757,9 @@ image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/be458fa52e9
 .Isometric view of Sprinkler
 image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/be458fa52e9b4bf7661dfd82df802ab23349e4b4/assets/sprinkler_fig2.jpg[width=50%]
 
-===== *For splitted cloth pieces using sensor*
+===== 1. For splitted cloth pieces using sensor
 
+[[_circuit_water]]
 .Circuit for Water Sprinkler
 image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/8f83e23284014fff1847c5024d5e7ba3d274cf96/electrical_resources/water_sprinkler_circuit.png[]
 
@@ -762,11 +813,14 @@ void measure_distance() {
 *** Then we use the time taken value to calculate the distance of the object ahead of the sensor. 
 *** Once the distance is calculated, we have to compare the value of distance using a simple if statement and if the value is less than 10cm we make the MOSFET and LED to go high, in the following else statement we make the MOSFET and LED to go low 
 
-===== *Without Censor, using push button*
+===== 2. Without Censor, using push button
 
+[[_circuit_push]]
 .Circuit using Push button
 image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/8f83e23284014fff1847c5024d5e7ba3d274cf96/electrical_resources/without_censor_sprinkler_circuit.png[]
 
+
+[[_circuit_sensor]]
 .Full Circuit without Sensor
 image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/8f83e23284014fff1847c5024d5e7ba3d274cf96/electrical_resources/sprinkler_full_circuit.png[]
 
@@ -806,69 +860,14 @@ void loop() {
 
 
 ==== Scrubber
-* Scrubbing will occur in circular motion [clockwise/anticlockwise]
-* Speed is controlled using electric signals (based on the voltage of a potentiometer)
-* Direction (clockwise/ anticlockwise) can be controlled based on a digital logic [1 or 0]
-* The L293D motor driver is used. It is designed to provide bidirectional drive currents of up to
-600-mA at voltages from 4.5 V to 36 V.
-* Multiple scrubbers/ scrubbing mode patterns can be defined on this model further based on
-the design specifications.
+Static stationary brush scrubber is an industrial cleaning tool designed for efficient cloth cleaning. This device features stationary brushes that remain fixed during operation, providing a stable cleaning surface. The static design allows for controlled and targeted cleaning of fabrics, ensuring uniform and effective removal of dirt and contaminants. This type of scrubber is commonly employed in industrial settings where precision and consistency in cloth cleaning are essential for maintaining high standards of hygiene and product quality.
 
-image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/4657c2e45a7e58677d9d220eac84a0fc316f88ca/electrical_resources/scrubbing_circuit.png[]
+* Stationary brushes would be used near the edges of the cloth.
 
-[%collapsible]
-.Click Here to See the Code
-====
-[source, arduino]
-----
-#define BTN_DIR 13
-#define POT 0
-#define EN1 3
-#define M1A 4
-#define M1B 7
-#define LED_GREEN 2
-#define LED_RED 5
-#define LED_YELLOW 1
+* Static cleaning mechanism
 
-int pos, veloc, oldpos=-1, Speed;
+* Zero power requirement
 
-void setup() {
-  pinMode(M1A, OUTPUT);
-  pinMode(M1B, OUTPUT);
-  pinMode(LED_GREEN, OUTPUT);
-  pinMode(LED_RED, OUTPUT);
-  pinMode(LED_YELLOW, OUTPUT);
-  pinMode(BTN_DIR, INPUT);
-}
-
-void loop() {
-  pos = analogRead(POT);
-  Speed = analogRead(POT);
-
-  if (pos != oldpos) {
-    veloc = map(pos, 0, 1023, 0, 255);
-    Speed = map(pos, 0, 1023, 0, 255);
-    analogWrite(EN1, veloc);
-    analogWrite(LED_RED, Speed);
-    oldpos = pos;
-  }
-
-  if (digitalRead(BTN_DIR) == LOW) {
-    digitalWrite(M1A, HIGH);
-    digitalWrite(M1B, LOW);
-    digitalWrite(LED_GREEN, HIGH);
-    digitalWrite(LED_YELLOW, LOW);
-  } else {
-    digitalWrite(M1A, LOW);
-    digitalWrite(M1B, HIGH);
-    digitalWrite(LED_YELLOW, HIGH);
-    digitalWrite(LED_GREEN, LOW);
-  }
-
-  delay(200);
-}
-----
-====
 
 ==== Blower
 
@@ -878,6 +877,7 @@ void loop() {
 * We can connect multiple DC motors in our system by making slight modifications in the wiring.
 * A Transistor is used for more efficient control of the motor speed. By controlling the current flow to the motor, transistors can prevent overloading and overheating, enhancing the motor’s lifespan. 
 
+[[_circuit_for_blower]]
 .TinkerCAD circuit for Blower
 image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/9ae27957f7f9bed7b02f8cd5803453d164ba0f19/electrical_resources/blower_circuit.png[]
 
@@ -906,12 +906,16 @@ void loop() {
 We are planning to use the configuration of tunnel dryer to dry the clothes. The power and torque requirements of the motor used in blower and power requirements of the heater will depend on the time needed to dry the cloth, rate at which the cloth is being fed, width and height of the chamber, final moisture content and initial moisture content.
 Also, since counter current configuration is most efficient, we will be using the same in our design. Using tunnel dryers also allows us to move the conveyor belt slowly as it is very efficient in processing materials taking long drying time and thus requiring lesser motor drive.
 
+[[_tunnel_dryer]]
+.Tunnel Dryer
 image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/9ae27957f7f9bed7b02f8cd5803453d164ba0f19/electrical_resources/tunnel_dryer.png[]
 
 Optimization for power requirements will be done once design specs are provided and it would be based on the mathematical modelling and simulations done to observe the humidity content with rate of air flow and power input to heater and blower.
 To control the heater we will use Arduino, a temperature sensor (thermocouple), a relay module, battery and bunch of connecting wires.
 One of the circuits which can be used is as follows:
 
+[[_circuit1_dryer]]
+.Circuit for Dryer
 image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/9ae27957f7f9bed7b02f8cd5803453d164ba0f19/electrical_resources/dryer_pic_2.png[]
 
 One can have LCD display to keep track of any errors in the functioning.
@@ -1051,6 +1055,8 @@ double readThermocouple() {
 
 For running and controlling the blower we need to have an Arduino controlling motor, anemometer, battery and bunch of wires.
 
+[[_circuit2_dryer]]
+.Control Circuit for Dryer
 image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/9ae27957f7f9bed7b02f8cd5803453d164ba0f19/electrical_resources/dryer_pic_3.png[]
 
 
@@ -1207,9 +1213,13 @@ Some of the cleansing agents that were researched and tested for oil and grease 
 
 * Cons: Takes 20 min soaking time and hot water is required for washing.
 
+
+[[_b_wd40]]
 .Grease stain before using WD-40
 image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/280fdb451ed940e8a1bfbbd416651b69019e250b/solvent_pictures/wd_40_before.jpg[]
 
+
+[[_a_wd40]]
 .Grease stain after using WD-40 
 image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/280fdb451ed940e8a1bfbbd416651b69019e250b/solvent_pictures/wd_40_after.jpg[]
 
@@ -1232,9 +1242,13 @@ Tested hand wash to clean oil stain with gentle brushing and it successfully cle
 
 * Pros: Effective in removing both oil and grease stains by scrubbing with vim drop and water with normal pressure.
 
+
+[[_b_dishwasher]]
 .Grease stain before using dishwasher(Vim)
 image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/280fdb451ed940e8a1bfbbd416651b69019e250b/solvent_pictures/dishwash_before.jpg[]
 
+
+[[_a_dishwasher]]
 .Grease stain after using dishwasher(Vim)
 image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/280fdb451ed940e8a1bfbbd416651b69019e250b/solvent_pictures/dishwash_after.jpg[]
 
@@ -1251,6 +1265,7 @@ image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/280fdb451ed
 
 * Cons: The idea was rejected after practically experimenting on the grease and oil stained cotton cloth by scrubbing and even soaking the cloth in it for 5 min didn't remove oil and Grease stain. May be effective after a longer time of soaking, and thus not efficient because of time constraints.
 
+[[_a_isopropyl]]
 .Grease stain after applying isopropyl(rubbing alcohol 68-72%)
 image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/280fdb451ed940e8a1bfbbd416651b69019e250b/solvent_pictures/isopropyl_after.png[]
 
@@ -1261,6 +1276,8 @@ image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/280fdb451ed
 
 * Cons: The idea was rejected because it was not effective on Grease stain, even after hard scrubbing
 
+
+[[_a_detergent]]
 .Grease stain after using detergent and scrubbing
 image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/280fdb451ed940e8a1bfbbd416651b69019e250b/solvent_pictures/detergent_after.png[]
 
@@ -1271,20 +1288,40 @@ image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/280fdb451ed
 
 *	Cons: We have experimentally seen that it does not work efficiently on grease stain
 
-
+[[_b_acetone]]
 .Grease stain before using acetone
 image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/280fdb451ed940e8a1bfbbd416651b69019e250b/solvent_pictures/acetone_before.jpg[]
 
+[[_a_acetone]]
 .Grease stain after using acetone
 image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/280fdb451ed940e8a1bfbbd416651b69019e250b/solvent_pictures/acetone_after.jpg[]
 
+[[_solvents_specs]]
+.Solvents Specifications
+|===
 
+| Suitability for oil-based stains | Excellent | Good | Good | Moderate
+
+| Amount of solvent | 5-10 mL, test in inconspicuous area first | Follow product instructions (5-15 mL typical) | 5-10 mL, test in inconspicuous area first | Apply directly to stain or dilute 5-10 mL in water for pre-treatment
+
+| Cleaning time | 5-10 minutes | 10-15 minutes | 5-10 minutes | Depends on washing cycle time
+
+| Scrubbing intensity | Light scrubbing with soft cloth | Light to moderate scrubbing | Light scrubbing with soft cloth | Moderate scrubbing with brush or hands
+
+| Evaporation/drying time | Evaporates quickly (5-10 minutes) | Dries moderately fast (15-30 minutes) | Evaporates quickly (5-10 minutes) | Depends on fabric and drying method
+
+| Safety | Flammable, use with caution and good ventilation | May contain harsh chemicals, follow product instructions | Flammable, use with caution and good ventilation | Generally safe, but test on inconspicuous area first
+
+| Fabric suitability | Works well on most fabrics, but test first on delicate fabrics | Check product label for fabric compatibility | Works well on most fabrics, but test first on delicate fabrics | Suitable for washable fabrics
+
+|===
 
 
 === Specifications
 
 ==== Energy Specifications
 ===== 1. Roller
+[[_roller_en_specs]]
 |===
 | Maximum Output Voltage   | 36 V
 | Maximum Current rating (per channel)| 600mA
@@ -1292,6 +1329,8 @@ image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/280fdb451ed
 
 ===== 2. Soap Water Sprinkler
 * With Sensor (Prototype)
+
+[[_sprinkler_en_specs1]]
 |===
 | Adapter Voltage Rating    | 12 -15 V 
 | Maximum Current Rating    | 1.2A 
@@ -1299,6 +1338,8 @@ image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/280fdb451ed
 |===
 
 * Without Sensor
+
+[[_sprinkler_en_specs2]]
 |===
 | Nozzle's Pressure|          5-15 bar 
 | Nozzle's Length  | 	 3-4 cm
@@ -1312,12 +1353,14 @@ image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/280fdb451ed
 ** Voltage: 9,12,15 Volts 
 
 * Potentiometer: 
+[[_blower_en_specs1]]
 |===
 | Resistance Value|200 Ohm 
 | Limiting element voltage|250 Volt 
 |===
 
 * Battery : 
+[[_blower_en_specs2]]
 |===
 | Power Supply| 9-volt  
 | Battery Impedance| 1700 m-ohm @ 1 kHz   
@@ -1353,9 +1396,9 @@ Proposed Model Specifications:
 
 ==== Power Specifications
 ===== 1. Roller
-|===
-| Power Rating of Prototype| 21.6 W
-|===
+
+* Power Rating of Prototype: 21.6 W
+
 
 ===== 2. Soap Water Sprinkler
 * With Sensor (Prototype)
@@ -1368,10 +1411,10 @@ Proposed Model Specifications:
 
 ===== 3. Blower
 * DC Motor: 
-|===
-|Power| 300 Watts 
-|Speed| 7000 RPM 
-|===
+
+** Power: 300 Watts 
+** Speed: 7000 RPM 
+
 
 * Transistor (BC547): Max collector Dissipation: 1.5W 
 * Resistor (100M ohms): Power Rating:0.25-0.5W  
@@ -1385,6 +1428,7 @@ Proposed Model Specifications:
 *  Prototype average cost: Rs. 200.
 
 ===== 2. Soap Water Sprinkler
+[[_sprinkler_cost]]
 |===
 |Arduino | Rs.2500 
 | Nozzle | Rs.500 
@@ -1397,12 +1441,14 @@ Proposed Model Specifications:
 |===
 
 ===== 3. Scrubber
+[[_scrubber_cost]]
 |===
 |Cost per meter| Rs. 300 - 400 
 |Number of Scrubbers| 2  (4 can be installed based on requirement) 
 |===
 
 ===== 4. Blower
+[[_blower_cost]]
 |===
 |Arduino | Rs.2550 
 |Resistor(100 ohms) | Rs.1 
@@ -1456,6 +1502,7 @@ Stationary scrubbers/brushes remain fixed during operation, providing a stable c
 ==== Manpower Specifications
 // ===== Research and Business Team:
 // 82 hours
+[[_manpower_specs]]
 .Manpower Specs
 |===
 |Team | Man hours  
@@ -1507,10 +1554,35 @@ TRL 5: Assembling all components into a working prototype, conducting a live dem
 
 
 [bibliography]
-== References (to be updated)
+== References
 // how to use citations. citenp:[DryCleaningChemicals]
 // citenp:[WhatWaterConsumption]
 // bibliography::[]
+
+. bibitem:[noauthor_conservation_nodate]
+. bibitem:[noauthor_stain_2023]
+. bibitem:[noauthor_3_nodate]
+. bibitem:[noauthor_conservation_nodate-1]
+. bibitem:[noauthor_we_nodate]
+. bibitem:[noauthor_armourme_nodate]
+. bibitem:[noauthor_5_nodate]
+. bibitem:[noauthor_4_nodate]
+. bibitem:[noauthor_amazoncom_nodate]
+. bibitem:[daniela_how_2017]
+. bibitem:[gentlemans_gazette_right_2023]
+. bibitem:[mahagaonkar_how_2020]
+. bibitem:[noauthor_epa_nodate]
+. bibitem:[noauthor_54_nodate]
+. bibitem:[noauthor_how_nodate]
+. bibitem:[cleaners_dry_2020]
+. bibitem:[kiron_dry_2021]
+. bibitem:[noauthor_what_nodate]
+. bibitem:[noauthor_remove_2022]
+. bibitem:[noauthor_textile_2015]
+. bibitem:[noauthor_which_nodate]
+. bibitem:[noauthor_ultimate_nodate]
+. bibitem:[kiron_drying_2013]
+. bibitem:[seok_effects_2009]
 . bibitem:[noauthor_buy_nodate]
 . bibitem:[noauthor_buy_nodate-1]
 . bibitem:[noauthor_arduino_nodate]
@@ -1533,30 +1605,7 @@ TRL 5: Assembling all components into a working prototype, conducting a live dem
 . bibitem:[macfos_temperature_nodate]
 . bibitem:[noauthor_control_nodate]
 . bibitem:[noauthor_automatic_nodate]
-. bibitem:[cleaners_dry_2020]
-. bibitem:[aqualogic_hot_2023]
-. bibitem:[noauthor_dry_nodate]
-. bibitem:[kiron_dry_2021]
-. bibitem:[noauthor_simple_nodate]
-. bibitem:[noauthor_what_nodate]
-. bibitem:[noauthor_16_nodate]
-. bibitem:[noauthor_remove_2022]
-. bibitem:[noauthor_how_nodate]
-. bibitem:[noauthor_how_2019]
-. bibitem:[gentlemans_gazette_how_2019]
-. bibitem:[ramsonsbangalore_ramsons_2012]
-. bibitem:[green_agitated_nodate]
-. bibitem:[noauthor_textile_2015]
-. bibitem:[noauthor__nodate]
-. bibitem:[noauthor_which_nodate]
-. bibitem:[noauthor_ultimate_nodate]
-. bibitem:[noauthor_how_nodate]
-. bibitem:[kiron_comparison_2020]
-. bibitem:[noauthor_what_2020]
-. bibitem:[seok_effects_2009]
-. bibitem:[qian_study_2022]
 
-== Index(with pageno.)??
 
 // [[_glossary]]
 
@@ -1634,7 +1683,7 @@ water compartment:: A compartment to store water
 == Appendix (to be changed)
 
 === Document ID
-
+[[_doc_id]]
 .Document ID
 |===
 |Document type          |
