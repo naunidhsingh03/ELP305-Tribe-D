@@ -8,7 +8,7 @@
 :pygments-style: autumn
 :sectnums: 
 :toc: macro
-:toclevels: 4
+:toclevels: 3
 
 [.text-center]
 .Week 2 Report
@@ -1248,57 +1248,92 @@ image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/280fdb451ed
 === Specifications
 
 ==== Energy Specifications
-. Roller
+===== 1. Roller
 |===
 | Maximum Output Voltage   | 36 V
 | Maximum Current rating (per channel)| 600mA
 |===
 
-. Soap Water Sprinkler
-.. With Sensor (Prototype)
+===== 2. Soap Water Sprinkler
+* With Sensor (Prototype)
 |===
 | Adapter Voltage Rating    | 12 -15 V 
 | Maximum Current Rating    | 1.2A 
 | Continuous Current Rating   | 700mA 
 |===
 
-.. Without Sensor
+* Without Sensor
 |===
 | Nozzle's Pressure|          5-15 bar 
 | Nozzle's Length  | 	 3-4 cm
 | Nozzle's Diameter|        1-1.5 cm 
 |===
 
-. Scrubber
+===== 3. Scrubber
 |===
 |Voltage|  0 V 
 |Current| 0 A 
 |===
 
+===== 4. Blower
+* DC Motor: 
+
+** Voltage: 9,12,15 Volts 
+
+* Potentiometer: 
+|===
+| Resistance Value|200 Ohm 
+| Limiting element voltage|250 Volt 
+|===
+
+* Battery : 
+|===
+| Power Supply| 9-volt  
+| Battery Impedance| 1700 m-ohm @ 1 kHz   
+|===
+
+===== 5. Dryer
+* Voltage: 220 Volts 
+
 ==== Space Specifications
 
 ==== Power Specifications
-. Roller
+===== 1. Roller
 |===
 | Power Rating of Prototype| 21.6 W
 |===
 
-. Soap Water Sprinkler
-.. With Sensor (Prototype)
+===== 2. Soap Water Sprinkler
+* With Sensor (Prototype)
+** Power Rating of Prototype: 18 W
+
+
+* Without Sensor
+** Battery voltage: 10 - 15 V
+
+
+===== 3. Scrubber
+* Power: 0 W 
+
+===== 4. Blower
+* DC Motor: 
 |===
-| Power Rating of Prototype| 18 W
+|Power| 300 Watts 
+|Speed| 7000 RPM 
 |===
 
-.. Without Sensor
-|===
-| Battery voltage| 10 - 15 V
-|===
+* Transistor (BC547): Max collector Dissipation| 1.5W 
+* Resistor (100M ohms): Power Rating:0.25-0.5W  
+
+===== 5. Blower
+* Actual machine requirement: 4-6 KW depending on the speed of feeding the cloth and drying rate 
+* For Prototype: 1000-2000W   
 
 ==== Cost Specifications
-. Roller
+===== 1. Roller
 *  Prototype average cost: Rs. 200.
 
-. Soap Water Sprinkler
+===== 2. Soap Water Sprinkler
 |===
 |Arduino | Rs.2500 
 | Nozzle | Rs.500 
@@ -1310,20 +1345,59 @@ image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/280fdb451ed
 | solvent pump | Rs. 200 
 |===
 
+===== 3. Scrubber
+|===
+|Cost per meter| Rs. 300 - 400 
+|Number of Scrubbers| 2  (4 can be installed based on requirement) 
+|===
+
+===== 4. Blower
+|===
+|Arduino | Rs.2550 
+|Resistor(100 ohms) | Rs.1 
+|Transistor| Rs. 1 
+|Potentiometer | Rs.17 
+|9 volt Battery | Rs.300 
+|DC motor | Rs. 260 
+|===
+
+===== 5.. Dryer
+* Actual machine cost: Around Rs. 100000 
+* For prototype: Rs. 800 
+
 ==== Performance Specifications
 
-. Roller
+===== 1. Roller
 * Rolling capacity: ~60-80 meters/min. 
 * Rewind Diameter: 1.8-2 meters. 
 * The driver module for the prototype can be used simultaneously by other motors in the system 
 * The cost of the actual machine can be reduced significantly because it would be integrated with other components. 
 * If a small DC motor is used, a no-load speed of ~9000 rpm, and a loaded speed of ~5000 rpm can be achieved in the prototype. 
 
-. Soap Water Sprinkler
+===== 2. Soap Water Sprinkler
 .. With Sensor:
  HCSR04 Ultrasonic Sensor will check if there is any object placed before the dispenser. A solenoid valve will be used to control the flow of water by energising and deenergising. 
 .. Withour Sensor:
-Arduino controls the operation of water pump. It also controls the flow rate and directions of water.  
+Arduino controls the operation of water pump. It also controls the flow rate and directions of water.
+
+===== 3. Scrubber:
+Stationary scrubbers/brushes remain fixed during operation, providing a stable cleaning surface. The static design allows for controlled and targeted cleaning of fabrics, ensuring uniform and effective removal of dirt and contaminants. 
+
+===== 4. Blower
+* Control Mechanism: Potentiometer for DC motor speed control 
+
+* Efficiency: Improved motor control using a transistor to prevent overloading and overheating 
+
+* Lifespan: Enhanced motor lifespan due to efficient control using the transistor 
+
+* Compatibility: Multiple DC motors can be connected with slight wiring modifications 
+
+===== 5. Dryer
+* Control Mechanism: Arduino, a temperature sensor (thermocouple), a relay module, battery and bunch of connecting wires will be used 
+
+* Efficiency: Most efficient counter current configuration will be used 
+
+* Power requirements will be optimized on the basis of mathematical modelling and simulations done to observe the humidity content with rate of air flow and power input to heater and blower 
 
 ==== Manpower Specifications
 
@@ -1371,33 +1445,70 @@ Arduino controls the operation of water pump. It also controls the flow rate and
 
 [glossary]
 [[_ABS_meaning]]
-ABS (Acrylonitrile Butadiene Styrene):: A strong and durable thermoplastic polymer used in manufacturing. 
-Affix:: Securely attach or fasten.  
-CPCB (Central Pollution Control Board):: A regulatory body in India that sets standards for environmental pollution control.  
-Denier:: A unit of measurement for the linear mass density of fibers. It is the mass in grams per 9000 meters of the fiber.  
-Desizing:: The removal of sizing agents, such as starch or other chemicals, from fabrics to prepare them for further processing.  
-Gantt Chart:: A visual representation of a project schedule that shows the start and finish dates of various elements of the project.  
-Graywater:: Domestic wastewater that does not contain fecal matter, often reused for irrigation or other non-potable purposes.  
-Isometric View:: A three-dimensional representation of an object, showing all three spatial dimensions in one view.  
-Mercerizing:: A textile finishing process that increases the luster and strength of fabric, typically cotton, by treating it with a caustic soda solution. 
-Nozzle:: A device for controlling the direction or flow of a fluid. 
-Nozzle mechanism:: The nozzle and flapper mechanism are a displacement type detector which converts mechanical movement into a pressure signal by covering the opening of a nozzle with a flat plate called the flapper. This restricts fluid flow through the nozzle and generates a pressure signal. 
+
+
+ABS (Acrylonitrile Butadiene Styrene):: A strong and durable thermoplastic polymer used in manufacturing.
+Adapter Voltage Rating:: This specifies the voltage range for the adapter that provides power to the soap water sprinkler.
+Affix:: Securely attach or fasten.
+Areal density:: mass per unit area
+Arduino:: Arduino is an open-source electronics platform used for creating interactive electronic projects.
+Blower:: A device used to create a flow of air or gas.
+carcinogen:: potential to cause cancer
+Central Pollution Control Board (CPCB):: A regulatory body in India that sets standards for environmental pollution control.
+chlorinated:: state of having chlorine
+Coil-based heating:: This implies the use of a heating element made in the form of a coil. Electricity passing through the coil generates heat, and this method is often used in appliances like room heaters.
+Compatibility:: The ability of the system to work with other components.
+Control Mechanism:: The method used to regulate or manipulate the operation of the system.
+Controller:: In this context, a controller is a device that regulates or manages the operation of the dryer. It could involve setting and maintaining specific conditions such as temperature and drying time.
+Controlled and targeted cleaning:: This describes the method of cleaning where the scrubbers are designed to clean fabrics in a precise and controlled manner. The goal is to ensure uniform and effective removal of dirt and contaminants from the surfaces being cleaned.
+CPCB (Central Pollution Control Board):: A regulatory body in India that sets standards for environmental pollution control.
+DC Motor:: A motor that operates on direct current (DC) electricity.
+Denier:: A unit of measurement for the linear mass density of fibers. It is the mass in grams per 9000 meters of the fiber.
+Desizing:: The removal of sizing agents, such as starch or other chemicals, from fabrics to prepare them for further processing.
+driving motors: Motors powering the movement of the cloth fabric
+Efficiency:: The effectiveness of the system in converting input power to useful output power.
+filleted:: Somewhat stuck to the side or attached to side walls
+fixtures:: a fixed frame
+Gantt Chart:: A visual representation of a project schedule that shows the start and finish dates of various elements of the project.
+Graywater:: Domestic wastewater that does not contain fecal matter, often reused for irrigation or other non-potable purposes.
+Guiding frame:: a frame used to fold the cloth in half vertically
+HCSR04 Ultrasonic Sensor:: A specific ultrasonic sensor used in the prototype to detect objects in front of the dispenser.
+Infrared based heating:: This refers to a method of heating using infrared radiation. Infrared radiation is a type of electromagnetic radiation that heats objects directly without heating the surrounding air. It's commonly used in appliances like heaters and dryers.
+Isometric View:: A three-dimensional representation of an object, showing all three spatial dimensions in one view.
+KW (Kilowatts):: Kilowatts are a unit of power.
+Lifespan:: The duration for which the system is expected to operate.
+Limiting element voltage:: The maximum voltage the potentiometer can handle.
+Lipase:: an enzyme the body uses to break down fats
+Mathematical modeling and simulations: This refers to the use of mathematical equations and computer simulations to analyze and predict the behavior of the system.
+Maximum Current Rating:: Indicates the maximum current the device can draw from the power source.
+Maximum Current Rating (per channel):: This indicates the maximum amount of electrical current that can flow through each channel (a path for electric current) without causing damage. The limit is set at 600 milliamperes (mA).
+Maximum Operating Voltage:: This is the highest voltage at which the roller or the associated system can safely operate.
+Mercerizing:: A textile finishing process that increases the luster and strength of fabric, typically cotton, by treating it with a caustic soda solution.
+Nozzle:: A device for controlling the direction or flow of a fluid.
+Nozzle mechanism:: The nozzle and flapper mechanism are a displacement type detector that converts mechanical movement into a pressure signal by covering the opening of a nozzle with a flat plate called the flapper. This restricts fluid flow through the nozzle and generates a pressure signal.
 Petroleum-based cleaning agents:: Solvents effective for oil-based stains (e.g., mineral spirits, naphtha).
-Pretreatment:: Applying cleansing agent before washing.  
-Resource Breakdown:: A breakdown of resources required for a project, often detailing labor, equipment, and materials. 
-Robust Scrubbing:: Strong, sturdy, and effective scrubbing.  
-Rust stains:: Formed by oxidation of iron.  
-Scour:: To clean or rub using a stiff brush or abrasive.  
-Setup Time:: The time required to prepare the washing machine for operation.  
-Singeing:: The process of burning off protruding fibers or impurities from the surface of a fabric, often using a flame or hot surface.  
-Syrup:: In the context of the report, it may refer to a concentrated solution of a sugar or sugar substitute in water.  
-Tannin::   bitter, astringent substance found in plants.  
-Testing Phase:: A stage in the development process where the functionality and performance are evaluated.  
-Thermoplastic Polymer:: A type of polymer that becomes pliable or mouldable when heated and solidifies upon cooling.  
-Thread Count:: The number of threads woven together per square inch in a fabric. A higher thread count is generally associated with a finer and more luxurious fabric.  
-Traces::  mall amounts or remnants.  
-Turpentine::   solvent used for thinning, cleaning paint and  varnish removal.  
-User-Centric:: Designed with a primary focus on meeting the needs and preferences of users.  
+Pretreatment:: Applying cleansing agent before washing.
+Prototype:: A prototype is an initial version or model of a product that is used to test and develop the design.
+Resource Breakdown:: A breakdown of resources required for a project, often detailing labor, equipment, and materials.
+Robust Scrubbing:: Strong, sturdy, and effective scrubbing.
+Rust stains:: Formed by oxidation of iron.
+Scour:: To clean or rub using a stiff brush or abrasive.
+Setup Time:: The time required to prepare the washing machine for operation.
+Singeing:: The process of burning off protruding fibers or impurities from the surface of a fabric, often using a flame or hot surface.
+Solvent:: A substance, typically a liquid, capable of dissolving other substances.
+Spot Lifters:: A unique cleaning aid that removes oil and grease spots and stains from several types of fabrics and clothing.
+Syrup:: In the context of the report, it may refer to a concentrated solution of sugar or a sugar substitute in water.
+Tannin:: A bitter, astringent substance found in plants.
+Testing Phase:: A stage in the development process where the functionality and performance are evaluated.
+Thermoplastic Polymer:: A type of polymer that becomes pliable or moldable when heated and solidifies upon cooling.
+Thread Count:: The number of threads woven together per square inch in a fabric. A higher thread count is generally associated with a finer and more luxurious fabric.
+traces:: Small amounts or remnants.
+Turpentine:: Solvent used for thinning, cleaning paint and varnish removal.
+User-Centric:: Designed with a primary focus on meeting the needs and preferences of users.
+USP:: Unique selling point
+Voltage:: Voltage is a measure of electrical potential difference.
+waste tub:: A waste tub at the bottom to collect residual drippings and lint.
+water compartment:: A compartment to store water
 
 [appendix]
 == Appendix (to be changed)

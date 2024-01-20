@@ -1068,31 +1068,13 @@ pre.pygments .tok-il { color: #009999 } /* Literal.Number.Integer.Long */
 <li><a href="#_logi_reqs">2.11.4. Logistical Requirements</a></li>
 <li><a href="#_env_reqs">2.11.5. Environmental Requirements</a></li>
 <li><a href="#_site_reqs">2.11.6. Site Requirements</a></li>
-<li><a href="#_time_reqs">2.11.7. Time Requirements</a>
-<ul class="sectlevel4">
-<li><a href="#_design_time">Design Time Requirements ? heading doesnt match with points ?</a></li>
-<li><a href="#_time_to_market_reqs">Time to Market Requirements</a></li>
-<li><a href="#_lifetime_reqs">Lifetime Requirements</a></li>
-<li><a href="#_end_of_life_reqs">End of Life Requirements</a></li>
-</ul>
-</li>
+<li><a href="#_time_reqs">2.11.7. Time Requirements</a></li>
 <li><a href="#_other_reqs">2.11.8. Other Non-Functional Requirements</a></li>
 </ul>
 </li>
 <li><a href="#_overview">2.12. Overview</a>
 <ul class="sectlevel3">
-<li><a href="#_key_components">2.12.1. Key Components:</a>
-<ul class="sectlevel4">
-<li><a href="#_rollers_with_motor_control">Rollers with Motor Control:</a></li>
-<li><a href="#_cloth_attachment">Cloth Attachment:</a></li>
-<li><a href="#_guiding_frame">Guiding Frame:</a></li>
-<li><a href="#_cleaning_mechanism">Cleaning Mechanism:</a></li>
-<li><a href="#_cleaning_fluid_compartment">Cleaning Fluid Compartment:</a></li>
-<li><a href="#_drying_chamber">Drying Chamber:</a></li>
-<li><a href="#_guiding_fixtures">Guiding Fixtures:</a></li>
-<li><a href="#_waste_tub">Waste Tub:</a></li>
-</ul>
-</li>
+<li><a href="#_key_components">2.12.1. Key Components:</a></li>
 <li><a href="#_workflow">2.12.2. Workflow:</a></li>
 <li><a href="#_benefits">2.12.3. Benefits:</a></li>
 <li><a href="#_calculation_of_order_of_magnitude_of_the_length_of_the_chamber">2.12.4. Calculation of order of magnitude of the length of the chamber:</a></li>
@@ -1100,18 +1082,8 @@ pre.pygments .tok-il { color: #009999 } /* Literal.Number.Integer.Long */
 </li>
 <li><a href="#_component_analysis">2.13. Component Analysis</a>
 <ul class="sectlevel3">
-<li><a href="#_roller">2.13.1. Roller</a>
-<ul class="sectlevel4">
-<li><a href="#_controlling_dc_motor_using_arduino"><span class="underline"><strong>Controlling DC motor using Arduino:</strong></span></a></li>
-<li><a href="#_arduino_and_l293d_circuit_diagram">Arduino and L293D Circuit Diagram</a></li>
-</ul>
-</li>
-<li><a href="#_soap_water_sprinkler">2.13.2. Soap Water Sprinkler</a>
-<ul class="sectlevel4">
-<li><a href="#_for_splitted_cloth_pieces_using_sensor"><strong>For splitted cloth pieces using sensor</strong></a></li>
-<li><a href="#_without_censor_using_push_button"><strong>Without Censor, using push button</strong></a></li>
-</ul>
-</li>
+<li><a href="#_roller">2.13.1. Roller</a></li>
+<li><a href="#_soap_water_sprinkler">2.13.2. Soap Water Sprinkler</a></li>
 <li><a href="#_scrubber">2.13.3. Scrubber</a></li>
 <li><a href="#_dryer">2.13.4. Dryer</a></li>
 <li><a href="#_blower">2.13.5. Blower</a></li>
@@ -2614,13 +2586,8 @@ Arduino code for controlling heater is as follows:</p>
 <h3 id="_specifications">2.15. Specifications</h3>
 <div class="sect3">
 <h4 id="_energy_specifications">2.15.1. Energy Specifications</h4>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Roller</p>
-</li>
-</ol>
-</div>
+<div class="sect4">
+<h5 id="_1_roller">1. Roller</h5>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 50%;">
@@ -2637,19 +2604,15 @@ Arduino code for controlling heater is as follows:</p>
 </tr>
 </tbody>
 </table>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Soap Water Sprinkler</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
+</div>
+<div class="sect4">
+<h5 id="_2_soap_water_sprinkler">2. Soap Water Sprinkler</h5>
+<div class="ulist">
+<ul>
 <li>
 <p>With Sensor (Prototype)</p>
 </li>
-</ol>
-</div>
-</li>
-</ol>
+</ul>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -2671,12 +2634,12 @@ Arduino code for controlling heater is as follows:</p>
 </tr>
 </tbody>
 </table>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
+<div class="ulist">
+<ul>
 <li>
 <p>Without Sensor</p>
 </li>
-</ol>
+</ul>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -2698,13 +2661,9 @@ Arduino code for controlling heater is as follows:</p>
 </tr>
 </tbody>
 </table>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Scrubber</p>
-</li>
-</ol>
 </div>
+<div class="sect4">
+<h5 id="_3_scrubber">3. Scrubber</h5>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 50%;">
@@ -2722,19 +2681,84 @@ Arduino code for controlling heater is as follows:</p>
 </tbody>
 </table>
 </div>
+<div class="sect4">
+<h5 id="_4_blower">4. Blower</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>DC Motor:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Voltage: 9,12,15 Volts</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Potentiometer:</p>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Resistance Value</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">200 Ohm</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Limiting element voltage</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">250 Volt</p></td>
+</tr>
+</tbody>
+</table>
+<div class="ulist">
+<ul>
+<li>
+<p>Battery :</p>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Power Supply</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">9-volt</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Battery Impedance</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1700 m-ohm @ 1 kHz</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="_5_dryer">5. Dryer</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Voltage: 220 Volts</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
 <div class="sect3">
 <h4 id="_space_specifications">2.15.2. Space Specifications</h4>
 
 </div>
 <div class="sect3">
 <h4 id="_power_specifications">2.15.3. Power Specifications</h4>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Roller</p>
-</li>
-</ol>
-</div>
+<div class="sect4">
+<h5 id="_1_roller_2">1. Roller</h5>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 50%;">
@@ -2747,38 +2771,52 @@ Arduino code for controlling heater is as follows:</p>
 </tr>
 </tbody>
 </table>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Soap Water Sprinkler</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
+</div>
+<div class="sect4">
+<h5 id="_2_soap_water_sprinkler_2">2. Soap Water Sprinkler</h5>
+<div class="ulist">
+<ul>
 <li>
 <p>With Sensor (Prototype)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Power Rating of Prototype: 18 W</p>
 </li>
-</ol>
+</ul>
 </div>
 </li>
-</ol>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Power Rating of Prototype</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">18 W</p></td>
-</tr>
-</tbody>
-</table>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
 <li>
 <p>Without Sensor</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Battery voltage: 10 - 15 V</p>
 </li>
-</ol>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_3_scrubber_2">3. Scrubber</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Power: 0 W</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_4_blower_2">4. Blower</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>DC Motor:</p>
+</li>
+</ul>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -2787,18 +2825,44 @@ Arduino code for controlling heater is as follows:</p>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Battery voltage</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">10 - 15 V</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Power</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">300 Watts</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Speed</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7000 RPM</p></td>
 </tr>
 </tbody>
 </table>
+<div class="ulist">
+<ul>
+<li>
+<p>Transistor (BC547): Max collector Dissipation| 1.5W</p>
+</li>
+<li>
+<p>Resistor (100M ohms): Power Rating:0.25-0.5W</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_5_blower">5. Blower</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Actual machine requirement: 4-6 KW depending on the speed of feeding the cloth and drying rate</p>
+</li>
+<li>
+<p>For Prototype: 1000-2000W</p>
+</li>
+</ul>
+</div>
+</div>
 </div>
 <div class="sect3">
 <h4 id="_cost_specifications">2.15.4. Cost Specifications</h4>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Roller</p>
+<div class="sect4">
+<h5 id="_1_roller_3">1. Roller</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -2806,12 +2870,9 @@ Arduino code for controlling heater is as follows:</p>
 </li>
 </ul>
 </div>
-</li>
-<li>
-<p>Soap Water Sprinkler</p>
-</li>
-</ol>
 </div>
+<div class="sect4">
+<h5 id="_2_soap_water_sprinkler_3">2. Soap Water Sprinkler</h5>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 50%;">
@@ -2853,12 +2914,78 @@ Arduino code for controlling heater is as follows:</p>
 </tbody>
 </table>
 </div>
+<div class="sect4">
+<h5 id="_3_scrubber_3">3. Scrubber</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cost per meter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Rs. 300 - 400</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Number of Scrubbers</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2  (4 can be installed based on requirement)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="_4_blower_3">4. Blower</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Arduino</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Rs.2550</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Resistor(100 ohms)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Rs.1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Transistor</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Rs. 1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Potentiometer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Rs.17</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">9 volt Battery</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Rs.300</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DC motor</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Rs. 260</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="_5_dryer_2">5.. Dryer</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Actual machine cost: Around Rs. 100000</p>
+</li>
+<li>
+<p>For prototype: Rs. 800</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
 <div class="sect3">
 <h4 id="_performance_specifications">2.15.5. Performance Specifications</h4>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Roller</p>
+<div class="sect4">
+<h5 id="_1_roller_4">1. Roller</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -2878,9 +3005,9 @@ Arduino code for controlling heater is as follows:</p>
 </li>
 </ul>
 </div>
-</li>
-<li>
-<p>Soap Water Sprinkler</p>
+</div>
+<div class="sect4">
+<h5 id="_2_soap_water_sprinkler_4">2. Soap Water Sprinkler</h5>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
@@ -2893,8 +3020,47 @@ Arduino controls the operation of water pump. It also controls the flow rate and
 </li>
 </ol>
 </div>
+</div>
+<div class="sect4">
+<h5 id="_3_scrubber_4">3. Scrubber:</h5>
+<div class="paragraph">
+<p>Stationary scrubbers/brushes remain fixed during operation, providing a stable cleaning surface. The static design allows for controlled and targeted cleaning of fabrics, ensuring uniform and effective removal of dirt and contaminants.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_4_blower_4">4. Blower</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Control Mechanism: Potentiometer for DC motor speed control</p>
 </li>
-</ol>
+<li>
+<p>Efficiency: Improved motor control using a transistor to prevent overloading and overheating</p>
+</li>
+<li>
+<p>Lifespan: Enhanced motor lifespan due to efficient control using the transistor</p>
+</li>
+<li>
+<p>Compatibility: Multiple DC motors can be connected with slight wiring modifications</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_5_dryer_3">5. Dryer</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Control Mechanism: Arduino, a temperature sensor (thermocouple), a relay module, battery and bunch of connecting wires will be used</p>
+</li>
+<li>
+<p>Efficiency: Most efficient counter current configuration will be used</p>
+</li>
+<li>
+<p>Power requirements will be optimized on the basis of mathematical modelling and simulations done to observe the humidity content with rate of air flow and power input to heater and blower</p>
+</li>
+</ul>
+</div>
 </div>
 </div>
 <div class="sect3">
@@ -2998,13 +3164,65 @@ Arduino controls the operation of water pump. It also controls the flow rate and
 <dd>
 <p>A strong and durable thermoplastic polymer used in manufacturing.</p>
 </dd>
+<dt>Adapter Voltage Rating</dt>
+<dd>
+<p>This specifies the voltage range for the adapter that provides power to the soap water sprinkler.</p>
+</dd>
 <dt>Affix</dt>
 <dd>
 <p>Securely attach or fasten.</p>
 </dd>
+<dt>Areal density</dt>
+<dd>
+<p>mass per unit area</p>
+</dd>
+<dt>Arduino</dt>
+<dd>
+<p>Arduino is an open-source electronics platform used for creating interactive electronic projects.</p>
+</dd>
+<dt>Blower</dt>
+<dd>
+<p>A device used to create a flow of air or gas.</p>
+</dd>
+<dt>carcinogen</dt>
+<dd>
+<p>potential to cause cancer</p>
+</dd>
+<dt>Central Pollution Control Board (CPCB)</dt>
+<dd>
+<p>A regulatory body in India that sets standards for environmental pollution control.</p>
+</dd>
+<dt>chlorinated</dt>
+<dd>
+<p>state of having chlorine</p>
+</dd>
+<dt>Coil-based heating</dt>
+<dd>
+<p>This implies the use of a heating element made in the form of a coil. Electricity passing through the coil generates heat, and this method is often used in appliances like room heaters.</p>
+</dd>
+<dt>Compatibility</dt>
+<dd>
+<p>The ability of the system to work with other components.</p>
+</dd>
+<dt>Control Mechanism</dt>
+<dd>
+<p>The method used to regulate or manipulate the operation of the system.</p>
+</dd>
+<dt>Controller</dt>
+<dd>
+<p>In this context, a controller is a device that regulates or manages the operation of the dryer. It could involve setting and maintaining specific conditions such as temperature and drying time.</p>
+</dd>
+<dt>Controlled and targeted cleaning</dt>
+<dd>
+<p>This describes the method of cleaning where the scrubbers are designed to clean fabrics in a precise and controlled manner. The goal is to ensure uniform and effective removal of dirt and contaminants from the surfaces being cleaned.</p>
+</dd>
 <dt>CPCB (Central Pollution Control Board)</dt>
 <dd>
 <p>A regulatory body in India that sets standards for environmental pollution control.</p>
+</dd>
+<dt>DC Motor</dt>
+<dd>
+<p>A motor that operates on direct current (DC) electricity.</p>
 </dd>
 <dt>Denier</dt>
 <dd>
@@ -3012,7 +3230,20 @@ Arduino controls the operation of water pump. It also controls the flow rate and
 </dd>
 <dt>Desizing</dt>
 <dd>
-<p>The removal of sizing agents, such as starch or other chemicals, from fabrics to prepare them for further processing.</p>
+<p>The removal of sizing agents, such as starch or other chemicals, from fabrics to prepare them for further processing.
+driving motors: Motors powering the movement of the cloth fabric</p>
+</dd>
+<dt>Efficiency</dt>
+<dd>
+<p>The effectiveness of the system in converting input power to useful output power.</p>
+</dd>
+<dt>filleted</dt>
+<dd>
+<p>Somewhat stuck to the side or attached to side walls</p>
+</dd>
+<dt>fixtures</dt>
+<dd>
+<p>a fixed frame</p>
 </dd>
 <dt>Gantt Chart</dt>
 <dd>
@@ -3022,9 +3253,50 @@ Arduino controls the operation of water pump. It also controls the flow rate and
 <dd>
 <p>Domestic wastewater that does not contain fecal matter, often reused for irrigation or other non-potable purposes.</p>
 </dd>
+<dt>Guiding frame</dt>
+<dd>
+<p>a frame used to fold the cloth in half vertically</p>
+</dd>
+<dt>HCSR04 Ultrasonic Sensor</dt>
+<dd>
+<p>A specific ultrasonic sensor used in the prototype to detect objects in front of the dispenser.</p>
+</dd>
+<dt>Infrared based heating</dt>
+<dd>
+<p>This refers to a method of heating using infrared radiation. Infrared radiation is a type of electromagnetic radiation that heats objects directly without heating the surrounding air. It&#8217;s commonly used in appliances like heaters and dryers.</p>
+</dd>
 <dt>Isometric View</dt>
 <dd>
 <p>A three-dimensional representation of an object, showing all three spatial dimensions in one view.</p>
+</dd>
+<dt>KW (Kilowatts)</dt>
+<dd>
+<p>Kilowatts are a unit of power.</p>
+</dd>
+<dt>Lifespan</dt>
+<dd>
+<p>The duration for which the system is expected to operate.</p>
+</dd>
+<dt>Limiting element voltage</dt>
+<dd>
+<p>The maximum voltage the potentiometer can handle.</p>
+</dd>
+<dt>Lipase</dt>
+<dd>
+<p>an enzyme the body uses to break down fats
+Mathematical modeling and simulations: This refers to the use of mathematical equations and computer simulations to analyze and predict the behavior of the system.</p>
+</dd>
+<dt>Maximum Current Rating</dt>
+<dd>
+<p>Indicates the maximum current the device can draw from the power source.</p>
+</dd>
+<dt>Maximum Current Rating (per channel)</dt>
+<dd>
+<p>This indicates the maximum amount of electrical current that can flow through each channel (a path for electric current) without causing damage. The limit is set at 600 milliamperes (mA).</p>
+</dd>
+<dt>Maximum Operating Voltage</dt>
+<dd>
+<p>This is the highest voltage at which the roller or the associated system can safely operate.</p>
 </dd>
 <dt>Mercerizing</dt>
 <dd>
@@ -3036,7 +3308,7 @@ Arduino controls the operation of water pump. It also controls the flow rate and
 </dd>
 <dt>Nozzle mechanism</dt>
 <dd>
-<p>The nozzle and flapper mechanism are a displacement type detector which converts mechanical movement into a pressure signal by covering the opening of a nozzle with a flat plate called the flapper. This restricts fluid flow through the nozzle and generates a pressure signal.</p>
+<p>The nozzle and flapper mechanism are a displacement type detector that converts mechanical movement into a pressure signal by covering the opening of a nozzle with a flat plate called the flapper. This restricts fluid flow through the nozzle and generates a pressure signal.</p>
 </dd>
 <dt>Petroleum-based cleaning agents</dt>
 <dd>
@@ -3045,6 +3317,10 @@ Arduino controls the operation of water pump. It also controls the flow rate and
 <dt>Pretreatment</dt>
 <dd>
 <p>Applying cleansing agent before washing.</p>
+</dd>
+<dt>Prototype</dt>
+<dd>
+<p>A prototype is an initial version or model of a product that is used to test and develop the design.</p>
 </dd>
 <dt>Resource Breakdown</dt>
 <dd>
@@ -3070,13 +3346,21 @@ Arduino controls the operation of water pump. It also controls the flow rate and
 <dd>
 <p>The process of burning off protruding fibers or impurities from the surface of a fabric, often using a flame or hot surface.</p>
 </dd>
+<dt>Solvent</dt>
+<dd>
+<p>A substance, typically a liquid, capable of dissolving other substances.</p>
+</dd>
+<dt>Spot Lifters</dt>
+<dd>
+<p>A unique cleaning aid that removes oil and grease spots and stains from several types of fabrics and clothing.</p>
+</dd>
 <dt>Syrup</dt>
 <dd>
-<p>In the context of the report, it may refer to a concentrated solution of a sugar or sugar substitute in water.</p>
+<p>In the context of the report, it may refer to a concentrated solution of sugar or a sugar substitute in water.</p>
 </dd>
 <dt>Tannin</dt>
 <dd>
-<p>bitter, astringent substance found in plants.</p>
+<p>A bitter, astringent substance found in plants.</p>
 </dd>
 <dt>Testing Phase</dt>
 <dd>
@@ -3084,23 +3368,39 @@ Arduino controls the operation of water pump. It also controls the flow rate and
 </dd>
 <dt>Thermoplastic Polymer</dt>
 <dd>
-<p>A type of polymer that becomes pliable or mouldable when heated and solidifies upon cooling.</p>
+<p>A type of polymer that becomes pliable or moldable when heated and solidifies upon cooling.</p>
 </dd>
 <dt>Thread Count</dt>
 <dd>
 <p>The number of threads woven together per square inch in a fabric. A higher thread count is generally associated with a finer and more luxurious fabric.</p>
 </dd>
-<dt>Traces</dt>
+<dt>traces</dt>
 <dd>
-<p>mall amounts or remnants.</p>
+<p>Small amounts or remnants.</p>
 </dd>
 <dt>Turpentine</dt>
 <dd>
-<p>solvent used for thinning, cleaning paint and  varnish removal.</p>
+<p>Solvent used for thinning, cleaning paint and varnish removal.</p>
 </dd>
 <dt>User-Centric</dt>
 <dd>
 <p>Designed with a primary focus on meeting the needs and preferences of users.</p>
+</dd>
+<dt>USP</dt>
+<dd>
+<p>Unique selling point</p>
+</dd>
+<dt>Voltage</dt>
+<dd>
+<p>Voltage is a measure of electrical potential difference.</p>
+</dd>
+<dt>waste tub</dt>
+<dd>
+<p>A waste tub at the bottom to collect residual drippings and lint.</p>
+</dd>
+<dt>water compartment</dt>
+<dd>
+<p>A compartment to store water</p>
 </dd>
 </dl>
 </div>
@@ -3213,7 +3513,7 @@ Arduino controls the operation of water pump. It also controls the flow rate and
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-01-21 00:04:00 +0530
+Last updated 2024-01-21 00:28:32 +0530
 </div>
 </div>
 <script type="text/x-mathjax-config">
