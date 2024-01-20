@@ -501,9 +501,161 @@ pre.pygments .tok-vm { color: #aa0000 } /* Name.Variable.Magic */
 pre.pygments .tok-il { color: #009999 } /* Literal.Number.Integer.Long */
 </style>
 </head>
-<body class="article">
+<body class="article toc2 toc-left">
 <div id="header">
 <h1>ELP 305: Design and Systems Lab</h1>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_our_tribe">1. Week 2 Report: Requirements + Specifications</a>
+<ul class="sectlevel2">
+<li><a href="#_our_tribe_2">1.1. Our Tribe</a></li>
+<li><a href="#_team_members_with_if_less_than_1">1.2. Team members with IF less than 1</a></li>
+</ul>
+</li>
+<li><a href="#_body">2. Body</a>
+<ul class="sectlevel2">
+<li><a href="#_list_of_tables">2.1. List of Tables (to be updated)</a></li>
+<li><a href="#_list_of_figures">2.2. List of Figures (to be updated)</a></li>
+<li><a href="#_list_of_abbreviations">2.3. List of Abbreviations (to be updated)</a></li>
+<li><a href="#_mindmap">2.4. Mind Map</a></li>
+<li><a href="#_project_mang">2.5. Project Management</a></li>
+<li><a href="#_abstract">2.6. Abstract</a></li>
+<li><a href="#_motivation">2.7. Motivation</a></li>
+<li><a href="#_requirements">2.8. Requirements for the Idea</a>
+<ul class="sectlevel3">
+<li><a href="#_input_specs">2.8.1. Input Specifications</a></li>
+<li><a href="#_output_specs">2.8.2. Outputs Requirements</a></li>
+<li><a href="#_power_reqs">2.8.3. Power Requirements</a></li>
+<li><a href="#_logi_reqs">2.8.4. Logistical Requirements</a></li>
+<li><a href="#_env_reqs">2.8.5. Environmental Requirements</a></li>
+<li><a href="#_site_reqs">2.8.6. Site Requirements</a></li>
+<li><a href="#_time_reqs">2.8.7. Time Requirements</a>
+<ul class="sectlevel4">
+<li><a href="#_design_time">Design Time Requirements</a></li>
+<li><a href="#_lifetime_reqs">Lifetime Requirements</a></li>
+<li><a href="#_end_of_life_reqs">End of Life Requirements</a></li>
+</ul>
+</li>
+<li><a href="#_other_reqs">2.8.8. Other Non-Functional Requirements</a></li>
+</ul>
+</li>
+<li><a href="#_overview">2.9. Overview</a>
+<ul class="sectlevel3">
+<li><a href="#_key_components">2.9.1. Key Components:</a>
+<ul class="sectlevel4">
+<li><a href="#_rollers_with_motor_control">Rollers with Motor Control:</a></li>
+<li><a href="#_cloth_attachment">Cloth Attachment:</a></li>
+<li><a href="#_guiding_frame">Guiding Frame:</a></li>
+<li><a href="#_cleaning_mechanism">Cleaning Mechanism:</a></li>
+<li><a href="#_cleaning_fluid_compartment">Cleaning Fluid Compartment:</a></li>
+<li><a href="#_drying_chamber">Drying Chamber:</a></li>
+<li><a href="#_guiding_fixtures">Guiding Fixtures:</a></li>
+<li><a href="#_waste_tub">Waste Tub:</a></li>
+</ul>
+</li>
+<li><a href="#_workflow">2.9.2. Workflow</a></li>
+<li><a href="#_benefits">2.9.3. Benefits:</a></li>
+<li><a href="#_calculation_of_order_of_magnitude_of_the_length_of_the_chamber">2.9.4. Calculation of order of magnitude of the length of the chamber:</a></li>
+</ul>
+</li>
+<li><a href="#_component_analysis">2.10. Component Analysis</a>
+<ul class="sectlevel3">
+<li><a href="#_roller">2.10.1. Roller</a>
+<ul class="sectlevel4">
+<li><a href="#_controlling_dc_motor_using_arduino"><span class="underline"><strong>Controlling DC motor using Arduino:</strong></span></a></li>
+<li><a href="#_arduino_and_l293d_circuit_diagram">Arduino and L293D Circuit Diagram</a></li>
+</ul>
+</li>
+<li><a href="#_soap_water_sprinkler">2.10.2. Soap Water Sprinkler</a>
+<ul class="sectlevel4">
+<li><a href="#_for_splitted_cloth_pieces_using_sensor"><strong>For splitted cloth pieces using sensor</strong></a></li>
+<li><a href="#_without_censor_using_push_button"><strong>Without Censor, using push button</strong></a></li>
+</ul>
+</li>
+<li><a href="#_scrubber">2.10.3. Scrubber</a></li>
+<li><a href="#_blower">2.10.4. Blower</a></li>
+<li><a href="#_dryer">2.10.5. Dryer</a></li>
+</ul>
+</li>
+<li><a href="#_solvent">2.11. Solvent</a>
+<ul class="sectlevel3">
+<li><a href="#_lipase_enzyme">2.11.1. Lipase Enzyme</a></li>
+<li><a href="#_spot_removersuch_as_shout_and_hot_water">2.11.2. Spot Remover(such as Shout) and Hot Water</a></li>
+<li><a href="#_spot_lifterssuch_as_k2r_spot_lifter_followed_by_dry_brushing">2.11.3. Spot Lifters(such as K2R spot lifter) followed by dry brushing</a></li>
+<li><a href="#_baby_powder_cornstarch_salt_vinegar_followed_by_washing">2.11.4. Baby powder/ Cornstarch/ Salt/ Vinegar followed by washing</a></li>
+<li><a href="#_wd_40_or_lighter_fluid">2.11.5. WD-40 or Lighter Fluid</a></li>
+<li><a href="#_pceperchloroethylene">2.11.6. PCE(perchloroethylene):</a></li>
+<li><a href="#_handwashdettol">2.11.7. Handwash(Dettol):</a></li>
+<li><a href="#_dishwasher_vim_drop">2.11.8. Dishwasher (Vim Drop)</a></li>
+<li><a href="#_trichloroethylene_tce_chlorinated_solvent">2.11.9. Trichloroethylene (TCE): chlorinated solvent</a></li>
+<li><a href="#_isopropylrubbing_alcohol_68_72">2.11.10. Isopropyl(Rubbing alcohol 68-72%)</a></li>
+<li><a href="#_detergent_surf_excel">2.11.11. Detergent (Surf Excel)</a></li>
+<li><a href="#_acetone">2.11.12. Acetone</a></li>
+</ul>
+</li>
+<li><a href="#_specifications">2.12. Specifications</a>
+<ul class="sectlevel3">
+<li><a href="#_energy_specifications">2.12.1. Energy Specifications</a>
+<ul class="sectlevel4">
+<li><a href="#_1_roller">1. Roller</a></li>
+<li><a href="#_2_soap_water_sprinkler">2. Soap Water Sprinkler</a></li>
+<li><a href="#_3_blower">3. Blower</a></li>
+<li><a href="#_4_dryer">4. Dryer</a></li>
+</ul>
+</li>
+<li><a href="#_space_specifications">2.12.2. Space Specifications</a></li>
+<li><a href="#_power_specifications">2.12.3. Power Specifications</a>
+<ul class="sectlevel4">
+<li><a href="#_1_roller_2">1. Roller</a></li>
+<li><a href="#_2_soap_water_sprinkler_2">2. Soap Water Sprinkler</a></li>
+<li><a href="#_4_blower">4. Blower</a></li>
+<li><a href="#_5_blower">5. Blower</a></li>
+</ul>
+</li>
+<li><a href="#_cost_specifications">2.12.4. Cost Specifications</a>
+<ul class="sectlevel4">
+<li><a href="#_1_roller_3">1. Roller</a></li>
+<li><a href="#_2_soap_water_sprinkler_3">2. Soap Water Sprinkler</a></li>
+<li><a href="#_3_scrubber">3. Scrubber</a></li>
+<li><a href="#_4_blower_2">4. Blower</a></li>
+<li><a href="#_5_dryer">5. Dryer</a></li>
+</ul>
+</li>
+<li><a href="#_performance_specifications">2.12.5. Performance Specifications</a>
+<ul class="sectlevel4">
+<li><a href="#_1_roller_4">1. Roller</a></li>
+<li><a href="#_2_soap_water_sprinkler_4">2. Soap Water Sprinkler</a></li>
+<li><a href="#_3_scrubber_2">3. Scrubber:</a></li>
+<li><a href="#_4_blower_3">4. Blower</a></li>
+<li><a href="#_5_dryer_2">5. Dryer</a></li>
+</ul>
+</li>
+<li><a href="#_manpower_specifications">2.12.6. Manpower Specifications</a></li>
+<li><a href="#_milestone_specifications">2.12.7. Milestone Specifications</a>
+<ul class="sectlevel4">
+<li><a href="#_phase_i_25">Phase I (25%)</a></li>
+<li><a href="#_phase_ii_50">Phase II (50%)</a></li>
+<li><a href="#_phase_iii_75">Phase III (75%)</a></li>
+<li><a href="#_phase_iv_100">Phase IV (100%)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_references_to_be_updated">References (to be updated)</a></li>
+<li><a href="#_indexwith_pageno">3. Index(with pageno.)??</a></li>
+<li><a href="#_glossary">Glossary</a></li>
+<li><a href="#_appendix_to_be_changed"> A: Appendix (to be changed)</a>
+<ul class="sectlevel2">
+<li><a href="#_document_id">A.1. Document ID</a></li>
+<li><a href="#_document_statistics">A.2. Document Statistics</a></li>
+<li><a href="#_readability_indices_explain_a_bit_about_ranges_add_max_range_in_denom">A.3. Readability Indices ? explain a bit about ranges? add max range in denom</a></li>
+</ul>
+</li>
+</ul>
+</div>
 </div>
 <div id="content">
 <div id="preamble">
@@ -513,7 +665,7 @@ pre.pygments .tok-il { color: #009999 } /* Literal.Number.Integer.Long */
 <div class="title">Week 2 Report</div>
 <div class="imageblock text-center">
 <div class="content">
-<img src="https://github.com/soulhunter03/ELP305-TribeD-Resources/raw/1baba6a33de5fbc93a292d9863ce8c8760a16c83/assets/logo.png" alt="60" width="60">
+<img src="https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/be458fa52e9b4bf7661dfd82df802ab23349e4b4/assets/logo.png" alt="60" width="60">
 </div>
 </div>
 <div class="literalblock">
@@ -607,7 +759,7 @@ pre.pygments .tok-il { color: #009999 } /* Literal.Number.Integer.Long */
 <td class="tableblock halign-left valign-top"><p class="tableblock">2021MT10927</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">Research Team Member</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:mt1210927@maths.iitd.ac.in">mt1210927@maths.iitd.ac.in</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0.6</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">8</p></td>
@@ -615,7 +767,7 @@ pre.pygments .tok-il { color: #009999 } /* Literal.Number.Integer.Long */
 <td class="tableblock halign-left valign-top"><p class="tableblock">2021MT10930</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">Research Team Member</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:mt1210930@maths.iitd.ac.in">mt1210930@maths.iitd.ac.in</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0.8</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">9</p></td>
@@ -679,7 +831,7 @@ pre.pygments .tok-il { color: #009999 } /* Literal.Number.Integer.Long */
 <td class="tableblock halign-left valign-top"><p class="tableblock">2021EE10035</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">Research Team Member</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:ee1210035@ee.iitd.ac.in">ee1210035@ee.iitd.ac.in</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0.9</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">17</p></td>
@@ -695,7 +847,7 @@ pre.pygments .tok-il { color: #009999 } /* Literal.Number.Integer.Long */
 <td class="tableblock halign-left valign-top"><p class="tableblock">2021EE10167</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">Research Team Member</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:ee1210167@ee.iitd.ac.in">ee1210167@ee.iitd.ac.in</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0.6</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">19</p></td>
@@ -703,7 +855,7 @@ pre.pygments .tok-il { color: #009999 } /* Literal.Number.Integer.Long */
 <td class="tableblock halign-left valign-top"><p class="tableblock">2021MT10933</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">Research Team Member</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:mt1210933@maths.iitd.ac.in">mt1210933@maths.iitd.ac.in</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0.6</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">20</p></td>
@@ -711,7 +863,7 @@ pre.pygments .tok-il { color: #009999 } /* Literal.Number.Integer.Long */
 <td class="tableblock halign-left valign-top"><p class="tableblock">2021EE10161</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">Research Team Member</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:ee1210161@ee.iitd.ac.in">ee1210161@ee.iitd.ac.in</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0.6</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">21</p></td>
@@ -719,7 +871,7 @@ pre.pygments .tok-il { color: #009999 } /* Literal.Number.Integer.Long */
 <td class="tableblock halign-left valign-top"><p class="tableblock">2021EE10682</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">Research Team Member</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:ee1210682@ee.iitd.ac.in">ee1210682@ee.iitd.ac.in</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0.9</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">22</p></td>
@@ -727,7 +879,7 @@ pre.pygments .tok-il { color: #009999 } /* Literal.Number.Integer.Long */
 <td class="tableblock halign-left valign-top"><p class="tableblock">2021EE10163</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">Research Team Member</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:ee1210163@ee.iitd.ac.in">ee1210163@ee.iitd.ac.in</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0.6</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">23</p></td>
@@ -895,7 +1047,7 @@ pre.pygments .tok-il { color: #009999 } /* Literal.Number.Integer.Long */
 <td class="tableblock halign-left valign-top"><p class="tableblock">2020MT60888</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">Fabrication Team Member</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:mt6210888@maths.iitd.ac.in">mt6210888@maths.iitd.ac.in</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0.5</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">44</p></td>
@@ -903,7 +1055,7 @@ pre.pygments .tok-il { color: #009999 } /* Literal.Number.Integer.Long */
 <td class="tableblock halign-left valign-top"><p class="tableblock">2021EE10141</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">Fabrication Team Member</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:ee1210141@ee.iitd.ac.in">ee1210141@ee.iitd.ac.in</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0.5</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">45</p></td>
@@ -1030,6 +1182,109 @@ pre.pygments .tok-il { color: #009999 } /* Literal.Number.Integer.Long */
 </div>
 <div class="sect2">
 <h3 id="_team_members_with_if_less_than_1">1.2. Team members with IF less than 1</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 4.5454%;">
+<col style="width: 18.1818%;">
+<col style="width: 18.1818%;">
+<col style="width: 31.8181%;">
+<col style="width: 22.7272%;">
+<col style="width: 4.5457%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SNo.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Roll No.</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Position</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Email</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IF</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.linkedin.com/in/tanisha-jangra-5203132ab">Tanisha</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021MT10927</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Research Team Member</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:mt1210927@maths.iitd.ac.in">mt1210927@maths.iitd.ac.in</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0.6</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.linkedin.com/in/shreyansh-jain-6abb9124b/">Shreyansh Jain</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021MT10930</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Research Team Member</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:mt1210930@maths.iitd.ac.in">mt1210930@maths.iitd.ac.in</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0.8</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.linkedin.com/in/divyansh-agarwal-22989525b">Diyvansh Agarwal</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021EE10035</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Research Team Member</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:ee1210035@ee.iitd.ac.in">ee1210035@ee.iitd.ac.in</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0.9</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.linkedin.com/in/tanishk-singh-80ba09224/">Tanishk Singh</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021EE10167</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Research Team Member</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:ee1210167@ee.iitd.ac.in">ee1210167@ee.iitd.ac.in</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0.6</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.linkedin.com/in/akshansh-rajora-5794b5228">Akshansh Rajora</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021MT10933</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Research Team Member</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:mt1210933@maths.iitd.ac.in">mt1210933@maths.iitd.ac.in</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0.6</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.linkedin.com/in/ayush-madhur-40a575236/">Ayush Madhur</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021EE10161</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Research Team Member</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:ee1210161@ee.iitd.ac.in">ee1210161@ee.iitd.ac.in</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0.6</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.linkedin.com/in/keshvi-tomer-4b0331236/">Keshvi Tomar</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021EE10682</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Research Team Member</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:ee1210682@ee.iitd.ac.in">ee1210682@ee.iitd.ac.in</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0.9</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.linkedin.com/in/kanak-kumar-538ab2247/">Kanak Kumar Singh</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021EE10163</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Research Team Member</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:ee1210163@ee.iitd.ac.in">ee1210163@ee.iitd.ac.in</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0.6</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">9</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.linkedin.com/in/ajay-ramavath-/">Ajay Naik</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2020MT60888</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Fabrication Team Member</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:mt6210888@maths.iitd.ac.in">mt6210888@maths.iitd.ac.in</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0.5</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.linkedin.com/in/aryan-sharma-326657230/">Aryan Sharma</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2021EE10141</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Fabrication Team Member</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:ee1210141@ee.iitd.ac.in">ee1210141@ee.iitd.ac.in</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0.5</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Assigned tasks were not completed, Low participation in most of the meetings even after multiple reminders on the group. No inputs were given for the research stage. No role in CAD model designing.</p>
+</div>
 <div style="page-break-after: always;"></div>
 </div>
 </div>
@@ -1038,101 +1293,7 @@ pre.pygments .tok-il { color: #009999 } /* Literal.Number.Integer.Long */
 <h2 id="_body">2. Body</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_table_of_contents">2.1. Table of Contents</h3>
-<div id="toc" class="toc">
-<div id="toctitle" class="title">Table of Contents</div>
-<ul class="sectlevel1">
-<li><a href="#_our_tribe">1. Week 2 Report: Requirements + Specifications</a>
-<ul class="sectlevel2">
-<li><a href="#_our_tribe_2">1.1. Our Tribe</a></li>
-<li><a href="#_team_members_with_if_less_than_1">1.2. Team members with IF less than 1</a></li>
-</ul>
-</li>
-<li><a href="#_body">2. Body</a>
-<ul class="sectlevel2">
-<li><a href="#_table_of_contents">2.1. Table of Contents</a></li>
-<li><a href="#_list_of_tables">2.2. List of Tables (to be updated)</a></li>
-<li><a href="#_list_of_figures">2.3. List of Figures (to be updated)</a></li>
-<li><a href="#_list_of_abbreviations">2.4. List of Abbreviations (to be updated)</a></li>
-<li><a href="#_index">2.5. Index ? at end with pg no. ?</a></li>
-<li><a href="#_glossary">2.6. Glossary??</a></li>
-<li><a href="#_mindmap">2.7. Mind Map</a></li>
-<li><a href="#_project_mang">2.8. Project Management</a></li>
-<li><a href="#_abstract">2.9. Abstract</a></li>
-<li><a href="#_motivation">2.10. Motivation  ? edit acc to ques given</a></li>
-<li><a href="#_requirements">2.11. Requirements for the Idea</a>
-<ul class="sectlevel3">
-<li><a href="#_input_specs">2.11.1. Input Specifications</a></li>
-<li><a href="#_output_specs">2.11.2. Outputs Requirements</a></li>
-<li><a href="#_power_reqs">2.11.3. Power Requirements</a></li>
-<li><a href="#_logi_reqs">2.11.4. Logistical Requirements</a></li>
-<li><a href="#_env_reqs">2.11.5. Environmental Requirements</a></li>
-<li><a href="#_site_reqs">2.11.6. Site Requirements</a></li>
-<li><a href="#_time_reqs">2.11.7. Time Requirements</a></li>
-<li><a href="#_other_reqs">2.11.8. Other Non-Functional Requirements</a></li>
-</ul>
-</li>
-<li><a href="#_overview">2.12. Overview</a>
-<ul class="sectlevel3">
-<li><a href="#_key_components">2.12.1. Key Components:</a></li>
-<li><a href="#_workflow">2.12.2. Workflow:</a></li>
-<li><a href="#_benefits">2.12.3. Benefits:</a></li>
-<li><a href="#_calculation_of_order_of_magnitude_of_the_length_of_the_chamber">2.12.4. Calculation of order of magnitude of the length of the chamber:</a></li>
-</ul>
-</li>
-<li><a href="#_component_analysis">2.13. Component Analysis</a>
-<ul class="sectlevel3">
-<li><a href="#_roller">2.13.1. Roller</a></li>
-<li><a href="#_soap_water_sprinkler">2.13.2. Soap Water Sprinkler</a></li>
-<li><a href="#_scrubber">2.13.3. Scrubber</a></li>
-<li><a href="#_dryer">2.13.4. Dryer</a></li>
-<li><a href="#_blower">2.13.5. Blower</a></li>
-</ul>
-</li>
-<li><a href="#_solvent">2.14. Solvent</a>
-<ul class="sectlevel3">
-<li><a href="#_lipase_enzyme">2.14.1. Lipase Enzyme</a></li>
-<li><a href="#_spot_removersuch_as_shout_and_hot_water">2.14.2. Spot Remover(such as Shout) and Hot Water</a></li>
-<li><a href="#_spot_lifterssuch_as_k2r_spot_lifter_followed_by_dry_brushing">2.14.3. Spot Lifters(such as K2R spot lifter) followed by dry brushing</a></li>
-<li><a href="#_baby_powder_cornstarch_salt_vinegar_followed_by_washing">2.14.4. Baby powder/ Cornstarch/ Salt/ Vinegar followed by washing</a></li>
-<li><a href="#_wd_40_or_lighter_fluid">2.14.5. WD-40 or Lighter Fluid</a></li>
-<li><a href="#_pceperchloroethylene">2.14.6. PCE(perchloroethylene):</a></li>
-<li><a href="#_handwashdettol">2.14.7. Handwash(Dettol):</a></li>
-<li><a href="#_dishwasher_vim_drop">2.14.8. Dishwasher (Vim Drop)</a></li>
-<li><a href="#_trichloroethylene_tce_chlorinated_solvent">2.14.9. Trichloroethylene (TCE): chlorinated solvent</a></li>
-<li><a href="#_isopropylrubbing_alcohol_68_72">2.14.10. Isopropyl(Rubbing alcohol 68-72%)</a></li>
-<li><a href="#_detergent_surf_excel">2.14.11. Detergent (Surf Excel)</a></li>
-<li><a href="#_acetone">2.14.12. Acetone</a></li>
-</ul>
-</li>
-<li><a href="#_specifications">2.15. Specifications</a>
-<ul class="sectlevel3">
-<li><a href="#_energy_specifications">2.15.1. Energy Specifications</a></li>
-<li><a href="#_space_specifications">2.15.2. Space Specifications</a></li>
-<li><a href="#_power_specifications">2.15.3. Power Specifications</a></li>
-<li><a href="#_cost_specifications">2.15.4. Cost Specifications</a></li>
-<li><a href="#_performance_specifications">2.15.5. Performance Specifications</a></li>
-<li><a href="#_manpower_specifications">2.15.6. Manpower Specifications</a></li>
-<li><a href="#_milestone_specifications">2.15.7. Milestone Specifications</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#_references_to_be_updated">References (to be updated)</a></li>
-<li><a href="#_indexwith_pageno">3. Index(with pageno.)??</a></li>
-<li><a href="#_glossary_2">Glossary</a></li>
-<li><a href="#_appendix_to_be_changed"> A: Appendix (to be changed)</a>
-<ul class="sectlevel2">
-<li><a href="#_document_id">A.1. Document ID</a></li>
-<li><a href="#_document_statistics">A.2. Document Statistics</a></li>
-<li><a href="#_readability_indices_explain_a_bit_about_ranges_add_max_range_in_denom">A.3. Readability Indices ? explain a bit about ranges? add max range in denom</a></li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_list_of_tables">2.2. List of Tables (to be updated)</h3>
+<h3 id="_list_of_tables">2.1. List of Tables (to be updated)</h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -1151,7 +1312,7 @@ pre.pygments .tok-il { color: #009999 } /* Literal.Number.Integer.Long */
 </div>
 </div>
 <div class="sect2">
-<h3 id="_list_of_figures">2.3. List of Figures (to be updated)</h3>
+<h3 id="_list_of_figures">2.2. List of Figures (to be updated)</h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -1170,7 +1331,7 @@ pre.pygments .tok-il { color: #009999 } /* Literal.Number.Integer.Long */
 </div>
 </div>
 <div class="sect2">
-<h3 id="_list_of_abbreviations">2.4. List of Abbreviations (to be updated)</h3>
+<h3 id="_list_of_abbreviations">2.3. List of Abbreviations (to be updated)</h3>
 <table id="_abbreviations" class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 1. Some Abbreviations</caption>
 <colgroup>
@@ -1216,32 +1377,25 @@ pre.pygments .tok-il { color: #009999 } /* Literal.Number.Integer.Long */
 </tr>
 </tbody>
 </table>
-</div>
-<div class="sect2">
-<h3 id="_index">2.5. Index ? at end with pg no. ?</h3>
-
-</div>
-<div class="sect2">
-<h3 id="_glossary">2.6. Glossary??</h3>
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
-<h3 id="_mindmap">2.7. Mind Map</h3>
+<h3 id="_mindmap">2.4. Mind Map</h3>
 <div id="_outline_mindmap" class="imageblock">
 <div class="content">
-<img src="https://github.com/soulhunter03/ELP305-TribeD-Resources/raw/1baba6a33de5fbc93a292d9863ce8c8760a16c83/assets/outline_mindmap.jpg" alt="outline mindmap">
+<img src="https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/be458fa52e9b4bf7661dfd82df802ab23349e4b4/assets/P1_Otline_TribeD_MindMap_BW.png" alt="P1 Otline TribeD MindMap BW">
 </div>
 <div class="title">Figure 1. Outline Mind Map</div>
 </div>
 <div id="_requirements_mind_map" class="imageblock">
 <div class="content">
-<img src="https://github.com/soulhunter03/ELP305-TribeD-Resources/raw/1baba6a33de5fbc93a292d9863ce8c8760a16c83/assets/requirements_mindmap.jpg" alt="requirements mindmap">
+<img src="https://github.com/naunidhsingh03/ELP305-TribeD-Resources/blob/d417d822e73870101807a1adacbe3fa176b03a75/assets/P1_Req1_TribeD_MindMap_BW.png" alt="P1 Req1 TribeD MindMap BW">
 </div>
 <div class="title">Figure 2. Requirements Mind Map</div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_project_mang">2.8. Project Management</h3>
+<h3 id="_project_mang">2.5. Project Management</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1260,7 +1414,7 @@ pre.pygments .tok-il { color: #009999 } /* Literal.Number.Integer.Long */
 </div>
 </div>
 <div class="sect2">
-<h3 id="_abstract">2.9. Abstract</h3>
+<h3 id="_abstract">2.6. Abstract</h3>
 <div class="quoteblock abstract">
 <blockquote>
 This project revolves around developing a user-centric washing machine, which involves a comprehensive analysis of the features an average user looks for. Through extensive research, we will identify key elements that resonate with the needs and preferences of the general population when searching for a washing machine.<br>
@@ -1269,15 +1423,15 @@ Our initial design focuses on building a basic model, which in further iteration
 </div>
 </div>
 <div class="sect2">
-<h3 id="_motivation">2.10. Motivation  ? edit acc to ques given</h3>
+<h3 id="_motivation">2.7. Motivation</h3>
 <div class="paragraph">
-<p>Our motivation for developing this innovative washing machine stems from a desire to redefine the conventional norms in the industry. We aim to go beyond the traditional boundaries and create a product that caters to the diverse needs of the broad market. Our product will heavily rely on user feedback at each stage of the design, making it user-friendly to ensure that our product becomes very accessible. This model is committed to going above and beyond the ordinary, surpassing user expectations, and setting new benchmarks in washing machine technology. We believe in creating a product that not only fulfills practical needs but also enhances the overall user experience, elevating the standard for what a washing machine can achieve.</p>
+<p>Our goal with this project is to create an advanced fabric-cleaning machine designed to wash oil stains, specifically those near the edges of manufactured cloth. This machine aims to improve the efficiency of cloth manufacturing by providing effective drying and cleaning processes while preserving the fabric. Our design’s USP is its ability to leave the areas of the cloth that are already clean untouched, which preserves the fabric’s quality and durability. Utilizing this approach helps ensure a straightforward process and reduces the resources required for drying. We currently have an Autodesk model of our machine and have researched various electrical parts and how they will be implemented practically. We have also tested various solvents in an attempt to find one which is most suitable. Finally, we intend to deliver a working model of this machine, which focuses on cleaning oil and grease stains left in cloth during the manufacturing process while focusing more on the edges of the cloth as there are higher chances of deterioration on the periphery.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_requirements">2.11. Requirements for the Idea</h3>
+<h3 id="_requirements">2.8. Requirements for the Idea</h3>
 <div class="sect3">
-<h4 id="_input_specs">2.11.1. Input Specifications</h4>
+<h4 id="_input_specs">2.8.1. Input Specifications</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1308,7 +1462,7 @@ Preference for the washing machine to be offered at zero cost, requiring no serv
 </div>
 </div>
 <div class="sect3">
-<h4 id="_output_specs">2.11.2. Outputs Requirements</h4>
+<h4 id="_output_specs">2.8.2. Outputs Requirements</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1323,7 +1477,7 @@ Treating discharged graywater, managing lint, and ensuring the returned cloth is
 </div>
 </div>
 <div class="sect3">
-<h4 id="_power_reqs">2.11.3. Power Requirements</h4>
+<h4 id="_power_reqs">2.8.3. Power Requirements</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1338,7 +1492,7 @@ They are expected to run continuously, 24/7, with an emergency shutdown initiate
 </div>
 </div>
 <div class="sect3">
-<h4 id="_logi_reqs">2.11.4. Logistical Requirements</h4>
+<h4 id="_logi_reqs">2.8.4. Logistical Requirements</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1351,7 +1505,7 @@ They are expected to run continuously, 24/7, with an emergency shutdown initiate
 </div>
 </div>
 <div class="sect3">
-<h4 id="_env_reqs">2.11.5. Environmental Requirements</h4>
+<h4 id="_env_reqs">2.8.5. Environmental Requirements</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1367,7 +1521,7 @@ They are expected to run continuously, 24/7, with an emergency shutdown initiate
 </div>
 </div>
 <div class="sect3">
-<h4 id="_site_reqs">2.11.6. Site Requirements</h4>
+<h4 id="_site_reqs">2.8.6. Site Requirements</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1383,26 +1537,22 @@ They are expected to run continuously, 24/7, with an emergency shutdown initiate
 </div>
 </div>
 <div class="sect3">
-<h4 id="_time_reqs">2.11.7. Time Requirements</h4>
+<h4 id="_time_reqs">2.8.7. Time Requirements</h4>
 <div class="sect4">
-<h5 id="_design_time">Design Time Requirements ? heading doesnt match with points ?</h5>
+<h5 id="_design_time">Design Time Requirements</h5>
 <div class="ulist">
 <ul>
 <li>
 <p><strong>Cleaning and Drying time:</strong> Atmost 45 minutes.</p>
 </li>
 <li>
-<p><strong>Use Rate:</strong> ?</p>
+<p><strong>Use Rate:</strong> 24 hours a day 7 days a week with maximum downtime of 6 hours per year</p>
 </li>
 <li>
 <p><strong>Setup Time:</strong> As little time as possible, no more than 1 day.</p>
 </li>
 </ul>
 </div>
-</div>
-<div class="sect4">
-<h5 id="_time_to_market_reqs">Time to Market Requirements</h5>
-
 </div>
 <div class="sect4">
 <h5 id="_lifetime_reqs">Lifetime Requirements</h5>
@@ -1432,7 +1582,7 @@ They are expected to run continuously, 24/7, with an emergency shutdown initiate
 </div>
 </div>
 <div class="sect3">
-<h4 id="_other_reqs">2.11.8. Other Non-Functional Requirements</h4>
+<h4 id="_other_reqs">2.8.8. Other Non-Functional Requirements</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1444,12 +1594,12 @@ Dimensions and the inclusion of a stand or wheels are left to the designer&#8217
 </div>
 </div>
 <div class="sect2">
-<h3 id="_overview">2.12. Overview</h3>
+<h3 id="_overview">2.9. Overview</h3>
 <div class="paragraph">
 <p>We propose the development of an innovative cloth cleaning machine that can be used to clean oil stains (which occur near the edges) off of manufactured cloth after the manufacturing process. Our design consists of rollers, driving motors, a guiding frame (used to fold the cloth in half vertically), wiping and cleaning surfaces (brushes/sponge), a soap water mixture compartment, a water compartment, and a drying chamber. This automated system aims to streamline the cloth manufacturing process, ensuring efficient cleaning and drying during the manufacturing process while minimising the impact on the fabric. The USP of our design is that the regions of the cloth that are guaranteed to come in clean are untouched in the process, which preserves the quality and durability of the cloth. This approach also ensures that drying requires less effort and resources than other approaches.</p>
 </div>
 <div class="sect3">
-<h4 id="_key_components">2.12.1. Key Components:</h4>
+<h4 id="_key_components">2.9.1. Key Components:</h4>
 <div class="sect4">
 <h5 id="_rollers_with_motor_control">Rollers with Motor Control:</h5>
 <div class="ulist">
@@ -1577,10 +1727,28 @@ Dimensions and the inclusion of a stand or wheels are left to the designer&#8217
 </li>
 </ul>
 </div>
+<div class="imageblock">
+<div class="content">
+<img src="https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/8f83e23284014fff1847c5024d5e7ba3d274cf96/P1_TribeD_Proposed_Model/isometric%201.png" alt="isometric%201">
+</div>
+<div class="title">Figure 3. Proposed model isometric view</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/8f83e23284014fff1847c5024d5e7ba3d274cf96/P1_TribeD_Proposed_Model/top%20view.png" alt="top%20view">
+</div>
+<div class="title">Figure 4. Proposed model top view</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/8f83e23284014fff1847c5024d5e7ba3d274cf96/P1_TribeD_Proposed_Model/side%20view.png" alt="side%20view">
+</div>
+<div class="title">Figure 5. Proposed model side view</div>
+</div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_workflow">2.12.2. Workflow:</h4>
+<h4 id="_workflow">2.9.2. Workflow</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1606,9 +1774,15 @@ Dimensions and the inclusion of a stand or wheels are left to the designer&#8217
 </li>
 </ul>
 </div>
+<div class="imageblock">
+<div class="content">
+<img src="https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/d417d822e73870101807a1adacbe3fa176b03a75/assets/P1_WorkFlow_TribeD_Flowchart.png" alt="P1 WorkFlow TribeD Flowchart">
+</div>
+<div class="title">Figure 6. Workflow</div>
+</div>
 </div>
 <div class="sect3">
-<h4 id="_benefits">2.12.3. Benefits:</h4>
+<h4 id="_benefits">2.9.3. Benefits:</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1628,7 +1802,7 @@ This innovative cloth making machine promises to revolutionise the textile indus
 </div>
 </div>
 <div class="sect3">
-<h4 id="_calculation_of_order_of_magnitude_of_the_length_of_the_chamber">2.12.4. Calculation of order of magnitude of the length of the chamber:</h4>
+<h4 id="_calculation_of_order_of_magnitude_of_the_length_of_the_chamber">2.9.4. Calculation of order of magnitude of the length of the chamber:</h4>
 <div class="paragraph">
 <p>Suppose the cleaning and drying part of the machine is ‘l’ inches long.
 The cloth needs to be in the cleaning environment for about 90 seconds to get cleaned and dried (experimental estimate using soap, hair dryer and napkin).</p>
@@ -1662,9 +1836,9 @@ Varying soaps changes the time cloth needs to spend in the chamber, which increa
 </div>
 </div>
 <div class="sect2">
-<h3 id="_component_analysis">2.13. Component Analysis</h3>
+<h3 id="_component_analysis">2.10. Component Analysis</h3>
 <div class="sect3">
-<h4 id="_roller">2.13.1. Roller</h4>
+<h4 id="_roller">2.10.1. Roller</h4>
 <div class="olist lowerroman">
 <ol class="lowerroman" type="i">
 <li>
@@ -1688,7 +1862,7 @@ Varying soaps changes the time cloth needs to spend in the chamber, which increa
 <div class="content">
 <img src="https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/4657c2e45a7e58677d9d220eac84a0fc316f88ca/electrical_resources/Picture1.png" alt="Picture1" width="50%">
 </div>
-<div class="title">Figure 3. Industrial Roller</div>
+<div class="title">Figure 7. Industrial Roller</div>
 </div>
 <div class="sect4">
 <h5 id="_controlling_dc_motor_using_arduino"><span class="underline"><strong>Controlling DC motor using Arduino:</strong></span></h5>
@@ -1702,7 +1876,7 @@ A common technique to do that is PWM (Pulse Width Modulation). In PWM the applie
 <div class="content">
 <img src="https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/4c3f442d4cf538c5df98a55429b09d2a34c96f45/electrical_resources/duty_cycle.png" alt="duty cycle">
 </div>
-<div class="title">Figure 4. Duty Cycle</div>
+<div class="title">Figure 8. Duty Cycle</div>
 </div>
 <div class="paragraph">
 <p>The higher the duty cycle, the higher the average voltage applied to the DC motor (resulting in higher speed) and the shorter the duty cycle, the lower the average voltage applied to the DC motor (resulting in lower speed).</p>
@@ -1718,7 +1892,7 @@ Below is an example of a circuit diagram to drive multiple motors from a single 
 <div class="content">
 <img src="https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/4657c2e45a7e58677d9d220eac84a0fc316f88ca/electrical_resources/roller_circuit.png" alt="roller circuit">
 </div>
-<div class="title">Figure 5. Circuit for Roller</div>
+<div class="title">Figure 9. Circuit for Roller</div>
 </div>
 <details>
 <summary class="title">Click Here to See the Code</summary>
@@ -1823,14 +1997,26 @@ Below is an example of a circuit diagram to drive multiple motors from a single 
 </div>
 </div>
 <div class="sect3">
-<h4 id="_soap_water_sprinkler">2.13.2. Soap Water Sprinkler</h4>
+<h4 id="_soap_water_sprinkler">2.10.2. Soap Water Sprinkler</h4>
+<div id="_fig1_isometric" class="imageblock">
+<div class="content">
+<img src="https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/be458fa52e9b4bf7661dfd82df802ab23349e4b4/assets/sprinkler_fig1.jpg" alt="sprinkler fig1" width="50%">
+</div>
+<div class="title">Figure 10. Isometric view of Sprinkler</div>
+</div>
+<div id="_fig2_isometric" class="imageblock">
+<div class="content">
+<img src="https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/be458fa52e9b4bf7661dfd82df802ab23349e4b4/assets/sprinkler_fig2.jpg" alt="sprinkler fig2" width="50%">
+</div>
+<div class="title">Figure 11. Isometric view of Sprinkler</div>
+</div>
 <div class="sect4">
 <h5 id="_for_splitted_cloth_pieces_using_sensor"><strong>For splitted cloth pieces using sensor</strong></h5>
 <div class="imageblock">
 <div class="content">
-<img src="https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/9ae27957f7f9bed7b02f8cd5803453d164ba0f19/electrical_resources/water_sprinkler_circuit.png" alt="water sprinkler circuit">
+<img src="https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/8f83e23284014fff1847c5024d5e7ba3d274cf96/electrical_resources/water_sprinkler_circuit.png" alt="water sprinkler circuit">
 </div>
-<div class="title">Figure 6. Circuit for Water Sprinkler</div>
+<div class="title">Figure 12. Circuit for Water Sprinkler</div>
 </div>
 <details>
 <summary class="title">Click Here to See the Code</summary>
@@ -1906,8 +2092,15 @@ Below is an example of a circuit diagram to drive multiple motors from a single 
 <h5 id="_without_censor_using_push_button"><strong>Without Censor, using push button</strong></h5>
 <div class="imageblock">
 <div class="content">
-<img src="https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/88c12ef3ea625a24905de9faf5e61669c8b8352f/electrical_resources/without_censor_sprinkler_circuit.png" alt="without censor sprinkler circuit">
+<img src="https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/8f83e23284014fff1847c5024d5e7ba3d274cf96/electrical_resources/without_censor_sprinkler_circuit.png" alt="without censor sprinkler circuit">
 </div>
+<div class="title">Figure 13. Circuit using Push button</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/8f83e23284014fff1847c5024d5e7ba3d274cf96/electrical_resources/sprinkler_full_circuit.png" alt="sprinkler full circuit">
+</div>
+<div class="title">Figure 14. Full Circuit without Sensor</div>
 </div>
 <details>
 <summary class="title">Click Here to See the Code</summary>
@@ -1959,7 +2152,7 @@ Below is an example of a circuit diagram to drive multiple motors from a single 
 </div>
 </div>
 <div class="sect3">
-<h4 id="_scrubber">2.13.3. Scrubber</h4>
+<h4 id="_scrubber">2.10.3. Scrubber</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -2043,7 +2236,55 @@ the design specifications.</p>
 </details>
 </div>
 <div class="sect3">
-<h4 id="_dryer">2.13.4. Dryer</h4>
+<h4 id="_blower">2.10.4. Blower</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>We will be controlling the speed of the DC motor using a potentiometer for the purpose of  blower in our washing machine to remove heavy dust particles from the cloth piece.</p>
+</li>
+<li>
+<p>Potentiometer has three terminals. Outer two terminals are for power supply and the middle terminal is the output.</p>
+</li>
+<li>
+<p>As we rotate the knob of the potentiometer, the resistance between the middle terminal and one of the outer terminals changes. This change in resistance controls the voltage supplied to the motor, which in turn controls its speed.</p>
+</li>
+<li>
+<p>We can connect multiple DC motors in our system by making slight modifications in the wiring.</p>
+</li>
+<li>
+<p>A Transistor is used for more efficient control of the motor speed. By controlling the current flow to the motor, transistors can prevent overloading and overheating, enhancing the motor’s lifespan.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/9ae27957f7f9bed7b02f8cd5803453d164ba0f19/electrical_resources/blower_circuit.png" alt="blower circuit">
+</div>
+<div class="title">Figure 15. TinkerCAD circuit for Blower</div>
+</div>
+<details>
+<summary class="title">Click Here to See the Code</summary>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="cpp"><span></span><span class="tok-k">const</span><span class="tok-w"> </span><span class="tok-kt">int</span><span class="tok-w"> </span><span class="tok-n">poten</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-n">A3</span><span class="tok-p">;</span>
+<span class="tok-kt">int</span><span class="tok-w"> </span><span class="tok-n">var</span><span class="tok-p">;</span>
+
+<span class="tok-kt">void</span><span class="tok-w"> </span><span class="tok-nf">setup</span><span class="tok-p">()</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="tok-w">  </span><span class="tok-n">pinMode</span><span class="tok-p">(</span><span class="tok-mi">6</span><span class="tok-p">,</span><span class="tok-w"> </span><span class="tok-n">OUTPUT</span><span class="tok-p">);</span>
+<span class="tok-p">}</span>
+
+<span class="tok-kt">void</span><span class="tok-w"> </span><span class="tok-nf">loop</span><span class="tok-p">()</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="tok-w">  </span><span class="tok-n">var</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-n">analogRead</span><span class="tok-p">(</span><span class="tok-n">poten</span><span class="tok-p">);</span>
+<span class="tok-w">  </span><span class="tok-n">analogWrite</span><span class="tok-p">(</span><span class="tok-mi">6</span><span class="tok-p">,</span><span class="tok-w"> </span><span class="tok-n">var</span><span class="tok-p">);</span>
+<span class="tok-p">}</span></code></pre>
+</div>
+</div>
+</div>
+</details>
+</div>
+<div class="sect3">
+<h4 id="_dryer">2.10.5. Dryer</h4>
 <div class="paragraph">
 <p>We are planning to use the configuration of tunnel dryer to dry the clothes. The power and torque requirements of the motor used in blower and power requirements of the heater will depend on the time needed to dry the cloth, rate at which the cloth is being fed, width and height of the chamber, final moisture content and initial moisture content.
 Also, since counter current configuration is most efficient, we will be using the same in our design. Using tunnel dryers also allows us to move the conveyor belt slowly as it is very efficient in processing materials taking long drying time and thus requiring lesser motor drive.</p>
@@ -2325,62 +2566,14 @@ Arduino code for controlling heater is as follows:</p>
 </div>
 </details>
 </div>
-<div class="sect3">
-<h4 id="_blower">2.13.5. Blower</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>We will be controlling the speed of the DC motor using a potentiometer for the purpose of  blower in our washing machine to remove heavy dust particles from the cloth piece.</p>
-</li>
-<li>
-<p>Potentiometer has three terminals. Outer two terminals are for power supply and the middle terminal is the output.</p>
-</li>
-<li>
-<p>As we rotate the knob of the potentiometer, the resistance between the middle terminal and one of the outer terminals changes. This change in resistance controls the voltage supplied to the motor, which in turn controls its speed.</p>
-</li>
-<li>
-<p>We can connect multiple DC motors in our system by making slight modifications in the wiring.</p>
-</li>
-<li>
-<p>A Transistor is used for more efficient control of the motor speed. By controlling the current flow to the motor, transistors can prevent overloading and overheating, enhancing the motor’s lifespan.</p>
-</li>
-</ul>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/9ae27957f7f9bed7b02f8cd5803453d164ba0f19/electrical_resources/blower_circuit.png" alt="blower circuit">
-</div>
-<div class="title">Figure 7. TinkerCAD circuit for Blower</div>
-</div>
-<details>
-<summary class="title">Click Here to See the Code</summary>
-<div class="content">
-<div class="listingblock">
-<div class="content">
-<pre class="pygments highlight"><code data-lang="cpp"><span></span><span class="tok-k">const</span><span class="tok-w"> </span><span class="tok-kt">int</span><span class="tok-w"> </span><span class="tok-n">poten</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-n">A3</span><span class="tok-p">;</span>
-<span class="tok-kt">int</span><span class="tok-w"> </span><span class="tok-n">var</span><span class="tok-p">;</span>
-
-<span class="tok-kt">void</span><span class="tok-w"> </span><span class="tok-nf">setup</span><span class="tok-p">()</span><span class="tok-w"> </span><span class="tok-p">{</span>
-<span class="tok-w">  </span><span class="tok-n">pinMode</span><span class="tok-p">(</span><span class="tok-mi">6</span><span class="tok-p">,</span><span class="tok-w"> </span><span class="tok-n">OUTPUT</span><span class="tok-p">);</span>
-<span class="tok-p">}</span>
-
-<span class="tok-kt">void</span><span class="tok-w"> </span><span class="tok-nf">loop</span><span class="tok-p">()</span><span class="tok-w"> </span><span class="tok-p">{</span>
-<span class="tok-w">  </span><span class="tok-n">var</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-n">analogRead</span><span class="tok-p">(</span><span class="tok-n">poten</span><span class="tok-p">);</span>
-<span class="tok-w">  </span><span class="tok-n">analogWrite</span><span class="tok-p">(</span><span class="tok-mi">6</span><span class="tok-p">,</span><span class="tok-w"> </span><span class="tok-n">var</span><span class="tok-p">);</span>
-<span class="tok-p">}</span></code></pre>
-</div>
-</div>
-</div>
-</details>
-</div>
 </div>
 <div class="sect2">
-<h3 id="_solvent">2.14. Solvent</h3>
+<h3 id="_solvent">2.11. Solvent</h3>
 <div class="paragraph">
 <p>Some of the cleansing agents that were researched and tested for oil and grease stains are:</p>
 </div>
 <div class="sect3">
-<h4 id="_lipase_enzyme">2.14.1. Lipase Enzyme</h4>
+<h4 id="_lipase_enzyme">2.11.1. Lipase Enzyme</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -2393,7 +2586,7 @@ Arduino code for controlling heater is as follows:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_spot_removersuch_as_shout_and_hot_water">2.14.2. Spot Remover(such as Shout) and Hot Water</h4>
+<h4 id="_spot_removersuch_as_shout_and_hot_water">2.11.2. Spot Remover(such as Shout) and Hot Water</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -2406,7 +2599,7 @@ Arduino code for controlling heater is as follows:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_spot_lifterssuch_as_k2r_spot_lifter_followed_by_dry_brushing">2.14.3. Spot Lifters(such as K2R spot lifter) followed by dry brushing</h4>
+<h4 id="_spot_lifterssuch_as_k2r_spot_lifter_followed_by_dry_brushing">2.11.3. Spot Lifters(such as K2R spot lifter) followed by dry brushing</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -2419,7 +2612,7 @@ Arduino code for controlling heater is as follows:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_baby_powder_cornstarch_salt_vinegar_followed_by_washing">2.14.4. Baby powder/ Cornstarch/ Salt/ Vinegar followed by washing</h4>
+<h4 id="_baby_powder_cornstarch_salt_vinegar_followed_by_washing">2.11.4. Baby powder/ Cornstarch/ Salt/ Vinegar followed by washing</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -2432,7 +2625,7 @@ Arduino code for controlling heater is as follows:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_wd_40_or_lighter_fluid">2.14.5. WD-40 or Lighter Fluid</h4>
+<h4 id="_wd_40_or_lighter_fluid">2.11.5. WD-40 or Lighter Fluid</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -2447,17 +2640,17 @@ Arduino code for controlling heater is as follows:</p>
 <div class="content">
 <img src="https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/280fdb451ed940e8a1bfbbd416651b69019e250b/solvent_pictures/wd_40_before.jpg" alt="wd 40 before">
 </div>
-<div class="title">Figure 8. Grease stain before using WD-40</div>
+<div class="title">Figure 16. Grease stain before using WD-40</div>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/280fdb451ed940e8a1bfbbd416651b69019e250b/solvent_pictures/wd_40_after.jpg" alt="wd 40 after">
 </div>
-<div class="title">Figure 9. Grease stain after using WD-40</div>
+<div class="title">Figure 17. Grease stain after using WD-40</div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_pceperchloroethylene">2.14.6. PCE(perchloroethylene):</h4>
+<h4 id="_pceperchloroethylene">2.11.6. PCE(perchloroethylene):</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -2470,7 +2663,7 @@ Arduino code for controlling heater is as follows:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_handwashdettol">2.14.7. Handwash(Dettol):</h4>
+<h4 id="_handwashdettol">2.11.7. Handwash(Dettol):</h4>
 <div class="paragraph">
 <p>Tested hand wash to clean oil stain with gentle brushing and it successfully cleaned the oil stain.</p>
 </div>
@@ -2486,7 +2679,7 @@ Arduino code for controlling heater is as follows:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_dishwasher_vim_drop">2.14.8. Dishwasher (Vim Drop)</h4>
+<h4 id="_dishwasher_vim_drop">2.11.8. Dishwasher (Vim Drop)</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -2498,17 +2691,17 @@ Arduino code for controlling heater is as follows:</p>
 <div class="content">
 <img src="https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/280fdb451ed940e8a1bfbbd416651b69019e250b/solvent_pictures/dishwash_before.jpg" alt="dishwash before">
 </div>
-<div class="title">Figure 10. Grease stain before using dishwasher(Vim)</div>
+<div class="title">Figure 18. Grease stain before using dishwasher(Vim)</div>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/280fdb451ed940e8a1bfbbd416651b69019e250b/solvent_pictures/dishwash_after.jpg" alt="dishwash after">
 </div>
-<div class="title">Figure 11. Grease stain after using dishwasher(Vim)</div>
+<div class="title">Figure 19. Grease stain after using dishwasher(Vim)</div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_trichloroethylene_tce_chlorinated_solvent">2.14.9. Trichloroethylene (TCE): chlorinated solvent</h4>
+<h4 id="_trichloroethylene_tce_chlorinated_solvent">2.11.9. Trichloroethylene (TCE): chlorinated solvent</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -2521,7 +2714,7 @@ Arduino code for controlling heater is as follows:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_isopropylrubbing_alcohol_68_72">2.14.10. Isopropyl(Rubbing alcohol 68-72%)</h4>
+<h4 id="_isopropylrubbing_alcohol_68_72">2.11.10. Isopropyl(Rubbing alcohol 68-72%)</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -2536,11 +2729,11 @@ Arduino code for controlling heater is as follows:</p>
 <div class="content">
 <img src="https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/280fdb451ed940e8a1bfbbd416651b69019e250b/solvent_pictures/isopropyl_after.png" alt="isopropyl after">
 </div>
-<div class="title">Figure 12. Grease stain after applying isopropyl(rubbing alcohol 68-72%)</div>
+<div class="title">Figure 20. Grease stain after applying isopropyl(rubbing alcohol 68-72%)</div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_detergent_surf_excel">2.14.11. Detergent (Surf Excel)</h4>
+<h4 id="_detergent_surf_excel">2.11.11. Detergent (Surf Excel)</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -2551,13 +2744,15 @@ Arduino code for controlling heater is as follows:</p>
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<div class="title">Grease stain after using detergent and scrubbing</div>
-<p>image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/280fdb451ed940e8a1bfbbd416651b69019e250b/solvent_pictures/detergent_after.png[====</p>
+<div class="imageblock">
+<div class="content">
+<img src="https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/280fdb451ed940e8a1bfbbd416651b69019e250b/solvent_pictures/detergent_after.png" alt="detergent after">
+</div>
+<div class="title">Figure 21. Grease stain after using detergent and scrubbing</div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_acetone">2.14.12. Acetone</h4>
+<h4 id="_acetone">2.11.12. Acetone</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -2572,20 +2767,20 @@ Arduino code for controlling heater is as follows:</p>
 <div class="content">
 <img src="https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/280fdb451ed940e8a1bfbbd416651b69019e250b/solvent_pictures/acetone_before.jpg" alt="acetone before">
 </div>
-<div class="title">Figure 13. Grease stain before using acetone</div>
+<div class="title">Figure 22. Grease stain before using acetone</div>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/280fdb451ed940e8a1bfbbd416651b69019e250b/solvent_pictures/acetone_after.jpg" alt="acetone after">
 </div>
-<div class="title">Figure 14. Grease stain after using acetone</div>
+<div class="title">Figure 23. Grease stain after using acetone</div>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_specifications">2.15. Specifications</h3>
+<h3 id="_specifications">2.12. Specifications</h3>
 <div class="sect3">
-<h4 id="_energy_specifications">2.15.1. Energy Specifications</h4>
+<h4 id="_energy_specifications">2.12.1. Energy Specifications</h4>
 <div class="sect4">
 <h5 id="_1_roller">1. Roller</h5>
 <table class="tableblock frame-all grid-all stretch">
@@ -2663,26 +2858,7 @@ Arduino code for controlling heater is as follows:</p>
 </table>
 </div>
 <div class="sect4">
-<h5 id="_3_scrubber">3. Scrubber</h5>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Voltage</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0 V</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Current</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0 A</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect4">
-<h5 id="_4_blower">4. Blower</h5>
+<h5 id="_3_blower">3. Blower</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -2741,7 +2917,7 @@ Arduino code for controlling heater is as follows:</p>
 </table>
 </div>
 <div class="sect4">
-<h5 id="_5_dryer">5. Dryer</h5>
+<h5 id="_4_dryer">4. Dryer</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -2752,11 +2928,56 @@ Arduino code for controlling heater is as follows:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_space_specifications">2.15.2. Space Specifications</h4>
-
+<h4 id="_space_specifications">2.12.2. Space Specifications</h4>
+<div class="paragraph">
+<p>proposed model specifications:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Base:</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>length = 100cm</p>
+</li>
+<li>
+<p>breadth = 30cm</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Roller:</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>diameter = 8cm</p>
+</li>
+<li>
+<p>length = 25cm</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>N-box:</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>length = 70cm</p>
+</li>
+<li>
+<p>breadth = 25cm</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
 </div>
 <div class="sect3">
-<h4 id="_power_specifications">2.15.3. Power Specifications</h4>
+<h4 id="_power_specifications">2.12.3. Power Specifications</h4>
 <div class="sect4">
 <h5 id="_1_roller_2">1. Roller</h5>
 <table class="tableblock frame-all grid-all stretch">
@@ -2800,17 +3021,7 @@ Arduino code for controlling heater is as follows:</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_3_scrubber_2">3. Scrubber</h5>
-<div class="ulist">
-<ul>
-<li>
-<p>Power: 0 W</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_4_blower_2">4. Blower</h5>
+<h5 id="_4_blower">4. Blower</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -2860,7 +3071,7 @@ Arduino code for controlling heater is as follows:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_cost_specifications">2.15.4. Cost Specifications</h4>
+<h4 id="_cost_specifications">2.12.4. Cost Specifications</h4>
 <div class="sect4">
 <h5 id="_1_roller_3">1. Roller</h5>
 <div class="ulist">
@@ -2915,7 +3126,7 @@ Arduino code for controlling heater is as follows:</p>
 </table>
 </div>
 <div class="sect4">
-<h5 id="_3_scrubber_3">3. Scrubber</h5>
+<h5 id="_3_scrubber">3. Scrubber</h5>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 50%;">
@@ -2934,7 +3145,7 @@ Arduino code for controlling heater is as follows:</p>
 </table>
 </div>
 <div class="sect4">
-<h5 id="_4_blower_3">4. Blower</h5>
+<h5 id="_4_blower_2">4. Blower</h5>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 50%;">
@@ -2969,7 +3180,7 @@ Arduino code for controlling heater is as follows:</p>
 </table>
 </div>
 <div class="sect4">
-<h5 id="_5_dryer_2">5.. Dryer</h5>
+<h5 id="_5_dryer">5. Dryer</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -2983,7 +3194,7 @@ Arduino code for controlling heater is as follows:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_performance_specifications">2.15.5. Performance Specifications</h4>
+<h4 id="_performance_specifications">2.12.5. Performance Specifications</h4>
 <div class="sect4">
 <h5 id="_1_roller_4">1. Roller</h5>
 <div class="ulist">
@@ -3022,13 +3233,13 @@ Arduino controls the operation of water pump. It also controls the flow rate and
 </div>
 </div>
 <div class="sect4">
-<h5 id="_3_scrubber_4">3. Scrubber:</h5>
+<h5 id="_3_scrubber_2">3. Scrubber:</h5>
 <div class="paragraph">
 <p>Stationary scrubbers/brushes remain fixed during operation, providing a stable cleaning surface. The static design allows for controlled and targeted cleaning of fabrics, ensuring uniform and effective removal of dirt and contaminants.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_4_blower_4">4. Blower</h5>
+<h5 id="_4_blower_3">4. Blower</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -3047,7 +3258,7 @@ Arduino controls the operation of water pump. It also controls the flow rate and
 </div>
 </div>
 <div class="sect4">
-<h5 id="_5_dryer_3">5. Dryer</h5>
+<h5 id="_5_dryer_2">5. Dryer</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -3064,12 +3275,131 @@ Arduino controls the operation of water pump. It also controls the flow rate and
 </div>
 </div>
 <div class="sect3">
-<h4 id="_manpower_specifications">2.15.6. Manpower Specifications</h4>
-
+<h4 id="_manpower_specifications">2.12.6. Manpower Specifications</h4>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 2. Manpower Specs</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Team</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Man hours</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Research Team</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">82 hours</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Electrical Team</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">60 hours</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fabrication</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">13.5 hours</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Documentation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">127 hours</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Consultant</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2 hours</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="sect3">
-<h4 id="_milestone_specifications">2.15.7. Milestone Specifications</h4>
-
+<h4 id="_milestone_specifications">2.12.7. Milestone Specifications</h4>
+<div class="sect4">
+<h5 id="_phase_i_25">Phase I (25%)</h5>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Outline and ideation of the proposed design.</p>
+</li>
+<li>
+<p>Learning the skills required for the project.</p>
+</li>
+<li>
+<p>Formation and organization of a team for the project.</p>
+</li>
+<li>
+<p>Empirical research on the idea and feasibility of the project.</p>
+</li>
+<li>
+<p>Visualization of the initial theorized model through basic diagrams on auto CAD mode.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>TRL 2: Outlining the proposed design, learning skills, and formation of a team indicates the initiation of the project. The use of AutoCAD for basic visualization enhances the maturity by translating ideas into tangible forms, although it&#8217;s still in the early stages of development involving ideation and conceptualization.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_phase_ii_50">Phase II (50%)</h5>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Realization of the components required in the design.</p>
+</li>
+<li>
+<p>Trial and error checks on the code for the mechanisms.</p>
+</li>
+<li>
+<p>Purchasing the required chemicals and inventory to realize the mechanisms.</p>
+</li>
+<li>
+<p>Testing the chemicals used on the cloth.</p>
+</li>
+<li>
+<p>Finalized design of the visualized model using Free CAD.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>TRL 3: Realizing components, conducting trial and error checks on the code, purchasing required materials, and finalizing the design using ‘FreeCAD’ signify a transition from the early stages to a more mature state. The culmination of these activities indicates a significant advancement in technology readiness, approaching the stage where it can be practically implemented.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_phase_iii_75">Phase III (75%)</h5>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Showing some individual components, which are completely ready and are in working condition, to the client</p>
+</li>
+<li>
+<p>Finalizing component circuits and codes</p>
+</li>
+<li>
+<p>Including details(dimensions and location) of all the small parts in the model.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>TRL 4: Demonstrating fully functional components to the client, finalizing circuits and codes, and providing detailed specifications represent a high level of maturity. This milestone is marked by a readiness for deployment, with working components and comprehensive documentation that can lead to the assembly of a full prototype.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_phase_iv_100">Phase IV (100%)</h5>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Assembling all the different components together to make a full working prototype.</p>
+</li>
+<li>
+<p>Live demonstration to the client by using a sample cloth with edges stained with oil and grease, to mimic a just manufactured cotton cloth.</p>
+</li>
+<li>
+<p>Assessment of the model by the quality of cleaning and the time taken.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>TRL 5: Assembling all components into a working prototype, conducting a live demonstration using a sample cloth, and assessing performance in real-world conditions with actual stains indicate a high level of readiness for practical application and deployment. The technology has progressed to the point where it can be reliably demonstrated and evaluated in real-world scenarios, signaling a mature state.</p>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -3079,6 +3409,72 @@ Arduino controls the operation of water pump. It also controls the flow rate and
 <div class="sectionbody">
 <div class="olist arabic">
 <ol class="arabic">
+<li>
+<p>“Buy Unbranded DISCRETE SEMICONDUCTOR DEVICES (ACTIVE COMPONENT - TRANSISTOR) Available upto 50 Units in Pack online \textbar Government e Marketplace (GeM).” Accessed: Jan. 20, 2024. [Online]. Available: <a href="https://mkp.gem.gov.in/discrete-semiconductor-devices-active-component-transistor/transistor-bc547/p-5116877-99881870936-cat.html#variant_id=5116877-99881870936" class="bare">https://mkp.gem.gov.in/discrete-semiconductor-devices-active-component-transistor/transistor-bc547/p-5116877-99881870936-cat.html#variant_id=5116877-99881870936</a>.</p>
+</li>
+<li>
+<p>“Buy Robu.in Fixed resistance 0.25 to 0.5 watt , 100 Ohms Resistors online \textbar Government e Marketplace (GeM).” Accessed: Jan. 20, 2024. [Online]. Available: <a href="https://mkp.gem.gov.in/resistors-v2/robu-100-ohm-0-5w-metal-film-resistor/p-5116877-89668708241-cat.html#variant_id=5116877-89668708241" class="bare">https://mkp.gem.gov.in/resistors-v2/robu-100-ohm-0-5w-metal-film-resistor/p-5116877-89668708241-cat.html#variant_id=5116877-89668708241</a>.</p>
+</li>
+<li>
+<p>“Arduino UNO R3 board with DIP ATmega328P : Amazon.in: Industrial &amp; Scientific.” Accessed: Jan. 20, 2024. [Online]. Available: <a href="https://www.amazon.in/Arduino-UNO-board-DIP-ATmega328P/dp/B008GRTSV6" class="bare">https://www.amazon.in/Arduino-UNO-board-DIP-ATmega328P/dp/B008GRTSV6</a>.</p>
+</li>
+<li>
+<p>“Circuit design Speed Control of DC motor,” <em>Tinkercad</em>. Accessed: Jan. 20, 2024. [Online]. Available: <a href="https://www.tinkercad.com/things/asw6WG8f1hX" class="bare">https://www.tinkercad.com/things/asw6WG8f1hX</a>.</p>
+</li>
+<li>
+<p>“ZYME RS775 High Torque 12V Brushed DC Motor, Big Strong Motor, High RPM, DIY Project : Amazon.in: Home Improvement.” Accessed: Jan. 20, 2024. [Online]. Available: <a href="https://www.amazon.in/RS775-Torque-Brushed-Strong-Project/dp/B07DB83TTQ/ref=pd_sbs_d_sccl_3_4/261-8874385-6367705?pd_rd_w=kwfPQ&amp;content-id=amzn1.sym.06e2aaf4-2afc-4124-9c99-6297c751b938&amp;pf_rd_p=06e2aaf4-2afc-4124-9c99-6297c751b938&amp;pf_rd_r=GMX9C252Q6TV4DZGPK8J&amp;pd_rd_wg=3gpLj&amp;pd_rd_r=4357d553-a48c-46ef-9927-c655e01ba140&amp;pd_rd_i=B07DB83TTQ&amp;psc=1" class="bare">https://www.amazon.in/RS775-Torque-Brushed-Strong-Project/dp/B07DB83TTQ/ref=pd_sbs_d_sccl_3_4/261-8874385-6367705?pd_rd_w=kwfPQ&amp;content-id=amzn1.sym.06e2aaf4-2afc-4124-9c99-6297c751b938&amp;pf_rd_p=06e2aaf4-2afc-4124-9c99-6297c751b938&amp;pf_rd_r=GMX9C252Q6TV4DZGPK8J&amp;pd_rd_wg=3gpLj&amp;pd_rd_r=4357d553-a48c-46ef-9927-c655e01ba140&amp;pd_rd_i=B07DB83TTQ&amp;psc=1</a>.</p>
+</li>
+<li>
+<p>“Buy POWER ONE Alkaline Battery 9 Volt online \textbar Government e Marketplace (GeM).” Accessed: Jan. 20, 2024. [Online]. Available: <a href="https://mkp.gem.gov.in/alkaline-battery-9v/alkaline-battery/p-5116877-49209006435-cat.html#variant_id=5116877-49209006435" class="bare">https://mkp.gem.gov.in/alkaline-battery-9v/alkaline-battery/p-5116877-49209006435-cat.html#variant_id=5116877-49209006435</a>.</p>
+</li>
+<li>
+<p>“Buy AI Ceramic Potentiometer, No. of pieces (per pack) 1 in Polythene online \textbar Government e Marketplace (GeM).” Accessed: Jan. 20, 2024. [Online]. Available: <a href="https://mkp.gem.gov.in/potentiometer/potentiometer/p-5116877-67004120183-cat.html#variant_id=5116877-67004120183" class="bare">https://mkp.gem.gov.in/potentiometer/potentiometer/p-5116877-67004120183-cat.html#variant_id=5116877-67004120183</a>.</p>
+</li>
+<li>
+<p>“What is the best Industrial cleaner? Water-based cleaners or solvent cleaners?,” <em>GZ Industrial Supplies</em>. Accessed: Jan. 12, 2024. [Online]. Available: <a href="https://www.gz-supplies.com/news/what-is-the-best-industrial-cleaner-waterbased-cleaners-or-solvent-cleaners/" class="bare">https://www.gz-supplies.com/news/what-is-the-best-industrial-cleaner-waterbased-cleaners-or-solvent-cleaners/</a>.</p>
+</li>
+<li>
+<p>“Controlling a DC Motor with Motor Shield Rev3 \textbar Arduino Documentation.” Accessed: Jan. 20, 2024. [Online]. Available: <a href="https://docs.arduino.cc/tutorials/motor-shield-rev3/msr3-controlling-dc-motor/" class="bare">https://docs.arduino.cc/tutorials/motor-shield-rev3/msr3-controlling-dc-motor/</a>.</p>
+</li>
+<li>
+<p>“Driving DC Motors with L293D and Arduino,” <em>Robocraze</em>. Jan. 2024, Accessed: Jan. 20, 2024. [Online]. Available: <a href="https://robocraze.com/blogs/post/driving-dc-motors-with-l293d-and-arduino" class="bare">https://robocraze.com/blogs/post/driving-dc-motors-with-l293d-and-arduino</a>.</p>
+</li>
+<li>
+<p>“(54) Textile rewinding machine REXEL PP-2 - YouTube.” Accessed: Jan. 20, 2024. [Online]. Available: <a href="https://www.youtube.com/watch?v=7mxV5Xkwehk" class="bare">https://www.youtube.com/watch?v=7mxV5Xkwehk</a>.</p>
+</li>
+<li>
+<p>“Customized Industrial Roller Brushes Spiral Cylinder Rotary Conveyor Belt Cleaning.” Accessed: Jan. 20, 2024. [Online]. Available: <a href="https://www.sweeping-brush.com/sale-11663841-customized-industrial-roller-brushes-spiral-cylinder-rotary-conveyor-belt-cleaning.html" class="bare">https://www.sweeping-brush.com/sale-11663841-customized-industrial-roller-brushes-spiral-cylinder-rotary-conveyor-belt-cleaning.html</a>.</p>
+</li>
+<li>
+<p>“Process Roll Cleaners-Traversing.” Accessed: Jan. 20, 2024. [Online]. Available: <a href="https://www.polymagtek.com/process-roll-cleaner-traversing/" class="bare">https://www.polymagtek.com/process-roll-cleaner-traversing/</a>.</p>
+</li>
+<li>
+<p>“Circuit design Arduino - Motor DC (L293D) with control button and Indications,” <em>Tinkercad</em>. Accessed: Jan. 20, 2024. [Online]. Available: <a href="https://www.tinkercad.com/things/dfXFEdEpIYG" class="bare">https://www.tinkercad.com/things/dfXFEdEpIYG</a>.</p>
+</li>
+<li>
+<p>“L293D data sheet, product information and support \textbar TI.com.” Accessed: Jan. 20, 2024. [Online]. Available: <a href="https://www.ti.com/product/L293D" class="bare">https://www.ti.com/product/L293D</a>.</p>
+</li>
+<li>
+<p>“Tunnel Conveyor , Drying Curing Conveyor,” <em>indiamart.com</em>. Accessed: Jan. 20, 2024. [Online]. Available: <a href="https://www.indiamart.com/proddetail/tunnel-conveyor-drying-curing-conveyor-2850009254588.html" class="bare">https://www.indiamart.com/proddetail/tunnel-conveyor-drying-curing-conveyor-2850009254588.html</a>.</p>
+</li>
+<li>
+<p>“Types of Dryers: Components, Types, Applications and Advantages.” Accessed: Jan. 12, 2024. [Online]. Available: <a href="https://www.iqsdirectory.com/articles/dryer/types-of-dryers.html" class="bare">https://www.iqsdirectory.com/articles/dryer/types-of-dryers.html</a>.</p>
+</li>
+<li>
+<p>“PID Thermocouple Arduino max6675.” Accessed: Jan. 20, 2024. [Online]. Available: <a href="https://electronoobs.com/eng_arduino_tut24_code2.php#google_vignette" class="bare">https://electronoobs.com/eng_arduino_tut24_code2.php#google_vignette</a>.</p>
+</li>
+<li>
+<p>“Study on drying characters of a thin cotton fabric under uneven radial heating by the hot air jet.” Accessed: Jan. 20, 2024. [Online]. Available: <a href="https://www.tandfonline.com/doi/epdf/10.1080/07373937.2021.2004159?needAccess=true" class="bare">https://www.tandfonline.com/doi/epdf/10.1080/07373937.2021.2004159?needAccess=true</a>.</p>
+</li>
+<li>
+<p>MACFOS, “Temperature Controlled Fan using Arduino - Step by Step Guide with Code - Robu.in \textbar Indian Online Store \textbar RC Hobby \textbar Robotics.” Accessed: Jan. 20, 2024. [Online]. Available: <a href="https://robu.in/temperature-controlled-fan-using-arduino-step-by-step-guide-with-code/" class="bare">https://robu.in/temperature-controlled-fan-using-arduino-step-by-step-guide-with-code/</a>.</p>
+</li>
+<li>
+<p>“Control a water pump by Arduino.” Accessed: Jan. 20, 2024. [Online]. Available: <a href="https://www.robotique.tech/robotics/control-a-water-pump-by-arduino/" class="bare">https://www.robotique.tech/robotics/control-a-water-pump-by-arduino/</a>.</p>
+</li>
+<li>
+<p>“Automatic Water Dispenser using Arduino.” Accessed: Jan. 20, 2024. [Online]. Available: <a href="https://circuitdigest.com/microcontroller-projects/arduino-automatic-water-dispenser" class="bare">https://circuitdigest.com/microcontroller-projects/arduino-automatic-water-dispenser</a>.</p>
+</li>
 <li>
 <p>K. D. Cleaners, “Dry Cleaining 101: Seven Fabrics That Need To Be Dry Cleaned,” <em>Kelly’s Dry Cleaners</em>. Jan. 2020, Accessed: Jan. 12, 2024. [Online]. Available: <a href="https://kellysdrycleaners.com/blog/dry-cleaning-101-six-fabrics-that-need-to-be-dry-cleaned/" class="bare">https://kellysdrycleaners.com/blog/dry-cleaning-101-six-fabrics-that-need-to-be-dry-cleaned/</a>.</p>
 </li>
@@ -3156,7 +3552,7 @@ Arduino controls the operation of water pump. It also controls the flow rate and
 </div>
 </div>
 <div class="sect1">
-<h2 id="_glossary_2">Glossary</h2>
+<h2 id="_glossary">Glossary</h2>
 <div class="sectionbody">
 <div id="_ABS_meaning" class="dlist glossary">
 <dl>
@@ -3411,12 +3807,40 @@ Mathematical modeling and simulations: This refers to the use of mathematical eq
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="_document_id">A.1. Document ID</h3>
-
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 3. Document ID</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Document type</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Document Authorised by</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Publication Date</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Version No.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GitHub Repo Details</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="sect2">
 <h3 id="_document_statistics">A.2. Document Statistics</h3>
 <table id="_doc_stats" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 2. Document Stats</caption>
+<caption class="title">Table 4. Document Stats</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -3468,7 +3892,7 @@ Mathematical modeling and simulations: This refers to the use of mathematical eq
 <div class="sect2">
 <h3 id="_readability_indices_explain_a_bit_about_ranges_add_max_range_in_denom">A.3. Readability Indices ? explain a bit about ranges? add max range in denom</h3>
 <table id="_readability_stats" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 3. Readability Stats</caption>
+<caption class="title">Table 5. Readability Stats</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -3513,7 +3937,7 @@ Mathematical modeling and simulations: This refers to the use of mathematical eq
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-01-21 00:28:32 +0530
+Last updated 2024-01-21 02:16:29 +0530
 </div>
 </div>
 <script type="text/x-mathjax-config">

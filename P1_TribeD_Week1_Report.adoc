@@ -7,14 +7,14 @@
 :source-highlighter: pygments
 :pygments-style: autumn
 :sectnums: 
-:toc: macro
-:toclevels: 3
+:toc: left
+:toclevels: 4
 
 [.text-center]
 .Week 2 Report
 ****
 
-image::https://github.com/soulhunter03/ELP305-TribeD-Resources/raw/1baba6a33de5fbc93a292d9863ce8c8760a16c83/assets/logo.png[60, 60,align="center"]
+image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/be458fa52e9b4bf7661dfd82df802ab23349e4b4/assets/logo.png[60, 60,align="center"]
 
  Submitted by: Tribe D (Demantors)
 
@@ -23,7 +23,6 @@ image::https://github.com/soulhunter03/ELP305-TribeD-Resources/raw/1baba6a33de5f
 
 
 ****
-
 
 
 [[_our_tribe]]
@@ -57,10 +56,10 @@ image::https://github.com/soulhunter03/ELP305-TribeD-Resources/raw/1baba6a33de5f
 | 6          | link:https://www.linkedin.com/in/abhas-porov-b69077248/[Abhas Porov]               | 2021EE10781| Electrical Design and Simulation Coordinator  |ee1210781@ee.iitd.ac.in     | 1
 
 
-| 7          | link:https://www.linkedin.com/in/tanisha-jangra-5203132ab[Tanisha]                   | 2021MT10927| Research Team Member                          |mt1210927@maths.iitd.ac.in  | 1
+| 7          | link:https://www.linkedin.com/in/tanisha-jangra-5203132ab[Tanisha]                   | 2021MT10927| Research Team Member                          |mt1210927@maths.iitd.ac.in  | 0.6
 
 
-| 8          | link:https://www.linkedin.com/in/shreyansh-jain-6abb9124b/[Shreyansh Jain]            | 2021MT10930| Research Team Member                          |mt1210930@maths.iitd.ac.in  | 1
+| 8          | link:https://www.linkedin.com/in/shreyansh-jain-6abb9124b/[Shreyansh Jain]            | 2021MT10930| Research Team Member                          |mt1210930@maths.iitd.ac.in  | 0.8
 
 
 | 9          | link:https://www.linkedin.com/in/rishika-arya-266082279/[Rishika Arya]              | 2021MT10926| Research Team Member                          |mt1210926@maths.iitd.ac.in  | 1
@@ -84,25 +83,25 @@ image::https://github.com/soulhunter03/ELP305-TribeD-Resources/raw/1baba6a33de5f
 | 15         | link:https://www.linkedin.com/in/nancy-kansal-1b5384234/[Nancy Kansal]              | 2021MT10905| Research Team Member                          |mt1210905@maths.iitd.ac.in  | 1
 
 
-| 16         | link:https://www.linkedin.com/in/divyansh-agarwal-22989525b[Diyvansh Agarwal]          | 2021EE10035| Research Team Member                          |ee1210035@ee.iitd.ac.in     | 1
+| 16         | link:https://www.linkedin.com/in/divyansh-agarwal-22989525b[Diyvansh Agarwal]          | 2021EE10035| Research Team Member                          |ee1210035@ee.iitd.ac.in     | 0.9
 
 
 | 17         | link:https://www.linkedin.com/in/mukund-aggarwal[Mukund Aggarwal]           | 2021MT60939| Research Team Member                          |mt6210939@maths.iitd.ac.in  | 1
 
 
-| 18         | link:https://www.linkedin.com/in/tanishk-singh-80ba09224/[Tanishk Singh]             | 2021EE10167| Research Team Member                          |ee1210167@ee.iitd.ac.in     | 1
+| 18         | link:https://www.linkedin.com/in/tanishk-singh-80ba09224/[Tanishk Singh]             | 2021EE10167| Research Team Member                          |ee1210167@ee.iitd.ac.in     | 0.6
 
 
-| 19         | link:https://www.linkedin.com/in/akshansh-rajora-5794b5228[Akshansh Rajora]           | 2021MT10933| Research Team Member                          |mt1210933@maths.iitd.ac.in  | 1
+| 19         | link:https://www.linkedin.com/in/akshansh-rajora-5794b5228[Akshansh Rajora]           | 2021MT10933| Research Team Member                          |mt1210933@maths.iitd.ac.in  | 0.6
 
 
-| 20         | link:https://www.linkedin.com/in/ayush-madhur-40a575236/[Ayush Madhur]              | 2021EE10161| Research Team Member                          |ee1210161@ee.iitd.ac.in     | 1
+| 20         | link:https://www.linkedin.com/in/ayush-madhur-40a575236/[Ayush Madhur]              | 2021EE10161| Research Team Member                          |ee1210161@ee.iitd.ac.in     | 0.6
 
 
-| 21         | link:https://www.linkedin.com/in/keshvi-tomer-4b0331236/[Keshvi Tomar]              | 2021EE10682| Research Team Member                          |ee1210682@ee.iitd.ac.in     | 1
+| 21         | link:https://www.linkedin.com/in/keshvi-tomer-4b0331236/[Keshvi Tomar]              | 2021EE10682| Research Team Member                          |ee1210682@ee.iitd.ac.in     | 0.9
 
 
-| 22         | link:https://www.linkedin.com/in/kanak-kumar-538ab2247/[Kanak Kumar Singh]         | 2021EE10163| Research Team Member                          |ee1210163@ee.iitd.ac.in     | 1
+| 22         | link:https://www.linkedin.com/in/kanak-kumar-538ab2247/[Kanak Kumar Singh]         | 2021EE10163| Research Team Member                          |ee1210163@ee.iitd.ac.in     | 0.6
 
 
 | 23         | link:https://www.linkedin.com/in/aravind-udupa-266a52223/[Aravind Udupa]             | 2021MT60940| Research Team Member                          |mt6210940@maths.iitd.ac.in  | 1
@@ -165,10 +164,10 @@ image::https://github.com/soulhunter03/ELP305-TribeD-Resources/raw/1baba6a33de5f
 | 42         | link:https://www.linkedin.com/in/champak-swargiary-a87b04230/[Champak Swargiary]         | 2021MT10263| Fabrication Team Member                       |mt1210263@maths.iitd.ac.in  | 1
 
 
-| 43         | link:https://www.linkedin.com/in/ajay-ramavath-/[Ajay Naik]                 | 2020MT60888| Fabrication Team Member                       |mt6210888@maths.iitd.ac.in  | 1
+| 43         | link:https://www.linkedin.com/in/ajay-ramavath-/[Ajay Naik]                 | 2020MT60888| Fabrication Team Member                       |mt6210888@maths.iitd.ac.in  | 0.5
 
 
-| 44         | link:https://www.linkedin.com/in/aryan-sharma-326657230/[Aryan Sharma]              | 2021EE10141| Fabrication Team Member                       |ee1210141@ee.iitd.ac.in     | 1
+| 44         | link:https://www.linkedin.com/in/aryan-sharma-326657230/[Aryan Sharma]              | 2021EE10141| Fabrication Team Member                       |ee1210141@ee.iitd.ac.in     | 0.5
 
 
 
@@ -223,14 +222,40 @@ image::https://github.com/soulhunter03/ELP305-TribeD-Resources/raw/1baba6a33de5f
 
 === Team members with IF less than 1
 
+[cols='1,4,4,^7, 5, 1',width="100%"]
+|===
+| SNo. | Name              | Roll No.   | Position                                                    |    Email                   | IF
+| 1          | link:https://www.linkedin.com/in/tanisha-jangra-5203132ab[Tanisha]                   | 2021MT10927| Research Team Member                          |mt1210927@maths.iitd.ac.in  | 0.6
+
+| 2          | link:https://www.linkedin.com/in/shreyansh-jain-6abb9124b/[Shreyansh Jain]            | 2021MT10930| Research Team Member                          |mt1210930@maths.iitd.ac.in  | 0.8
+
+| 3         | link:https://www.linkedin.com/in/divyansh-agarwal-22989525b[Diyvansh Agarwal]          | 2021EE10035| Research Team Member                          |ee1210035@ee.iitd.ac.in     | 0.9
+
+| 4         | link:https://www.linkedin.com/in/tanishk-singh-80ba09224/[Tanishk Singh]             | 2021EE10167| Research Team Member                          |ee1210167@ee.iitd.ac.in     | 0.6
+
+
+| 5         | link:https://www.linkedin.com/in/akshansh-rajora-5794b5228[Akshansh Rajora]           | 2021MT10933| Research Team Member                          |mt1210933@maths.iitd.ac.in  | 0.6
+
+| 6         | link:https://www.linkedin.com/in/ayush-madhur-40a575236/[Ayush Madhur]              | 2021EE10161| Research Team Member                          |ee1210161@ee.iitd.ac.in     | 0.6
+
+
+| 7         | link:https://www.linkedin.com/in/keshvi-tomer-4b0331236/[Keshvi Tomar]              | 2021EE10682| Research Team Member                          |ee1210682@ee.iitd.ac.in     | 0.9
+
+
+| 8         | link:https://www.linkedin.com/in/kanak-kumar-538ab2247/[Kanak Kumar Singh]         | 2021EE10163| Research Team Member                          |ee1210163@ee.iitd.ac.in     | 0.6
+
+| 9         | link:https://www.linkedin.com/in/ajay-ramavath-/[Ajay Naik]                 | 2020MT60888| Fabrication Team Member                       |mt6210888@maths.iitd.ac.in  | 0.5
+
+
+| 10         | link:https://www.linkedin.com/in/aryan-sharma-326657230/[Aryan Sharma]              | 2021EE10141| Fabrication Team Member                       |ee1210141@ee.iitd.ac.in     | 0.5
+
+|===
+Assigned tasks were not completed, Low participation in most of the meetings even after multiple reminders on the group. No inputs were given for the research stage. No role in CAD model designing.
+
 <<<
 
 
 == Body
-
-=== Table of Contents
-
-toc::[]
 
 // * link:#_list_of_tables[1. List of Tables]
 // * link:#_list_of_figures[2. List of Figures]
@@ -299,23 +324,18 @@ toc::[]
 |ABS              |Acrylonitrile Butadiene Styrene
 |===
 
-[[_index]]
-=== Index ? at end with pg no. ?
-
-
-=== Glossary??
 
 <<<
 [[_mindmap]]
 === Mind Map
 [[_outline_mindmap]]
 .Outline Mind Map
-image::https://github.com/soulhunter03/ELP305-TribeD-Resources/raw/1baba6a33de5fbc93a292d9863ce8c8760a16c83/assets/outline_mindmap.jpg[]
+image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/be458fa52e9b4bf7661dfd82df802ab23349e4b4/assets/P1_Otline_TribeD_MindMap_BW.png[]
 
 
 [[_requirements_mind_map]]
 .Requirements Mind Map
-image::https://github.com/soulhunter03/ELP305-TribeD-Resources/raw/1baba6a33de5fbc93a292d9863ce8c8760a16c83/assets/requirements_mindmap.jpg[]
+image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/d417d822e73870101807a1adacbe3fa176b03a75/assets/P1_Req1_TribeD_MindMap_BW.png[]
 
 [[_project_mang]]
 === Project Management
@@ -335,8 +355,8 @@ Our initial design focuses on building a basic model, which in further iteration
 
 
 [[_motivation]]
-=== Motivation  ? edit acc to ques given
-Our motivation for developing this innovative washing machine stems from a desire to redefine the conventional norms in the industry. We aim to go beyond the traditional boundaries and create a product that caters to the diverse needs of the broad market. Our product will heavily rely on user feedback at each stage of the design, making it user-friendly to ensure that our product becomes very accessible. This model is committed to going above and beyond the ordinary, surpassing user expectations, and setting new benchmarks in washing machine technology. We believe in creating a product that not only fulfills practical needs but also enhances the overall user experience, elevating the standard for what a washing machine can achieve.
+=== Motivation  
+Our goal with this project is to create an advanced fabric-cleaning machine designed to wash oil stains, specifically those near the edges of manufactured cloth. This machine aims to improve the efficiency of cloth manufacturing by providing effective drying and cleaning processes while preserving the fabric. Our design’s USP is its ability to leave the areas of the cloth that are already clean untouched, which preserves the fabric’s quality and durability. Utilizing this approach helps ensure a straightforward process and reduces the resources required for drying. We currently have an Autodesk model of our machine and have researched various electrical parts and how they will be implemented practically. We have also tested various solvents in an attempt to find one which is most suitable. Finally, we intend to deliver a working model of this machine, which focuses on cleaning oil and grease stains left in cloth during the manufacturing process while focusing more on the edges of the cloth as there are higher chances of deterioration on the periphery.
 
 // [[_machine_mech]]
 // === [underline]#*Mechanism of the Machine*#
@@ -349,13 +369,7 @@ Our motivation for developing this innovative washing machine stems from a desir
 
 
 // ==== Soap + Water Mechanism
-// [[_fig1_isometric]]
-// .Isometric view of Sprinkler
-// image::https://github.com/soulhunter03/ELP305-TribeD-Resources/raw/1baba6a33de5fbc93a292d9863ce8c8760a16c83/assets/sprinkler_fig1.jpg[width=50%]
 
-// [[_fig2_isometric]]
-// .Isometric view of Sprinkler
-// image::https://github.com/soulhunter03/ELP305-TribeD-Resources/raw/1baba6a33de5fbc93a292d9863ce8c8760a16c83/assets/sprinkler_fig2.jpg[width=50%]
 
 // The fundamental concept behind this method is to ensure comprehensive cleaning by spreading the soap solution evenly on both sides of the fabric. To execute this, a soap solution is meticulously prepared above the targeted cloth. This solution with a predetermined ratio of soap to water facilitates effective cleansing. Employing a specialized nozzle mechanism, the soap solution is methodically sprinkled onto the fabric evenly in both directions making it more effective in removing dirt, stains. The end result comes out to be a thorough and uniform cleaning mechanism.
 
@@ -435,13 +449,12 @@ They are expected to run continuously, 24/7, with an emergency shutdown initiate
 ==== Time Requirements
 
 [[_design_time]]
-===== Design Time Requirements ? heading doesnt match with points ?
+===== Design Time Requirements 
 * *Cleaning and Drying time:* Atmost 45 minutes.
-* *Use Rate:* ?
+* *Use Rate:* 24 hours a day 7 days a week with maximum downtime of 6 hours per year
 * *Setup Time:* As little time as possible, no more than 1 day.
 
-[[_time_to_market_reqs]]
-===== Time to Market Requirements
+
 
 [[_lifetime_reqs]]
 ===== Lifetime Requirements
@@ -505,7 +518,18 @@ We propose the development of an innovative cloth cleaning machine that can be u
 ===== Waste Tub:
 * A waste tub at the bottom to collect residual drippings and lint.
 
-==== Workflow:
+.Proposed model isometric view
+image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/8f83e23284014fff1847c5024d5e7ba3d274cf96/P1_TribeD_Proposed_Model/isometric%201.png[]
+
+.Proposed model top view
+image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/8f83e23284014fff1847c5024d5e7ba3d274cf96/P1_TribeD_Proposed_Model/top%20view.png[]
+
+.Proposed model side view
+image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/8f83e23284014fff1847c5024d5e7ba3d274cf96/P1_TribeD_Proposed_Model/side%20view.png[]
+
+
+
+==== Workflow
 * Cloth is loaded onto input rollers over the guiding frame, through them and onto the output roller. (in order to prevent wastage of a significant initial length of the cloth roll, we can attach it to a clean dummy cloth as  long as the machine, with the help of a speed punching system and later detach the dummy cloth and reuse it for the next batch-This is not relevant to the demonstration but very relevant to during industrial scaling)
 * Then a lever/switch is activated, which brings the two walls closer to the guiding frame with the cloth attached to it, and the horizontal line of brushes lock onto each hanging edge of the cloth, securing it in place.
 * Motors are powered on, and the cloth starts sliding on the frame while being kept in place by the walls and guiding fixtures.
@@ -513,6 +537,9 @@ We propose the development of an innovative cloth cleaning machine that can be u
 * The cloth passes through multiple alternating soap water mixture and water compartments and gets recursively cleaned for better results.
 * The cloth then enters the drying chamber, where hot air is blown to expedite the drying process.
 * After drying, the cleaned and dried cloth moves through guiding fixtures onto the rollers for subsequent manufacturing.
+
+.Workflow
+image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/d417d822e73870101807a1adacbe3fa176b03a75/assets/P1_WorkFlow_TribeD_Flowchart.png[]
 
 ==== Benefits:
 * Improved cloth cleaning efficiency.
@@ -672,10 +699,18 @@ void speedControl() {
 
 ==== Soap Water Sprinkler
 
+[[_fig1_isometric]]
+.Isometric view of Sprinkler
+image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/be458fa52e9b4bf7661dfd82df802ab23349e4b4/assets/sprinkler_fig1.jpg[width=50%]
+
+[[_fig2_isometric]]
+.Isometric view of Sprinkler
+image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/be458fa52e9b4bf7661dfd82df802ab23349e4b4/assets/sprinkler_fig2.jpg[width=50%]
+
 ===== *For splitted cloth pieces using sensor*
 
 .Circuit for Water Sprinkler
-image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/9ae27957f7f9bed7b02f8cd5803453d164ba0f19/electrical_resources/water_sprinkler_circuit.png[]
+image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/8f83e23284014fff1847c5024d5e7ba3d274cf96/electrical_resources/water_sprinkler_circuit.png[]
 
 
 [%collapsible]
@@ -729,9 +764,11 @@ void measure_distance() {
 
 ===== *Without Censor, using push button*
 
+.Circuit using Push button
+image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/8f83e23284014fff1847c5024d5e7ba3d274cf96/electrical_resources/without_censor_sprinkler_circuit.png[]
 
-image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/88c12ef3ea625a24905de9faf5e61669c8b8352f/electrical_resources/without_censor_sprinkler_circuit.png[]
-
+.Full Circuit without Sensor
+image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/8f83e23284014fff1847c5024d5e7ba3d274cf96/electrical_resources/sprinkler_full_circuit.png[]
 
 [%collapsible]
 .Click Here to See the Code
@@ -833,6 +870,36 @@ void loop() {
 ----
 ====
 
+==== Blower
+
+* We will be controlling the speed of the DC motor using a potentiometer for the purpose of  blower in our washing machine to remove heavy dust particles from the cloth piece. 
+* Potentiometer has three terminals. Outer two terminals are for power supply and the middle terminal is the output.
+* As we rotate the knob of the potentiometer, the resistance between the middle terminal and one of the outer terminals changes. This change in resistance controls the voltage supplied to the motor, which in turn controls its speed.
+* We can connect multiple DC motors in our system by making slight modifications in the wiring.
+* A Transistor is used for more efficient control of the motor speed. By controlling the current flow to the motor, transistors can prevent overloading and overheating, enhancing the motor’s lifespan. 
+
+.TinkerCAD circuit for Blower
+image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/9ae27957f7f9bed7b02f8cd5803453d164ba0f19/electrical_resources/blower_circuit.png[]
+
+
+[%collapsible]
+.Click Here to See the Code
+====
+[source,cpp]
+----
+const int poten = A3;
+int var;
+
+void setup() {
+  pinMode(6, OUTPUT);
+}
+
+void loop() {
+  var = analogRead(poten);
+  analogWrite(6, var);
+}
+----
+====
 
 ==== Dryer
 
@@ -1106,37 +1173,6 @@ void loop() {
 
 
 
-==== Blower
-
-* We will be controlling the speed of the DC motor using a potentiometer for the purpose of  blower in our washing machine to remove heavy dust particles from the cloth piece. 
-* Potentiometer has three terminals. Outer two terminals are for power supply and the middle terminal is the output.
-* As we rotate the knob of the potentiometer, the resistance between the middle terminal and one of the outer terminals changes. This change in resistance controls the voltage supplied to the motor, which in turn controls its speed.
-* We can connect multiple DC motors in our system by making slight modifications in the wiring.
-* A Transistor is used for more efficient control of the motor speed. By controlling the current flow to the motor, transistors can prevent overloading and overheating, enhancing the motor’s lifespan. 
-
-.TinkerCAD circuit for Blower
-image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/9ae27957f7f9bed7b02f8cd5803453d164ba0f19/electrical_resources/blower_circuit.png[]
-
-
-[%collapsible]
-.Click Here to See the Code
-====
-[source,cpp]
-----
-const int poten = A3;
-int var;
-
-void setup() {
-  pinMode(6, OUTPUT);
-}
-
-void loop() {
-  var = analogRead(poten);
-  analogWrite(6, var);
-}
-----
-====
-
 === Solvent
 
 Some of the cleansing agents that were researched and tested for oil and grease stains are:
@@ -1226,7 +1262,7 @@ image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/280fdb451ed
 * Cons: The idea was rejected because it was not effective on Grease stain, even after hard scrubbing
 
 .Grease stain after using detergent and scrubbing
-image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/280fdb451ed940e8a1bfbbd416651b69019e250b/solvent_pictures/detergent_after.png[====
+image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/280fdb451ed940e8a1bfbbd416651b69019e250b/solvent_pictures/detergent_after.png[]
 
 
 ==== Acetone
@@ -1269,13 +1305,8 @@ image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/280fdb451ed
 | Nozzle's Diameter|        1-1.5 cm 
 |===
 
-===== 3. Scrubber
-|===
-|Voltage|  0 V 
-|Current| 0 A 
-|===
 
-===== 4. Blower
+===== 3. Blower
 * DC Motor: 
 
 ** Voltage: 9,12,15 Volts 
@@ -1292,10 +1323,33 @@ image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/280fdb451ed
 | Battery Impedance| 1700 m-ohm @ 1 kHz   
 |===
 
-===== 5. Dryer
+===== 4. Dryer
 * Voltage: 220 Volts 
 
 ==== Space Specifications
+
+proposed model specifications:
+
+* *Base:*
+
+** length = 100cm 
+
+** breadth = 30cm
+
+* *Roller:* 	
+
+** diameter = 8cm 
+
+** length = 25cm
+
+* *N-box:*  	
+
+** length = 70cm
+
+** breadth = 25cm
+
+
+
 
 ==== Power Specifications
 ===== 1. Roller
@@ -1311,9 +1365,6 @@ image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/280fdb451ed
 * Without Sensor
 ** Battery voltage: 10 - 15 V
 
-
-===== 3. Scrubber
-* Power: 0 W 
 
 ===== 4. Blower
 * DC Motor: 
@@ -1361,9 +1412,12 @@ image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/280fdb451ed
 |DC motor | Rs. 260 
 |===
 
-===== 5.. Dryer
+===== 5. Dryer
 * Actual machine cost: Around Rs. 100000 
 * For prototype: Rs. 800 
+
+
+
 
 ==== Performance Specifications
 
@@ -1400,11 +1454,56 @@ Stationary scrubbers/brushes remain fixed during operation, providing a stable c
 * Power requirements will be optimized on the basis of mathematical modelling and simulations done to observe the humidity content with rate of air flow and power input to heater and blower 
 
 ==== Manpower Specifications
+// ===== Research and Business Team:
+// 82 hours
+.Manpower Specs
+|===
+|Team | Man hours  
+|Research Team | 82 hours  
+|Electrical Team | 60 hours  
+|Fabrication | 13.5 hours  
+|Documentation | 127 hours
+|Consultant | 2 hours
+|===
+
 
 ==== Milestone Specifications
 
+===== Phase I (25%)
+
+. Outline and ideation of the proposed design.
+. Learning the skills required for the project.
+. Formation and organization of a team for the project.
+. Empirical research on the idea and feasibility of the project.
+. Visualization of the initial theorized model through basic diagrams on auto CAD mode.
+
+TRL 2: Outlining the proposed design, learning skills, and formation of a team indicates the initiation of the project. The use of AutoCAD for basic visualization enhances the maturity by translating ideas into tangible forms, although it's still in the early stages of development involving ideation and conceptualization.
+
+===== Phase II (50%)
+
+. Realization of the components required in the design.
+. Trial and error checks on the code for the mechanisms.
+. Purchasing the required chemicals and inventory to realize the mechanisms.
+. Testing the chemicals used on the cloth.
+. Finalized design of the visualized model using Free CAD.
+
+TRL 3: Realizing components, conducting trial and error checks on the code, purchasing required materials, and finalizing the design using ‘FreeCAD’ signify a transition from the early stages to a more mature state. The culmination of these activities indicates a significant advancement in technology readiness, approaching the stage where it can be practically implemented.
 
 
+===== Phase III (75%)
+
+. Showing some individual components, which are completely ready and are in working condition, to the client
+. Finalizing component circuits and codes 
+. Including details(dimensions and location) of all the small parts in the model.
+
+TRL 4: Demonstrating fully functional components to the client, finalizing circuits and codes, and providing detailed specifications represent a high level of maturity. This milestone is marked by a readiness for deployment, with working components and comprehensive documentation that can lead to the assembly of a full prototype.
+
+===== Phase IV (100%)
+. Assembling all the different components together to make a full working prototype.
+. Live demonstration to the client by using a sample cloth with edges stained with oil and grease, to mimic a just manufactured cotton cloth.
+. Assessment of the model by the quality of cleaning and the time taken.
+
+TRL 5: Assembling all components into a working prototype, conducting a live demonstration using a sample cloth, and assessing performance in real-world conditions with actual stains indicate a high level of readiness for practical application and deployment. The technology has progressed to the point where it can be reliably demonstrated and evaluated in real-world scenarios, signaling a mature state.
 
 
 [bibliography]
@@ -1412,7 +1511,28 @@ Stationary scrubbers/brushes remain fixed during operation, providing a stable c
 // how to use citations. citenp:[DryCleaningChemicals]
 // citenp:[WhatWaterConsumption]
 // bibliography::[]
-
+. bibitem:[noauthor_buy_nodate]
+. bibitem:[noauthor_buy_nodate-1]
+. bibitem:[noauthor_arduino_nodate]
+. bibitem:[noauthor_circuit_nodate]
+. bibitem:[noauthor_zyme_nodate]
+. bibitem:[noauthor_buy_nodate-2]
+. bibitem:[noauthor_buy_nodate-3]
+. bibitem:[noauthor_what_nodate]
+. bibitem:[noauthor_controlling_nodate]
+. bibitem:[noauthor_driving_2024]
+. bibitem:[noauthor_54_nodate]
+. bibitem:[noauthor_customized_nodate]
+. bibitem:[noauthor_process_nodate]
+. bibitem:[noauthor_circuit_nodate-1]
+. bibitem:[noauthor_l293d_nodate]
+. bibitem:[noauthor_tunnel_nodate]
+. bibitem:[noauthor_types_nodate]
+. bibitem:[noauthor_pid_nodate]
+. bibitem:[noauthor_study_nodate]
+. bibitem:[macfos_temperature_nodate]
+. bibitem:[noauthor_control_nodate]
+. bibitem:[noauthor_automatic_nodate]
 . bibitem:[cleaners_dry_2020]
 . bibitem:[aqualogic_hot_2023]
 . bibitem:[noauthor_dry_nodate]
@@ -1515,6 +1635,14 @@ water compartment:: A compartment to store water
 
 === Document ID
 
+.Document ID
+|===
+|Document type      |
+|Document Authorised by |
+|Publication Date   |
+|Version No.        |
+|GitHub Repo Details |
+|===
 
 === Document Statistics
 [[_doc_stats]]
