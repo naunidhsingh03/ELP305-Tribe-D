@@ -1,0 +1,1769 @@
+= ELP 305: Design and Systems Lab 
+:appendix-caption:
+:bibtex-file: P1_zotero_bibtex.bib
+:bibtex-order: alphabetical
+:bibtex-style: ieee
+:stem: latexmath
+:source-highlighter: pygments
+:pygments-style: autumn
+:sectnums: 
+:toc: left
+:toclevels: 4
+
+[.text-center]
+.Week 2 Report
+****
+
+image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/be458fa52e9b4bf7661dfd82df802ab23349e4b4/assets/logo.png[60, 60,align="center"]
+
+ Submitted by: Tribe D (Demantors)
+
+
+ Submitted to: Prof. Subrat Kar 
+
+
+****
+
+
+[[_our_tribe]]
+==  Week 2 Report: Requirements + Specifications
+
+=== Our Tribe
+
+[cols='1,4,4,^7, 5, 1',width="100%"]
+|===
+
+
+| SNo. | Name              | Roll No.   | Position                                                    |    Email                   | IF
+
+
+
+| 1          | link:https://www.linkedin.com/in/ayush-dudawat-6b7a9b222/[Ayush Dudawat]            | 2021EE10694| Tribe Coordinator                             |ee1210694@ee.iitd.ac.in     | 1
+
+
+| 2          | link:https://www.linkedin.com/in/ayush-sharma-b01346224/[Ayush Sharma]              | 2021MT10244| Tribe Coordinator                             |mt1210244@maths.iitd.ac.in  | 1
+
+
+| 3          | link:https://www.linkedin.com/in/nitesh-singh-a79a17223/[Nitesh Singh]              | 2021MT10250| Documentation Activity Coordinator            |mt1210250@maths.iitd.ac.in  | 1
+
+
+| 4          | link:https://www.linkedin.com/in/vansh-jain-36569b225/[Vansh Jain]                  | 2021MT10234| Research and Business Development Coordinator |mt1210234@maths.iitd.ac.in  | 1
+
+
+| 5          | link:https://www.linkedin.com/in/sharesth-thakan-249504250/[Sharesth Thakan]        | 2021EE30730| Fabrication and Testing Coordinator           |ee3210730@ee.iitd.ac.in     | 1
+
+
+| 6          | link:https://www.linkedin.com/in/abhas-porov-b69077248/[Abhas Porov]               | 2021EE10781| Electrical Design and Simulation Coordinator  |ee1210781@ee.iitd.ac.in     | 1
+
+
+| 7          | link:https://www.linkedin.com/in/tanisha-jangra-5203132ab[Tanisha]                   | 2021MT10927| Research Team Member                          |mt1210927@maths.iitd.ac.in  | 0.6
+
+
+| 8          | link:https://www.linkedin.com/in/shreyansh-jain-6abb9124b/[Shreyansh Jain]            | 2021MT10930| Research Team Member                          |mt1210930@maths.iitd.ac.in  | 0.8
+
+
+| 9          | link:https://www.linkedin.com/in/rishika-arya-266082279/[Rishika Arya]              | 2021MT10926| Research Team Member                          |mt1210926@maths.iitd.ac.in  | 1
+
+
+| 10         | link:https://www.linkedin.com/in/sarmistha-subhadarshini-507172243[Sarmistha Subhadarshini]   | 2021MT10261| Research Team Member                          |mt1210261@maths.iitd.ac.in  | 1
+
+
+| 11         | link:https://www.linkedin.com/in/anshika-prajapati-9b855022b/[Anshika Prajapati]         | 2021MT60961| Research Team Member                          |mt6210961@maths.iitd.ac.in  | 1
+
+
+| 12         | link:https://www.linkedin.com/in/rupam-kumawat-b27949253/[Rupam Kumawat]             | 2021MT60267| Research Team Member                          |mt6210267@maths.iitd.ac.in  | 1
+
+
+| 13         | link:https://www.linkedin.com/in/sakshimagarkar/[Sakshi Magarkar]                            | 2021MT60965| Research Team Member                          |mt6210965@maths.iitd.ac.in  | 1
+
+
+| 14         | link:https://www.linkedin.com/in/aniket-pandey-b5b9a1263/[Aniket Pandey]             | 2021MT60266| Research Team Member                          |mt6210266@maths.iitd.ac.in  | 1
+
+
+| 15         | link:https://www.linkedin.com/in/nancy-kansal-1b5384234/[Nancy Kansal]              | 2021MT10905| Research Team Member                          |mt1210905@maths.iitd.ac.in  | 1
+
+
+| 16         | link:https://www.linkedin.com/in/divyansh-agarwal-22989525b[Diyvansh Agarwal]          | 2021EE10035| Research Team Member                          |ee1210035@ee.iitd.ac.in     | 0.9
+
+
+| 17         | link:https://www.linkedin.com/in/mukund-aggarwal[Mukund Aggarwal]           | 2021MT60939| Research Team Member                          |mt6210939@maths.iitd.ac.in  | 1
+
+
+| 18         | link:https://www.linkedin.com/in/tanishk-singh-80ba09224/[Tanishk Singh]             | 2021EE10167| Research Team Member                          |ee1210167@ee.iitd.ac.in     | 0.6
+
+
+| 19         | link:https://www.linkedin.com/in/akshansh-rajora-5794b5228[Akshansh Rajora]           | 2021MT10933| Research Team Member                          |mt1210933@maths.iitd.ac.in  | 0.6
+
+
+| 20         | link:https://www.linkedin.com/in/ayush-madhur-40a575236/[Ayush Madhur]              | 2021EE10161| Research Team Member                          |ee1210161@ee.iitd.ac.in     | 0.6
+
+
+| 21         | link:https://www.linkedin.com/in/keshvi-tomer-4b0331236/[Keshvi Tomar]              | 2021EE10682| Research Team Member                          |ee1210682@ee.iitd.ac.in     | 0.9
+
+
+| 22         | link:https://www.linkedin.com/in/kanak-kumar-538ab2247/[Kanak Kumar Singh]         | 2021EE10163| Research Team Member                          |ee1210163@ee.iitd.ac.in     | 0.6
+
+
+| 23         | link:https://www.linkedin.com/in/aravind-udupa-266a52223/[Aravind Udupa]             | 2021MT60940| Research Team Member                          |mt6210940@maths.iitd.ac.in  | 1
+
+
+| 24         | link:https://www.linkedin.com/in/arpit-rathore-56b535223/[Arpit Rathore]             | 2021MT10920| Research Team Member                          |mt1210920@maths.iitd.ac.in  | 1
+
+
+| 25         | link:https://www.linkedin.com/in/vandit-srivastava[Vandit Srivastava]         | 2021EE10640| Electrical Team Member                        |ee1210640@ee.iitd.ac.in     | 1
+
+
+| 26         | link:https://www.linkedin.com/in/ankita-meena-2b919a236/[Ankita Meena]              | 2021EE10173| Electrical Team Member                        |ee1210173@ee.iitd.ac.in     | 1
+
+
+| 27         | link:https://www.linkedin.com/in/aditya-gupta-178638228[Aditya Gupta]              | 2021EE30713| Electrical Team Member                        |ee3210713@ee.iitd.ac.in     | 1
+
+
+| 28         | link:https://www.linkedin.com/in/aditya-bhalotia-756654253[Aditya Bhalotia]         | 2021EE30698| Electrical Team Member                        |ee3210698@ee.iitd.ac.in     | 1
+
+
+| 29         | link:https://www.linkedin.com/in/ayush-shrivastava-264398248[Ayush Shrivastava]     | 2021EE10632| Electrical Team Member                        |ee1210632@ee.iitd.ac.in     | 1
+
+
+| 30         | link:https://www.linkedin.com/in/harshit-nagar-178a33253[Harshit Nagar]             | 2021EE10155| Electrical Team Member                        |ee1210155@ee.iitd.ac.in     | 1
+
+
+| 31         | link:https://www.linkedin.com/in/shreyansh-jaiswal-4b79b2228[Shreyansh Jaiswal]         | 2021EE10154| Electrical Team Member                        |ee1210154@ee.iitd.ac.in     | 1
+
+
+| 32         | link:https://www.linkedin.com/in/akshar-tripathi-9a267425b/[Akshar Tripathi]           | 2021EE10980| Electrical Team Member                        |ee1210980@ee.iitd.ac.in     | 1
+
+
+| 33         | link:https://www.linkedin.com/in/muskan-yadav-2b0651b4[Muskan Yadav]              | 2021EE10686| Electrical Team Member                        |ee1210686@ee.iitd.ac.in     | 1
+
+
+| 34         | link:https://www.linkedin.com/in/pavan-bharadwaj-07025a281[Pavan Bharadwaj]           | 2021EE10630| Electrical Team Member                        |ee1210630@ee.iitd.ac.in     | 1
+
+
+| 35         | link:https://www.linkedin.com/in/mokshavi-reddy-93b41a255[Aluka Mokshavi]            | 2021MT10909| Electrical Team Member                        |mt1210909@maths.iitd.ac.in  | 1
+
+
+| 36         | link:https://www.linkedin.com/in/sathvika-palle-28a13025a[Palle Sathvika]            | 2021MT10928| Electrical Team Member                        |mt1210928@maths.iitd.ac.in  | 1
+
+
+| 37         | link:https://www.linkedin.com/in/shubham-anand-055423252[Shubham Anand]             | 2021EE10674| Electrical Team Member                        |ee1210674@ee.iitd.ac.in     | 1
+
+
+| 38         | link:https://www.linkedin.com/in/sanu-a5b6a72ab[Kumar Sanu Singh]          | 2021EE31213| Electrical Team Member                        |ee3211213@ee.iitd.ac.in     | 1
+
+
+| 39         | link:https://www.linkedin.com/in/rahul-kumar-9a021a236/[Rahul Kumar]               | 2021MT10893| Fabrication Team Member                       |mt1210893@maths.iitd.ac.in  | 1
+
+
+| 40         | link:https://www.linkedin.com/in/manav-garg-0a240a175[Manav Garg]                | 2021EE30017| Fabrication Team Member                       |ee3210017@ee.iitd.ac.in     | 1
+
+
+| 41         | link:https://www.linkedin.com/in/kushagrgoyal[Kushagr Goyal]                             | 2021EE10634| Fabrication Team Member                       |ee1210634@ee.iitd.ac.in     | 1
+
+
+| 42         | link:https://www.linkedin.com/in/champak-swargiary-a87b04230/[Champak Swargiary]         | 2021MT10263| Fabrication Team Member                       |mt1210263@maths.iitd.ac.in  | 1
+
+
+| 43         | link:https://www.linkedin.com/in/ajay-ramavath-/[Ajay Naik]                 | 2020MT60888| Fabrication Team Member                       |mt6210888@maths.iitd.ac.in  | 0.5
+
+
+| 44         | link:https://www.linkedin.com/in/aryan-sharma-326657230/[Aryan Sharma]              | 2021EE10141| Fabrication Team Member                       |ee1210141@ee.iitd.ac.in     | 0.5
+
+
+
+| 45         | link:https://www.linkedin.com/in/bhavik-garg-4b214422a[Bhavik Garg]               | 2021EE10657| Documentation Team Member                     |ee1210657@ee.iitd.ac.in     | 1
+
+
+| 46         | link:https://www.linkedin.com/in/ishu-ishu-9241242ab/[Ishu]                      | 2021EE30735| Documentation Team Member                     |ee3210735@ee.iitd.ac.in     | 1
+
+
+| 47         | link:https://www.linkedin.com/in/sashidhar-alvakonda-32b9011a5[Alvakonda Sashidhar]       | 2021EE30744| Documentation Team Member                     |ee3210744@ee.iitd.ac.in     | 1
+
+
+| 48         | link:https://www.linkedin.com/in/harshdeep-shakya-507304236/[Harshdeep Shakya]          | 2021EE30745| Documentation Team Member                     |ee3210745@ee.iitd.ac.in     | 1
+
+
+| 49         | link:https://www.linkedin.com/in/abhinava-a-mohanty-30a3a6232[Abhinava Anwesha Mohanty]  | 2021EE10136| Documentation Team Member                     |ee1210136@ee.iitd.ac.in     | 1
+
+
+| 50         | link:https://www.linkedin.com/in/atishay-aggarwal-066414226[Atishay Aggarwal]          | 2021MT60941| Documentation Team Member                     |mt6210941@maths.iitd.ac.in  | 1
+
+
+| 51         | link:https://www.linkedin.com/in/srinath-k-s-875834222/[Srinath K S]               | 2021MT10912| Documentation Team Member                     |mt1210912@maths.iitd.ac.in  | 1
+
+
+| 52         | link:https://www.linkedin.com/in/kshitij-kumar-gautam/[Kshitij K Gautam]          | 2021MT60269| Documentation Team Member                     |mt6210269@maths.iitd.ac.in  | 1
+
+
+| 53         | link:https://www.linkedin.com/in/chandan-kumar-774813224[Chandan Kumar]             | 2021MT60268| Documentation Team Member                     |mt6210268@maths.iitd.ac.in  | 1
+
+
+| 54         | link:https://www.linkedin.com/in/naunidh-singh-0b256a22b/[Naunidh Singh]             | 2021MT60956| Documentation Team Member                     |mt6210956@maths.iitd.ac.in  | 1
+
+
+| 55         | link:https://www.linkedin.com/in/vipul-yadav-6142a6287[Vipul]                     | 2021EE30731| Documentation Team Member                     |ee3210731@ee.iitd.ac.in     | 1
+
+
+| 56         | link:https://www.linkedin.com/in/amit-singh-221888236/[Amit Singh]                | 2021MT10921| Documentation Team Member                     |mt1210921@maths.iitd.ac.in  | 1
+
+
+| 57         | link:https://www.linkedin.com/in/sumanth-mandala-868a1a2aa/[Sumanth Mandala]           | 2021EE10153| Documentation Team Member                     |ee1210153@ee.iitd.ac.in     | 1
+
+
+| 58         | link:https://www.linkedin.com/in/prabhat-babu-490096282[Prabhat Babu]              | 2021MT10255| Documentation Team Member                     |mt1210255@maths.iitd.ac.in  | 1
+
+
+
+| 59         | link:https://www.linkedin.com/in/vadlapudi-manoj-5a764825a[Vadlapudi Manoj]           | 2021MT10245| Documentation Team Member                     |mt1210245@maths.iitd.ac.in  | 1
+
+|===
+
+
+
+=== Team members with IF less than 1
+[[_less_if]]
+[cols='1,4,4,^7, 5, 1',width="100%"]
+|===
+| SNo. | Name              | Roll No.   | Position                                                    |    Email                   | IF
+| 1          | link:https://www.linkedin.com/in/tanisha-jangra-5203132ab[Tanisha]                   | 2021MT10927| Research Team Member                          |mt1210927@maths.iitd.ac.in  | 0.6
+
+| 2          | link:https://www.linkedin.com/in/shreyansh-jain-6abb9124b/[Shreyansh Jain]            | 2021MT10930| Research Team Member                          |mt1210930@maths.iitd.ac.in  | 0.8
+
+| 3         | link:https://www.linkedin.com/in/divyansh-agarwal-22989525b[Diyvansh Agarwal]          | 2021EE10035| Research Team Member                          |ee1210035@ee.iitd.ac.in     | 0.9
+
+| 4         | link:https://www.linkedin.com/in/tanishk-singh-80ba09224/[Tanishk Singh]             | 2021EE10167| Research Team Member                          |ee1210167@ee.iitd.ac.in     | 0.6
+
+
+| 5         | link:https://www.linkedin.com/in/akshansh-rajora-5794b5228[Akshansh Rajora]           | 2021MT10933| Research Team Member                          |mt1210933@maths.iitd.ac.in  | 0.6
+
+| 6         | link:https://www.linkedin.com/in/ayush-madhur-40a575236/[Ayush Madhur]              | 2021EE10161| Research Team Member                          |ee1210161@ee.iitd.ac.in     | 0.6
+
+
+| 7         | link:https://www.linkedin.com/in/keshvi-tomer-4b0331236/[Keshvi Tomar]              | 2021EE10682| Research Team Member                          |ee1210682@ee.iitd.ac.in     | 0.9
+
+
+| 8         | link:https://www.linkedin.com/in/kanak-kumar-538ab2247/[Kanak Kumar Singh]         | 2021EE10163| Research Team Member                          |ee1210163@ee.iitd.ac.in     | 0.6
+
+| 9         | link:https://www.linkedin.com/in/ajay-ramavath-/[Ajay Naik]                 | 2020MT60888| Fabrication Team Member                       |mt6210888@maths.iitd.ac.in  | 0.5
+
+
+| 10         | link:https://www.linkedin.com/in/aryan-sharma-326657230/[Aryan Sharma]              | 2021EE10141| Fabrication Team Member                       |ee1210141@ee.iitd.ac.in     | 0.5
+
+|===
+Assigned tasks were not completed, Low participation in most of the meetings even after multiple reminders on the group. No inputs were given for the research stage. No role in CAD model designing.
+
+<<<
+
+
+== Body
+
+// * link:#_list_of_tables[1. List of Tables]
+// * link:#_list_of_figures[2. List of Figures]
+// * link:#_list_of_abbreviations[3. List of Abbreviations]
+// * link:#_index[4. Index]
+// * link:#_mindmap[5. Mind Map]
+// * link:#_project_mang[6. Project Management]
+// * link:#_abstract[7. Abstract]
+// * link:#_motivation[8. Motivation]
+// * link:#_machine_mech[9. Mechanism of the Machine]
+// ** link:#_removal[9.1. Removal of Dust using Air]
+// ** link:#_soap_and_water[9.2. Soap + Water Mechanism]
+// *** link:#_stains[9.2.1. Stains]
+// *** link:#_solvents[9.2.2. Solvents]
+// ** link:#_scrubbing[9.3. Scrubbing]
+// ** link:#_water_mech[9.4. Water Mechanism]
+// ** link:#_drying[9.5. Drying]
+// * link:#_requirements[10. Requirements for the Idea]
+// ** link:#_input_specs[10.1. Input Specifications]
+// ** link:#_output_specs[10.2. Output Specifications]
+// ** link:#_power_reqs[10.3. Power Requirements]
+// ** link:#_logi_reqs[10.4. Logistical Requirements]
+// ** link:#_env_reqs[10.5. Environmental Requirements]
+// ** link:#_site_reqs[10.6. Site Requirements]
+// ** link:#_time_reqs[10.7. Time Requirements]
+// *** link:#_design_time[10.7.1. Design Time Requirements]
+// *** link:#_time_to_market_reqs[10.7.2. Time to Market Requirements]
+// *** link:#_lifetime_reqs[10.7.3. Lifetime Requirements]
+// *** link:#_end_of_life_reqs[10.7.4. End of Life Requirements]
+// ** link:#_other_reqs[10.8. Other Non-Functional Requirements]
+// * link:#_glossary[11. Glossary]
+
+
+
+
+[[_list_of_tables]]
+=== List of Tables 
+
+
+. link:#_our_tribe[Our Tribe]
+. link:#_less_if[Tribe members with IF less than 1]
+. link:#_abbreviations[Abbreviations Table]
+. link:#_solvents_specs[Solvents Specifications]
+. link:#_roller_en_specs[Roller Energy Specs]
+. link:#_sprinkler_en_specs1[Sprinkler Energy Specifications 1]
+. link:#_sprinkler_en_specs2[Sprinkler Energy Specifications 2]
+. link:#_blower_en_specs1[Blower Potentiometer Speciicatios]
+. link:#_blower_en_specs2[Blower Battery Specifications]
+. link:#_sprinkler_cost[Sprinkler Cost Specifications]
+. link:#_scrubber_cost[Scrubber Cost Specifications]
+. link:#_blower_cost[Blower Cost Specifications]
+. link:#_manpower_specs[Manpower Specifications]
+. link:#_doc_id[Document ID]
+. link:#_doc_stats[Document Statistics]
+. link:#_readability_stats[Readability Statistics]
+
+[[_list_of_figures]]
+=== List of Figures 
+
+. link:#_outline_mindmap[Outline Mind Map]
+. link:#_requirements_mind_map[Mind Map for Requirements]
+. link:#_specs_mind_map[Mind Map for Specifications]
+. link:#_prop_isometric_view[Proposed Model isometric view]
+. link:#_prop_top_view[Proposed Model top view]
+. link:#_prop_side_view[Proposed Model side view]
+. link:#_workflow_mindmap[Workflow]
+. link:#_industrial_roller[Industrial Roller]
+. link:#_duty_cycle[Duty Cycle]
+. link:#_circuit_for_roller[Circuit for Roller]
+. link:#_fig1_isometric[Isometric view of Sprinkler Figure 1]
+. link:#_fig2_isometric[Isometric view of Sprinkler Figure 2]
+. link:#_circuit_water[Circuit for Water Sprinkler]
+. link:#_circuit_push[Circuit for Water Sprinkler using Push]
+. link:#_circuit_sensor[Circuit for Water Sprinkler using Sensor]
+. link:#_circuit_for_blower[Circuit for Blower]
+. link:#_tunnel_dryer[Tunnel Dryer]
+. link:#_circuit1_dryer[Circuit for Dryer]
+. link:#_circuit2_dryer[Control Circuit for Dryer]
+. link:#_b_wd40[Stain before using WD-40]
+. link:#_a_wd40[Stain after using WD-40]
+. link:#_b_dishwasher[Stain after using Dishwasher]
+. link:#_a_dishwasher[Stain after using Dishwasher ]
+. link:#_a_isopropyl[Stain after using Isopropyl ]
+. link:#_a_detergent[Stain after using Detergent]
+. link:#_b_acetone[Stain before using Acetone]
+. link:#_a_acetone[Stain after using Acetone]
+. link:#_workdis_mind_map[Mind Map for Work Distribution]
+
+
+
+
+
+
+[[_list_of_abbreviations]]
+=== List of Abbreviations 
+
+[[_abbreviations]]
+.Some Abbreviations
+|===
+|*Abbreviation*     | *Stands for*
+|IF               | Involvement Factor
+|ID               | Identification
+|CPCB             | Central Pollution Control Board
+|mg               | milligram
+|AC               | Alternating Current
+|dB               | Decibels
+|Kg               | Kilograms
+|ABS              |Acrylonitrile Butadiene Styrene
+|PWM              |Pulse Width Modulation
+|IC               | Integrated Circuit
+|TCE              | Trichloroethylene
+|PCE              | Perchloroethylene
+|TRL              | Technology Readiness Level
+|CAD              | Computer Aided Design
+|USP              | Unique Selling Point
+|NMOS             | N-type Metal Oxide Semi Conductor
+|DC               | Direct Current
+|LED              | Light Emitting Diode
+|RPM              | Revolutions per Minute
+|mA               | milli Ampere
+|===
+
+
+<<<
+[[_mindmap]]
+=== Mind Map
+[[_outline_mindmap]]
+.Outline Mind Map
+image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/53d4745ea6ab3b0c6183f9f0da38f23ef741df23/assets/P1_Outline_TribeD_MindMap.png[]
+
+
+[[_requirements_mind_map]]
+.Requirements Mind Map
+image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/d417d822e73870101807a1adacbe3fa176b03a75/assets/P1_Req1_TribeD_MindMap_BW.png[]
+
+[[_specs_mind_map]]
+.Specifications Mind Map
+image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/7bea65007c99656c7f56cc0854390542971b664d/assets/P1_Specifications_TribeD_MindMap.png[]
+
+[[_project_mang]]
+=== Project Management
+
+* link:https://owncloud.iitd.ac.in/nextcloud/index.php/s/aRx7A3B8AFbZ32Y[Network Chart]
+* link:https://owncloud.iitd.ac.in/nextcloud/index.php/s/pnCtc4MAoRkQte2[WBS]
+* link:https://owncloud.iitd.ac.in/nextcloud/index.php/s/MDxAqgJGXYexDLy[Gantt Chart]
+* link:https://owncloud.iitd.ac.in/nextcloud/index.php/s/7HQLz7ibrgMm5mY[Resource Breakdown]
+
+[[_abstract]]
+=== Abstract
+
+[abstract]
+
+This project revolves around developing a user-centric washing machine, which involves a comprehensive analysis of the features an average user looks for. Through extensive research, we will identify key elements that resonate with the needs and preferences of the general population when searching for a washing machine. +
+Our initial design focuses on building a basic model, which in further iterations can incorporate more advanced features as a result of extensive surveys and research done across the course of the project to satisfy the contemporary users' needs.
+
+
+[[_motivation]]
+=== Motivation  
+Our goal with this project is to create an advanced fabric-cleaning machine designed to wash oil stains, specifically those near the edges of manufactured cloth. This machine aims to improve the efficiency of cloth manufacturing by providing effective drying and cleaning processes while preserving the fabric. Our design’s USP is its ability to leave the areas of the cloth that are already clean untouched, which preserves the fabric’s quality and durability. Utilizing this approach helps ensure a straightforward process and reduces the resources required for drying. We currently have an Autodesk model of our machine and have researched various electrical parts and how they will be implemented practically. We have also tested various solvents in an attempt to find one which is most suitable. Finally, we intend to deliver a working model of this machine, which focuses on cleaning oil and grease stains left in cloth during the manufacturing process while focusing more on the edges of the cloth as there are higher chances of deterioration on the periphery.
+
+// [[_machine_mech]]
+// === [underline]#*Mechanism of the Machine*#
+
+// [[_removal]]
+// ==== *Removal of Dust using Air*
+// To secure the cloth in place and prevent it from being carried away by the wind, lay it flat and affix it to the surface. Utilize an air blower by directing the airflow over the cloth, with the attached blower expelling air from the top onto the fabric. For smaller pieces of fabric, a 500W mini blower, priced at Rs 500, is an effective solution. Alternatively, a manual approach involves installing a high-speed fan within a pipe for a similar effect.
+
+// [[_soap_and_water]]
+
+
+// ==== Soap + Water Mechanism
+
+
+// The fundamental concept behind this method is to ensure comprehensive cleaning by spreading the soap solution evenly on both sides of the fabric. To execute this, a soap solution is meticulously prepared above the targeted cloth. This solution with a predetermined ratio of soap to water facilitates effective cleansing. Employing a specialized nozzle mechanism, the soap solution is methodically sprinkled onto the fabric evenly in both directions making it more effective in removing dirt, stains. The end result comes out to be a thorough and uniform cleaning mechanism.
+
+// [[_stains]]
+// ===== *Stains*
+// In our research on fabric stains encountered during the manufacturing process, we identified common culprits such as oil-based stains, dye, and rust stains. For tackling oil-based stains like grease and wax, we recommend using petroleum-based cleaning agents or robust detergents such as ABS. Paint stains can be effectively removed with turpentine or a detergent pretreatment. Rust stains, on the other hand, respond well to a combination of detergents and scrubbing. While vinegar can be used for stain removal, it may require more time, leading us to consider alternative solutions. For oil stains, a mixture of 50% water and 50% white vinegar, along with a hot water detergent solution, proves effective. Spot cleaning for odors and stains can be achieved using a solution of white vinegar and water or a paste of baking soda and water. Bleaching, if needed, can be accomplished with bleaching powder, although caution is advised to prevent potential damage to the fabric fibers. Our comprehensive approach addresses various stains, providing practical solutions for effective cloth cleaning in the manufacturing process.
+
+// [[_solvents]]
+// ===== *Solvents*
+// In our exploration of stain removal methods, we categorized stains into organic and inorganic types. Organic stains, such as those absorbed from lubricating oil, dyes, grease, and tannin, respond well to organic solvents. These solvents, such as ABS , effectively target and break down organic compounds, making them suitable for various manufacturing stains. On the other hand, inorganic stains, including adsorbed substances like muddy soil, inorganic salts, and contaminants, require a different approach. For these stains, the use of non-polar and volatile solvents is recommended, ensuring efficient removal without leaving residues. Additionally, high-pressure jet machines prove effective in the scouring process, providing a thorough cleaning method for a range of stains. This comprehensive strategy incorporates specialized solvents and techniques tailored to address the diverse nature of stains encountered in the manufacturing of fabrics.
+
+// [[_scrubbing]]
+// ==== *Scrubbing*
+// For a washing machine assembly line, we've prioritized effective scrubbing for optimal cloth cleaning. Recognizing the fabric's thickness, we've implemented a two-step scrubbing approach. As the cloth advances between the conveyor belts, a circular scrubber is strategically positioned to vigorously scrub one side. To enhance the scrubbing effectiveness, we've incorporated a rough platform opposite to the scrub, acting like a 'washboard' for improved friction and cleaning. This meticulous scrubbing process is crucial, as without the platform, the scrubbing efficiency is compromised. After cleaning one side, we reverse the positions of the scrubber and platform to ensure a thorough scrubbing action on the other side. Our design emphasizes the importance of robust scrubbing for a comprehensive and efficient cleaning process on the assembly line.
+
+// [[_water_mech]]
+// ==== *Water Mechanism*
+// The scrubbed fabric retaining traces of soap, undergoes exposure to high-pressure water from a nozzle. Subsequently, the cloth is guided through a wiper to eliminate any surplus moisture and soap solution. The combined unit, comprising both the nozzle and wiper, moves back and forth across the fabric for several iterations, with the exact number determined during the testing phase.
+
+// [[_drying]]
+// ==== Drying
+// The device produces warm air directed towards damp surfaces using a hot air-drying method. The same mechanism can be understood as the one used in a hair dryer.  This targeted application of heat speeds up the evaporation process of water molecules. The elevated temperature boosts the energy of the water, facilitating its swift transition from liquid to vapor. This mechanism effectively eliminates moisture, making it a fast and efficient technique for drying fabrics. 
+
+
+[[_requirements]]
+=== Requirements for the Idea
+
+[[_input_specs]]
+==== Input Specifications
+
+* *Material Specifications:*
+Newly manufactured white unbleached cotton with single-ply, Denier 60, and a thread count 400.
+* *Dimensions:*
+Cloth is either available on rollers(2m*10m) or it can be assumed as an infinite sheet supply of width 2 m.
+* *Cloth Characteristics:*
+Free from foul odour, slightly damp, and without buttons, zippers, or attachments.
+* *Stain Characteristics:*
+Only oil and grease stains present on the edges of the cloth need to be removed
+* *Cleaning Limitations:*
+Maximum weight for cleaning is set at 11 kg dry, with stains limited to those occurring during manufacturing.
+
+* *Cost and Service Preferences:*
+Preference for the washing machine to be offered at zero cost, requiring no servicing time and no maintenance. Actual prices are expected to depend on the provider, with alternatives considered if costs are excessively high.
+
+[[_output_specs]]
+==== Output Requirements
+* *Desired Output:*
+A cleaned and dry cloth wound on rollers.
+* *Client Responsibilities:*
+Treating discharged graywater, managing lint, and ensuring the returned cloth is wrinkle-free and bone-dry.
+
+[[_power_reqs]]
+==== Power Requirements
+* *Voltage and Phase Requirements:*
+The washing machine should operate on 220VAC 15A, with the option for 440VAC 3-phase available at an additional cost.
+* *Operational Expectations:*
+They are expected to run continuously, 24/7, with an emergency shutdown initiated using a 1-button process.
+
+[[_logi_reqs]]
+==== Logistical Requirements
+* *Machine Type and Features:* An automatic washing machine is preffered with minimal water usage and no need for portability or a programmable timer.
+* *Washing Medium Features* There are no restrictions on the washing medium, but costs may be incurred for using rare solvents, focusing on overall cost-effectiveness.
+
+[[_env_reqs]]
+==== Environmental Requirements
+* *Noise Restrictions:* Noise levels should not exceed 75 dB.
+* *Compliance:* Must comply with local regulations, including those set by the Central Pollution Control Board (CPCB).
+* *Sustainability Preferences:* Preference for cold water washing, sustainable components, and optimization of energy consumption, robustness, and durability.
+
+[[_site_reqs]]
+==== Site Requirements
+* *Essentials for the Site:* Adequate power supply, suitable drainage, and specific design parameters.
+* *Water Source:* The water source was specified as having 60 mg CaCO3/l hardness, with an overhead tank and a 50,000-liter refillable capacity at 35 meters.
+* *Structural Considerations:* Structural considerations include material selection and the ability to withstand the maximum cloth weight.
+
+[[_time_reqs]]
+==== Time Requirements
+
+[[_design_time]]
+===== Design Time Requirements 
+* *Cleaning and Drying time:* Atmost 45 minutes.
+* *Use Rate:* 24 hours a day 7 days a week with maximum downtime of 6 hours per year
+* *Setup Time:* As little time as possible, no more than 1 day.
+
+
+
+[[_lifetime_reqs]]
+===== Lifetime Requirements
+* *Expected Lifetime:* The machine is expected to last atlest 6 years.
+* *Service Hours and Cost:* No more than 6 hours per year and there isn't an explicit cost constraint for the servicing.
+
+[[_end_of_life_reqs]]
+===== End of Life Requirements
+* *Replacement for Old Machine:* Client could be interested in replacing the old machine for a new one at a discounted price.
+* *Parts' Availability:* Parts of the machine should be available for 10 years to enable servicing. 
+
+
+[[_other_reqs]]
+==== Other Non-Functional Requirements
+* *Miscellaneous Considerations:*
+Dimensions and the inclusion of a stand or wheels are left to the designer's discretion.
+
+
+=== Overview
+
+We propose the development of an innovative cloth cleaning machine that can be used to clean oil stains (which occur near the edges) off of manufactured cloth after the manufacturing process. Our design consists of rollers, driving motors, a guiding frame (used to fold the cloth in half vertically), wiping and cleaning surfaces (brushes/sponge), a soap water mixture compartment, a water compartment, and a drying chamber. This automated system aims to streamline the cloth manufacturing process, ensuring efficient cleaning and drying during the manufacturing process while minimising the impact on the fabric. The USP of our design is that the regions of the cloth that are guaranteed to come in clean are untouched in the process, which preserves the quality and durability of the cloth. This approach also ensures that drying requires less effort and resources than other approaches.
+
+==== Key Components
+===== 1. Rollers with Motor Control
+* Two rollers placed on either side of the machine.
+* Motor-controlled to regulate the speed of the cloth movement.
+
+===== 2. Cloth Attachment
+* Cloth is securely attached to the rollers upon loading in batches, ensuring uniform tension.
+
+===== 3. Guiding Frame
+* Positioned between the rollers upon viewing from the side and placed parallelly between the two vertical walls when viewed from the top.
+* The frame, when viewed from the side, looks like a smoothened plateau with a long flat top and curved sides (coming from and going towards the input and output rollers, respectively.) Upon viewing from the top, it looks like the edge of a railing. 
+* The frame is slightly angled and is broader at the bottom than at the top. (This helps in dispensing soap on the edge stains from the top with targeted and precise positioning)
+* All edges on the frame are filleted and smoothened to ensure that the cloth doesn’t rip or tear or get stuck while it slides over the frame due to the pull of the motor. (Please note, the top of the frame is not a dome kept on top of a rectangular sheet. It is a rectangular sheet that is cut to the guiding geometry and filleted and smoothened)
+* It is shaped this way to guide the fabric to smoothly rise in height from the horizontal roller configuration at the input to the folded vertical configuration in the cleaning and drying chamber.
+* This vertical folding ensures that the stained edges are hanging on the two sides of the frame symmetrically, with the entire cloth folded along the midline and suspended vertically by the normal reaction from the sleek frame.
+* The part of the fabric towards the centre in the horizontal configuration, now slides at the top of the smooth frame as the rollers on the other end pulls it at a constant speed and is unaffected by the cleaning and drying process.
+* Once the cloth crosses the drying chamber, the guiding frame is shaped in such a way that it lowers the cloth from the raised frame back to its horizontal configuration onto the roller
+
+===== 4. Cleaning Mechanism
+* Brushes along the edges of the frame at a fixed distance from the height (coincides with the stained edge of the cloth).
+* The parallel wall also has brushes at the same vertical height, and the two brushes hold onto the edge of the cloth as it moves under the influence of the rollers and scrubs against the brushes, hence getting cleaned.
+* Solvent drizzled from the top onto the stained part of the cloth). The solvent mixture and water are dispensed in succession and recursively, creating stages along the length of the frame. (first “x” cm-> soap, next “y” cm-> water, next “x” cm-> soap, etc. )
+* Brushes act as scrubbers to enhance cleaning effectiveness.
+
+===== 5. Cleaning Fluid Compartment
+* Alternating compartments for soap water mixture and water.
+* The soap compartments have brushes along the wall, while the water compartment consists of high pressure water nozzles to remove soap from the cloth. 
+* Ensures proper cleaning of the cloth during the process.
+
+===== 6. Drying Chamber
+* Located after the cleaning mechanism.
+* Equipped with air blowers to blow hot air onto the cloth.
+* Ensures quick and effective drying.
+
+===== 7. Guiding Fixtures
+* Transition the cloth from the input roller to the cleaning chamber of the frame and from the drying chamber of the frame to the rollers.
+* Facilitates a smooth movement of the cloth.
+
+===== 8. Waste Tub
+* A waste tub at the bottom to collect residual drippings and lint.
+
+
+[[_prop_isometric_view]]
+.Proposed model isometric view
+image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/8f83e23284014fff1847c5024d5e7ba3d274cf96/P1_TribeD_Proposed_Model/isometric%201.png[width=50%]
+
+
+[[_prop_top_view]]
+.Proposed model top view
+image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/8f83e23284014fff1847c5024d5e7ba3d274cf96/P1_TribeD_Proposed_Model/top%20view.png[width=50%]
+
+[[_prop_side_view]]
+.Proposed model side view
+image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/8f83e23284014fff1847c5024d5e7ba3d274cf96/P1_TribeD_Proposed_Model/side%20view.png[width=50%]
+
+
+
+==== Workflow
+* Cloth is loaded onto input rollers over the guiding frame, through them and onto the output roller. (in order to prevent wastage of a significant initial length of the cloth roll, we can attach it to a clean dummy cloth as  long as the machine, with the help of a speed punching system and later detach the dummy cloth and reuse it for the next batch-This is not relevant to the demonstration but very relevant to during industrial scaling)
+* Then a lever/switch is activated, which brings the two walls closer to the guiding frame with the cloth attached to it, and the horizontal line of brushes lock onto each hanging edge of the cloth, securing it in place.
+* Motors are powered on, and the cloth starts sliding on the frame while being kept in place by the walls and guiding fixtures.
+* Solvent is drizzled from the top with targeted precision on the edges, and brushes act as scrubbers for thorough cleaning as the cloth slides over them.
+* The cloth passes through multiple alternating soap water mixture and water compartments and gets recursively cleaned for better results.
+* The cloth then enters the drying chamber, where hot air is blown to expedite the drying process.
+* After drying, the cleaned and dried cloth moves through guiding fixtures onto the rollers for subsequent manufacturing.
+
+[[_workflow_mindmap]]
+.Workflow
+image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/7bea65007c99656c7f56cc0854390542971b664d/assets/P1_WorkFlow_TribeD_Flowchart.png[]
+
+==== Benefits
+* Improved cloth cleaning efficiency.
+* Minimised impact on the fabric during the cleaning process.
+* Streamlined manufacturing workflow.
+* Enhanced drying capabilities for increased production speed.
+This innovative cloth making machine promises to revolutionise the textile industry by automating and optimising the cloth cleaning and drying processes.
+
+==== Determining the Order of Magnitude for the Length of the Chamber
+Suppose the cleaning and drying part of the machine is 'l' inches long.
+The cloth needs to be in the cleaning environment for about 90 seconds to get cleaned and dried (experimental estimate using soap, hair dryer and napkin).
+
+* Load in one batch = 11 kg
+* Breadth of cloth roll = 2 m
+* Areal density of Single ply cotton cloth unbleached, denier 60, thread count 400 = 0.180 kg/m^2^
+* Time provided for cleaning = 45 minutes
+
+[latexmath]
+.*Calculation:*
+++++
+l = \frac{(90 * 11)}{(0.18 * 2 * 45 * 60)} = 1  m (approx) = 40 inches (approx)
+++++
+
+*Note:*
+Varying soaps changes the time cloth needs to spend in the chamber, which increases/decreases the length of the machine.
+
+=== Component Analysis
+
+==== Roller
+* The roller will roll the washed cloth, coming through the conveyor belt.
+* A controlled DC motor will be used to drive the roller.
+* Appropriately select the dimensions of the roller, like the diameter of the roller and its length, based on the conveyor width.
+* Choose a proper outer covering for the roller, which can provide a better grip and friction for the cloth.
+
+The cloth will also be straightened using 1 or 2 uncontrolled rolling cylinders which can provide the requisite tension in the fabric and guide the fabric onto the roller.
+
+
+[[_industrial_roller]]
+.Industrial Roller
+image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/4657c2e45a7e58677d9d220eac84a0fc316f88ca/electrical_resources/Picture1.png[width=50%]
+
+===== Controlling DC motor using Arduino
+To control the speed of a DC motor using Arduino, we need to adjust the input voltage supplied to the motor. 
+We can control the input voltage with a pulse-width modulated (PWM) signal.
+To change the speed of the DC motor we need to change the amplitude of the input voltage that is applied to the motor.
+A common technique to do that is PWM (Pulse Width Modulation). In PWM the applied voltage is adjusted by sending a series of pulses so the output voltage is proportional pulse width generated by the microcontroller that is also known as *duty cycle*.
+
+[[_duty_cycle]]
+.Duty Cycle
+image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/4c3f442d4cf538c5df98a55429b09d2a34c96f45/electrical_resources/duty_cycle.png[]
+
+The higher the duty cycle, the higher the average voltage applied to the DC motor (resulting in higher speed) and the shorter the duty cycle, the lower the average voltage applied to the DC motor (resulting in lower speed).
+
+===== Arduino and L293D Circuit Diagram
+
+A common and cheap solution to drive motors and efficiently control them, is to use a Motor Controller module along with Arduino. L293D Motor driver module is a readily available IC which can be easily interfaced with Arduino, to control the various aspects of DC motors like speed, direction and braking. It is designed to provide bidirectional drive currents of up to 600-mA at voltages from 4.5 V to 36V.
+Below is an example of a circuit diagram to drive multiple motors from a single module, and Arduino code to interface a motor with the module.
+
+[[_circuit_for_roller]]
+.Circuit for Roller
+image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/4657c2e45a7e58677d9d220eac84a0fc316f88ca/electrical_resources/roller_circuit.png[width=50%]
+
+[%collapsible]
+.Click Here to See the Code
+====
+[source,arduino, role=code-folding]
+.Arduino Code
+----
+// Motor A connections
+int enA = 9;
+int in1 = 8;
+int in2 = 7;
+// Motor B connections
+int enB = 3;
+int in3 = 5;
+int in4 = 4;
+
+void setup() {
+  // Set all the motor control pins to outputs
+  pinMode(enA, OUTPUT);
+  pinMode(enB, OUTPUT);
+  pinMode(in1, OUTPUT);
+  pinMode(in2, OUTPUT);
+  pinMode(in3, OUTPUT);
+  pinMode(in4, OUTPUT);
+  
+  // Turn off motors - Initial state
+  digitalWrite(in1, LOW);
+  digitalWrite(in2, LOW);
+  digitalWrite(in3, LOW);
+  digitalWrite(in4, LOW);
+}
+
+void loop() {
+  directionControl();
+  delay(1000);
+  speedControl();
+  delay(1000);
+}
+
+// This function lets you control the spinning direction of motors
+void directionControl() {
+  // Set motors to maximum speed
+  // For PWM maximum possible values are 0 to 255
+  analogWrite(enA, 255);
+  analogWrite(enB, 255);
+  
+  // Turn on motor A & B
+  digitalWrite(in1, HIGH);
+  digitalWrite(in2, LOW);
+  digitalWrite(in3, HIGH);
+  digitalWrite(in4, LOW);
+  
+  delay(2000);
+  
+  // Now change motor directions
+  digitalWrite(in1, LOW);
+  digitalWrite(in2, HIGH);
+  digitalWrite(in3, LOW);
+  digitalWrite(in4, HIGH);
+  
+  delay(2000);
+  
+  // Turn off motors
+  digitalWrite(in1, LOW);
+  digitalWrite(in2, LOW);
+  digitalWrite(in3, LOW);
+  digitalWrite(in4, LOW);
+}
+
+// This function lets you control the speed of the motors
+void speedControl() {
+  // Turn on motors
+  digitalWrite(in1, LOW);
+  digitalWrite(in2, HIGH);
+  digitalWrite(in3, LOW);
+  digitalWrite(in4, HIGH);
+  
+  // Accelerate from zero to maximum speed
+  for (int i = 0; i < 256; i++) {
+    analogWrite(enA, i);
+    analogWrite(enB, i);
+    delay(20);
+  }
+  
+  // Decelerate from maximum speed to zero
+  for (int i = 255; i >= 0; --i) {
+    analogWrite(enA, i);
+    analogWrite(enB, i);
+    delay(20);
+  }
+  
+  // Now turn off motors
+  digitalWrite(in1, LOW);
+  digitalWrite(in2, LOW);
+  digitalWrite(in3, LOW);
+  digitalWrite(in4, LOW);
+}
+----
+====
+
+==== Soap Water Sprinkler
+
+[[_fig1_isometric]]
+.Isometric view of Sprinkler
+image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/be458fa52e9b4bf7661dfd82df802ab23349e4b4/assets/sprinkler_fig1.jpg[width=50%]
+
+[[_fig2_isometric]]
+.Isometric view of Sprinkler
+image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/be458fa52e9b4bf7661dfd82df802ab23349e4b4/assets/sprinkler_fig2.jpg[width=50%]
+
+===== 1. For splitted cloth pieces using sensor
+
+[[_circuit_water]]
+.Circuit for Water Sprinkler
+image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/8f83e23284014fff1847c5024d5e7ba3d274cf96/electrical_resources/water_sprinkler_circuit.png[width=50%]
+
+
+[%collapsible]
+.Click Here to See the Code
+====
+[source,arduino]
+----
+void setup() {
+  Serial.begin(9600);
+  pinMode(trigger, OUTPUT);
+  pinMode(echo, INPUT);
+  pinMode(LED, OUTPUT);
+  pinMode(MOSFET, OUTPUT);
+  delay(2000);
+}
+
+void loop() {
+  measure_distance();
+  Serial.println(distance);
+  
+  if (distance < 10) {
+    digitalWrite(LED, HIGH);
+    digitalWrite(MOSFET, HIGH);
+  } else {
+    digitalWrite(LED, LOW);
+    digitalWrite(MOSFET, LOW);
+  }
+  
+  delay(500);
+}
+
+void measure_distance() {
+  digitalWrite(trigger, LOW);
+  delayMicroseconds(2);
+  digitalWrite(trigger, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigger, LOW);
+  delayMicroseconds(2);
+  time = pulseIn(echo, HIGH);
+  distance = time * 340 / 20000;
+}
+----
+====
+
+** Code Explanation:
+*** When the distance is less than 10cm we have to turn on the MOSFET and else we have to turn off the MOSFET. We will also use the on board LED connected to pin 13 and toggle it along with the MOSFET so that we can ensure if the MOSFET is in turned on or off state.
+*** Inside the main loop function we call for the function called measure_distance(). This function uses the US sensor to measure the distance of the object in front of it and updates the value to the variable 'distance'. 
+*** The input or the detection will send a sonic blast of Ultrasonic signals into the air which will get reflected by the object in front of it and the echo pin will pick up the signals reflected by it.
+*** Then we use the time taken value to calculate the distance of the object ahead of the sensor. 
+*** Once the distance is calculated, we have to compare the value of distance using a simple if statement and if the value is less than 10cm we make the MOSFET and LED to go high, in the following else statement we make the MOSFET and LED to go low 
+
+===== 2. Without Sensor, using push button
+
+[[_circuit_push]]
+.Circuit using Push button
+image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/8f83e23284014fff1847c5024d5e7ba3d274cf96/electrical_resources/without_censor_sprinkler_circuit.png[width=50%]
+
+
+[[_circuit_sensor]]
+.Full Circuit without Sensor
+image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/8f83e23284014fff1847c5024d5e7ba3d274cf96/electrical_resources/sprinkler_full_circuit.png[width=50%]
+
+[%collapsible]
+.Click Here to See the Code
+====
+.Arduino Relay Control with Button
+[source,arduino]
+----
+const int relayPin = 2;
+const int buttonPin = 3;
+
+void setup() {
+  pinMode(relayPin, OUTPUT);
+  pinMode(buttonPin, INPUT_PULLUP);
+  Serial.begin(9600);
+  digitalWrite(relayPin, LOW);
+}
+
+void loop() {
+  int buttonState = digitalRead(buttonPin);
+  Serial.println(buttonState);
+
+  if (buttonState == LOW) {
+    digitalWrite(relayPin, HIGH);
+  } else {
+    digitalWrite(relayPin, LOW);
+  }
+}
+----
+====
+
+* Code Explanation:
+** Push button is used to on/off the relay which controls the pump
+** The relay is turned on and off at regular intervals, simulating the control of a device (solvent pump) through the relay. The relay pin (control pin) is set HIGH to activate the relay and LOW to deactivate it.
+
+
+
+==== Scrubber
+Static stationary brush scrubber is an industrial cleaning tool designed for efficient cloth cleaning. This device features stationary brushes that remain fixed during operation, providing a stable cleaning surface. The static design allows for controlled and targeted cleaning of fabrics, ensuring uniform and effective removal of dirt and contaminants. This type of scrubber is commonly employed in industrial settings where precision and consistency in cloth cleaning are essential for maintaining high standards of hygiene and product quality.
+
+* Stationary brushes would be used near the edges of the cloth.
+
+* Static cleaning mechanism
+
+* Zero power requirement
+
+
+==== Blower
+
+* We will be controlling the speed of the DC motor using a potentiometer for the purpose of  blower in our washing machine to remove heavy dust particles from the cloth piece. 
+* Potentiometer has three terminals. Outer two terminals are for power supply and the middle terminal is the output.
+* As we rotate the knob of the potentiometer, the resistance between the middle terminal and one of the outer terminals changes. This change in resistance controls the voltage supplied to the motor, which in turn controls its speed.
+* We can connect multiple DC motors in our system by making slight modifications in the wiring.
+* A Transistor is used for more efficient control of the motor speed. By controlling the current flow to the motor, transistors can prevent overloading and overheating, enhancing the motor’s lifespan. 
+
+[[_circuit_for_blower]]
+.TinkerCAD circuit for Blower
+image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/9ae27957f7f9bed7b02f8cd5803453d164ba0f19/electrical_resources/blower_circuit.png[width=50%]
+
+
+[%collapsible]
+.Click Here to See the Code
+====
+[source,cpp]
+----
+const int poten = A3;
+int var;
+
+void setup() {
+  pinMode(6, OUTPUT);
+}
+
+void loop() {
+  var = analogRead(poten);
+  analogWrite(6, var);
+}
+----
+====
+
+==== Dryer
+
+We are planning to use the configuration of tunnel dryer to dry the clothes. The power and torque requirements of the motor used in blower and power requirements of the heater will depend on the time needed to dry the cloth, rate at which the cloth is being fed, width and height of the chamber, final moisture content and initial moisture content.
+Also, since counter current configuration is most efficient, we will be using the same in our design. Using tunnel dryers also allows us to move the conveyor belt slowly as it is very efficient in processing materials taking long drying time and thus requiring lesser motor drive.
+
+[[_tunnel_dryer]]
+.Tunnel Dryer
+image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/9ae27957f7f9bed7b02f8cd5803453d164ba0f19/electrical_resources/tunnel_dryer.png[width=50%]
+
+Optimization for power requirements will be done once design specs are provided and it would be based on the mathematical modelling and simulations done to observe the humidity content with rate of air flow and power input to heater and blower.
+To control the heater we will use Arduino, a temperature sensor (thermocouple), a relay module, battery and bunch of connecting wires.
+One of the circuits which can be used is as follows:
+
+[[_circuit1_dryer]]
+.Circuit for Dryer
+image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/9ae27957f7f9bed7b02f8cd5803453d164ba0f19/electrical_resources/dryer_pic_2.png[width=50%]
+
+One can have LCD display to keep track of any errors in the functioning.
+Arduino code for controlling heater is as follows:
+
+
+[%collapsible]
+.Click Here to See the Code
+====
+[source, cpp]
+----
+/* Max6675 Module  ==> Arduino
+ * CS            ==> D10
+ * SO            ==> D12
+ * SCK           ==> D13
+ * Vcc           ==> Vcc (5v)
+ * Gnd           ==> Gnd
+ */
+
+// LCD config (i2c LCD screen, you need to install the LiquidCrystal_I2C if you don't have it)
+#include <Wire.h>
+#include <LiquidCrystal_I2C.h>
+LiquidCrystal_I2C lcd(0x3f, 20, 4);  // sometimes the address is not 0x3f. Change to 0x27 if it doesn't work.
+
+/* i2c LCD Module  ==> Arduino
+ * SCL           ==> A5
+ * SDA           ==> A4
+ * Vcc           ==> Vcc (5v)
+ * Gnd           ==> Gnd
+ */
+#include <SPI.h>
+// We define the SPI pins
+#define MAX6675_CS   10
+#define MAX6675_SO   12
+#define MAX6675_SCK  13
+
+// Pins
+int PWM_pin = 3;
+
+// Variables
+float temperature_read = 0.0;
+float set_temperature = 100;
+float PID_error = 0;
+float previous_error = 0;
+float elapsedTime, Time, timePrev;
+int PID_value = 0;
+
+// PID constants
+int kp = 9.1;   int ki = 0.3;   int kd = 1.8;
+int PID_p = 0;  int PID_i = 0;  int PID_d = 0;
+
+void setup() {
+  pinMode(PWM_pin, OUTPUT);
+  TCCR2B = TCCR2B & B11111000 | 0x03;  // pin 3 and 11 PWM frequency of 980.39 Hz
+  Time = millis();
+  lcd.init();
+  lcd.backlight();
+}
+
+void loop() {
+  // First, we read the real value of temperature
+  temperature_read = readThermocouple();
+  // Next, we calculate the error between the setpoint and the real value
+  PID_error = set_temperature - temperature_read;
+  // Calculate the P value
+  PID_p = kp * PID_error;
+  // Calculate the I value in a range of +-3
+  if (-3 < PID_error < 3) {
+    PID_i = PID_i + (ki * PID_error);
+  }
+
+  // For derivative, we need real-time to calculate speed change rate
+  timePrev = Time;                         // the previous time is stored before the actual time read
+  Time = millis();                         // actual time read
+  elapsedTime = (Time - timePrev) / 1000;
+  // Now we can calculate the D value
+  PID_d = kd * ((PID_error - previous_error) / elapsedTime);
+  // Final total PID value is the sum of P + I + D
+  PID_value = PID_p + PID_i + PID_d;
+  // We define PWM range between 0 and 255
+  if (PID_value < 0) {
+    PID_value = 0;
+  }
+  if (PID_value > 255) {
+    PID_value = 255;
+  }
+  // Now we can write the PWM signal to the MOSFET on digital pin D3
+  analogWrite(PWM_pin, 255 - PID_value);
+  previous_error = PID_error;     // Remember to store the previous error for the next loop.
+
+  delay(300);
+  // lcd.clear();
+
+  lcd.setCursor(0, 0);
+  lcd.print("PID TEMP control");
+  lcd.setCursor(0, 1);
+  lcd.print("S:");
+  lcd.setCursor(2, 1);
+  lcd.print(set_temperature, 1);
+  lcd.setCursor(9, 1);
+  lcd.print("R:");
+  lcd.setCursor(11, 1);
+  lcd.print(temperature_read, 1);
+}
+
+double readThermocouple() {
+  uint16_t v;
+  pinMode(MAX6675_CS, OUTPUT);
+  pinMode(MAX6675_SO, INPUT);
+  pinMode(MAX6675_SCK, OUTPUT);
+
+  digitalWrite(MAX6675_CS, LOW);
+  delay(1);
+
+  // Read in 16 bits,
+  // 15	= 0 always
+  // 14..2 = 0.25 degree counts MSB First
+  // 2 	= 1 if thermocouple is open circuit
+  // 1..0  = uninteresting status
+
+  v = shiftIn(MAX6675_SO, MAX6675_SCK, MSBFIRST);
+  v <<= 8;
+  v |= shiftIn(MAX6675_SO, MAX6675_SCK, MSBFIRST);
+
+  digitalWrite(MAX6675_CS, HIGH);
+  if (v & 0x4) {
+    // Bit 2 indicates if the thermocouple is disconnected
+    return NAN;
+  }
+  // The lower three bits (0,1,2) are discarded status bits
+  v >>= 3;
+  // The remaining bits are the number of 0.25 degree (C) counts
+  return v * 0.25;
+}
+----
+====
+
+For running and controlling the blower we need to have an Arduino controlling motor, anemometer, battery and bunch of wires.
+
+[[_circuit2_dryer]]
+.Control Circuit for Dryer
+image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/9ae27957f7f9bed7b02f8cd5803453d164ba0f19/electrical_resources/dryer_pic_3.png[width=50%]
+
+
+
+[%collapsible]
+.Click Here to See the Code
+====
+[source,cpp]
+----
+#include "DHT.h"
+#include <LiquidCrystal.h>
+
+LiquidCrystal lcd(7, 6, 5, 4, 3, 2);
+#define DHTPIN 12  // Pin connected to the DHT sensor
+
+#define DHTTYPE DHT11  // DHT 11
+
+#define pwm 9  // PWM pin for fan speed control
+
+byte degree[8] =
+{
+  0b00011,
+  0b00011,
+  0b00000,
+  0b00000,
+  0b00000,
+  0b00000,
+  0b00000,
+  0b00000
+};
+
+// Initialize DHT sensor for normal 16mhz Arduino
+DHT dht(DHTPIN, DHTTYPE);
+
+void setup() {
+  lcd.begin(16, 2);
+  lcd.createChar(1, degree);
+  lcd.clear();
+  lcd.print("   Fan Speed  ");
+  lcd.setCursor(0, 1);
+  lcd.print("  Controlling ");
+  delay(2000);
+  analogWrite(pwm, 255);
+  delay(2000);
+  Serial.begin(9600);
+  dht.begin();
+}
+
+void loop() {
+  // Wait a few seconds between measurements.
+  delay(2000);
+
+  // Reading temperature or humidity takes about 250 milliseconds!
+  // Sensor readings may also be up to 2 seconds 'old' (it's a very slow sensor)
+  float h = dht.readHumidity();
+  // Read temperature as Celsius
+  float t = dht.readTemperature();
+  // Read temperature as Fahrenheit
+  float f = dht.readTemperature(true);
+
+  // Check if any reads failed and exit early (to try again).
+  if (isnan(h) || isnan(t) || isnan(f)) {
+    Serial.println("Failed to read from DHT sensor!");
+    return;
+  }
+
+  // Compute heat index
+  // Must send in t in Fahrenheit!
+  float hi = dht.computeHeatIndex(f, h);
+
+  Serial.print("Humidity: ");
+  Serial.print(h);
+  Serial.print(" %\t");
+  Serial.print("Temperature: ");
+  Serial.print(t);
+  Serial.print(" *C ");
+  Serial.print(f);
+  Serial.print(" *F\t");
+  Serial.print("Heat index: ");
+  Serial.print(hi);
+  Serial.println(" *F");
+
+  lcd.setCursor(0, 0);
+  lcd.print("Temp: ");
+  lcd.print(t);   // Printing temperature on LCD
+  lcd.print(" C");
+  lcd.setCursor(0, 1);
+
+  // Fan Speed Control based on Temperature
+  if (t > 29) {
+    analogWrite(9, 0);
+    lcd.print("Fan OFF         ");
+    delay(100);
+  } else if (t == 29) {
+    analogWrite(pwm, 51);
+    lcd.print("Fan Speed: 20%   ");
+    delay(100);
+  } else if (t == 28) {
+    analogWrite(pwm, 102);
+    lcd.print("Fan Speed: 40%   ");
+    delay(100);
+  } else if (t == 24) {
+    analogWrite(pwm, 153);
+    lcd.print("Fan Speed: 60%   ");
+    delay(100);
+  } else if (t == 20) {
+    analogWrite(pwm, 204);
+    lcd.print("Fan Speed: 80%   ");
+    delay(100);
+  } else if (t < 20) {
+    analogWrite(pwm, 255);
+    lcd.print("Fan Speed: 100%   ");
+    delay(100);
+  }
+
+  delay(3000);
+}
+----
+====
+
+
+
+=== Solvent
+
+Some of the cleansing agents that were researched and tested for oil and grease stains are:
+
+==== Lipase Enzyme
+
+* Pros: Lipase is an enzyme that breaks down oil and thus was thought of as a solution to clean oil and grease stains.
+
+* Cons: The idea was rejected as we require the water to be slightly warm(~40-50 C) for the optimal enzyme action, and maintaining warm water is not so easy.
+
+==== Spot Remover(such as Shout) and Hot Water
+
+* Pros: It can remove both oil and grease stains. Spraying the stain remover and then followed by brushing in hot water can remove the results.
+
+* Cons: Increases the energy requirement of the model as hot water is required. Using spot removers increases the cost.
+
+==== Spot Lifters(such as K2R spot lifter) followed by dry brushing
+
+* Pros: It overcomes the drawback of scrubbing in hot water(mentioned in the previous method). After application, keeping it for 10-15 minutes lifts the stain and only a brush off is required in the end.
+
+* Cons: It is very costly(~3300 Rs for 150 ml) and availability may become an issue when required in large amounts, as it is manufactured in the USA. 
+
+==== Baby powder/ Cornstarch/ Salt/ Vinegar followed by washing
+
+* Pros: Effective in cleaning oil and grease stain significantly
+
+* Cons: Requires soaking and  multiple iterations to remove the stains, therefore time consuming
+
+==== WD-40 or Lighter Fluid 
+
+* Pros: Effective in cleaning oil and grease stain significantly
+
+* Cons: Takes 20 min soaking time and hot water is required for washing.
+
+
+[[_b_wd40]]
+.Grease stain before using WD-40
+image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/280fdb451ed940e8a1bfbbd416651b69019e250b/solvent_pictures/wd_40_before.jpg[]
+
+
+[[_a_wd40]]
+.Grease stain after using WD-40 
+image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/280fdb451ed940e8a1bfbbd416651b69019e250b/solvent_pictures/wd_40_after.jpg[]
+
+
+==== PCE (perchloroethylene)
+
+* Pros: Tetrachloroethylene (PCE) is a nonflammable, liquid solvent widely used in dry cleaning and is effective in removing oil and grease stains..In small quantities.
+
+* Cons: Extended exposure to large quantities of PCE could cause irritation to eyes, skin, throat, nose, and respiratory system.
+
+==== Handwash (Dettol)
+
+Tested hand wash to clean oil stain with gentle brushing and it successfully cleaned the oil stain.
+
+* Pros: Handwashes are biodegradable and environmentally friendly and can be washed and reused multiple times. They are soft and less abrasive
+
+* Cons: Depending on the material and color, handwashes may be more prone to staining, which could affect the appearance and cleanliness of cloth
+
+==== Dishwasher (Vim Drop)
+
+* Pros: Effective in removing both oil and grease stains by scrubbing with vim drop and water with normal pressure.
+
+
+[[_b_dishwasher]]
+.Grease stain before using dishwasher(Vim)
+image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/280fdb451ed940e8a1bfbbd416651b69019e250b/solvent_pictures/dishwash_before.jpg[]
+
+
+[[_a_dishwasher]]
+.Grease stain after using dishwasher(Vim)
+image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/280fdb451ed940e8a1bfbbd416651b69019e250b/solvent_pictures/dishwash_after.jpg[]
+
+
+==== Trichloroethylene (TCE): chlorinated solvent
+
+* Pros: Stain remover and degreaser. TCE evaporates quickly, leaving behind a dry surface.TCE can act quickly to break down and dissolve stains or contaminants, making it effective for rapid cleaning processes.
+
+* Cons: TCE exposure has been linked to various health risks, including respiratory, neurological, and reproductive effects. Prolonged or repeated exposure can lead to serious health problems, and it is considered a potential human carcinogen. TCE has been restricted or banned in many countries for certain applications. TCE is flammable, posing a fire hazard. Special precautions are needed when handling and storing TCE to prevent accidents. It is also persistent in the environment and can contaminate soil and groundwater, posing risks to ecosystems.
+
+==== Isopropyl (Rubbing alcohol 68-72%)
+
+* Pros: Isopropyl alcohol, also known as rubbing alcohol, is a natural degreasing agent sold in most department stores. Based on the theoretical searches it was suggested a volatile solvent to remove oil and grease stains
+
+* Cons: The idea was rejected after practically experimenting on the grease and oil stained cotton cloth by scrubbing and even soaking the cloth in it for 5 min didn't remove oil and Grease stain. May be effective after a longer time of soaking, and thus not efficient because of time constraints.
+
+[[_a_isopropyl]]
+.Grease stain after applying isopropyl(rubbing alcohol 68-72%)
+image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/280fdb451ed940e8a1bfbbd416651b69019e250b/solvent_pictures/isopropyl_after.png[]
+
+
+====  Detergent (Surf Excel)
+
+* Pros: Was effective on oil stains with slight scrubbing 
+
+* Cons: The idea was rejected because it was not effective on Grease stain, even after hard scrubbing
+
+
+[[_a_detergent]]
+.Grease stain after using detergent and scrubbing
+image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/280fdb451ed940e8a1bfbbd416651b69019e250b/solvent_pictures/detergent_after.png[]
+
+
+==== Acetone
+
+* Pros: As it is volatile, it would be quite convenient in the drying stage.
+
+*	Cons: We have experimentally seen that it does not work efficiently on grease stain
+
+[[_b_acetone]]
+.Grease stain before using acetone
+image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/280fdb451ed940e8a1bfbbd416651b69019e250b/solvent_pictures/acetone_before.jpg[]
+
+[[_a_acetone]]
+.Grease stain after using acetone
+image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/280fdb451ed940e8a1bfbbd416651b69019e250b/solvent_pictures/acetone_after.jpg[]
+
+[[_solvents_specs]]
+.Solvents Specifications
+|===
+| *Factor* | *Acetone* | *Stain Remover* | *Isopropyl Alcohol* | *Liquid Washing Soap*
+| Suitability for oil-based stains | Excellent | Good | Good | Moderate
+
+| Amount of solvent | 5-10 mL, test in inconspicuous area first | Follow product instructions (5-15 mL typical) | 5-10 mL, test in inconspicuous area first | Apply directly to stain or dilute 5-10 mL in water for pre-treatment
+
+| Cleaning time | 5-10 minutes | 10-15 minutes | 5-10 minutes | Depends on washing cycle time
+
+| Scrubbing intensity | Light scrubbing with soft cloth | Light to moderate scrubbing | Light scrubbing with soft cloth | Moderate scrubbing with brush or hands
+
+| Evaporation/drying time | Evaporates quickly (5-10 minutes) | Dries moderately fast (15-30 minutes) | Evaporates quickly (5-10 minutes) | Depends on fabric and drying method
+
+| Safety | Flammable, use with caution and good ventilation | May contain harsh chemicals, follow product instructions | Flammable, use with caution and good ventilation | Generally safe, but test on inconspicuous area first
+
+| Fabric suitability | Works well on most fabrics, but test first on delicate fabrics | Check product label for fabric compatibility | Works well on most fabrics, but test first on delicate fabrics | Suitable for washable fabrics
+
+|===
+
+
+=== Specifications
+
+==== Energy Specifications
+=====  Roller
+[[_roller_en_specs]]
+|===
+| Maximum Output Voltage   | 36 V
+| Maximum Current rating (per channel)| 600mA
+|===
+
+=====  Soap Water Sprinkler
+* With Sensor (Prototype)
+
+[[_sprinkler_en_specs1]]
+|===
+| Adapter Voltage Rating    | 12 -15 V 
+| Maximum Current Rating    | 1.2A 
+| Continuous Current Rating   | 700mA 
+|===
+
+* Without Sensor
+
+[[_sprinkler_en_specs2]]
+|===
+| Nozzle's Pressure|          5-15 bar 
+| Nozzle's Length  | 	 3-4 cm
+| Nozzle's Diameter|        1-1.5 cm 
+|===
+
+
+===== Blower
+* DC Motor: 
+
+** Voltage: 9,12,15 Volts 
+
+* Potentiometer: 
+[[_blower_en_specs1]]
+|===
+| Resistance Value|200 Ohm 
+| Limiting element voltage|250 Volt 
+|===
+
+* Battery : 
+[[_blower_en_specs2]]
+|===
+| Power Supply| 9-volt  
+| Battery Impedance| 1700 m-ohm @ 1 kHz   
+|===
+
+===== Dryer
+* Voltage: 220 Volts 
+
+==== Space Specifications
+
+Proposed Model Specifications:
+
+* *Base:*
+
+** Length = 100cm 
+
+** Breadth = 30cm
+
+* *Roller:* 	
+
+** Diameter = 8cm 
+
+** Length = 25cm
+
+* *N-box:*  	
+
+** Length = 70cm
+
+** Breadth = 25cm
+
+
+
+
+==== Power Specifications
+===== Roller
+
+* Power Rating of Prototype: 21.6 W
+
+
+===== Soap Water Sprinkler
+* With Sensor (Prototype)
+** Power Rating of Prototype: 18 W
+
+
+* Without Sensor
+** Battery voltage: 10 - 15 V
+
+
+===== Blower
+* DC Motor: 
+
+** Power: 300 Watts 
+** Speed: 7000 RPM 
+
+
+* Transistor (BC547): Max collector Dissipation: 1.5W 
+* Resistor (100M ohms): Power Rating:0.25-0.5W  
+
+===== Dryer
+* Actual machine requirement: 4-6 KW depending on the speed of feeding the cloth and drying rate 
+* For Prototype: 1000-2000W   
+
+==== Cost Specifications
+===== Roller
+*  Prototype average cost: Rs. 200.
+
+===== Soap Water Sprinkler
+[[_sprinkler_cost]]
+|===
+|Arduino | Rs.2500 
+| Nozzle | Rs.500 
+| Resistors | Rs. 10-20 
+| Breadboard | Rs. 90 
+| Sensor | Rs. 200 
+| Connecting wires | Rs.150 
+|NMOS | Rs. 70 
+| solvent pump | Rs. 200 
+|===
+
+===== Scrubber
+[[_scrubber_cost]]
+|===
+|Cost per meter| Rs. 300 - 400 
+|Number of Scrubbers| 2  (4 can be installed based on requirement) 
+|===
+
+===== Blower
+[[_blower_cost]]
+|===
+|Arduino | Rs.2550 
+|Resistor(100 ohms) | Rs.1 
+|Transistor| Rs. 1 
+|Potentiometer | Rs.17 
+|9 volt Battery | Rs.300 
+|DC motor | Rs. 260 
+|===
+
+===== Dryer
+* Actual machine cost: Around Rs. 100000 
+* For prototype: Rs. 800 
+
+
+
+
+==== Performance Specifications
+
+===== Roller
+* Rolling capacity: ~60-80 meters/min. 
+* Rewind Diameter: 1.8-2 meters. 
+* The driver module for the prototype can be used simultaneously by other motors in the system 
+* The cost of the actual machine can be reduced significantly because it would be integrated with other components. 
+* If a small DC motor is used, a no-load speed of ~9000 rpm, and a loaded speed of ~5000 rpm can be achieved in the prototype. 
+
+===== Soap Water Sprinkler
+* With Sensor:
+ HCSR04 Ultrasonic Sensor will check if there is any object placed before the dispenser. A solenoid valve will be used to control the flow of water by energising and deenergising. 
+* Withour Sensor:
+Arduino controls the operation of water pump. It also controls the flow rate and directions of water.
+
+===== Scrubber:
+Stationary scrubbers/brushes remain fixed during operation, providing a stable cleaning surface. The static design allows for controlled and targeted cleaning of fabrics, ensuring uniform and effective removal of dirt and contaminants. 
+
+===== Blower
+* Control Mechanism: Potentiometer for DC motor speed control 
+
+* Efficiency: Improved motor control using a transistor to prevent overloading and overheating 
+
+* Lifespan: Enhanced motor lifespan due to efficient control using the transistor 
+
+* Compatibility: Multiple DC motors can be connected with slight wiring modifications 
+
+===== Dryer
+* Control Mechanism: Arduino, a temperature sensor (thermocouple), a relay module, battery and bunch of connecting wires will be used 
+
+* Efficiency: Most efficient counter current configuration will be used 
+
+* Power requirements will be optimized on the basis of mathematical modelling and simulations done to observe the humidity content with rate of air flow and power input to heater and blower 
+
+==== Manpower Specifications
+// ===== Research and Business Team:
+// 82 hours
+[[_manpower_specs]]
+.Manpower Specs
+|===
+|Team | Man hours  
+|Research Team | 82 hours  
+|Electrical Team | 60 hours  
+|Fabrication | 13.5 hours  
+|Documentation | 127 hours
+|Consultant | 2 hours
+|===
+
+[[_wordis_mind_map]]
+.Work Distribuition Mind Map
+image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/07e5bd9b9f2f9a0c0843f86ec252c528781d678c/assets/P1_WorkDist_TribeD_MindMap.png[]
+
+==== Milestone Specifications
+
+===== Phase I (25%)
+
+* Outline and ideation of the proposed design.
+* Learning the skills required for the project.
+* Formation and organization of a team for the project.
+* Empirical research on the idea and feasibility of the project.
+* Visualization of the initial theorized model through basic diagrams on auto CAD mode.
+
+TRL 2: Outlining the proposed design, learning skills, and formation of a team indicates the initiation of the project. The use of AutoCAD for basic visualization enhances the maturity by translating ideas into tangible forms, although it's still in the early stages of development involving ideation and conceptualization.
+
+===== Phase II (50%)
+
+* Realization of the components required in the design.
+* Trial and error checks on the code for the mechanisms.
+* Purchasing the required chemicals and inventory to realize the mechanisms.
+* Testing the chemicals used on the cloth.
+* Finalized design of the visualized model using Free CAD.
+
+TRL 3: Realizing components, conducting trial and error checks on the code, purchasing required materials, and finalizing the design using ‘FreeCAD’ signify a transition from the early stages to a more mature state. The culmination of these activities indicates a significant advancement in technology readiness, approaching the stage where it can be practically implemented.
+
+
+===== Phase III (75%)
+
+* Showing some individual components, which are completely ready and are in working condition, to the client
+* Finalizing component circuits and codes 
+* Including details(dimensions and location) of all the small parts in the model.
+
+TRL 4: Demonstrating fully functional components to the client, finalizing circuits and codes, and providing detailed specifications represent a high level of maturity. This milestone is marked by a readiness for deployment, with working components and comprehensive documentation that can lead to the assembly of a full prototype.
+
+===== Phase IV (100%)
+* Assembling all the different components together to make a full working prototype.
+* Live demonstration to the client by using a sample cloth with edges stained with oil and grease, to mimic a just manufactured cotton cloth.
+* Assessment of the model by the quality of cleaning and the time taken.
+
+TRL 5: Assembling all components into a working prototype, conducting a live demonstration using a sample cloth, and assessing performance in real-world conditions with actual stains indicate a high level of readiness for practical application and deployment. The technology has progressed to the point where it can be reliably demonstrated and evaluated in real-world scenarios, signaling a mature state.
+
+
+[bibliography]
+== References
+// how to use citations. citenp:[DryCleaningChemicals]
+// citenp:[WhatWaterConsumption]
+// bibliography::[]
+
+. bibitem:[noauthor_conservation_nodate]
+. bibitem:[noauthor_stain_2023]
+. bibitem:[noauthor_3_nodate]
+. bibitem:[noauthor_conservation_nodate-1]
+. bibitem:[noauthor_we_nodate]
+. bibitem:[noauthor_armourme_nodate]
+. bibitem:[noauthor_5_nodate]
+. bibitem:[noauthor_4_nodate]
+. bibitem:[noauthor_amazoncom_nodate]
+. bibitem:[daniela_how_2017]
+. bibitem:[gentlemans_gazette_right_2023]
+. bibitem:[mahagaonkar_how_2020]
+. bibitem:[noauthor_epa_nodate]
+. bibitem:[noauthor_54_nodate]
+. bibitem:[noauthor_how_nodate]
+. bibitem:[cleaners_dry_2020]
+. bibitem:[kiron_dry_2021]
+. bibitem:[noauthor_what_nodate]
+. bibitem:[noauthor_remove_2022]
+. bibitem:[noauthor_textile_2015]
+. bibitem:[noauthor_which_nodate]
+. bibitem:[noauthor_ultimate_nodate]
+. bibitem:[kiron_drying_2013]
+. bibitem:[seok_effects_2009]
+. bibitem:[noauthor_buy_nodate]
+. bibitem:[noauthor_buy_nodate-1]
+. bibitem:[noauthor_arduino_nodate]
+. bibitem:[noauthor_circuit_nodate]
+. bibitem:[noauthor_zyme_nodate]
+. bibitem:[noauthor_buy_nodate-2]
+. bibitem:[noauthor_buy_nodate-3]
+. bibitem:[noauthor_what_nodate]
+. bibitem:[noauthor_controlling_nodate]
+. bibitem:[noauthor_driving_2024]
+. bibitem:[noauthor_54_nodate]
+. bibitem:[noauthor_customized_nodate]
+. bibitem:[noauthor_process_nodate]
+. bibitem:[noauthor_circuit_nodate-1]
+. bibitem:[noauthor_l293d_nodate]
+. bibitem:[noauthor_tunnel_nodate]
+. bibitem:[noauthor_types_nodate]
+. bibitem:[noauthor_pid_nodate]
+. bibitem:[noauthor_study_nodate]
+. bibitem:[macfos_temperature_nodate]
+. bibitem:[noauthor_control_nodate]
+. bibitem:[noauthor_automatic_nodate]
+
+
+// [[_glossary]]
+
+[glossary]
+== Glossary
+
+[glossary]
+[[_ABS_meaning]]
+
+
+ABS (Acrylonitrile Butadiene Styrene):: A strong and durable thermoplastic polymer used in manufacturing.
+Adapter Voltage Rating:: This specifies the voltage range for the adapter that provides power to the soap water sprinkler.
+Affix:: Securely attach or fasten.
+Areal density:: mass per unit area
+Arduino:: Arduino is an open-source electronics platform used for creating interactive electronic projects.
+Blower:: A device used to create a flow of air or gas.
+carcinogen:: potential to cause cancer
+Central Pollution Control Board (CPCB):: A regulatory body in India that sets standards for environmental pollution control.
+chlorinated:: state of having chlorine
+Coil-based heating:: This implies the use of a heating element made in the form of a coil. Electricity passing through the coil generates heat, and this method is often used in appliances like room heaters.
+Compatibility:: The ability of the system to work with other components.
+Control Mechanism:: The method used to regulate or manipulate the operation of the system.
+Controller:: In this context, a controller is a device that regulates or manages the operation of the dryer. It could involve setting and maintaining specific conditions such as temperature and drying time.
+Controlled and targeted cleaning:: This describes the method of cleaning where the scrubbers are designed to clean fabrics in a precise and controlled manner. The goal is to ensure uniform and effective removal of dirt and contaminants from the surfaces being cleaned.
+CPCB (Central Pollution Control Board):: A regulatory body in India that sets standards for environmental pollution control.
+DC Motor:: A motor that operates on direct current (DC) electricity.
+Denier:: A unit of measurement for the linear mass density of fibers. It is the mass in grams per 9000 meters of the fiber.
+Desizing:: The removal of sizing agents, such as starch or other chemicals, from fabrics to prepare them for further processing.
+driving motors: Motors powering the movement of the cloth fabric
+Efficiency:: The effectiveness of the system in converting input power to useful output power.
+filleted:: Somewhat stuck to the side or attached to side walls
+fixtures:: a fixed frame
+Gantt Chart:: A visual representation of a project schedule that shows the start and finish dates of various elements of the project.
+Graywater:: Domestic wastewater that does not contain fecal matter, often reused for irrigation or other non-potable purposes.
+Guiding frame:: a frame used to fold the cloth in half vertically
+HCSR04 Ultrasonic Sensor:: A specific ultrasonic sensor used in the prototype to detect objects in front of the dispenser.
+Infrared based heating:: This refers to a method of heating using infrared radiation. Infrared radiation is a type of electromagnetic radiation that heats objects directly without heating the surrounding air. It's commonly used in appliances like heaters and dryers.
+Isometric View:: A three-dimensional representation of an object, showing all three spatial dimensions in one view.
+KW (Kilowatts):: Kilowatts are a unit of power.
+Lifespan:: The duration for which the system is expected to operate.
+Limiting element voltage:: The maximum voltage the potentiometer can handle.
+Lipase:: an enzyme the body uses to break down fats
+Mathematical modeling and simulations: This refers to the use of mathematical equations and computer simulations to analyze and predict the behavior of the system.
+Maximum Current Rating:: Indicates the maximum current the device can draw from the power source.
+Maximum Current Rating (per channel):: This indicates the maximum amount of electrical current that can flow through each channel (a path for electric current) without causing damage. The limit is set at 600 milliamperes (mA).
+Maximum Operating Voltage:: This is the highest voltage at which the roller or the associated system can safely operate.
+Mercerizing:: A textile finishing process that increases the luster and strength of fabric, typically cotton, by treating it with a caustic soda solution.
+Nozzle:: A device for controlling the direction or flow of a fluid.
+Nozzle mechanism:: The nozzle and flapper mechanism are a displacement type detector that converts mechanical movement into a pressure signal by covering the opening of a nozzle with a flat plate called the flapper. This restricts fluid flow through the nozzle and generates a pressure signal.
+Petroleum-based cleaning agents:: Solvents effective for oil-based stains (e.g., mineral spirits, naphtha).
+Pretreatment:: Applying cleansing agent before washing.
+Prototype:: A prototype is an initial version or model of a product that is used to test and develop the design.
+Resource Breakdown:: A breakdown of resources required for a project, often detailing labor, equipment, and materials.
+Robust Scrubbing:: Strong, sturdy, and effective scrubbing.
+Rust stains:: Formed by oxidation of iron.
+Scour:: To clean or rub using a stiff brush or abrasive.
+Setup Time:: The time required to prepare the washing machine for operation.
+Singeing:: The process of burning off protruding fibers or impurities from the surface of a fabric, often using a flame or hot surface.
+Solvent:: A substance, typically a liquid, capable of dissolving other substances.
+Spot Lifters:: A unique cleaning aid that removes oil and grease spots and stains from several types of fabrics and clothing.
+Syrup:: In the context of the report, it may refer to a concentrated solution of sugar or a sugar substitute in water.
+Tannin:: A bitter, astringent substance found in plants.
+Testing Phase:: A stage in the development process where the functionality and performance are evaluated.
+Thermoplastic Polymer:: A type of polymer that becomes pliable or moldable when heated and solidifies upon cooling.
+Thread Count:: The number of threads woven together per square inch in a fabric. A higher thread count is generally associated with a finer and more luxurious fabric.
+traces:: Small amounts or remnants.
+Turpentine:: Solvent used for thinning, cleaning paint and varnish removal.
+User-Centric:: Designed with a primary focus on meeting the needs and preferences of users.
+USP:: Unique selling point
+Voltage:: Voltage is a measure of electrical potential difference.
+waste tub:: A waste tub at the bottom to collect residual drippings and lint.
+water compartment:: A compartment to store water
+
+[appendix]
+== Appendix 
+
+=== Document ID
+[[_doc_id]]
+.Document ID
+|===
+|Document type          | Private Release
+|Document Authorised by | Ayush Sharma
+|Publication Date       | 21/01/2024
+|Version No.            | 1.5.1
+|GitHub Repo Details    | https://github.com/naunidhsingh03/ELP305-Tribe-D/[https://github.com/ELP305-Tribe-D/]
+|===
+
+=== Document Statistics
+[[_doc_stats]]
+.Document Stats
+|===
+|Number of words      | 3453
+|Average Word Length  | 5
+|Average number of words per sentence | 19
+|Total Number of characters with spaces | 23005
+|Total Number of character without spaces | 19288
+|Total Number of Letter characters   | 16953
+|Total Number of Sentences | 180
+|Number of Unique Words | 1127
+|Number of Repeat Words | 2653
+|Number of Syllables    | 5517
+|===
+
+=== Readability Indices 
+[[_readability_stats]]
+
+.Readability Stats 
+|===
+| Readibility Index | Score | Difficulty  
+| Flesch Reading Ease | 52/100 | Fairly Difficult 
+| Gunning Fog Readibility | 13.9/20 | Professional
+| Coleman Liau Readibility Index | 14.33 | Professional 
+| Flesch Kincaid Grade Level | 10.74 | Fairly Difficult 
+| Automated Readibility Index | 14.47 | Professional
+| Readibility | 62.5/100 | Average
+|===
+
+* Flesch Reading Ease:
+** Score Range: 0-100
+** Explanation: The Flesch Reading Ease score is a measure of how easy or difficult a piece of text is to read. The higher the score, the easier the text is to understand. The formula takes into account the average sentence length and the average number of syllables per word.
+
+* Gunning Fog Readability:
+** Score: Calculated grade level
+** Explanation: The Gunning Fog Index estimates the years of formal education needed to understand a piece of text. The higher the index, the more difficult the text is to comprehend. It considers the average sentence length and the percentage of complex words (words with three or more syllables).
+
+* Coleman Liau Readability Index:
+** Score: Estimated U.S. grade level
+** Explanation: The Coleman Liau Index determines the readability of a text by using characters per word and words per sentence. It provides an estimate of the U.S. school grade level required to comprehend the text. Higher scores indicate more difficult readability.
+
+* Flesch Kincaid Grade Level:
+** Score: U.S. school grade level
+** Explanation: Similar to Flesch Reading Ease, the Flesch Kincaid Grade Level estimates the U.S. school grade level needed to understand the text. The formula takes into account the average sentence length and the average number of syllables per word.
+
+* Automated Readability Index:
+** Score: Estimated U.S. grade level
+** Explanation: The Automated Readability Index calculates the readability of a text based on characters per word and words per sentence. Like other indices, it estimates the U.S. school grade level required to comprehend the text. Higher scores indicate more difficult readability.
+
+* Readibility
+** Score Range: 0-100
+** Explanation: The Readability (0-100) score, specifically the Flesch Reading Ease score, measures how easy or difficult a piece of text is to read. The higher the score, the easier the text is to understand. The score is calculated based on the average sentence length and the average number of syllables per word in the text.
