@@ -164,7 +164,7 @@ image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/be458fa52e9
 | 42         | link:https://www.linkedin.com/in/champak-swargiary-a87b04230/[Champak Swargiary]         | 2021MT10263| Fabrication Team Member                       |mt1210263@maths.iitd.ac.in  | 1
 
 
-| 43         | link:https://www.linkedin.com/in/ajay-ramavath-/[Ajay Naik]                 | 2020MT60888| Fabrication Team Member                       |mt6210888@maths.iitd.ac.in  | 0.5
+| 43         | link:https://www.linkedin.com/in/ajay-ramavath-/[Ajay Naik]                 | 2020MT60888| Fabrication Team Member                       |mt6200888@maths.iitd.ac.in  | 0.5
 
 
 | 44         | link:https://www.linkedin.com/in/aryan-sharma-326657230/[Aryan Sharma]              | 2021EE10141| Fabrication Team Member                       |ee1210141@ee.iitd.ac.in     | 0.5
@@ -244,7 +244,7 @@ image::https://github.com/naunidhsingh03/ELP305-TribeD-Resources/raw/be458fa52e9
 
 | 8         | link:https://www.linkedin.com/in/kanak-kumar-538ab2247/[Kanak Kumar Singh]         | 2021EE10163| Research Team Member                          |ee1210163@ee.iitd.ac.in     | 0.6
 
-| 9         | link:https://www.linkedin.com/in/ajay-ramavath-/[Ajay Naik]                 | 2020MT60888| Fabrication Team Member                       |mt6210888@maths.iitd.ac.in  | 0.5
+| 9         | link:https://www.linkedin.com/in/ajay-ramavath-/[Ajay Naik]                 | 2020MT60888| Fabrication Team Member                       |mt6200888@maths.iitd.ac.in  | 0.5
 
 
 | 10         | link:https://www.linkedin.com/in/aryan-sharma-326657230/[Aryan Sharma]              | 2021EE10141| Fabrication Team Member                       |ee1210141@ee.iitd.ac.in     | 0.5
